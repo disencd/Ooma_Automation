@@ -1,0 +1,744 @@
+1490050964901	geckodriver	INFO	Listening on 127.0.0.1:64356
+1490050965897	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.FVyp81vuTQFU
+1490050965898	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490050965919	geckodriver::marionette	INFO	Connecting to Marionette on localhost:64362
+1490050966338	Marionette	INFO	Listening on port 64362
+1490051121443	geckodriver	INFO	Listening on 127.0.0.1:64405
+1490051122448	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.Q8WKF9R9ZIuf
+1490051122449	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490051122452	geckodriver::marionette	INFO	Connecting to Marionette on localhost:64411
+1490051122849	Marionette	INFO	Listening on port 64411
+1490051787720	geckodriver	INFO	Listening on 127.0.0.1:64458
+1490051788725	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.aWIfr8bacvrN
+1490051788727	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490051788730	geckodriver::marionette	INFO	Connecting to Marionette on localhost:64465
+1490051789145	Marionette	INFO	Listening on port 64465
+1490052628602	geckodriver	INFO	Listening on 127.0.0.1:64517
+1490052629608	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.hXMH42o4UhaP
+1490052629609	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490052629613	geckodriver::marionette	INFO	Connecting to Marionette on localhost:64523
+1490052630023	Marionette	INFO	Listening on port 64523
+1490052693825	geckodriver	INFO	Listening on 127.0.0.1:64542
+1490052694828	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.CQJaj89iHNpX
+1490052694829	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490052694833	geckodriver::marionette	INFO	Connecting to Marionette on localhost:64548
+1490052695244	Marionette	INFO	Listening on port 64548
+1490053127129	geckodriver	INFO	Listening on 127.0.0.1:64604
+1490053128135	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.79f4iMrbY1ge
+1490053128136	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490053128139	geckodriver::marionette	INFO	Connecting to Marionette on localhost:64610
+1490053128544	Marionette	INFO	Listening on port 64610
+1490053426501	geckodriver	INFO	Listening on 127.0.0.1:64650
+1490053427507	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.QPNfzkmFpnzL
+1490053427508	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490053427512	geckodriver::marionette	INFO	Connecting to Marionette on localhost:64657
+1490053427921	Marionette	INFO	Listening on port 64657
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 138: TypeError: document.getElementById(...) is null
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/account-mgr/customerSearch.do?internalID=563g584xbv3ims3jdwnkanzef99vavit, line 197: ReferenceError: headerContainer is not defined
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript warning: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/mootools-1.2-core-nc.js, line 2575: String.prototype.contains() is deprecated and will be removed in a future release; use String.prototype.includes() instead
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 698: TypeError: obj is null
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: chrome://marionette/content/proxy.js, line 228: TypeError: l is undefined
+1490053673988	geckodriver	INFO	Listening on 127.0.0.1:64834
+1490053674991	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.oBSkOkahZ3fx
+1490053674992	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490053674996	geckodriver::marionette	INFO	Connecting to Marionette on localhost:64840
+1490053675405	Marionette	INFO	Listening on port 64840
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 138: TypeError: document.getElementById(...) is null
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/account-mgr/customerSearch.do?internalID=563g584xbv3ims3jdwnkanzef99vavit, line 197: ReferenceError: headerContainer is not defined
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript warning: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/mootools-1.2-core-nc.js, line 2575: String.prototype.contains() is deprecated and will be removed in a future release; use String.prototype.includes() instead
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 698: TypeError: obj is null
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: chrome://marionette/content/proxy.js, line 228: TypeError: l is undefined
+1490053746953	geckodriver	INFO	Listening on 127.0.0.1:65006
+1490053747958	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.0Ty3nMH7UP21
+1490053747959	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490053747963	geckodriver::marionette	INFO	Connecting to Marionette on localhost:65012
+1490053748368	Marionette	INFO	Listening on port 65012
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 138: TypeError: document.getElementById(...) is null
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/account-mgr/customerSearch.do?internalID=9mhe4nxrw3cd93tqjqh56gxy8hkqsj4p, line 197: ReferenceError: headerContainer is not defined
+1490053837464	geckodriver	INFO	Listening on 127.0.0.1:65098
+1490053838469	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.kQldkWHyBGbM
+1490053838470	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490053838473	geckodriver::marionette	INFO	Connecting to Marionette on localhost:65104
+1490053838875	Marionette	INFO	Listening on port 65104
+JavaScript error: http://oss1-cert1.cn.ooma.com:8085/ossOps/common/pageUtils.js, line 138: TypeError: document.getElementById(...) is null
+JavaScript error: http://oss1-cert1.cn.ooma.com:8085/ossOps/account-mgr/customerSearch.do?internalID=excjchtc66z45w3w79uxdupeznpkcaa3, line 197: ReferenceError: headerContainer is not defined
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript warning: http://oss1-cert1.cn.ooma.com:8085/ossOps/common/mootools-1.2-core-nc.js, line 2575: String.prototype.contains() is deprecated and will be removed in a future release; use String.prototype.includes() instead
+JavaScript error: http://oss1-cert1.cn.ooma.com:8085/ossOps/common/pageUtils.js, line 698: TypeError: obj is null
+1490054172793	geckodriver	INFO	Listening on 127.0.0.1:65250
+1490054173799	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.Ckp4KTJc2lnk
+1490054173800	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490054173803	geckodriver::marionette	INFO	Connecting to Marionette on localhost:65256
+1490054174229	Marionette	INFO	Listening on port 65256
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: this.browser.getBrowserForTab is not a function
+Full stack: BrowserObj.prototype.hasRemotenessChange@chrome://marionette/content/driver.js:3182:25
+BrowserObj.prototype.executeWhenReady@chrome://marionette/content/driver.js:3213:7
+GeckoDriver.prototype.sendAsync@chrome://marionette/content/driver.js:223:5
+send/<@chrome://marionette/content/proxy.js:138:7
+send@chrome://marionette/content/proxy.js:105:12
+ownPriorityGetterTrap.get/<@chrome://marionette/content/proxy.js:24:25
+GeckoDriver.prototype.findElement@chrome://marionette/content/driver.js:1878:31
+TaskImpl_run@resource://gre/modules/Task.jsm:319:40
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+Task_spawn@resource://gre/modules/Task.jsm:168:12
+TaskImpl_handleResultValue@resource://gre/modules/Task.jsm:388:16
+TaskImpl_run@resource://gre/modules/Task.jsm:327:13
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+Task_spawn@resource://gre/modules/Task.jsm:168:12
+Dispatcher.prototype.execute@chrome://marionette/content/dispatcher.js:120:13
+Dispatcher.prototype.onPacket@chrome://marionette/content/dispatcher.js:91:5
+DebuggerTransport.prototype._onJSONObjectReady/<@chrome://marionette/content/server.js -> resource://devtools/shared/transport/transport.js:479:9
+exports.makeInfallible/<@resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:101:14
+exports.makeInfallible/<@resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:101:14
+
+*************************
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: this.browser.getBrowserForTab is not a function
+Full stack: BrowserObj.prototype.hasRemotenessChange@chrome://marionette/content/driver.js:3182:25
+BrowserObj.prototype.executeWhenReady@chrome://marionette/content/driver.js:3213:7
+GeckoDriver.prototype.sendAsync@chrome://marionette/content/driver.js:223:5
+send/<@chrome://marionette/content/proxy.js:138:7
+send@chrome://marionette/content/proxy.js:105:12
+ownPriorityGetterTrap.get/<@chrome://marionette/content/proxy.js:24:25
+GeckoDriver.prototype.findElement@chrome://marionette/content/driver.js:1878:31
+TaskImpl_run@resource://gre/modules/Task.jsm:319:40
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+Task_spawn@resource://gre/modules/Task.jsm:168:12
+TaskImpl_handleResultValue@resource://gre/modules/Task.jsm:388:16
+TaskImpl_run@resource://gre/modules/Task.jsm:327:13
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+Task_spawn@resource://gre/modules/Task.jsm:168:12
+Dispatcher.prototype.execute@chrome://marionette/content/dispatcher.js:120:13
+Dispatcher.prototype.onPacket@chrome://marionette/content/dispatcher.js:91:5
+DebuggerTransport.prototype._onJSONObjectReady/<@chrome://marionette/content/server.js -> resource://devtools/shared/transport/transport.js:479:9
+exports.makeInfallible/<@resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:101:14
+exports.makeInfallible/<@resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:101:14
+
+*************************
+*************************
+A coding exception was thrown in a Promise rejection callback.
+See https://developer.mozilla.org/Mozilla/JavaScript_code_modules/Promise.jsm/Promise
+
+Full message: TypeError: this.browser.getBrowserForTab is not a function
+Full stack: BrowserObj.prototype.hasRemotenessChange@chrome://marionette/content/driver.js:3182:25
+BrowserObj.prototype.executeWhenReady@chrome://marionette/content/driver.js:3213:7
+GeckoDriver.prototype.sendAsync@chrome://marionette/content/driver.js:223:5
+send/<@chrome://marionette/content/proxy.js:138:7
+send@chrome://marionette/content/proxy.js:105:12
+ownPriorityGetterTrap.get/<@chrome://marionette/content/proxy.js:24:25
+GeckoDriver.prototype.findElement@chrome://marionette/content/driver.js:1878:31
+TaskImpl_run@resource://gre/modules/Task.jsm:319:40
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+Task_spawn@resource://gre/modules/Task.jsm:168:12
+TaskImpl_handleResultValue@resource://gre/modules/Task.jsm:388:16
+TaskImpl_run@resource://gre/modules/Task.jsm:327:13
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+Task_spawn@resource://gre/modules/Task.jsm:168:12
+Dispatcher.prototype.execute@chrome://marionette/content/dispatcher.js:120:13
+Dispatcher.prototype.onPacket@chrome://marionette/content/dispatcher.js:91:5
+DebuggerTransport.prototype._onJSONObjectReady/<@chrome://marionette/content/server.js -> resource://devtools/shared/transport/transport.js:479:9
+exports.makeInfallible/<@resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:101:14
+exports.makeInfallible/<@resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:101:14
+
+*************************
+Marionette threw an error: TypeError: this.browser.getBrowserForTab is not a function
+BrowserObj.prototype.hasRemotenessChange@chrome://marionette/content/driver.js:3182:25
+BrowserObj.prototype.executeWhenReady@chrome://marionette/content/driver.js:3213:7
+GeckoDriver.prototype.sendAsync@chrome://marionette/content/driver.js:223:5
+send/<@chrome://marionette/content/proxy.js:138:7
+send@chrome://marionette/content/proxy.js:105:12
+ownPriorityGetterTrap.get/<@chrome://marionette/content/proxy.js:24:25
+GeckoDriver.prototype.findElement@chrome://marionette/content/driver.js:1878:31
+TaskImpl_run@resource://gre/modules/Task.jsm:319:40
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+Task_spawn@resource://gre/modules/Task.jsm:168:12
+TaskImpl_handleResultValue@resource://gre/modules/Task.jsm:388:16
+TaskImpl_run@resource://gre/modules/Task.jsm:327:13
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+Task_spawn@resource://gre/modules/Task.jsm:168:12
+Dispatcher.prototype.execute@chrome://marionette/content/dispatcher.js:120:13
+Dispatcher.prototype.onPacket@chrome://marionette/content/dispatcher.js:91:5
+DebuggerTransport.prototype._onJSONObjectReady/<@chrome://marionette/content/server.js -> resource://devtools/shared/transport/transport.js:479:9
+exports.makeInfallible/<@resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:101:14
+exports.makeInfallible/<@resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:101:14
+
+1490054225806	geckodriver	INFO	Listening on 127.0.0.1:65296
+1490054226807	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.NZDFnJOugQ4s
+1490054226808	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490054226811	geckodriver::marionette	INFO	Connecting to Marionette on localhost:65302
+1490054227219	Marionette	INFO	Listening on port 65302
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: this.browser.getBrowserForTab is not a function
+Full stack: BrowserObj.prototype.hasRemotenessChange@chrome://marionette/content/driver.js:3182:25
+BrowserObj.prototype.executeWhenReady@chrome://marionette/content/driver.js:3213:7
+GeckoDriver.prototype.sendAsync@chrome://marionette/content/driver.js:223:5
+send/<@chrome://marionette/content/proxy.js:138:7
+send@chrome://marionette/content/proxy.js:105:12
+ownPriorityGetterTrap.get/<@chrome://marionette/content/proxy.js:24:25
+GeckoDriver.prototype.findElement@chrome://marionette/content/driver.js:1878:31
+TaskImpl_run@resource://gre/modules/Task.jsm:319:40
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+Task_spawn@resource://gre/modules/Task.jsm:168:12
+TaskImpl_handleResultValue@resource://gre/modules/Task.jsm:388:16
+TaskImpl_run@resource://gre/modules/Task.jsm:327:13
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+Task_spawn@resource://gre/modules/Task.jsm:168:12
+Dispatcher.prototype.execute@chrome://marionette/content/dispatcher.js:120:13
+Dispatcher.prototype.onPacket@chrome://marionette/content/dispatcher.js:91:5
+DebuggerTransport.prototype._onJSONObjectReady/<@chrome://marionette/content/server.js -> resource://devtools/shared/transport/transport.js:479:9
+exports.makeInfallible/<@resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:101:14
+exports.makeInfallible/<@resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:101:14
+
+*************************
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: this.browser.getBrowserForTab is not a function
+Full stack: BrowserObj.prototype.hasRemotenessChange@chrome://marionette/content/driver.js:3182:25
+BrowserObj.prototype.executeWhenReady@chrome://marionette/content/driver.js:3213:7
+GeckoDriver.prototype.sendAsync@chrome://marionette/content/driver.js:223:5
+send/<@chrome://marionette/content/proxy.js:138:7
+send@chrome://marionette/content/proxy.js:105:12
+ownPriorityGetterTrap.get/<@chrome://marionette/content/proxy.js:24:25
+GeckoDriver.prototype.findElement@chrome://marionette/content/driver.js:1878:31
+TaskImpl_run@resource://gre/modules/Task.jsm:319:40
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+Task_spawn@resource://gre/modules/Task.jsm:168:12
+TaskImpl_handleResultValue@resource://gre/modules/Task.jsm:388:16
+TaskImpl_run@resource://gre/modules/Task.jsm:327:13
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+Task_spawn@resource://gre/modules/Task.jsm:168:12
+Dispatcher.prototype.execute@chrome://marionette/content/dispatcher.js:120:13
+Dispatcher.prototype.onPacket@chrome://marionette/content/dispatcher.js:91:5
+DebuggerTransport.prototype._onJSONObjectReady/<@chrome://marionette/content/server.js -> resource://devtools/shared/transport/transport.js:479:9
+exports.makeInfallible/<@resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:101:14
+exports.makeInfallible/<@resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:101:14
+
+*************************
+*************************
+A coding exception was thrown in a Promise rejection callback.
+See https://developer.mozilla.org/Mozilla/JavaScript_code_modules/Promise.jsm/Promise
+
+Full message: TypeError: this.browser.getBrowserForTab is not a function
+Full stack: BrowserObj.prototype.hasRemotenessChange@chrome://marionette/content/driver.js:3182:25
+BrowserObj.prototype.executeWhenReady@chrome://marionette/content/driver.js:3213:7
+GeckoDriver.prototype.sendAsync@chrome://marionette/content/driver.js:223:5
+send/<@chrome://marionette/content/proxy.js:138:7
+send@chrome://marionette/content/proxy.js:105:12
+ownPriorityGetterTrap.get/<@chrome://marionette/content/proxy.js:24:25
+GeckoDriver.prototype.findElement@chrome://marionette/content/driver.js:1878:31
+TaskImpl_run@resource://gre/modules/Task.jsm:319:40
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+Task_spawn@resource://gre/modules/Task.jsm:168:12
+TaskImpl_handleResultValue@resource://gre/modules/Task.jsm:388:16
+TaskImpl_run@resource://gre/modules/Task.jsm:327:13
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+Task_spawn@resource://gre/modules/Task.jsm:168:12
+Dispatcher.prototype.execute@chrome://marionette/content/dispatcher.js:120:13
+Dispatcher.prototype.onPacket@chrome://marionette/content/dispatcher.js:91:5
+DebuggerTransport.prototype._onJSONObjectReady/<@chrome://marionette/content/server.js -> resource://devtools/shared/transport/transport.js:479:9
+exports.makeInfallible/<@resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:101:14
+exports.makeInfallible/<@resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:101:14
+
+*************************
+Marionette threw an error: TypeError: this.browser.getBrowserForTab is not a function
+BrowserObj.prototype.hasRemotenessChange@chrome://marionette/content/driver.js:3182:25
+BrowserObj.prototype.executeWhenReady@chrome://marionette/content/driver.js:3213:7
+GeckoDriver.prototype.sendAsync@chrome://marionette/content/driver.js:223:5
+send/<@chrome://marionette/content/proxy.js:138:7
+send@chrome://marionette/content/proxy.js:105:12
+ownPriorityGetterTrap.get/<@chrome://marionette/content/proxy.js:24:25
+GeckoDriver.prototype.findElement@chrome://marionette/content/driver.js:1878:31
+TaskImpl_run@resource://gre/modules/Task.jsm:319:40
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+Task_spawn@resource://gre/modules/Task.jsm:168:12
+TaskImpl_handleResultValue@resource://gre/modules/Task.jsm:388:16
+TaskImpl_run@resource://gre/modules/Task.jsm:327:13
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+Task_spawn@resource://gre/modules/Task.jsm:168:12
+Dispatcher.prototype.execute@chrome://marionette/content/dispatcher.js:120:13
+Dispatcher.prototype.onPacket@chrome://marionette/content/dispatcher.js:91:5
+DebuggerTransport.prototype._onJSONObjectReady/<@chrome://marionette/content/server.js -> resource://devtools/shared/transport/transport.js:479:9
+exports.makeInfallible/<@resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:101:14
+exports.makeInfallible/<@resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:101:14
+
+1490054369334	geckodriver	INFO	Listening on 127.0.0.1:65336
+1490054370337	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.RpENWTOU4FyI
+1490054370338	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490054370342	geckodriver::marionette	INFO	Connecting to Marionette on localhost:65342
+1490054370740	Marionette	INFO	Listening on port 65342
+1490054397852	geckodriver	INFO	Listening on 127.0.0.1:65422
+1490054398855	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.VTQ6B3PFJHwv
+1490054398856	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490054398860	geckodriver::marionette	INFO	Connecting to Marionette on localhost:65430
+1490054399263	Marionette	INFO	Listening on port 65430
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 138: TypeError: document.getElementById(...) is null
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/account-mgr/customerSearch.do?internalID=563g584xbv3ims3jdwnkanzef99vavit, line 197: ReferenceError: headerContainer is not defined
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript warning: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/mootools-1.2-core-nc.js, line 2575: String.prototype.contains() is deprecated and will be removed in a future release; use String.prototype.includes() instead
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 698: TypeError: obj is null
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: chrome://marionette/content/proxy.js, line 228: TypeError: l is undefined
+1490054617914	geckodriver	INFO	Listening on 127.0.0.1:49276
+1490054618916	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.0YXpK99SdbhQ
+1490054618917	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490054618921	geckodriver::marionette	INFO	Connecting to Marionette on localhost:49282
+1490054619331	Marionette	INFO	Listening on port 49282
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 138: TypeError: document.getElementById(...) is null
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/account-mgr/customerSearch.do?internalID=563g584xbv3ims3jdwnkanzef99vavit, line 197: ReferenceError: headerContainer is not defined
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript warning: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/mootools-1.2-core-nc.js, line 2575: String.prototype.contains() is deprecated and will be removed in a future release; use String.prototype.includes() instead
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 698: TypeError: obj is null
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+1490055022927	geckodriver	INFO	Listening on 127.0.0.1:49543
+1490055023930	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.ehZWCyIkna4P
+1490055023931	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490055023935	geckodriver::marionette	INFO	Connecting to Marionette on localhost:49549
+1490055024337	Marionette	INFO	Listening on port 49549
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 138: TypeError: document.getElementById(...) is null
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/account-mgr/customerSearch.do?internalID=563g584xbv3ims3jdwnkanzef99vavit, line 197: ReferenceError: headerContainer is not defined
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript warning: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/mootools-1.2-core-nc.js, line 2575: String.prototype.contains() is deprecated and will be removed in a future release; use String.prototype.includes() instead
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 698: TypeError: obj is null
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: chrome://marionette/content/proxy.js, line 228: TypeError: l is undefined
+1490055127795	geckodriver	INFO	Listening on 127.0.0.1:49716
+1490055128798	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.bHka3mPaflO1
+1490055128799	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490055128802	geckodriver::marionette	INFO	Connecting to Marionette on localhost:49722
+1490055129206	Marionette	INFO	Listening on port 49722
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 138: TypeError: document.getElementById(...) is null
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/account-mgr/customerSearch.do?internalID=563g584xbv3ims3jdwnkanzef99vavit, line 197: ReferenceError: headerContainer is not defined
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript warning: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/mootools-1.2-core-nc.js, line 2575: String.prototype.contains() is deprecated and will be removed in a future release; use String.prototype.includes() instead
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 698: TypeError: obj is null
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: chrome://marionette/content/proxy.js, line 228: TypeError: l is undefined
+1490055200231	geckodriver	INFO	Listening on 127.0.0.1:49887
+1490055201235	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.7JUGSXdc42sH
+1490055201236	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490055201240	geckodriver::marionette	INFO	Connecting to Marionette on localhost:49893
+1490055201645	Marionette	INFO	Listening on port 49893
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 138: TypeError: document.getElementById(...) is null
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/account-mgr/customerSearch.do?internalID=563g584xbv3ims3jdwnkanzef99vavit, line 197: ReferenceError: headerContainer is not defined
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript warning: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/mootools-1.2-core-nc.js, line 2575: String.prototype.contains() is deprecated and will be removed in a future release; use String.prototype.includes() instead
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 698: TypeError: obj is null
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: chrome://marionette/content/proxy.js, line 228: TypeError: l is undefined
+1490057584343	geckodriver	INFO	Listening on 127.0.0.1:59558
+1490057585348	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.k3WSUlMMxoHI
+1490057585349	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490057585353	geckodriver::marionette	INFO	Connecting to Marionette on localhost:59564
+1490057585750	Marionette	INFO	Listening on port 59564
+1490058990153	geckodriver	INFO	Listening on 127.0.0.1:59684
+1490058991156	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.nCzb9Qe4vAtp
+1490058991157	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490058991161	geckodriver::marionette	INFO	Connecting to Marionette on localhost:59690
+1490058991573	Marionette	INFO	Listening on port 59690
+1490059030418	geckodriver	INFO	Listening on 127.0.0.1:59807
+1490059031422	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.QbN8CbT8gfo9
+1490059031423	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490059031427	geckodriver::marionette	INFO	Connecting to Marionette on localhost:59813
+1490059031826	Marionette	INFO	Listening on port 59813
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 138: TypeError: document.getElementById(...) is null
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/account-mgr/customerSearch.do?internalID=563g584xbv3ims3jdwnkanzef99vavit, line 197: ReferenceError: headerContainer is not defined
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript warning: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/mootools-1.2-core-nc.js, line 2575: String.prototype.contains() is deprecated and will be removed in a future release; use String.prototype.includes() instead
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 698: TypeError: obj is null
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: chrome://marionette/content/proxy.js, line 228: TypeError: l is undefined
+1490059360688	geckodriver	INFO	Listening on 127.0.0.1:59990
+1490059361692	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.l4b1TX07knjK
+1490059361694	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490059361697	geckodriver::marionette	INFO	Connecting to Marionette on localhost:59996
+1490059362104	Marionette	INFO	Listening on port 59996
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 138: TypeError: document.getElementById(...) is null
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/account-mgr/customerSearch.do?internalID=563g584xbv3ims3jdwnkanzef99vavit, line 197: ReferenceError: headerContainer is not defined
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript warning: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/mootools-1.2-core-nc.js, line 2575: String.prototype.contains() is deprecated and will be removed in a future release; use String.prototype.includes() instead
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 698: TypeError: obj is null
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: chrome://marionette/content/proxy.js, line 228: TypeError: l is undefined
+1490059479056	geckodriver	INFO	Listening on 127.0.0.1:60164
+1490059480059	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.Fix3JVW9OJoX
+1490059480060	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490059480062	geckodriver::marionette	INFO	Connecting to Marionette on localhost:60171
+1490059480467	Marionette	INFO	Listening on port 60171
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 138: TypeError: document.getElementById(...) is null
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/account-mgr/customerSearch.do?internalID=563g584xbv3ims3jdwnkanzef99vavit, line 197: ReferenceError: headerContainer is not defined
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript warning: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/mootools-1.2-core-nc.js, line 2575: String.prototype.contains() is deprecated and will be removed in a future release; use String.prototype.includes() instead
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 698: TypeError: obj is null
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: chrome://marionette/content/proxy.js, line 228: TypeError: l is undefined
+1490059538727	geckodriver	INFO	Listening on 127.0.0.1:60349
+1490059539733	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.75peRo6wdmre
+1490059539734	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490059539737	geckodriver::marionette	INFO	Connecting to Marionette on localhost:60355
+1490059540141	Marionette	INFO	Listening on port 60355
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 138: TypeError: document.getElementById(...) is null
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/account-mgr/customerSearch.do?internalID=563g584xbv3ims3jdwnkanzef99vavit, line 197: ReferenceError: headerContainer is not defined
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript warning: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/mootools-1.2-core-nc.js, line 2575: String.prototype.contains() is deprecated and will be removed in a future release; use String.prototype.includes() instead
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 698: TypeError: obj is null
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: chrome://marionette/content/proxy.js, line 228: TypeError: l is undefined
+1490059960208	geckodriver	INFO	Listening on 127.0.0.1:60554
+1490059961210	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.qdWoIArflASZ
+1490059961211	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490059961214	geckodriver::marionette	INFO	Connecting to Marionette on localhost:60560
+1490059961629	Marionette	INFO	Listening on port 60560
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 138: TypeError: document.getElementById(...) is null
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/account-mgr/customerSearch.do?internalID=563g584xbv3ims3jdwnkanzef99vavit, line 197: ReferenceError: headerContainer is not defined
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript warning: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/mootools-1.2-core-nc.js, line 2575: String.prototype.contains() is deprecated and will be removed in a future release; use String.prototype.includes() instead
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 698: TypeError: obj is null
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: chrome://marionette/content/proxy.js, line 228: TypeError: l is undefined
+1490060106144	geckodriver	INFO	Listening on 127.0.0.1:60837
+1490060107149	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.bcKjkytXGM3b
+1490060107150	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490060107154	geckodriver::marionette	INFO	Connecting to Marionette on localhost:60843
+1490060107550	Marionette	INFO	Listening on port 60843
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 138: TypeError: document.getElementById(...) is null
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/account-mgr/customerSearch.do?internalID=563g584xbv3ims3jdwnkanzef99vavit, line 197: ReferenceError: headerContainer is not defined
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript warning: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/mootools-1.2-core-nc.js, line 2575: String.prototype.contains() is deprecated and will be removed in a future release; use String.prototype.includes() instead
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 698: TypeError: obj is null
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: chrome://marionette/content/proxy.js, line 228: TypeError: l is undefined
+1490061031887	geckodriver	INFO	Listening on 127.0.0.1:61076
+1490061032891	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.OZtclSdFGBNG
+1490061032892	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490061032895	geckodriver::marionette	INFO	Connecting to Marionette on localhost:61083
+1490061033309	Marionette	INFO	Listening on port 61083
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 138: TypeError: document.getElementById(...) is null
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/account-mgr/customerSearch.do?internalID=563g584xbv3ims3jdwnkanzef99vavit, line 197: ReferenceError: headerContainer is not defined
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript warning: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/mootools-1.2-core-nc.js, line 2575: String.prototype.contains() is deprecated and will be removed in a future release; use String.prototype.includes() instead
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 698: TypeError: obj is null
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: chrome://marionette/content/proxy.js, line 228: TypeError: l is undefined
+1490073384596	geckodriver	INFO	Listening on 127.0.0.1:61844
+1490073385590	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.AvQEUfmT5bgk
+1490073385591	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490073385593	geckodriver::marionette	INFO	Connecting to Marionette on localhost:61850
+1490073386000	Marionette	INFO	Listening on port 61850
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 138: TypeError: document.getElementById(...) is null
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/account-mgr/customerSearch.do?internalID=563g584xbv3ims3jdwnkanzef99vavit, line 197: ReferenceError: headerContainer is not defined
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript warning: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/mootools-1.2-core-nc.js, line 2575: String.prototype.contains() is deprecated and will be removed in a future release; use String.prototype.includes() instead
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 698: TypeError: obj is null
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: chrome://marionette/content/proxy.js, line 228: TypeError: l is undefined
+1490075757311	geckodriver	INFO	Listening on 127.0.0.1:62209
+1490075758316	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.DLj7w8RNQpEF
+1490075758318	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490075758321	geckodriver::marionette	INFO	Connecting to Marionette on localhost:62215
+1490075758712	Marionette	INFO	Listening on port 62215
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 138: TypeError: document.getElementById(...) is null
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/account-mgr/customerSearch.do?internalID=563g584xbv3ims3jdwnkanzef99vavit, line 197: ReferenceError: headerContainer is not defined
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript warning: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/mootools-1.2-core-nc.js, line 2575: String.prototype.contains() is deprecated and will be removed in a future release; use String.prototype.includes() instead
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 698: TypeError: obj is null
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: chrome://marionette/content/proxy.js, line 228: TypeError: l is undefined
+1490075838649	geckodriver	INFO	Listening on 127.0.0.1:62375
+1490075839654	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.0Vq8PsZ1mjlA
+1490075839655	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490075839659	geckodriver::marionette	INFO	Connecting to Marionette on localhost:62381
+1490075840050	Marionette	INFO	Listening on port 62381
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 138: TypeError: document.getElementById(...) is null
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/account-mgr/customerSearch.do?internalID=563g584xbv3ims3jdwnkanzef99vavit, line 197: ReferenceError: headerContainer is not defined
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript warning: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/mootools-1.2-core-nc.js, line 2575: String.prototype.contains() is deprecated and will be removed in a future release; use String.prototype.includes() instead
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 698: TypeError: obj is null
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: chrome://marionette/content/proxy.js, line 228: TypeError: l is undefined
+1490076027422	geckodriver	INFO	Listening on 127.0.0.1:62545
+1490076028430	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.jFPY7kB8B8R8
+1490076028431	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490076028434	geckodriver::marionette	INFO	Connecting to Marionette on localhost:62551
+1490076028822	Marionette	INFO	Listening on port 62551
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 138: TypeError: document.getElementById(...) is null
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/account-mgr/customerSearch.do?internalID=563g584xbv3ims3jdwnkanzef99vavit, line 197: ReferenceError: headerContainer is not defined
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript warning: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/mootools-1.2-core-nc.js, line 2575: String.prototype.contains() is deprecated and will be removed in a future release; use String.prototype.includes() instead
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 698: TypeError: obj is null
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: chrome://marionette/content/proxy.js, line 228: TypeError: l is undefined
+1490076239334	geckodriver	INFO	Listening on 127.0.0.1:62749
+1490076240339	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.HEYSGchyqnQn
+1490076240341	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490076240344	geckodriver::marionette	INFO	Connecting to Marionette on localhost:62756
+1490076240729	Marionette	INFO	Listening on port 62756
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 138: TypeError: document.getElementById(...) is null
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/account-mgr/customerSearch.do?internalID=563g584xbv3ims3jdwnkanzef99vavit, line 197: ReferenceError: headerContainer is not defined
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript warning: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/mootools-1.2-core-nc.js, line 2575: String.prototype.contains() is deprecated and will be removed in a future release; use String.prototype.includes() instead
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 698: TypeError: obj is null
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: chrome://marionette/content/proxy.js, line 228: TypeError: l is undefined
+1490076359460	geckodriver	INFO	Listening on 127.0.0.1:62906
+1490076360461	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.OcG2JhyaFr3B
+1490076360463	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490076360466	geckodriver::marionette	INFO	Connecting to Marionette on localhost:62912
+1490076360849	Marionette	INFO	Listening on port 62912
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 138: TypeError: document.getElementById(...) is null
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/account-mgr/customerSearch.do?internalID=563g584xbv3ims3jdwnkanzef99vavit, line 197: ReferenceError: headerContainer is not defined
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript warning: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/mootools-1.2-core-nc.js, line 2575: String.prototype.contains() is deprecated and will be removed in a future release; use String.prototype.includes() instead
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 698: TypeError: obj is null
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: chrome://marionette/content/proxy.js, line 228: TypeError: l is undefined
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+1490076528999	geckodriver	INFO	Listening on 127.0.0.1:63077
+1490076530003	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.cfq5OMWjLOy1
+1490076530004	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490076530008	geckodriver::marionette	INFO	Connecting to Marionette on localhost:63083
+1490076530407	Marionette	INFO	Listening on port 63083
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 138: TypeError: document.getElementById(...) is null
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/account-mgr/customerSearch.do?internalID=563g584xbv3ims3jdwnkanzef99vavit, line 197: ReferenceError: headerContainer is not defined
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript warning: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/mootools-1.2-core-nc.js, line 2575: String.prototype.contains() is deprecated and will be removed in a future release; use String.prototype.includes() instead
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 698: TypeError: obj is null
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: chrome://marionette/content/proxy.js, line 228: TypeError: l is undefined
+JavaScript warning: https://cdn.adsafeprotected.com/sca.17.2.2.js, line 1: SyntaxError: for-in loop head declarations may not have initializers
+JavaScript warning: https://cdn.adsafeprotected.com/sca.17.2.2.js line 19 > eval, line 1: String.prototype.contains() is deprecated and will be removed in a future release; use String.prototype.includes() instead
+JavaScript warning: https://cdn.adsafeprotected.com/sca.17.2.2.js line 19 > eval, line 4: mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create
+1490076887111	geckodriver	INFO	Listening on 127.0.0.1:63341
+1490076888115	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.P7DpYdOsJXjd
+1490076888117	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490076888120	geckodriver::marionette	INFO	Connecting to Marionette on localhost:63348
+1490076888517	Marionette	INFO	Listening on port 63348
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 138: TypeError: document.getElementById(...) is null
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/account-mgr/customerSearch.do?internalID=563g584xbv3ims3jdwnkanzef99vavit, line 197: ReferenceError: headerContainer is not defined
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript warning: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/mootools-1.2-core-nc.js, line 2575: String.prototype.contains() is deprecated and will be removed in a future release; use String.prototype.includes() instead
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 698: TypeError: obj is null
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: chrome://marionette/content/proxy.js, line 228: TypeError: l is undefined
+1490077142456	geckodriver	INFO	Listening on 127.0.0.1:63607
+1490077143459	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.ZAZezLPjyWMv
+1490077143460	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490077143464	geckodriver::marionette	INFO	Connecting to Marionette on localhost:63613
+1490077143853	Marionette	INFO	Listening on port 63613
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 138: TypeError: document.getElementById(...) is null
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/account-mgr/customerSearch.do?internalID=563g584xbv3ims3jdwnkanzef99vavit, line 197: ReferenceError: headerContainer is not defined
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript warning: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/mootools-1.2-core-nc.js, line 2575: String.prototype.contains() is deprecated and will be removed in a future release; use String.prototype.includes() instead
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 698: TypeError: obj is null
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: chrome://marionette/content/proxy.js, line 228: TypeError: l is undefined
+1490077257441	geckodriver	INFO	Listening on 127.0.0.1:63784
+1490077258440	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.MZ7gjF71F5Dc
+1490077258441	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490077258444	geckodriver::marionette	INFO	Connecting to Marionette on localhost:63790
+1490077258852	Marionette	INFO	Listening on port 63790
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 138: TypeError: document.getElementById(...) is null
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/account-mgr/customerSearch.do?internalID=563g584xbv3ims3jdwnkanzef99vavit, line 197: ReferenceError: headerContainer is not defined
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript warning: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/mootools-1.2-core-nc.js, line 2575: String.prototype.contains() is deprecated and will be removed in a future release; use String.prototype.includes() instead
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 698: TypeError: obj is null
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: chrome://marionette/content/proxy.js, line 228: TypeError: l is undefined
+1490077382238	geckodriver	INFO	Listening on 127.0.0.1:63962
+1490077383242	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.m7ZfPQc7KM3n
+1490077383243	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490077383247	geckodriver::marionette	INFO	Connecting to Marionette on localhost:63968
+1490077383646	Marionette	INFO	Listening on port 63968
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 138: TypeError: document.getElementById(...) is null
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/account-mgr/customerSearch.do?internalID=563g584xbv3ims3jdwnkanzef99vavit, line 197: ReferenceError: headerContainer is not defined
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript warning: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/mootools-1.2-core-nc.js, line 2575: String.prototype.contains() is deprecated and will be removed in a future release; use String.prototype.includes() instead
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 698: TypeError: obj is null
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: chrome://marionette/content/proxy.js, line 228: TypeError: l is undefined
+1490077459179	geckodriver	INFO	Listening on 127.0.0.1:64152
+1490077460184	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.zXVZGG3xflYZ
+1490077460185	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490077460189	geckodriver::marionette	INFO	Connecting to Marionette on localhost:64158
+1490077460603	Marionette	INFO	Listening on port 64158
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 138: TypeError: document.getElementById(...) is null
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/account-mgr/customerSearch.do?internalID=563g584xbv3ims3jdwnkanzef99vavit, line 197: ReferenceError: headerContainer is not defined
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript warning: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/mootools-1.2-core-nc.js, line 2575: String.prototype.contains() is deprecated and will be removed in a future release; use String.prototype.includes() instead
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 698: TypeError: obj is null
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: chrome://marionette/content/proxy.js, line 228: TypeError: l is undefined
+1490077650824	geckodriver	INFO	Listening on 127.0.0.1:64350
+1490077651826	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.LBZCRPSOpwmJ
+1490077651827	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490077651831	geckodriver::marionette	INFO	Connecting to Marionette on localhost:64356
+1490077652228	Marionette	INFO	Listening on port 64356
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 138: TypeError: document.getElementById(...) is null
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/account-mgr/customerSearch.do?internalID=563g584xbv3ims3jdwnkanzef99vavit, line 197: ReferenceError: headerContainer is not defined
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript warning: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/mootools-1.2-core-nc.js, line 2575: String.prototype.contains() is deprecated and will be removed in a future release; use String.prototype.includes() instead
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 698: TypeError: obj is null
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: chrome://marionette/content/proxy.js, line 228: TypeError: l is undefined
+1490080014727	geckodriver	INFO	Listening on 127.0.0.1:64847
+1490080015733	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.0Fv4oLgoluyN
+1490080015734	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490080015737	geckodriver::marionette	INFO	Connecting to Marionette on localhost:64853
+1490080016128	Marionette	INFO	Listening on port 64853
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 138: TypeError: document.getElementById(...) is null
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/account-mgr/customerSearch.do?internalID=563g584xbv3ims3jdwnkanzef99vavit, line 197: ReferenceError: headerContainer is not defined
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript warning: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/mootools-1.2-core-nc.js, line 2575: String.prototype.contains() is deprecated and will be removed in a future release; use String.prototype.includes() instead
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 698: TypeError: obj is null
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: chrome://marionette/content/proxy.js, line 228: TypeError: l is undefined
+1490080026042	geckodriver	INFO	Listening on 127.0.0.1:65007
+1490080027046	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.OvGsH5xhSsMW
+1490080027047	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490080027051	geckodriver::marionette	INFO	Connecting to Marionette on localhost:65013
+1490080027456	Marionette	INFO	Listening on port 65013
+1490080821976	geckodriver	INFO	Listening on 127.0.0.1:65076
+1490080822977	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.QesOmSD6siHS
+1490080822978	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490080822981	geckodriver::marionette	INFO	Connecting to Marionette on localhost:65082
+1490080823371	Marionette	INFO	Listening on port 65082
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 138: TypeError: document.getElementById(...) is null
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/account-mgr/customerSearch.do?internalID=563g584xbv3ims3jdwnkanzef99vavit, line 197: ReferenceError: headerContainer is not defined
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript warning: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/mootools-1.2-core-nc.js, line 2575: String.prototype.contains() is deprecated and will be removed in a future release; use String.prototype.includes() instead
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 698: TypeError: obj is null
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: chrome://marionette/content/proxy.js, line 228: TypeError: l is undefined
+1490080833360	geckodriver	INFO	Listening on 127.0.0.1:65233
+1490080834364	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.RJIkh3B9qhoW
+1490080834365	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490080834368	geckodriver::marionette	INFO	Connecting to Marionette on localhost:65239
+1490080834791	Marionette	INFO	Listening on port 65239
+1490080907033	geckodriver	INFO	Listening on 127.0.0.1:65286
+1490080908036	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.1Bk2XT49nevZ
+1490080908037	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490080908041	geckodriver::marionette	INFO	Connecting to Marionette on localhost:65292
+1490080908441	Marionette	INFO	Listening on port 65292
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 138: TypeError: document.getElementById(...) is null
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/account-mgr/customerSearch.do?internalID=563g584xbv3ims3jdwnkanzef99vavit, line 197: ReferenceError: headerContainer is not defined
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript warning: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/mootools-1.2-core-nc.js, line 2575: String.prototype.contains() is deprecated and will be removed in a future release; use String.prototype.includes() instead
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 698: TypeError: obj is null
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: chrome://marionette/content/proxy.js, line 228: TypeError: l is undefined
+1490080917942	geckodriver	INFO	Listening on 127.0.0.1:65442
+1490080918945	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.y1qS92kap5Ao
+1490080918946	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490080918949	geckodriver::marionette	INFO	Connecting to Marionette on localhost:65448
+1490080919355	Marionette	INFO	Listening on port 65448
+1490110941417	geckodriver	INFO	Listening on 127.0.0.1:49386
+1490110942414	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.6dkxw3xVDoSD
+1490110942415	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490110942417	geckodriver::marionette	INFO	Connecting to Marionette on localhost:49392
+1490110942910	Marionette	INFO	Listening on port 49392
+1490110944069	geckodriver	INFO	Listening on 127.0.0.1:49406
+1490110945070	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.5qr7A3ludvX9
+1490110945070	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490110945074	geckodriver::marionette	INFO	Connecting to Marionette on localhost:49415
+1490110945470	Marionette	INFO	Listening on port 49415
+1490110965516	geckodriver	INFO	Listening on 127.0.0.1:49453
+1490110966520	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.0nvFkBIHGNIX
+1490110966521	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490110966525	geckodriver::marionette	INFO	Connecting to Marionette on localhost:49459
+1490110966918	Marionette	INFO	Listening on port 49459
+1490110967912	geckodriver	INFO	Listening on 127.0.0.1:49475
+1490110968915	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.HW5Js4dpaHxq
+1490110968916	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490110968919	geckodriver::marionette	INFO	Connecting to Marionette on localhost:49483
+1490110969308	Marionette	INFO	Listening on port 49483
+1490111021173	geckodriver	INFO	Listening on 127.0.0.1:49580
+1490111022176	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.7QK6yIVnPSgZ
+1490111022177	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490111022180	geckodriver::marionette	INFO	Connecting to Marionette on localhost:49587
+1490111022566	Marionette	INFO	Listening on port 49587
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 138: TypeError: document.getElementById(...) is null
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/account-mgr/customerSearch.do?internalID=563g584xbv3ims3jdwnkanzef99vavit, line 197: ReferenceError: headerContainer is not defined
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript warning: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/mootools-1.2-core-nc.js, line 2575: String.prototype.contains() is deprecated and will be removed in a future release; use String.prototype.includes() instead
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 698: TypeError: obj is null
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: chrome://marionette/content/proxy.js, line 228: TypeError: l is undefined
+1490111031849	geckodriver	INFO	Listening on 127.0.0.1:49739
+1490111032854	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.LP4pQ7QysWNb
+1490111032855	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490111032857	geckodriver::marionette	INFO	Connecting to Marionette on localhost:49745
+1490111033241	Marionette	INFO	Listening on port 49745
+1490111081864	geckodriver	INFO	Listening on 127.0.0.1:49784
+1490111082866	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.SS2BsRF0rsSq
+1490111082868	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490111082871	geckodriver::marionette	INFO	Connecting to Marionette on localhost:49790
+1490111083270	Marionette	INFO	Listening on port 49790
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 138: TypeError: document.getElementById(...) is null
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/account-mgr/customerSearch.do?internalID=563g584xbv3ims3jdwnkanzef99vavit, line 197: ReferenceError: headerContainer is not defined
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript warning: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/mootools-1.2-core-nc.js, line 2575: String.prototype.contains() is deprecated and will be removed in a future release; use String.prototype.includes() instead
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 698: TypeError: obj is null
+1490111091738	geckodriver	INFO	Listening on 127.0.0.1:49927
+1490111092743	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.OR8ljJiPwhP3
+1490111092744	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490111092748	geckodriver::marionette	INFO	Connecting to Marionette on localhost:49933
+1490111093146	Marionette	INFO	Listening on port 49933
+1490111207383	geckodriver	INFO	Listening on 127.0.0.1:50017
+1490111208389	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.lhzxLIGE4UV6
+1490111208390	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490111208393	geckodriver::marionette	INFO	Connecting to Marionette on localhost:50023
+1490111208786	Marionette	INFO	Listening on port 50023
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 138: TypeError: document.getElementById(...) is null
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/account-mgr/customerSearch.do?internalID=563g584xbv3ims3jdwnkanzef99vavit, line 197: ReferenceError: headerContainer is not defined
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript warning: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/mootools-1.2-core-nc.js, line 2575: String.prototype.contains() is deprecated and will be removed in a future release; use String.prototype.includes() instead
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 698: TypeError: obj is null
+1490111217283	geckodriver	INFO	Listening on 127.0.0.1:50155
+1490111218285	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.t76nWGm5sJjD
+1490111218286	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490111218289	geckodriver::marionette	INFO	Connecting to Marionette on localhost:50161
+1490111218690	Marionette	INFO	Listening on port 50161
+1490122499286	geckodriver	INFO	Listening on 127.0.0.1:51075
+1490122500292	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.NGkiNGSiv8GH
+1490122500293	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490122500296	geckodriver::marionette	INFO	Connecting to Marionette on localhost:51081
+1490122500699	Marionette	INFO	Listening on port 51081
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 138: TypeError: document.getElementById(...) is null
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/account-mgr/customerSearch.do?internalID=563g584xbv3ims3jdwnkanzef99vavit, line 197: ReferenceError: headerContainer is not defined
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript warning: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/mootools-1.2-core-nc.js, line 2575: String.prototype.contains() is deprecated and will be removed in a future release; use String.prototype.includes() instead
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 698: TypeError: obj is null
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: chrome://marionette/content/proxy.js, line 228: TypeError: l is undefined
+1490122510410	geckodriver	INFO	Listening on 127.0.0.1:51232
+1490122511411	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.gO1yLehK3Dt3
+1490122511412	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490122511416	geckodriver::marionette	INFO	Connecting to Marionette on localhost:51238
+1490122511802	Marionette	INFO	Listening on port 51238

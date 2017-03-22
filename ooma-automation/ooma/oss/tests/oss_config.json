@@ -1,0 +1,24 @@
+{
+ "cert":
+        {
+          "oss_url" : "http://oss1-cert1.cn.ooma.com:8085/ossOps/credentialsFailure.jsp",
+          "activation_url" : "https://my-qa-new.ooma.com/activate#step_1",
+          "fulfillment_url" : "http://oss1-cert1.cn.ooma.com:8084/ossSvc/fulfillmentMgr.swf"
+        },
+ "sandbox":
+        {
+          "oss_url":"http://oss1-beta.pbeta.ooma.com:8085/ossOps/credentialsFailure.jsp",
+          "activation_url": "https://my-sandbox.ooma.com/activate#step_1",
+          "fulfillment_url" : "http://oss1-beta.pbeta.ooma.com:8084/ossSvc/fulfillmentMgr.swf"
+        },
+ "access_credentials":
+        {
+          "username":"userqa",
+          "password":"Password1"
+        },
+ "device_credentials":
+        {
+          "spn":"4693019886",
+          "myxid":"223A7A"
+        }
+}
