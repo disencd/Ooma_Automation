@@ -1,0 +1,23 @@
+{
+ "cert":
+        {
+          "prv-server" : "prv1-cert1.cn.ooma.com",
+	      "hms-server" : "hms1-cert1.cn.ooma.com"
+        },
+ "sandbox":
+        {
+          "prv-server" : "prv1-beta.pbeta.ooma.com",
+	      "hms-server" : "hms1-beta.pbeta.ooma.com"
+        },
+ "login_cred":
+        {
+          "username":"root",
+          "password":"!hello123"
+        },
+ "client_conf":
+        {
+          "spn":"4693019886",
+          "myxid":"2251E0",
+          "activ_code":"2251E0A"
+        }
+}
