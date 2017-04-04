@@ -1,0 +1,27 @@
+Things to do once:
+
+- type "make install"
+- edit /boot/uEnv.txt, comment out any "cape_enable" lines
+- type "systemctl disable bluetooth"
+- type "systemctl disable alsa-utils"
+- edit /etc/pulse/client.conf
+	- change "; autospawn = yes" to "autospawn = no"
+	- change "; daemon-binary = /usr/bin/pulseaudio" to "daemon-binary = /bin/true"
+- type "mv /usr/bin/pulseaudio /usr/bin/pulseaudio.off"
+
+
+
+reboot
+
+
+Things to do every time you boot:
+
+- execute "sh run" - if you get errors send Paul the output from the 'dmesg' command
+
+Testing cape hardware:
+
+- build a test-fixture for the test-fixture on a 6-pin pin socket with leds and resistors from the common pin 1 (VCC) to the 3 pins numbers 3, 4 and 5 (corresponding to output's 0, 1 and 2 resp)
+
+- run "gpioserver -t" that will sequence thru all 15 output pins 
+
+- put the fixture on all 5 output pin headers (pin one is the one closest to the end of the cape)

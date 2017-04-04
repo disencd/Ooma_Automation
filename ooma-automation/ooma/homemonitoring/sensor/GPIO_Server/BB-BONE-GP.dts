@@ -1,0 +1,71 @@
+/dts-v1/;
+/plugin/;
+
+/ {
+        compatible = "ti,beaglebone", "ti,beaglebone-black", "ti,beaglebone-green";
+
+        /* identification */
+        part-number = "BB-BONE-GP";
+        version = "00A0";
+
+        /* state the resources this cape uses */
+        exclusive-use =
+                /* the pin header uses */
+
+
+                "P9.25",        /* gpio3_21                     Y2 */
+                "P9.27",        /* pru0: pr1_pru0_pru_r30_5     dc1 */
+                "P9.28",        /* pru0: pr1_pru0_pru_r30_3     dc2 */
+                "P9.29",        /* pru0: pr1_pru0_pru_r30_1     dc3 */
+                "P9.30",        /* gpio3_16                     dd2 */
+                "P9.31",        /* gpio3_14                     dd3 */
+
+                "P8.12",        /* gpio 2_15                    rst7   */
+
+
+                "P8.39",        /* gpio2_12                     dd4 */
+                "P8.40",        /* pru1: pr1_pru1_pru_r30_7     dc4 */
+                "P8.41",        /* gpio2_10                     dd5 */
+                "P8.42",        /* pru1: pr1_pru1_pru_r30_5     dc5 */
+                "P8.43",        /* gpio2_8                      dd6 */
+                "P8.44",        /* pru1: pr1_pru1_pru_r30_3     dc6 */
+                "P8.45",        /* gpio2_6                      dd7 */
+                "P8.46";        /* pru1: pr1_pru1_pru_r30_1     dc7 */
+
+        fragment@0 {
+                target = <&am33xx_pinmux>;
+                __overlay__ {
+                        mygpio: pinmux_mygpio {
+                            pinctrl-single,pins = <
+                                        /* 6    slewctrl        slow    0x40    
+                                           5    rxactive        in      0x20
+                                           4    pullup/dn       up      0x10
+                                           3    pull enable     0n      0x08
+                                           2-0  mode                    0x07 */
+
+                                0x1ac 0x07 /* out   "P9.25",    gpio3_21       */
+                                0x1a4 0x07 /* out   "P9.27",    gpio3_19       */
+                                0x19c 0x07 /* out   "P9.28",    gpio3_17       */
+                                0x194 0x07 /* out   "P9.29",    gpio3_15       */
+                                0x198 0x07 /* out   "P9.30",    gpio3_16       */
+                                0x190 0x07 /* out   "P9.31",    gpio3_14       */
+
+
+                                0x030 0x07 /* out   "P8.12",    gpio1_12       */
+
+                                0x0b8 0x07 /* out   "P8.39",    gpio2_12       */
+                                0x0bc 0x07 /* out   "P8.40",    gpio2_13       */
+                                0x0b0 0x07 /* out   "P8.41",    gpio2_10       */
+                                0x0b4 0x07 /* out   "P8.42",    gpio2_11       */
+                                0x0a8 0x07 /* out   "P8.43",    gpio2_8        */
+                                0x0ac 0x07 /* out   "P8.44",    gpio2_9        */
+                                0x0a0 0x07 /* out   "P8.45",    gpio2_6        */
+                                0x0a4 0x07 /* out   "P8.46",    gpio2_7        */
+                                >;
+                        };
+                };
+        };
+
+};
+
+

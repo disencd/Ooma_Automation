@@ -1,0 +1,29 @@
+{
+  "Water_Sensor":
+  {
+    "Tamper_ON" : "W_Tamper_ON",
+    "Tamper_OFF" : "W_Tamper_OFF",
+    "Water_ON" : "W_Water_ON",
+    "Water_OFF" : "W_Water_OFF",
+    "Pair_ON" : "W_Pair_ON",
+    "Pair_OFF" : "W_Pair_OFF"
+  },
+  "Door_sensor":
+  {
+    "Tamper_ON" : "D_Tamper_ON",
+    "Tamper_OFF" : "D_Tamper_OFF",
+    "Door_ON" : "D_Door_ON",
+    "Door_OFF" : "D_Door_OFF",
+    "Pair_ON" : "D_Pair_ON",
+    "Pair_OFF" : "D_Pair_OFF"
+  },
+  "Motion_sensor":
+  {
+    "Tamper_ON" : "M_Tamper_ON",
+    "Tamper_OFF" : "M_Tamper_OFF",
+    "Motion_ON" : "M_Motion_ON",
+    "Motion_OFF" : "M_Motion_OFF",
+    "Pair_ON" : "M_Pair_ON",
+    "Pair_OFF" : "M_Pair_OFF"
+  },
+}
