@@ -17,8 +17,7 @@
  "client_conf":
         {
           "spn":"4693019886",
-          "myxid":"223A7A",
-          "Myxid":"myx_001861223A7A"
-        },
-  "debug_url" : "http://dtool.cn.ooma.com:8080/fsTeloWebControl/v1/"
+          "myxid":"2251E0",
+          "activ_code":"2251E0A"
+        }
 }

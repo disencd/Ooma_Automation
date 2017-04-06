@@ -742,3 +742,20 @@ JavaScript error: chrome://marionette/content/proxy.js, line 228: TypeError: l i
 1490122511412	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
 1490122511416	geckodriver::marionette	INFO	Connecting to Marionette on localhost:51238
 1490122511802	Marionette	INFO	Listening on port 51238
+1490656214435	geckodriver	INFO	Listening on 127.0.0.1:52342
+1490656215432	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.L6VgBo1kCawp
+1490656215433	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490656215454	geckodriver::marionette	INFO	Connecting to Marionette on localhost:52351
+1490656215919	Marionette	INFO	Listening on port 52351
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 138: TypeError: document.getElementById(...) is null
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/account-mgr/customerSearch.do?internalID=563g584xbv3ims3jdwnkanzef99vavit, line 197: ReferenceError: headerContainer is not defined
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript warning: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/mootools-1.2-core-nc.js, line 2575: String.prototype.contains() is deprecated and will be removed in a future release; use String.prototype.includes() instead
+JavaScript error: http://oss1-beta.pbeta.ooma.com:8085/ossOps/common/pageUtils.js, line 698: TypeError: obj is null
+JavaScript error: javascript:%20<html></html>, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: chrome://marionette/content/proxy.js, line 228: TypeError: l is undefined
+1490656225963	geckodriver	INFO	Listening on 127.0.0.1:52505
+1490656226966	mozprofile::profile	INFO	Using profile path /var/folders/vt/__7kv6w12vxgdg0__yxs6b85g998yb/T/rust_mozprofile.EaHVrtEwrHpm
+1490656226967	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1490656226969	geckodriver::marionette	INFO	Connecting to Marionette on localhost:52511
+1490656227368	Marionette	INFO	Listening on port 52511
