@@ -1,0 +1,92 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+LOG_LEVEL	call.py	/^LOG_LEVEL=3$/;"	v
+LOG_LEVEL	presence.py	/^LOG_LEVEL = 3$/;"	v
+MyAccountCallback	call.py	/^class MyAccountCallback(pj.AccountCallback):$/;"	c
+MyAccountCallback	presence.py	/^class MyAccountCallback(pj.AccountCallback):$/;"	c
+MyAccountCallback	registration.py	/^class MyAccountCallback(pj.AccountCallback):$/;"	c
+MyBuddyCallback	presence.py	/^class MyBuddyCallback(pj.BuddyCallback):$/;"	c
+MyCallCallback	call.py	/^class MyCallCallback(pj.CallCallback):$/;"	c
+MyCallCallback	pjsip_ua_sample.py	/^class MyCallCallback(pj.CallCallback):$/;"	c
+MyCallCallback	simplecall.py	/^class MyCallCallback(pj.CallCallback):$/;"	c
+__init__	call.py	/^        def __init__(self, account):$/;"	m	class:MyAccountCallback
+__init__	call.py	/^    def __init__(self, account=None):$/;"	m	class:MyAccountCallback
+__init__	call.py	/^    def __init__(self, call=None):$/;"	m	class:MyCallCallback
+__init__	pjsip_ua_sample.py	/^    def __init__(self, call=None):$/;"	m	class:MyCallCallback
+__init__	presence.py	/^    def __init__(self, account=None):$/;"	m	class:MyAccountCallback
+__init__	presence.py	/^    def __init__(self, buddy=None):$/;"	m	class:MyBuddyCallback
+__init__	registration.py	/^    def __init__(self, account):$/;"	m	class:MyAccountCallback
+__init__	simplecall.py	/^    def __init__(self, call=None):$/;"	m	class:MyCallCallback
+acc	pjsip_ua_sample.py	/^    acc = lib.create_account_for_transport(transport)$/;"	v	class:MyCallCallback
+acc	presence.py	/^    acc = None$/;"	v
+acc	presence.py	/^    acc = lib.create_account_for_transport(transport, cb=MyAccountCallback())$/;"	v
+acc	registration.py	/^    acc = lib.create_account(pj.AccountConfig("w4f3s.smb.cert1.ooma.com", "qc41lb8o08", "netc19kcs9"))$/;"	v
+acc	simplecall.py	/^    acc = lib.create_account_for_transport(transport)$/;"	v	class:MyCallCallback
+acc_cb	registration.py	/^    acc_cb = MyAccountCallback(acc)$/;"	v
+buddy	presence.py	/^    buddy = None$/;"	v
+call	pjsip_ua_sample.py	/^    call = acc.make_call(sys.argv[1], MyCallCallback())$/;"	v	class:MyCallCallback
+call	simplecall.py	/^    call = acc.make_call(sys.argv[1], MyCallCallback())$/;"	v	class:MyCallCallback
+current_call	call.py	/^current_call = None$/;"	v
+fibonacci	fibonacii.py	/^def fibonacci():$/;"	f
+input	pjsip_ua_sample.py	/^    input = sys.stdin.readline().rstrip("\\r\\n")$/;"	v	class:MyCallCallback
+input	simplecall.py	/^    input = sys.stdin.readline().rstrip("\\r\\n")$/;"	v	class:MyCallCallback
+lib	call.py	/^    lib = None$/;"	v
+lib	call.py	/^lib = pj.Lib()$/;"	v
+lib	pjsip_ua_sample.py	/^    lib = None$/;"	v
+lib	pjsip_ua_sample.py	/^    lib = None$/;"	v	class:MyCallCallback
+lib	pjsip_ua_sample.py	/^    lib = pj.Lib()$/;"	v	class:MyCallCallback
+lib	presence.py	/^    lib = None$/;"	v
+lib	presence.py	/^lib = pj.Lib()$/;"	v
+lib	registration.py	/^    lib = None$/;"	v
+lib	registration.py	/^lib = pj.Lib()$/;"	v
+lib	simplecall.py	/^    lib = None$/;"	v
+lib	simplecall.py	/^    lib = None$/;"	v	class:MyCallCallback
+lib	simplecall.py	/^    lib = pj.Lib()$/;"	v	class:MyCallCallback
+log_cb	call.py	/^def log_cb(level, str, len):$/;"	f
+log_cb	pjsip_ua_sample.py	/^def log_cb(level, str, len):$/;"	f
+log_cb	presence.py	/^def log_cb(level, str, len):$/;"	f
+log_cb	registration.py	/^def log_cb(level, str, len):$/;"	f
+log_cb	simplecall.py	/^def log_cb(level, str, len):$/;"	f
+make_call	call.py	/^def make_call(uri):$/;"	f
+my_sip_uri	presence.py	/^                 ":" + str(transport.info().port)$/;"	v
+on_incoming_call	call.py	/^    def on_incoming_call(self, call):$/;"	m	class:MyAccountCallback
+on_incoming_subscribe	presence.py	/^    def on_incoming_subscribe(self, buddy, from_uri, contact_uri, pres):$/;"	m	class:MyAccountCallback
+on_media_state	call.py	/^    def on_media_state(self):$/;"	m	class:MyCallCallback
+on_media_state	pjsip_ua_sample.py	/^    def on_media_state(self):$/;"	m	class:MyCallCallback
+on_media_state	simplecall.py	/^    def on_media_state(self):$/;"	m	class:MyCallCallback
+on_pager	presence.py	/^    def on_pager(self, mime_type, body):$/;"	m	class:MyBuddyCallback
+on_pager_status	presence.py	/^    def on_pager_status(self, body, im_id, code, reason):$/;"	m	class:MyBuddyCallback
+on_reg_state	call.py	/^        def on_reg_state(self):$/;"	m	class:MyAccountCallback
+on_reg_state	registration.py	/^    def on_reg_state(self):$/;"	m	class:MyAccountCallback
+on_state	call.py	/^    def on_state(self):$/;"	m	class:MyCallCallback
+on_state	pjsip_ua_sample.py	/^    def on_state(self):$/;"	m	class:MyCallCallback
+on_state	presence.py	/^    def on_state(self):$/;"	m	class:MyBuddyCallback
+on_state	simplecall.py	/^    def on_state(self):$/;"	m	class:MyCallCallback
+on_typing	presence.py	/^    def on_typing(self, is_typing):$/;"	m	class:MyBuddyCallback
+pending_pres	presence.py	/^pending_pres = None$/;"	v
+pending_uri	presence.py	/^pending_uri = None$/;"	v
+pj	call.py	/^import pjsua as pj$/;"	i
+pj	pjsip_ua_sample.py	/^import pjsua as pj$/;"	i
+pj	presence.py	/^import pjsua as pj$/;"	i
+pj	registration.py	/^import pjsua as pj$/;"	i
+pj	simplecall.py	/^import pjsua as pj$/;"	i
+print_function	fibonacii.py	/^from __future__ import print_function$/;"	i
+sem	call.py	/^        sem = None$/;"	v	class:MyAccountCallback
+sem	registration.py	/^    sem = None$/;"	v	class:MyAccountCallback
+sys	call.py	/^import sys$/;"	i
+sys	pjsip_ua_sample.py	/^import sys$/;"	i
+sys	presence.py	/^import sys$/;"	i
+sys	registration.py	/^import sys$/;"	i
+sys	simplecall.py	/^import sys$/;"	i
+threading	call.py	/^import threading$/;"	i
+threading	registration.py	/^import threading$/;"	i
+transport	pjsip_ua_sample.py	/^    transport = lib.create_transport(pj.TransportType.UDP)$/;"	v	class:MyCallCallback
+transport	presence.py	/^    transport = None$/;"	v
+transport	presence.py	/^    transport = lib.create_transport(pj.TransportType.UDP, $/;"	v
+transport	simplecall.py	/^    transport = lib.create_transport(pj.TransportType.UDP)$/;"	v	class:MyCallCallback
+wait	call.py	/^        def wait(self):$/;"	m	class:MyAccountCallback
+wait	registration.py	/^    def wait(self):$/;"	m	class:MyAccountCallback

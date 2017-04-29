@@ -1,0 +1,30 @@
+{
+  "bb_rest_url" : "http://10.66.11.36:5000",
+  "Water_Sensor":
+  {
+    "Tamper_ON" : "c d3i1 1",
+    "Tamper_OFF" : "c d3i1 0",
+    "Water_ON" : "c d3i2 1",
+    "Water_OFF" : "c d3i2 0",
+    "Pair_ON" : "c d3i0 1",
+    "Pair_OFF" : "c d3i0 0"
+  },
+  "Door_sensor":
+  {
+    "Tamper_ON" : "c d2i1 1",
+    "Tamper_OFF" : "c d2i1 0",
+    "Door_ON" : "c d2i2 1",
+    "Door_OFF" : "c d2i2 0",
+    "Pair_ON" : "c d2i0 1",
+    "Pair_OFF" : "c d2i0 0"
+  },
+  "Motion_sensor":
+  {
+    "Tamper_ON" : "M_Tamper_ON",
+    "Tamper_OFF" : "M_Tamper_OFF",
+    "Motion_ON" : "M_Motion_ON",
+    "Motion_OFF" : "M_Motion_OFF",
+    "Pair_ON" : "M_Pair_ON",
+    "Pair_OFF" : "M_Pair_OFF"
+  }
+}

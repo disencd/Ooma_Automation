@@ -1,0 +1,221 @@
+#!/bin/sh
+
+orLaunch="siege"
+
+orDirName="OpenRemote-Controller"
+orPath="/ipkg/"
+
+orHiveRoot="https://auto-dev-mera.mera.ooma.com:8443/"
+orHiveRemoteCommand="ccs/rest"
+orHiveSync="bcs/"
+orHiveDeviceDiscovery="dds/rest/rpc/devicediscovery/2/0/0/"
+orHiveRemoteCommandWs="ccs/ws-commands"
+
+orControllerID="1"
+
+tomcatLogLevel="INFO"
+orStartupLevel="DEBUG"
+orConsoleThreshold="DEBUG"
+
+export LD_LIBRARY_PATH="/usr/siege/lib/arm/"
+export SIEGE_JIT_EXCLUDE="/usr/siege/lib/jit-exclude"
+
+while [ "$1" != "" ]; do
+    
+        # Use NFS path
+    if [ "$1" = "--nfs" ]
+    then
+        orPath="/"
+        shift
+        continue
+    fi
+
+        # Use given path
+    if [ "$1" = "--path" ]
+    then
+        orPath="$2"
+        shift
+        shift
+        continue
+    fi
+
+        # Set hive
+    if [ "$1" = "--hive" ]
+    then
+        orHiveRoot="$2"
+        shift
+        shift
+        continue
+    fi
+
+        # Set remote command service subpath
+    if [ "$1" = "--remote" ]
+    then
+        orHiveRemoteCommand="$2"
+        shift
+        shift
+        continue
+    fi 
+
+        # Set sync sub path
+    if [ "$1" = "--sync" ]
+    then
+        orHiveSync="$2"
+        shift
+        shift
+        continue
+    fi
+
+        # Set device discovery subpath
+    if [ "$1" = "--discovery" ]
+    then
+        orHiveDeviceDiscovery="$2"
+        shift
+        shift
+        continue
+    fi 
+
+        # Set controller id
+    if [ "$1" = "--id" ]
+    then
+        orControllerID="$2"
+        shift
+        shift
+        continue
+    fi    
+
+        # Set tomcat.server.console.log.level
+    if [ "$1" = "--tomcat.log.level" ]
+    then
+        tomcatLogLevel="$2"
+        shift
+        shift
+        continue
+    fi 
+
+        # Set controller id
+    if [ "$1" = "--startup.log.level" ]
+    then
+        orStartupLevel="$2"
+        shift
+        shift
+        continue
+    fi 
+
+        # Set openremote.controller.console.threshold
+    if [ "$1" = "--console.threshold.level" ]
+    then
+        orConsoleThreshold="$2"
+        shift
+        shift
+        continue
+    fi 
+    
+        # clear launch flag
+    if [ "$1" = "--nolaunch" ]
+    then
+        orLaunch="echo"
+        shift
+        continue
+    fi 
+    
+        # Dump help
+    if [ "$1" = "--help" ] || [ "$1" = "-help" ] || [ "$1" = "help" ]
+    then
+        echo "==============================================================================================================="
+        echo ""
+        echo "Options to openremote script. Used to launch openremote on device."
+        echo ""
+        echo "    --hive XXX                    - Where XXX is url. Default \"http://designer.openremote.com/\"."
+        echo ""
+        echo "    --nfs                         - Use \"/\" as location of OpenRemote-Controller directory."
+        echo "    --path XXX                    - Where XXX is location of OpenRemote-Controller directory. Default \"/ipkg/\"."
+        echo ""
+        echo "    --remote XXX                  - Where XXX is subpath. Default \"remote/\"."
+        echo "    --sync XXX                    - Where XXX is subpath. Default \"beehive/rest/\"."
+        echo "    --discovery XXX               - Where XXX is subpath. Default \"dds/rest/\"."
+        echo ""
+        echo "    --id XXX                      - Where XXX is id number. Default 1."
+        echo ""
+        echo "    --nolaunch                    - Only dump command to terminal, don't execute it."
+        echo ""
+        echo "    --tomcat.log.level XXX        - Where XXX is level. DEBUG,INFO,etc."
+        echo "    --startup.log.level XXX       - Where XXX is level. DEBUG,INFO,etc."
+        echo "    --console.threshold.level XXX - Where XXX is level. DEBUG,INFO,etc."
+        echo ""
+        echo "==============================================================================================================="
+        exit
+    fi 
+
+    echo "Unknown param \"$1\""
+    exit 1;
+done
+
+orRoot="${orPath}${orDirName}"
+orHiveWsRoot="ws""$( echo "$orHiveRoot" | sed -E -e 's#^http##' )"
+
+#Setting hostname explicitly since log4j syslog appender cannot resolve it
+MYX_HOSTNAME=`uname -n | awk -F. '{print $1}'`
+sed -i "s/MYX_HOSTNAME/${MYX_HOSTNAME}/g" ${orRoot}/webapps/controller/WEB-INF/classes/log4j.properties
+
+loopCmd="echo"
+while [ "$loopCmd" != "stop" ]; 
+do
+    ${loopCmd} -Duser.timezone=$TZ \
+        -Dh2.bindAddress=localhost \
+        -Dcatalina.home="${orRoot}/" \
+        -Dcatalina.base="${orRoot}" \
+        -Djava.io.tmpdir="${orRoot}/temp" \
+        -Dtomcat.server.console.log.level=${tomcatLogLevel} \
+        -Dopenremote.controller.startup.log.level=${orStartupLevel} \
+        -Dopenremote.controller.console.threshold=${orConsoleThreshold} \
+        -Djava.library.path=${orRoot}/webapps/controller/WEB-INF/lib/native \
+        -Djava.util.logging.config.file=${orRoot}/conf/logging.properties \
+        -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager \
+        -Djava.net.preferIPv4Stack=true -Djava.net.preferIPv4Addresses \
+        -Dopenremote.remote.command.service.uri="${orHiveRoot}${orHiveRemoteCommand}" \
+        -Dopenremote.remote.command.service.ws.uri="${orHiveWsRoot}${orHiveRemoteCommandWs}" \
+        -Dopenremote.controller.id=${orControllerID} \
+        -Dopenremote.device.discovery.service.uri="${orHiveRoot}${orHiveDeviceDiscovery}" \
+        -Dopenremote.sync.service.uri="${orHiveRoot}${orHiveSync}" \
+        -Djavax.net.ssl.trustStore="${orRoot}/conf/ca_list.bks" \
+        -Djavax.net.ssl.trustStorePassword="" \
+        -Djavax.net.ssl.trustStoreType="BKS" \
+        -Dssl.TrustManagerFactory.algorithm="X509" \
+        -Dceej.jit.exclude=/usr/siege/lib/jit-exclude \
+        -Xss512k \
+        -cp ":${orRoot}/bin/tomcat/bootstrap.jar:${orRoot}/bin/tomcat/tomcat-juli.jar" \
+        org.apache.catalina.startup.Bootstrap start
+
+    if [ "$orLaunch" = "echo" ] || [ "$orLaunch" = "$loopCmd" ]
+    then
+        exit;    
+    fi
+
+    if [ "$loopCmd" = "echo" ]
+    then
+        loopCmd="$orLaunch"
+        continue
+    fi
+done
+
+
+
+#siege -Duser.timezone=$TZ \
+#-Dcatalina.home=/ipkg/OpenRemote-Controller/ \
+#-Dcatalina.base=/ipkg/OpenRemote-Controller \
+#-Djava.io.tmpdir=/ipkg/OpenRemote-Controller/temp \
+#-Dtomcat.server.console.log.level=INFO \
+#-Dopenremote.controller.startup.log.level=DEBUG \
+#-Dopenremote.controller.console.threshold=DEBUG \
+#-Djava.library.path=/ipkg/OpenRemote-Controller/webapps/controller/WEB-INF/lib/native \
+#-Djava.util.logging.config.file=/ipkg/OpenRemote-Controller/conf/logging.properties \
+#-Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager \
+#-Dopenremote.remote.command.service.uri="https://beehive.openremote.org/remote" \
+#-Dopenremote.controller.id="1" \
+#-Dopenremote.device.discovery.service.uri="https://beehive.openremote.org/dds/rest/" \
+#-Dopenremote.sync.service.uri="https://beehive.openremote.org/3.0/alpha5/rest/" \
+#-cp ":/ipkg/OpenRemote-Controller/bin/tomcat/bootstrap.jar:/ipkg/OpenRemote-Controller/bin/tomcat/tomcat-juli.jar" \
+#org.apache.catalina.startup.Bootstrap start
+
+

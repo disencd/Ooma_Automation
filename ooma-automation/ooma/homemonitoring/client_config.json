@@ -1,0 +1,25 @@
+{
+ "cert":
+        {
+          "prv-server" : "prv1-cert1.cn.ooma.com",
+	      "hms-server" : "hms1-cert1.cn.ooma.com"
+        },
+ "sandbox":
+        {
+          "prv-server" : "prv1-beta.pbeta.ooma.com",
+	      "hms-server" : "hms1-beta.pbeta.ooma.com"
+        },
+ "login_cred":
+        {
+          "username":"root",
+          "password":"!hello123"
+        },
+ "client_conf":
+        {
+          "spn" : "4084384765",
+          "myxid" : "220120",
+          "Myxid" : "myx_001861220120",
+          "cust_pk" : "ryhijwcxdcjs86n6fqhi3axr3yywj5ct"
+        },
+  "debug_url" : "http://dtool.cn.ooma.com:8080/fsTeloWebControl/v1/"
+}

@@ -1,0 +1,208 @@
+RNING: no real random source present!
+07:53:10.082 sip_endpoint.c  .Module "mod-evsub" registered
+07:53:10.082 sip_endpoint.c  .Module "mod-presence" registered
+07:53:10.082 sip_endpoint.c  .Module "mod-mwi" registered
+07:53:10.082 sip_endpoint.c  .Module "mod-refer" registered
+07:53:10.082 sip_endpoint.c  .Module "mod-pjsua-pres" registered
+07:53:10.082 sip_endpoint.c  .Module "mod-pjsua-im" registered
+07:53:10.082 sip_endpoint.c  .Module "mod-pjsua-options" registered
+07:53:10.082   pjsua_core.c  .No SIP worker threads created
+07:53:10.082   pjsua_core.c  .pjsua version 2.5.5 for Darwin-14.5/x86_64 initialized
+07:53:10.082   pjsua_core.c  .PJSUA state changed: CREATED --> INIT
+07:53:10.082   pjsua_core.c  SIP UDP socket reachable at 10.0.0.29:5080
+07:53:10.082 udp0x100393920  SIP UDP transport started, published address is 10.0.0.29:5080
+07:53:10.082   pjsua_core.c  PJSUA state changed: INIT --> STARTING
+07:53:10.082 sip_endpoint.c  .Module "mod-unsolicited-mwi" registered
+07:53:10.082   pjsua_core.c  .PJSUA state changed: STARTING --> RUNNING
+Commenting out the proxy header#######################
+
+07:53:10.084    pjsua_acc.c  Adding account: id=<sip:19165200092@10.5.0.44>
+07:53:10.084    pjsua_acc.c  .Account <sip:19165200092@10.5.0.44> added with id 0
+07:53:10.084    pjsua_acc.c  .Acc 0: setting registration..
+07:53:10.084   pjsua_core.c  ...TX 545 bytes Request msg REGISTER/cseq=13069 (tdta0x101829e00) to UDP 10.5.0.44:5060:
+REGISTER sip:10.5.0.44 SIP/2.0
+Via: SIP/2.0/UDP 10.66.20.58:5080;rport;branch=z9hG4bKPjE8GbsY1166HhpZAd7Ulj0ufaBlCTHrSU
+Route: <sip:10.5.0.44;lr>
+Max-Forwards: 70
+From: <sip:19165200092@10.5.0.44>;tag=lahQJD-N64oLkGetCP6GYWC4esgMKIxU
+To: <sip:19165200092@10.5.0.44>
+Call-ID: QqE2tboxDLOn4w.mmUJTvLh7Dl.V7fRZ
+CSeq: 13069 REGISTER
+User-Agent: pjsip python
+Contact: <sip:19165200092@10.66.20.58:5080;ob>
+Expires: 300
+Allow: PRACK, INVITE, ACK, BYE, CANCEL, UPDATE, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS
+Content-Length:  0
+
+
+--end msg--
+07:53:10.084    pjsua_acc.c  ..Acc 0: Registration sent
+07:53:10.136   pjsua_core.c !.RX 506 bytes Response msg 401/REGISTER/cseq=13069 (rdata0x1008d0a28) from UDP 10.5.0.44:5060:
+SIP/2.0 401 Unauthorized
+Via: SIP/2.0/UDP 10.66.20.58:5080;rport=5080;branch=z9hG4bKPjE8GbsY1166HhpZAd7Ulj0ufaBlCTHrSU
+From: <sip:19165200092@10.5.0.44>;tag=lahQJD-N64oLkGetCP6GYWC4esgMKIxU
+To: <sip:19165200092@10.5.0.44>;tag=f5be61efeaa43874f675ffae0f735252.fbba
+Call-ID: QqE2tboxDLOn4w.mmUJTvLh7Dl.V7fRZ
+CSeq: 13069 REGISTER
+WWW-Authenticate: Digest realm="oomamobile.com", nonce="V+6KYlfufFKyMyN39jaVyVmZIueM8fM/ZAoygUA=", qop="auth"
+Server: kamailio (3.3.5 (x86_64/linux))
+Content-Length: 0
+
+
+--end msg--
+07:53:10.136   pjsua_core.c  ....TX 797 bytes Request msg REGISTER/cseq=13070 (tdta0x101829e00) to UDP 10.5.0.44:5060:
+REGISTER sip:10.5.0.44 SIP/2.0
+Via: SIP/2.0/UDP 10.66.20.58:5080;rport;branch=z9hG4bKPjC67bg6Xs5ijdYnk0bTyrG2Z1MkLZ5wCc
+Route: <sip:10.5.0.44;lr>
+Max-Forwards: 70
+From: <sip:19165200092@10.5.0.44>;tag=lahQJD-N64oLkGetCP6GYWC4esgMKIxU
+To: <sip:19165200092@10.5.0.44>
+Call-ID: QqE2tboxDLOn4w.mmUJTvLh7Dl.V7fRZ
+CSeq: 13070 REGISTER
+User-Agent: pjsip python
+Contact: <sip:19165200092@10.66.20.58:5080;ob>
+Expires: 300
+Allow: PRACK, INVITE, ACK, BYE, CANCEL, UPDATE, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS
+Authorization: Digest username="19165200092", realm="oomamobile.com", nonce="V+6KYlfufFKyMyN39jaVyVmZIueM8fM/ZAoygUA=", uri="sip:10.5.0.44", response="50e3c23b6b9061f1fadd551da6d0a8ce", cnonce="dvoCgApKWVBrcNkI0zUFfBRLtRV-rQZK", qop=auth, nc=00000001
+Content-Length:  0
+
+
+--end msg--
+07:53:10.248   pjsua_core.c  .RX 477 bytes Response msg 200/REGISTER/cseq=13070 (rdata0x1008d0a28) from UDP 10.5.0.44:5060:
+SIP/2.0 200 OK
+Via: SIP/2.0/UDP 10.66.20.58:5080;rport=5080;branch=z9hG4bKPjC67bg6Xs5ijdYnk0bTyrG2Z1MkLZ5wCc
+From: <sip:19165200092@10.5.0.44>;tag=lahQJD-N64oLkGetCP6GYWC4esgMKIxU
+To: <sip:19165200092@10.5.0.44>;tag=0e12d6552c025041d860b6575f0a1db2.93d3
+Call-ID: QqE2tboxDLOn4w.mmUJTvLh7Dl.V7fRZ
+CSeq: 13070 REGISTER
+Contact: <sip:19165200092@10.66.20.58:5080;ob>;expires=300;received="sip:10.66.20.58:5080"
+Server: kamailio (3.3.5 (x86_64/linux))
+Content-Length: 0
+
+
+--end msg--
+07:53:10.248    pjsua_acc.c  ....SIP outbound status for acc 0 is not active
+07:53:10.248    pjsua_acc.c  ....<sip:19165200092@10.5.0.44>: registration success, status=200 (OK), will re-register in 300 seconds
+07:53:10.248    pjsua_acc.c  ....Keep-alive timer started for acc 0, destination:10.5.0.44:5060, interval:15s
+
+
+Registration complete, status= 200 (OK)
+
+Press ENTER to quit
+
+07:53:12.448   pjsua_core.c !Shutting down, flags=0...
+07:53:12.448   pjsua_core.c  PJSUA state changed: RUNNING --> CLOSING
+07:53:12.448   pjsua_call.c  .Hangup all calls..
+07:53:12.448  pjsua_media.c  .Call 0: deinitializing media..
+07:53:12.448  pjsua_media.c  .Call 1: deinitializing media..
+07:53:12.448  pjsua_media.c  .Call 2: deinitializing media..
+07:53:12.448  pjsua_media.c  .Call 3: deinitializing media..
+07:53:12.448  pjsua_media.c  .Call 4: deinitializing media..
+07:53:12.448  pjsua_media.c  .Call 5: deinitializing media..
+07:53:12.448  pjsua_media.c  .Call 6: deinitializing media..
+07:53:12.448  pjsua_media.c  .Call 7: deinitializing media..
+07:53:12.448  pjsua_media.c  .Call 8: deinitializing media..
+07:53:12.448  pjsua_media.c  .Call 9: deinitializing media..
+07:53:12.448  pjsua_media.c  .Call 10: deinitializing media..
+07:53:12.448  pjsua_media.c  .Call 11: deinitializing media..
+07:53:12.448  pjsua_media.c  .Call 12: deinitializing media..
+07:53:12.448  pjsua_media.c  .Call 13: deinitializing media..
+07:53:12.448  pjsua_media.c  .Call 14: deinitializing media..
+07:53:12.448  pjsua_media.c  .Call 15: deinitializing media..
+07:53:12.448  pjsua_media.c  .Call 16: deinitializing media..
+07:53:12.448  pjsua_media.c  .Call 17: deinitializing media..
+07:53:12.448  pjsua_media.c  .Call 18: deinitializing media..
+07:53:12.448  pjsua_media.c  .Call 19: deinitializing media..
+07:53:12.448  pjsua_media.c  .Call 20: deinitializing media..
+07:53:12.448  pjsua_media.c  .Call 21: deinitializing media..
+07:53:12.448  pjsua_media.c  .Call 22: deinitializing media..
+07:53:12.448  pjsua_media.c  .Call 23: deinitializing media..
+07:53:12.448  pjsua_media.c  .Call 24: deinitializing media..
+07:53:12.448   pjsua_pres.c  .Shutting down presence..
+07:53:12.448    pjsua_acc.c  .Acc 0: setting unregistration..
+07:53:12.448   pjsua_core.c  ...TX 445 bytes Request msg REGISTER/cseq=13071 (tdta0x102001000) to UDP 10.5.0.44:5060:
+REGISTER sip:10.5.0.44 SIP/2.0
+Via: SIP/2.0/UDP 10.66.20.58:5080;rport;branch=z9hG4bKPjNp231WgUDTEoky46ZQ04Bpv2jh.K.thD
+Route: <sip:10.5.0.44;lr>
+Max-Forwards: 70
+From: <sip:19165200092@10.5.0.44>;tag=X9BH8UeWhQHg.ZBmdsqMyh6XAt4J3e18
+To: <sip:19165200092@10.5.0.44>
+Call-ID: QqE2tboxDLOn4w.mmUJTvLh7Dl.V7fRZ
+CSeq: 13071 REGISTER
+User-Agent: pjsip python
+Contact: <sip:19165200092@10.66.20.58:5080;ob>
+Expires: 0
+Content-Length:  0
+
+
+--end msg--
+07:53:12.448    pjsua_acc.c  ..Acc 0: Unregistration sent
+07:53:12.469   pjsua_core.c  ..RX 506 bytes Response msg 401/REGISTER/cseq=13071 (rdata0x10182de28) from UDP 10.5.0.44:5060:
+SIP/2.0 401 Unauthorized
+Via: SIP/2.0/UDP 10.66.20.58:5080;rport=5080;branch=z9hG4bKPjNp231WgUDTEoky46ZQ04Bpv2jh.K.thD
+From: <sip:19165200092@10.5.0.44>;tag=X9BH8UeWhQHg.ZBmdsqMyh6XAt4J3e18
+To: <sip:19165200092@10.5.0.44>;tag=f5be61efeaa43874f675ffae0f735252.76f6
+Call-ID: QqE2tboxDLOn4w.mmUJTvLh7Dl.V7fRZ
+CSeq: 13071 REGISTER
+WWW-Authenticate: Digest realm="oomamobile.com", nonce="V+6KZFfufFQbci8xW8YObn9bi2EustKGZAozgkA=", qop="auth"
+Server: kamailio (3.3.5 (x86_64/linux))
+Content-Length: 0
+
+
+--end msg--
+07:53:12.469   pjsua_core.c  .....TX 697 bytes Request msg REGISTER/cseq=13072 (tdta0x102001000) to UDP 10.5.0.44:5060:
+REGISTER sip:10.5.0.44 SIP/2.0
+Via: SIP/2.0/UDP 10.66.20.58:5080;rport;branch=z9hG4bKPjJ-mIQd59RxgjX.tNMaiBBt9XzrFQZgSI
+Route: <sip:10.5.0.44;lr>
+Max-Forwards: 70
+From: <sip:19165200092@10.5.0.44>;tag=X9BH8UeWhQHg.ZBmdsqMyh6XAt4J3e18
+To: <sip:19165200092@10.5.0.44>
+Call-ID: QqE2tboxDLOn4w.mmUJTvLh7Dl.V7fRZ
+CSeq: 13072 REGISTER
+User-Agent: pjsip python
+Contact: <sip:19165200092@10.66.20.58:5080;ob>
+Expires: 0
+Authorization: Digest username="19165200092", realm="oomamobile.com", nonce="V+6KZFfufFQbci8xW8YObn9bi2EustKGZAozgkA=", uri="sip:10.5.0.44", response="579182af58d438284ca96dd9b0a6df00", cnonce="dvoCgApKWVBrcNkI0zUFfBRLtRV-rQZK", qop=auth, nc=00000001
+Content-Length:  0
+
+
+--end msg--
+07:53:12.552   pjsua_core.c  ..RX 385 bytes Response msg 200/REGISTER/cseq=13072 (rdata0x10182de28) from UDP 10.5.0.44:5060:
+SIP/2.0 200 OK
+Via: SIP/2.0/UDP 10.66.20.58:5080;rport=5080;branch=z9hG4bKPjJ-mIQd59RxgjX.tNMaiBBt9XzrFQZgSI
+From: <sip:19165200092@10.5.0.44>;tag=X9BH8UeWhQHg.ZBmdsqMyh6XAt4J3e18
+To: <sip:19165200092@10.5.0.44>;tag=f61bcc12960981bca5bd3a2f03017ae6.c778
+Call-ID: QqE2tboxDLOn4w.mmUJTvLh7Dl.V7fRZ
+CSeq: 13072 REGISTER
+Server: kamailio (3.3.5 (x86_64/linux))
+Content-Length: 0
+
+
+--end msg--
+07:53:12.552    pjsua_acc.c  .....<sip:19165200092@10.5.0.44>: unregistration success
+07:53:13.476   pjsua_core.c  .Destroying...
+07:53:13.476  pjsua_media.c  .Shutting down media..
+07:53:13.604 sip_transactio  .Stopping transaction layer module
+07:53:13.604 sip_transactio  .Stopped transaction layer module
+07:53:13.604 sip_endpoint.c  .Module "mod-unsolicited-mwi" unregistered
+07:53:13.604 sip_endpoint.c  .Module "mod-pjsua-options" unregistered
+07:53:13.604 sip_endpoint.c  .Module "mod-pjsua-im" unregistered
+07:53:13.604 sip_endpoint.c  .Module "mod-pjsua-pres" unregistered
+07:53:13.604 sip_endpoint.c  .Module "mod-pjsua" unregistered
+07:53:13.604 sip_endpoint.c  .Module "mod-stateful-util" unregistered
+07:53:13.604 sip_endpoint.c  .Module "mod-refer" unregistered
+07:53:13.604 sip_endpoint.c  .Module "mod-mwi" unregistered
+07:53:13.604 sip_endpoint.c  .Module "mod-presence" unregistered
+07:53:13.604 sip_endpoint.c  .Module "mod-evsub" unregistered
+07:53:13.604 sip_endpoint.c  .Module "mod-invite" unregistered
+07:53:13.604 sip_endpoint.c  .Module "mod-100rel" unregistered
+07:53:13.604 sip_endpoint.c  .Module "mod-ua" unregistered
+07:53:13.604 sip_transactio  .Transaction layer module destroyed
+07:53:13.604 sip_endpoint.c  .Module "mod-tsx-layer" unregistered
+07:53:13.604 sip_endpoint.c  .Module "mod-msg-print" unregistered
+07:53:13.604 sip_endpoint.c  .Module "mod-pjsua-log" unregistered
+07:53:13.605 udp0x100393920  .SIP UDP transport destroyed
+07:53:13.605 sip_endpoint.c  .Endpoint 0x10180cca8 destroyed
+07:53:13.605   pjsua_core.c  .PJSUA state changed: CLOSING --> NULL
+07:53:13.605   pjsua_core.c  .PJSUA destroyed...
+dhcp-11-193:samples DisenChitilapilly$ 

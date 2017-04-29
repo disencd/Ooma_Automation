@@ -1,0 +1,14 @@
+#!/bin/sh
+#if [ -e /sys/devices/bone_capemgr.8/slots ]; 
+#then
+        echo BB-BONE-GP >/sys/devices/bone_capemgr.8/slots
+#else
+#	if [ -e /sys/devices/bone_capemgr.9/slots ]; 
+#	then
+#        	echo BB-BONE-GP >/sys/devices/bone_capemgr.9/slots
+#	else
+#        	echo BB-BONE-GP >/sys/devices/platform/bone_capemgr/slots
+#	fi
+#fi
+#sleep 2
+#nohup ./Getest &

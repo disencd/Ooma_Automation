@@ -1,0 +1,36 @@
+Getest: gpioserver.c:228: tcp_thread: Assertion `bind(fd, (struct sockaddr *) &serveraddr, sizeof(serveraddr)) >=0' failed.
+gpio0_addr = b6f9b000
+gpio1_addr = b6f99000
+gpio2_addr = b6f82000
+gpio3_addr = b6f81000
+start udp thread
+Getest: gpioserver.c:228: tcp_thread: Assertion `bind(fd, (struct sockaddr *) &serveraddr, sizeof(serveraddr)) >=0' failed.
+gpio0_addr = b6f52000
+gpio1_addr = b6f50000
+gpio2_addr = b6f39000
+gpio3_addr = b6f38000
+start udp thread
+Getest: gpioserver.c:229: tcp_thread: Assertion `bind(fd, (struct sockaddr *) &serveraddr, sizeof(serveraddr)) >=0' failed.
+gpio0_addr = b6fb0000
+gpio1_addr = b6fae000
+gpio2_addr = b6f97000
+gpio3_addr = b6f96000
+start udp thread
+Getest: gpioserver.c:229: tcp_thread: Assertion `bind(fd, (struct sockaddr *) &serveraddr, sizeof(serveraddr)) >=0' failed.
+gpio0_addr = b6fc2000
+gpio1_addr = b6fc0000
+gpio2_addr = b6fa9000
+gpio3_addr = b6fa8000
+start udp thread
+Getest: gpioserver.c:229: tcp_thread: Assertion `bind(fd, (struct sockaddr *) &serveraddr, sizeof(serveraddr)) >=0' failed.
+gpio0_addr = b6f7c000
+gpio1_addr = b6f7a000
+gpio2_addr = b6f63000
+gpio3_addr = b6f62000
+start udp thread
+Getest: gpioserver.c:229: tcp_thread: Assertion `bind(fd, (struct sockaddr *) &serveraddr, sizeof(serveraddr)) >=0' failed.
+gpio0_addr = b6f5e000
+gpio1_addr = b6f5c000
+gpio2_addr = b6f45000
+gpio3_addr = b6f44000
+start udp thread

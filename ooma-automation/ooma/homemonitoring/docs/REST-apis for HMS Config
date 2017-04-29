@@ -1,0 +1,476 @@
+===============================================================
+curl -H "Content-Type: application/json" -XPOST  http://hms:8083/hms/api/base/status?username=u8bep9zdfqnb52sp3mvnbymbbu9sai2a -d '{"pairingMode": "true"}'
+===============================================================
+Latest Setup
+===============================================================
+ http://hms1-cert1.cn.ooma.com:8084/hms/api/base/status?username=9776d3ifxtvx74ejxpsmuxvzq3ijhrmp
+{ "pairingMode": false, "notificationPause": false, "controllerConnection": false, "controllerConfigureMode": true, "controllerConfigurationStatus": -1, "newDevices": [] }
+
+GET
+Accept – appl/json
+Basic auth
+Username – bn88k8b45
+Password – nns879r4f
+
+ http://hms1-cert1.cn.ooma.com:8084/hms/api/devices?username=9776d3ifxtvx74ejxpsmuxvzq3ijhrmp
+
+[ { "id": 2002, "name": "Home-Maindoor", "beehiveName": "02e9e000f2", "type": "DOOR_SENSOR", "model": "Window Sensor", "alert": false, "state": 1, "status": { "state": -1, "batteryStatus": -1, "connectionStatus": -1, "tamperStatus": -1 }, "activeNotificationSettings": { "push": "on", "telo": "off", "phone": "off", "email": "off", "sms": "off", "conditionRaised": 1, "conditionCeased": 0 } }, { "id": 2003, "name": "Home-Garagedoor", "beehiveName": "02e9e00043", "type": "DOOR_SENSOR", "model": "Window Sensor", "alert": false, "state": 1, "status": { "state": -1,       "batteryStatus": -1, "connectionStatus": -1, "tamperStatus": -1 }, "activeNotificationSettings": { "push": "on", "telo": "off", "phone": "off", "email": "off", "sms": "off", "conditionRaised": 1, "conditionCeased": 0 } }, { "id": 2004, "name": "Home-Sidedoor", "beehiveName": "02e9e08592", "type": "DOOR_SENSOR", "model": "Window Sensor", "alert": false, "state": 1, "status": { "state": -1, "batteryStatus": -1, "connectionStatus": -1, "tamperStatus": -1 }, "activeNotificationSettings": { "push": "on", "telo": "off", "phone": "off", "email": "off", "sms": "off", "conditionRaised": 1, "conditionCeased": 0 } }, { "id": 2128, "name": "Home-Slidingdoor", "beehiveName": "02e9e085ee", "type": "DOOR_SENSOR", "model": "dectWindowOpenCloseDetector", "alert": false, "state": 1, "status": { "state": -1, "batteryStatus": -1, "connectionStatus": -1, "tamperStatus": -1 }, "activeNotificationSettings": {       "push": "on", "telo": "off", "phone": "off", "email": "off", "sms": "off", "conditionRaised": 1, "conditionCeased": 0 } },   { "id": 2129, "name": "Home-officewindow", "beehiveName": "02e9e085b4", "type": "WINDOW_SENSOR", "model": "dectWindowOpenCloseDetector", "alert": false, "state": 1, "status": { "state": -1, "batteryStatus": -1, "connectionStatus": -1, "tamperStatus": -1 }, "activeNotificationSettings": { "push": "on", "telo": "off", "phone": "off", "email": "off", "sms": "off", "conditionRaised": 1, "conditionCeased": 0 } }, { "id": 2130, "name": "Home-Officedoor", "beehiveName": "02e9e085e8", "type": "DOOR_SENSOR", "model": "Window Sensor", "alert": false, "state": 1, "status": { "state": -1, "batteryStatus": -1, "connectionStatus": -1, "tamperStatus": -1 }, "activeNotificationSettings": { "push": "on", "telo": "off", "phone": "off", "email": "off", "sms": "off", "conditionRaised": 1, "conditionCeased": 0 } }, { "id": 2131, "name": "Home-Livingroom", "beehiveName": "027ba01c13", "type": "MOTION_DETECTOR", "model": "dectMotionDetector", "alert": true, "state": 1, "status": { "state": -1, "batteryStatus": -1, "connectionStatus": -1, "tamperStatus": -1 }, "activeNotificationSettings": { "push": "on", "telo": "off", "phone": "off", "email": "off", "sms": "off", "conditionRaised": 1, "conditionCeased": 0 } }, { "id": 2132, "name": "Home-Familyroom", "beehiveName": "027ba01c46", "type": "MOTION_DETECTOR", "model": "dectMotionDetector", "alert": true, "state": 1, "status": { "state": -1, "batteryStatus": -1, "connectionStatus": -1, "tamperStatus": -1 }, "activeNotificationSettings": { "push": "off", "telo": "off", "phone": "off", "email": "off", "sms": "off", "conditionRaised": 1, "conditionCeased": 0 } } ]
+
+ http://hms1-cert1.cn.ooma.com:8084/hms/api/devices/2002?username=9776d3ifxtvx74ejxpsmuxvzq3ijhrmp
+
+{ "id": 2002, "name": "Home-Maindoor", "beehiveName": "02e9e000f2", "type": "DOOR_SENSOR", "model": "Window Sensor", "alert": false, "state": 1, "status": { "state": -1, "batteryStatus": -1, "connectionStatus": -1, "tamperStatus": -1 } }
+
+ http://hms1-cert1.cn.ooma.com:8084/hms/api/devices/2002/status?username=9776d3ifxtvx74ejxpsmuxvzq3ijhrmp
+
+{ "state": -1, "batteryStatus": -1, "connectionStatus": -1, "tamperStatus": -1 }
+
+===============================================================
+Exact Sensor Status
+http://hms-proxy-qa.ooma.com:8083/hms/api/devices/256/status?username=kb8whtmr99q48uutjd5k75ws7gif4v7j
+{
+  "state": 0,
+  "batteryStatus": 0,
+  "connectionStatus": 1,
+  "tamperStatus": 1
+}
+
+Entire Sensor Status
+
+http://hms-proxy-qa.ooma.com:8083/hms/api/devices/256?username=kb8whtmr99q48uutjd5k75ws7gif4v7j
+{"id":256,"name":"Disen Front door sensor ","beehiveName":"02e9e00042","type":"DOOR_SENSOR","model":"dectWindowOpenCloseDetector","alert":true,"state":1,"status":{"state":0,"batteryStatus":0,"connectionStatus":1,"tamperStatus":1}}
+
+All Modes
+http://hms-proxy-qa.ooma.com:8083/hms/api/modes?username=wigt2rx4db9dbcu9f4n5hnnf5x7evm58
+
+[{"id":219,"name":"Home","runSettings":{"current":false,"paused":false,"modeSchedules":[{"id":240,"startTime":"18:00","days":127}]}},{"id":220,"name":"Away","runSettings":{"current":true,"paused":false,"modeSchedules":[{"id":241,"startTime":"08:00","days":127}]}},{"id":221,"name":"Night","runSettings":{"current":false,"paused":false,"modeSchedules":[{"id":242,"startTime":"21:00","days":127}]}},{"id":283,"name":"new","runSettings":{"current":false,"paused":false,"modeSchedules":[]}},{"id":284,"name":"new Mode","runSettings":{"current":false,"paused":false,"modeSchedules":[]}},{"id":285,"name":"Mode1","runSettings":{"current":false,"paused":false,"modeSchedules":[]}}]
+
+Getting current mode
+http://hms-proxy-qa.ooma.com:8083/hms/api/modes/current?username=wigt2rx4db9dbcu9f4n5hnnf5x7evm58
+
+{"id":220,"name":"Away","runSettings":{"current":true,"paused":false,"modeSchedules":[{"id":241,"startTime":"08:00","days":127}]}}
+
+Check different modes
+
+http://hms-proxy-qa.ooma.com:8083/hms/api/modes/283?username=wigt2rx4db9dbcu9f4n5hnnf5x7evm58
+
+{"id":283,"name":"new","runSettings":{"current":false,"paused":false,"modeSchedules":[]}}
+Active Sensors
+http://hms-proxy-qa.ooma.com:8083/hms/api/devices?username=wigt2rx4db9dbcu9f4n5hnnf5x7evm58
+[{"id":678,"name":"Water Sensor 1 vco","beehiveName":"02e9e00117","type":"WATER_LEAKAGE","model":"dectFloodDetector","alert":true,"state":0,"status":{"state":-1,"batteryStatus":-1,"connectionStatus":-1},"activeNotificationSettings":{"push":"on","telo":"on","phone":"off","email":"off","sms":"off","conditionRaised":1,"conditionCeased":0}}]
+
+Search based on sensor id
+http://hms-proxy-qa.ooma.com:8083/hms/api/devices/678?username=wigt2rx4db9dbcu9f4n5hnnf5x7evm58
+{"id":678,"name":"Water Sensor 1 vco","beehiveName":"02e9e00117","type":"WATER_LEAKAGE","model":"dectFloodDetector","alert":true,"state":0,"status":{"state":-1,"batteryStatus":-1,"connectionStatus":-1}}
+Notification Settings in Home Mode
+http://hms-proxy-qa.ooma.com:8083/hms/api/devices/678/notification_settings/219?username=wigt2rx4db9dbcu9f4n5hnnf5x7evm58
+{"push":"on","telo":"on","phone":"off","email":"on","sms":"on","conditionRaised":1,"conditionCeased":1}
+SMS Phone No
+http://hms-proxy-qa.ooma.com:8083/hms/api/base/notification/sms?username=wigt2rx4db9dbcu9f4n5hnnf5x7evm58
+["8583973190@tmomail.net","987654321","6504338086@txt.att.net”]
+Email ID
+http://hms-proxy-qa.ooma.com:8083/hms/api/base/notification/email?username=wigt2rx4db9dbcu9f4n5hnnf5x7evm58
+["disen@ooma.com”]
+
+Status of Current Modes
+http://hms-proxy-qa.ooma.com:8083/hms/api/base/status?username=wigt2rx4db9dbcu9f4n5hnnf5x7evm58
+{"pairingMode":false,"notificationPause":false,"controllerConnection":true,"controllerConfigureMode":false,"newDevices":[]}
+Device Discovery
+http://hms1-cert1.cn.ooma.com:8083/dds/rest/rpc/devicediscovery/2/0/0/devicediscovery/
+{
+  "libraryName": "OpenRemote Object Model",
+  "javaFullClassName": "org.openremote.model.DeviceDiscovery",
+  "schemaVersion": "2.0.0",
+  "apiVersion": "0.2",
+  "model": {
+    "devices": [
+      {
+        "deviceIdentifier": "0000000000-OomaBaseStationRegistration-U0",
+        "deviceName": "OomaBaseStationRegistration",
+        "deviceProtocol": "ooma_ule",
+        "deviceModel": "OomaBaseStationRegistration",
+        "deviceType": "OomaBaseStationRegistration",
+        "deviceAttributes": {
+          "rootId": "0000000000",
+          "unitName": "Ooma Base Station Registration",
+          "deviceId": "RG",
+          "unitId": "U0",
+          "interfaceType": "output",
+          "deviceType": "interface"
+        }
+      },
+      {
+        "deviceIdentifier": "02e9e00117-BatteryIndicator-U1",
+        "deviceName": "BatteryIndicator",
+        "deviceProtocol": "ooma_ule",
+        "deviceModel": "BatteryIndicator",
+        "deviceType": "BatteryIndicator",
+        "deviceAttributes": {
+          "rootId": "02e9e00117",
+          "deviceId": "D1U0S1I272",
+          "unitId": "U1",
+          "interfaceType": "output",
+          "deviceType": "interface"
+        }
+      },
+      {
+        "deviceIdentifier": "02e9e00042-TamperDetector-U1",
+        "deviceName": "TamperDetector",
+        "deviceProtocol": "ooma_ule",
+        "deviceModel": "TamperDetector",
+        "deviceType": "TamperDetector",
+        "deviceAttributes": {
+          "rootId": "02e9e00042",
+          "deviceId": "D2U0S1I257",
+          "unitId": "U1",
+          "interfaceType": "output",
+          "deviceType": "interface"
+        }
+      },
+      {
+        "deviceIdentifier": "02e9e00042-IdentifyInputDevice-U1",
+        "deviceName": "Identify Input Device",
+        "deviceProtocol": "ooma_ule",
+        "deviceModel": "IdentifyInputDevice",
+        "deviceType": "IdentifyInputDevice",
+        "deviceAttributes": {
+          "rootId": "02e9e00042",
+          "deviceId": "D2U0S1I342458095",
+          "unitId": "U1",
+          "interfaceType": "output",
+          "deviceType": "interface"
+        }
+      },
+      {
+        "deviceIdentifier": "0000000000-dectBaseStation-root",
+        "deviceName": "Telo Base Station",
+        "deviceProtocol": "ooma_ule",
+        "deviceModel": "dectBaseStation",
+        "deviceType": "dectBaseStation",
+        "deviceAttributes": {
+          "deviceId": "0000000000",
+          "deviceType": "root"
+        }
+      },
+      {
+        "deviceIdentifier": "0000000000-OomaBaseStationFlashRedBlue-U3",
+        "deviceName": "OomaBaseStationFlashRedBlue",
+        "deviceProtocol": "ooma_ule",
+        "deviceModel": "OomaBaseStationFlashRedBlue",
+        "deviceType": "OomaBaseStationFlashRedBlue",
+        "deviceAttributes": {
+          "rootId": "0000000000",
+          "unitName": "Ooma Base Station Flash Red/Blue",
+          "deviceId": "SP3",
+          "unitId": "U3",
+          "interfaceType": "output",
+          "deviceType": "interface"
+        }
+      },
+      {
+        "deviceIdentifier": "0000000000-OomaBaseStationFlashFIRE-U4",
+        "deviceName": "OomaBaseStationFlashFIRE",
+        "deviceProtocol": "ooma_ule",
+        "deviceModel": "OomaBaseStationFlashFIRE",
+        "deviceType": "OomaBaseStationFlashFIRE",
+        "deviceAttributes": {
+          "rootId": "0000000000",
+          "unitName": "Ooma Base Station Flash FIRE",
+          "deviceId": "SP4",
+          "unitId": "U4",
+          "interfaceType": "output",
+          "deviceType": "interface"
+        }
+      },
+      {
+        "deviceIdentifier": "02e9e00042-Announcement-U1",
+        "deviceName": "Announcement",
+        "deviceProtocol": "ooma_ule",
+        "deviceModel": "Announcement",
+        "deviceType": "Announcement",
+        "deviceAttributes": {
+          "rootId": "02e9e00042",
+          "deviceId": "D2U0S1I342458093",
+          "unitId": "U1",
+          "interfaceType": "output",
+          "deviceType": "interface"
+        }
+      },
+      {
+        "deviceIdentifier": "02e9e00042-IdentifyDevice-U1",
+        "deviceName": "Identify Device",
+        "deviceProtocol": "ooma_ule",
+        "deviceModel": "IdentifyDevice",
+        "deviceType": "IdentifyDevice",
+        "deviceAttributes": {
+          "rootId": "02e9e00042",
+          "deviceId": "D2U0S1I4",
+          "unitId": "U1",
+          "interfaceType": "output",
+          "deviceType": "interface"
+        }
+      },
+      {
+        "deviceIdentifier": "02e9e00117-Alert-U1",
+        "deviceName": "Alert",
+        "deviceProtocol": "ooma_ule",
+        "deviceModel": "Alert",
+        "deviceType": "Alert",
+        "deviceAttributes": {
+          "rootId": "02e9e00117",
+          "deviceId": "D1U1S1I256",
+          "unitId": "U1",
+          "interfaceType": "output",
+          "deviceType": "interface"
+        }
+      },
+      {
+        "deviceIdentifier": "0000000000-ActiveDevice-U0",
+        "deviceName": "Active Device",
+        "deviceProtocol": "ooma_ule",
+        "deviceModel": "ActiveDevice",
+        "deviceType": "ActiveDevice",
+        "deviceAttributes": {
+          "rootId": "0000000000",
+          "unitName": "System",
+          "deviceId": "SK",
+          "unitId": "U0",
+          "interfaceType": "output",
+          "deviceType": "interface"
+        }
+      },
+      {
+        "deviceIdentifier": "02e9e00117-Announcement-U1",
+        "deviceName": "Announcement",
+        "deviceProtocol": "ooma_ule",
+        "deviceModel": "Announcement",
+        "deviceType": "Announcement",
+        "deviceAttributes": {
+          "rootId": "02e9e00117",
+          "deviceId": "D1U0S1I342458093",
+          "unitId": "U1",
+          "interfaceType": "output",
+          "deviceType": "interface"
+        }
+      },
+      {
+        "deviceIdentifier": "02e9e00117-IdentifyInputDevice-U1",
+        "deviceName": "Identify Input Device",
+        "deviceProtocol": "ooma_ule",
+        "deviceModel": "IdentifyInputDevice",
+        "deviceType": "IdentifyInputDevice",
+        "deviceAttributes": {
+          "rootId": "02e9e00117",
+          "deviceId": "D1U0S1I342458095",
+          "unitId": "U1",
+          "interfaceType": "output",
+          "deviceType": "interface"
+        }
+      },
+      {
+        "deviceIdentifier": "02e9e00117-TamperDetector-U1",
+        "deviceName": "TamperDetector",
+        "deviceProtocol": "ooma_ule",
+        "deviceModel": "TamperDetector",
+        "deviceType": "TamperDetector",
+        "deviceAttributes": {
+          "rootId": "02e9e00117",
+          "deviceId": "D1U0S1I257",
+          "unitId": "U1",
+          "interfaceType": "output",
+          "deviceType": "interface"
+        }
+      },
+      {
+        "deviceIdentifier": "02e9e00117-UnregisterDevice-U1",
+        "deviceName": "Unregister Device",
+        "deviceProtocol": "ooma_ule",
+        "deviceModel": "UnregisterDevice",
+        "deviceType": "UnregisterDevice",
+        "deviceAttributes": {
+          "rootId": "02e9e00117",
+          "deviceId": "D1U0S1I342458094",
+          "unitId": "U1",
+          "interfaceType": "output",
+          "deviceType": "interface"
+        }
+      },
+      {
+        "deviceIdentifier": "02e9e00117-IdentifyDevice-U1",
+        "deviceName": "Identify Device",
+        "deviceProtocol": "ooma_ule",
+        "deviceModel": "IdentifyDevice",
+        "deviceType": "IdentifyDevice",
+        "deviceAttributes": {
+          "rootId": "02e9e00117",
+          "deviceId": "D1U0S1I4",
+          "unitId": "U1",
+          "interfaceType": "output",
+          "deviceType": "interface"
+        }
+      },
+      {
+        "deviceIdentifier": "02e9e00117-ActiveDevice-U1",
+        "deviceName": "Active Device",
+        "deviceProtocol": "ooma_ule",
+        "deviceModel": "ActiveDevice",
+        "deviceType": "ActiveDevice",
+        "deviceAttributes": {
+          "rootId": "02e9e00117",
+          "deviceId": "D1U0S1I277",
+          "unitId": "U1",
+          "interfaceType": "output",
+          "deviceType": "interface"
+        }
+      },
+      {
+        "deviceIdentifier": "02e9e00117-dectFloodDetector-root",
+        "deviceName": "Flood Detector",
+        "deviceProtocol": "ooma_ule",
+        "deviceModel": "dectFloodDetector",
+        "deviceType": "dectFloodDetector",
+        "deviceAttributes": {
+          "deviceId": "02e9e00117",
+          "deviceType": "root"
+        }
+      },
+      {
+        "deviceIdentifier": "02e9e00042-BatteryIndicator-U1",
+        "deviceName": "BatteryIndicator",
+        "deviceProtocol": "ooma_ule",
+        "deviceModel": "BatteryIndicator",
+        "deviceType": "BatteryIndicator",
+        "deviceAttributes": {
+          "rootId": "02e9e00042",
+          "deviceId": "D2U0S1I272",
+          "unitId": "U1",
+          "interfaceType": "output",
+          "deviceType": "interface"
+        }
+      },
+      {
+        "deviceIdentifier": "0000000000-OomaBaseStationRegistration-U1",
+        "deviceName": "OomaBaseStationRegistration",
+        "deviceProtocol": "ooma_ule",
+        "deviceModel": "OomaBaseStationRegistration",
+        "deviceType": "OomaBaseStationRegistration",
+        "deviceAttributes": {
+          "rootId": "0000000000",
+          "unitName": "Ooma Base Station Registration",
+          "deviceId": "RN",
+          "unitId": "U1",
+          "interfaceType": "input",
+          "deviceType": "interface"
+        }
+      },
+      {
+        "deviceIdentifier": "02e9e00042-Alert-U1",
+        "deviceName": "Alert",
+        "deviceProtocol": "ooma_ule",
+        "deviceModel": "Alert",
+        "deviceType": "Alert",
+        "deviceAttributes": {
+          "rootId": "02e9e00042",
+          "deviceId": "D2U1S1I256",
+          "unitId": "U1",
+          "interfaceType": "output",
+          "deviceType": "interface"
+        }
+      },
+      {
+        "deviceIdentifier": "02e9e00042-dectWindowOpenCloseDetector-root",
+        "deviceName": "Window Open Detector",
+        "deviceProtocol": "ooma_ule",
+        "deviceModel": "dectWindowOpenCloseDetector",
+        "deviceType": "dectWindowOpenCloseDetector",
+        "deviceAttributes": {
+          "deviceId": "02e9e00042",
+          "deviceType": "root"
+        }
+      },
+      {
+        "deviceIdentifier": "02e9e00042-ActiveDevice-U1",
+        "deviceName": "Active Device",
+        "deviceProtocol": "ooma_ule",
+        "deviceModel": "ActiveDevice",
+        "deviceType": "ActiveDevice",
+        "deviceAttributes": {
+          "rootId": "02e9e00042",
+          "deviceId": "D2U0S1I277",
+          "unitId": "U1",
+          "interfaceType": "output",
+          "deviceType": "interface"
+        }
+      },
+      {
+        "deviceIdentifier": "0000000000-Announcement-U0",
+        "deviceName": "Announcement",
+        "deviceProtocol": "ooma_ule",
+        "deviceModel": "Announcement",
+        "deviceType": "Announcement",
+        "deviceAttributes": {
+          "rootId": "0000000000",
+          "unitName": "System",
+          "deviceId": "AN",
+          "unitId": "U0",
+          "interfaceType": "output",
+          "deviceType": "interface"
+        }
+      },
+      {
+        "deviceIdentifier": "02e9e00042-UnregisterDevice-U1",
+        "deviceName": "Unregister Device",
+        "deviceProtocol": "ooma_ule",
+        "deviceModel": "UnregisterDevice",
+        "deviceType": "UnregisterDevice",
+        "deviceAttributes": {
+          "rootId": "02e9e00042",
+          "deviceId": "D2U0S1I342458094",
+          "unitId": "U1",
+          "interfaceType": "output",
+          "deviceType": "interface"
+        }
+      }
+    ]
+  }
+}
+
+GET - http://hms-proxy-qa.ooma.com:8083/bcs/accounts/57/devices
+Accept - application/json
+[
+  {
+    "model": "dectBaseStation",
+    "vendor": "",
+    "name": "0000000000",
+    "id": 409
+  },
+  {
+    "model": "dectWindowOpenCloseDetector",
+    "vendor": "",
+    "name": "02e9e00014",
+    "id": 797
+  },
+  {
+    "model": "dectFloodDetector",
+    "vendor": "",
+    "name": "02e9e00082",
+    "id": 811
+  },
+  {
+    "model": "dectMotionDetector",
+    "vendor": "",
+    "name": "027ba01ca8",
+    "id": 837
+  },
+  {
+    "model": "dectMotionDetector",
+    "vendor": "",
+    "name": "027ba0036e",
+    "id": 838
+  },
+  {
+    "model": "dectFloodDetector",
+    "vendor": "",
+    "name": "02e9e00128",
+    "id": 839
+  }
+]

@@ -1,0 +1,159 @@
+: boyle-gould-flash ; /etc/init.d/checkORFlag.sh
+2017-04-18 23:59:22-0700 Start openremote_current
+Ooma Gould Version 179239
+2017-04-18 23:59:22-0700 openremote --id 1360 --path /ipkg/HMS-176950.ipk/ &> /var/tmp/openremote.log &
+: boyle-gould-flash ; -Duser.timezone=PST8PDT -Dh2.bindAddress=localhost -Dcatalina.home=/ipkg/HMS-176950.ipk/OpenRemote-Controller/ -Dcatalina.base=/ipkg/HMS-176950.ipk/OpenRemote-Controller -Djava.io.tmpdir=/ipkg/HMS-176950.ipk/OpenRemote-Controller/temp -Dtomcat.server.console.log.level=INFO -Dopenremote.controller.startup.log.level=DEBUG -Dopenremote.controller.console.threshold= -Djava.library.path=/ipkg/HMS-176950.ipk/OpenRemote-Controller/webapps/controller/WEB-INF/lib/native -Djava.util.logging.config.file=/ipkg/HMS-176950.ipk/OpenRemote-Controller/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djava.net.preferIPv4Stack=true -Djava.net.preferIPv4Addresses -Dopenremote.remote.command.service.uri=https://beehive-cert.hms.ooma.com:8443/ccs/rest -Dopenremote.remote.command.service.ws.uri=wss://beehive-cert.hms.ooma.com:8443/ccs/ws-commands -Dopenremote.controller.id=1360 -Dopenremote.device.discovery.service.uri=https://beehive-cert.hms.ooma.com:8443/dds/rest/rpc/devicediscovery/2/0/0/ -Dopenremote.sync.service.uri=https://beehive-cert.hms.ooma.com:8443/bcs/ -Djavax.net.ssl.trustStore=/ipkg/HMS-176950.ipk/OpenRemote-Controller/conf/ca_list.bks -Djavax.net.ssl.trustStorePassword=
+-Djavax.net.ssl.trustStoreType=BKS -Dssl.TrustManagerFactory.algorithm=X509 -Dceej.jit.exclude=/usr/siege/lib/jit-exclude -Xss512k -cp :/ipkg/HMS-176950.ipk/OpenRemote-Controller/bin/tomcat/bootstrap.jar:/ipkg/HMS-176950.ipk/OpenRemote-Controller/bin/tomcat/tomcat-juli.jar org.apache.catalina.startup.Bootstrap start
+Created MBeanServer with ID: 0:1492585163116:-32768:localhost:1
+INFO [main]: Initialized JUL to LOG4J Redirector.
+INFO [main]: Programmatically set 'useParentHandlers=false' in 'OpenRemote.Controller' log category.
+class java.beans.IntrospectionException: Method not found: setsensor
+INFO [main]: create thread
+class java.beans.IntrospectionException: Method not found: setdeviceName
+class java.beans.IntrospectionException: Method not found: setcommands
+class java.beans.IntrospectionException: Method not found: setsensors
+INFO [Controller Auto-Discovery]: Created IP discover multicast server !
+INFO [Controller Auto-Discovery]: Joined a group : 224.0.1.100:3333
+INFO [Controller Auto-Discovery]: Listening on  224.0.1.100:3333
+INFO [main]:
+
+--------------------------------------------------------------------
+
+  DEPLOYING NEW CONTROLLER RUNTIME...
+
+--------------------------------------------------------------------
+
+INFO [main]: No constructor(deployer) found for class: org.openremote.controller.protocol.ooma_base.OomaBaseCommandBuilder
+INFO [main]: OomaEventProcessor initialization
+INFO [main]: NimbitsClientHolder initialization
+INFO [OomaListener Port: 4443]: ####### sending initial @
+INFO [OomaListener Port: 4443]: Received Ooma packet: @ "02e9e03544-device" "Window Sensor" "Window Sensor" "Window Sensor" "deviceId":"02e9e03544" "deviceType":"root" "Battery Manufacturer":"CHARGER MONSTER" "Battery Rated Capacity (mAHr)":"1050" "Battery Number of Cells":"2" "Battery Rated Voltage (mV)":"3000" "Battery Minimum Voltage (mV)":"2600" "Battery Maximum Voltage (mV)":"2800" "Battery Voltage (mV)":"3100" "Response Time":"0" "Software Version":"176206" "Hardware Version":"dhx91-ooma-c" "Manufacturer":"Ooma" "Friendly
+Name":"Window Sensor"
+INFO [OomaListener Port: 4443]: Starting immediate discovery accouncement task...
+INFO [OomaListener Port: 4443]: Received Ooma packet: @ "02e9e03544-U0S1I273" "RSSI biased +128" "RSSI+128" "RSSI+128" "deviceId":"D1U0S1I273" "deviceType":"interface" "rootId":"02e9e03544" "interfaceType":"output" "unitId":"U1"
+INFO [OomaListener Port: 4443]: Starting immediate discovery accouncement task...
+INFO [OomaListener Port: 4443]: Received Ooma packet: @ "02e9e03544-U1S1I256" "Alert" "Alert" "Alert" "deviceId":"D1U1S1I256" "deviceType":"interface" "rootId":"02e9e03544" "interfaceType":"output" "unitId":"U1"
+INFO [OomaListener Port: 4443]: Starting immediate discovery accouncement task...
+INFO [OomaListener Port: 4443]: Received Ooma packet: @ "02e9e03544-U0S1I342458093" "Window Sensor" "Announcement" "Announcement" "deviceId":"D1U0S1I342458093" "deviceType":"interface" "rootId":"02e9e03544" "interfaceType":"output" "unitId":"U1"
+INFO [DiscoveredDevicesAnnouncement]: Starting device discovery service...
+WARN [OomaListener Port: 4443]: recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+INFO [main]: Initialized event processor : Ooma Event Processor
+INFO [main]: Initialized event processor : Ooma Protocol Mapper
+INFO [main]: Scheduling cleanupDuplicateRecordsTask in 1000 msec.
+WARN [pool-2-thread-1]: Device 02e9e03544-Window Sensor-root already discovered. Aborting...
+WARN [pool-2-thread-1]: Device 02e9e03544-RSSI128-U1 already discovered. Aborting...
+WARN [pool-2-thread-1]: Device 02e9e03544-Alert-U1 already discovered. Aborting...
+INFO [ReSendToNimbitsTask]: Trying to resend events to Nimbits...
+INFO [ReSendToNimbitsTask]: There are 0 events to send
+INFO [main]: Sending to nimbits, datapoint is 0000000000-Announcement-U0, and value is -1
+INFO [OomaListener Port: 4443]: Starting immediate discovery accouncement task...
+INFO [OomaListener Port: 4443]: Received Ooma packet: @ "02e9e03544-U0S1I342458094" "Window Sensor" "UnregisterDevice" "UnregisterDevice" "deviceId":"D1U0S1I342458094" "deviceType":"interface" "rootId":"02e9e03544" "interfaceType":"output" "unitId":"U1"
+INFO [OomaListener Port: 4443]: Starting immediate discovery accouncement task...
+INFO [OomaListener Port: 4443]: Received Ooma packet: @ "02e9e03544-U0S1I4" "Window Sensor" "IdentifyDevice" "IdentifyDevice" "deviceId":"D1U0S1I4" "deviceType":"interface" "rootId":"02e9e03544" "interfaceType":"output" "unitId":"U1"
+INFO [OomaListener Port: 4443]: Starting immediate discovery accouncement task...
+INFO [OomaListener Port: 4443]: Received Ooma packet: @ "02e9e03544-U0S1I342458095" "Window Sensor" "IdentifyInputDevice" "IdentifyInputDevice" "deviceId":"D1U0S1I342458095" "deviceType":"interface" "rootId":"02e9e03544" "interfaceType":"output" "unitId":"U1"
+INFO [OomaListener Port: 4443]: Starting immediate discovery accouncement task...
+INFO [OomaListener Port: 4443]: Received Ooma packet: @ "02e9e03544-U0S1I257" "Window Sensor" "TamperDetector" "TamperDetector" "deviceId":"D1U0S1I257" "deviceType":"interface" "rootId":"02e9e03544" "interfaceType":"output" "unitId":"U1"
+INFO [OomaListener Port: 4443]: Starting immediate discovery accouncement task...
+INFO [OomaListener Port: 4443]: Received Ooma packet: @ "02e9e03544-U0S1I272" "Window Sensor" "BatteryIndicator" "BatteryIndicator" "deviceId":"D1U0S1I272" "deviceType":"interface" "rootId":"02e9e03544" "interfaceType":"output" "unitId":"U1"
+INFO [OomaListener Port: 4443]: Starting immediate discovery accouncement task...
+INFO [OomaListener Port: 4443]: Received Ooma packet: @ "02e9e03544-U0S1I277" "Window Sensor" "ActiveDevice" "ActiveDevice" "deviceId":"D1U0S1I277" "deviceType":"interface" "rootId":"02e9e03544" "interfaceType":"output" "unitId":"U1"
+INFO [OomaListener Port: 4443]: Starting immediate discovery accouncement task...
+INFO [OomaListener Port: 4443]: Received Ooma packet: @ "0000000000-device" "Telo Base Station" "dectBaseStation" "dectBaseStation" "deviceId":"0000000000" "deviceType":"root"
+INFO [OomaListener Port: 4443]: Starting immediate discovery accouncement task...
+INFO [OomaListener Port: 4443]: Received Ooma packet: @ "0000000000-AN" "Announcement" "Announcement" "Announcement" "deviceId":"AN" "deviceType":"interface" "rootId":"0000000000" "interfaceType":"output" "unitId":"U0" "unitName":"System"
+ERROR [OomaListener Port: 4443]: Cannot read device settings, DeviceEntity is null.
+ERROR [OomaListener Port: 4443]: Could not set device name to freeswitch: deviceEntity or deviceSettingsEntity is null for device: 0000000000
+INFO [OomaListener Port: 4443]: Starting immediate discovery accouncement task...
+INFO [OomaListener Port: 4443]: Received Ooma packet: @ "0000000000-RN" "OomaBaseStationRegistration" "OomaBaseStationRegistration" "OomaBaseStationRegistration" "deviceId":"RN"
+"deviceType":"interface" "rootId":"0000000000" "interfaceType":"input" "unitId":"U1" "unitName":"Ooma Base Station Registration"
+INFO [OomaListener Port: 4443]: Starting immediate discovery accouncement task...
+INFO [OomaListener Port: 4443]: Received Ooma packet: @ "0000000000-RG" "OomaBaseStationRegistration" "OomaBaseStationRegistration" "OomaBaseStationRegistration" "deviceId":"RG"
+"deviceType":"interface" "rootId":"0000000000" "interfaceType":"output" "unitId":"U0" "unitName":"Ooma Base Station Registration"
+INFO [OomaListener Port: 4443]: Starting immediate discovery accouncement task...
+INFO [OomaListener Port: 4443]: Received Ooma packet: @ "0000000000-SK" "Active Device" "ActiveDevice" "ActiveDevice" "deviceId":"SK" "deviceType":"interface" "rootId":"0000000000" "interfaceType":"output" "unitId":"U0" "unitName":"System"
+ERROR [main]: Cannot read device settings, DeviceEntity is null.
+ERROR [main]: Could not set device name to freeswitch: deviceEntity or deviceSettingsEntity is null for device: 0000000000
+INFO [OomaListener Port: 4443]: Starting immediate discovery accouncement task...
+INFO [OomaListener Port: 4443]: Received Ooma packet: @ "0000000000-SP4" "OomaBaseStationFlashFIRE" "OomaBaseStationFlashFIRE" "OomaBaseStationFlashFIRE" "deviceId":"SP4" "deviceType":"interface" "rootId":"0000000000" "interfaceType":"output" "unitId":"U4" "unitName":"Ooma Base Station Flash FIRE"
+INFO [main]: Adding new device with name 0000000000
+INFO [OomaListener Port: 4443]: Starting immediate discovery accouncement task...
+INFO [OomaListener Port: 4443]: Received Ooma packet: @ "0000000000-SP3" "OomaBaseStationFlashRedBlue" "OomaBaseStationFlashRedBlue" "OomaBaseStationFlashRedBlue" "deviceId":"SP3" "deviceType":"interface" "rootId":"0000000000" "interfaceType":"output" "unitId":"U3" "unitName":"Ooma Base Station Flash Red/Blue"
+INFO [OomaListener Port: 4443]: Starting immediate discovery accouncement task...
+INFO [OomaListener Port: 4443]: Received Ooma packet: @@
+ERROR [OomaListener Port: 4443]: Bad message
+java.lang.StringIndexOutOfBoundsException
+        at org.openremote.controller.protocol.ooma.OomaListenerCommandSingleton$OomaListenerThread.run (OomaListenerCommandSingleton.java:417)
+INFO [OomaListener Port: 4443]: Received Ooma packet: c D1U0S1I273 98
+INFO [OomaListener Port: 4443]: Received Ooma packet: c D1U1S1I256 1
+INFO [OomaListener Port: 4443]: Sending to nimbits, datapoint is 02e9e03544-Alert-U1, and value is 1
+INFO [main]: Sending event to Freeswitch: S D1U0S1I342458093 61866239
+INFO [main]: Sending event to Freeswitch: S D1U0S1I342458093 188809471
+INFO [main]: Sending event to Freeswitch: S D1U0S1I342458093 4128375039
+INFO [OomaListener Port: 4443]: Executing command [Type: SET_RAISED; Device: 02e9e03544; Param: null]
+INFO [OomaListener Port: 4443]: Adding new device with name 02e9e03544
+INFO [OomaListener Port: 4443]: Device 02e9e03544: Changed state to DeviceState{state=RAISED, alertStateDuration=0, timestamp=1492585296761}
+INFO [OomaListener Port: 4443]: Received Ooma packet: c D1U0S1I342458093 9
+INFO [OomaListener Port: 4443]: Sending to nimbits, datapoint is 02e9e03544-Announcement-U1, and value is 9
+INFO [OomaListener Port: 4443]: Received Ooma packet: c D1U0S1I342458094 U
+INFO [OomaListener Port: 4443]: Received Ooma packet: c D1U0S1I4 U
+INFO [OomaListener Port: 4443]: Received Ooma packet: c D1U0S1I342458095 0
+INFO [OomaListener Port: 4443]: Sending to nimbits, datapoint is 02e9e03544-IdentifyInputDevice-U1, and value is 0
+INFO [OomaListener Port: 4443]: Received Ooma packet: c D1U0S1I257 1
+INFO [OomaListener Port: 4443]: Sending to nimbits, datapoint is 02e9e03544-TamperDetector-U1, and value is 1
+INFO [OomaListener Port: 4443]: Received Ooma packet: c D1U0S1I272 0
+INFO [OomaListener Port: 4443]: Sending to nimbits, datapoint is 02e9e03544-BatteryIndicator-U1, and value is 0
+WARN [pool-2-thread-1]: Device 02e9e03544-Announcement-U1 already discovered. Aborting...
+INFO [OomaListener Port: 4443]: Received Ooma packet: c D1U0S1I277 1
+INFO [OomaListener Port: 4443]: Sending to nimbits, datapoint is 02e9e03544-ActiveDevice-U1, and value is 1
+INFO [OomaListener Port: 4443]: Received Ooma packet: c AN 1
+INFO [OomaListener Port: 4443]: Sending to nimbits, datapoint is 0000000000-Announcement-U0, and value is 1
+ERROR [OomaListener Port: 4443]: Cannot read device settings, DeviceEntity is null.
+ERROR [OomaListener Port: 4443]: Could not set device name to freeswitch: deviceEntity or deviceSettingsEntity is null for device: 0000000000
+INFO [OomaListener Port: 4443]: Received Ooma packet: c RG 0
+INFO [OomaListener Port: 4443]: Sending to nimbits, datapoint is 0000000000-OomaBaseStationRegistration-U0, and value is 0
+INFO [OomaListener Port: 4443]: Received Ooma packet: c D1U0S1I4 U
+INFO [OomaListener Port: 4443]: Received Ooma packet: c D1U0S1I277 1
+INFO [OomaListener Port: 4443]: Sending to nimbits, datapoint is 02e9e03544-ActiveDevice-U1, and value is 1
+INFO [main]: Your platform does not provide complete low-level API for accessing direct buffers reliably. Unless explicitly requested, heap buffer will always be preferred to avoid potential system unstability.
+INFO [OomaListener Port: 4443]: Received Ooma packet: c SP4 0
+INFO [OomaListener Port: 4443]: Sending to nimbits, datapoint is 0000000000-OomaBaseStationFlashFIRE-U4, and value is 0
+INFO [OomaListener Port: 4443]: Received Ooma packet: c SP3 0
+INFO [OomaListener Port: 4443]: Sending to nimbits, datapoint is 0000000000-OomaBaseStationFlashRedBlue-U3, and value is 0
+INFO [OomaListener Port: 4443]: Received Ooma packet: c D1U1S1I256 1
+INFO [OomaListener Port: 4443]: Sending to nimbits, datapoint is 02e9e03544-Alert-U1, and value is 1
+INFO [OomaListener Port: 4443]: Executing command [Type: SET_RAISED; Device: 02e9e03544; Param: null]
+INFO [OomaListener Port: 4443]: Received Ooma packet: c RG 0
+INFO [OomaListener Port: 4443]: Sending to nimbits, datapoint is 0000000000-OomaBaseStationRegistration-U0, and value is 0
+WARN [pool-2-thread-1]: Device 02e9e03544-UnregisterDevice-U1 already discovered. Aborting...
+INFO [OomaListener Port: 4443]: Received Ooma packet: c D1U0S1I272 0
+INFO [OomaListener Port: 4443]: Sending to nimbits, datapoint is 02e9e03544-BatteryIndicator-U1, and value is 0
+INFO [OomaListener Port: 4443]: Received Ooma packet: c D1U0S1I342458095 0
+INFO [OomaListener Port: 4443]: Sending to nimbits, datapoint is 02e9e03544-IdentifyInputDevice-U1, and value is 0
+INFO [OomaListener Port: 4443]: Received Ooma packet: c SP4 0
+INFO [OomaListener Port: 4443]: Sending to nimbits, datapoint is 0000000000-OomaBaseStationFlashFIRE-U4, and value is 0
+INFO [OomaListener Port: 4443]: Received Ooma packet: c D1U0S1I257 1
+INFO [OomaListener Port: 4443]: Sending to nimbits, datapoint is 02e9e03544-TamperDetector-U1, and value is 1
+INFO [OomaListener Port: 4443]: Received Ooma packet: c D1U0S1I342458093 -166592257
+INFO [OomaListener Port: 4443]: Sending to nimbits, datapoint is 02e9e03544-Announcement-U1, and value is -1000
+INFO [OomaListener Port: 4443]: Received Ooma packet: c SP3 0
+INFO [OomaListener Port: 4443]: Sending to nimbits, datapoint is 0000000000-OomaBaseStationFlashRedBlue-U3, and value is 0
+INFO [OomaListener Port: 4443]: Received Ooma packet: c D1U0S1I342458094 U
+INFO [OomaListener Port: 4443]: Received Ooma packet: c D1U0S1I273 98
+INFO [OomaListener Port: 4443]: Sending to nimbits, datapoint is 02e9e03544-RSSI128-U1, and value is 98
+WARN [pool-2-thread-1]: Device 02e9e03544-IdentifyDevice-U1 already discovered. Aborting...
+WARN [pool-2-thread-1]: Device 02e9e03544-IdentifyInputDevice-U1 already discovered. Aborting...
+WARN [main]: Failed to find the current process ID from 'null'; using a random value: 2263799
+INFO [main]: Startup complete.
+INFO [main]: Controller Definition File Watcher for Default Deployer started.
+WARN [pool-2-thread-1]: Device 02e9e03544-TamperDetector-U1 already discovered. Aborting...
+WARN [pool-2-thread-1]: Device 02e9e03544-BatteryIndicator-U1 already discovered. Aborting...
+WARN [pool-2-thread-1]: Device 02e9e03544-ActiveDevice-U1 already discovered. Aborting...
+INFO [nioEventLoopGroup-2-1]: WebSocket Client connected! With OpenSSL
+WARN [pool-2-thread-1]: Device 0000000000-dectBaseStation-root already discovered. Aborting...
+WARN [pool-2-thread-1]: Device 0000000000-Announcement-U0 already discovered. Aborting...
+WARN [pool-2-thread-1]: Device 0000000000-OomaBaseStationRegistration-U1 already discovered. Aborting...
+WARN [pool-2-thread-1]: Device 0000000000-OomaBaseStationRegistration-U0 already discovered. Aborting...
+WARN [pool-2-thread-1]: Device 0000000000-ActiveDevice-U0 already discovered. Aborting...
+WARN [pool-2-thread-1]: Device 0000000000-OomaBaseStationFlashFIRE-U4 already discovered. Aborting...
+WARN [pool-2-thread-1]: Device 0000000000-OomaBaseStationFlashRedBlue-U3 already discovered. Aborting...

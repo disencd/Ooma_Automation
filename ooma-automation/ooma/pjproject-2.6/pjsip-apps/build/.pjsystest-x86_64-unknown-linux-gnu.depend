@@ -1,0 +1,312 @@
+output/pjsystest-x86_64-unknown-linux-gnu/systest.o: ../src/pjsystest/systest.c ../src/pjsystest/systest.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pjlib.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/activesock.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/ioqueue.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/types.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/config.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/compat/cc_gcc.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/compat/os_auto.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/compat/m_auto.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/compat/size_t.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.4.7/include/stddef.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/config_site.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/sock.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/addr_resolv.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/array.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/assert.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/compat/assert.h \
+ /usr/include/assert.h /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-64.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/ctype.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/compat/ctype.h \
+ /usr/include/ctype.h /usr/include/bits/types.h \
+ /usr/include/bits/typesizes.h /usr/include/endian.h \
+ /usr/include/bits/endian.h /usr/include/bits/byteswap.h \
+ /usr/include/xlocale.h /var/tmp/pjproject-2.6/pjlib/include/pj/errno.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/compat/errno.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.4.7/include/stdarg.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/except.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/compat/setjmp.h \
+ /usr/include/setjmp.h /usr/include/bits/setjmp.h \
+ /usr/include/bits/sigset.h /var/tmp/pjproject-2.6/pjlib/include/pj/log.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/fifobuf.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/file_access.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/file_io.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/guid.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/hash.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/ip_helper.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/list.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/lock.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/math.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/string.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/compat/string.h \
+ /usr/include/string.h /usr/include/bits/string.h \
+ /usr/include/bits/string2.h /usr/include/stdlib.h /usr/include/stdio.h \
+ /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ /usr/include/bits/stdio.h /usr/include/bits/waitflags.h \
+ /usr/include/bits/waitstatus.h /usr/include/sys/types.h \
+ /usr/include/time.h /usr/include/sys/select.h /usr/include/bits/select.h \
+ /usr/include/bits/time.h /usr/include/sys/sysmacros.h \
+ /usr/include/bits/pthreadtypes.h /usr/include/alloca.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/compat/high_precision.h \
+ /usr/include/math.h /usr/include/bits/huge_val.h \
+ /usr/include/bits/huge_valf.h /usr/include/bits/huge_vall.h \
+ /usr/include/bits/inf.h /usr/include/bits/nan.h \
+ /usr/include/bits/mathdef.h /usr/include/bits/mathcalls.h \
+ /usr/include/bits/mathinline.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/os.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/pool.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/pool_buf.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/rand.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/rbtree.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/sock_qos.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/sock_select.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/ssl_sock.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/timer.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/unicode.h ../src/pjsystest/gui.h \
+ /var/tmp/pjproject-2.6/pjsip/include/pjsua-lib/pjsua.h \
+ /var/tmp/pjproject-2.6/pjsip/include/pjsip.h \
+ /var/tmp/pjproject-2.6/pjsip/include/pjsip/sip_types.h \
+ /var/tmp/pjproject-2.6/pjsip/include/pjsip/sip_config.h \
+ /var/tmp/pjproject-2.6/pjsip/include/pjsip/sip_autoconf.h \
+ /var/tmp/pjproject-2.6/pjsip/include/pjsip/sip_errno.h \
+ /var/tmp/pjproject-2.6/pjsip/include/pjsip/sip_uri.h \
+ /var/tmp/pjproject-2.6/pjlib-util/include/pjlib-util/scanner.h \
+ /var/tmp/pjproject-2.6/pjlib-util/include/pjlib-util/types.h \
+ /var/tmp/pjproject-2.6/pjlib-util/include/pjlib-util/config.h \
+ /var/tmp/pjproject-2.6/pjlib-util/include/pjlib-util/scanner_cis_bitwise.h \
+ /var/tmp/pjproject-2.6/pjsip/include/pjsip/sip_tel_uri.h \
+ /var/tmp/pjproject-2.6/pjsip/include/pjsip/sip_msg.h \
+ /var/tmp/pjproject-2.6/pjsip/include/pjsip/sip_multipart.h \
+ /var/tmp/pjproject-2.6/pjsip/include/pjsip/sip_parser.h \
+ /var/tmp/pjproject-2.6/pjsip/include/pjsip/sip_event.h \
+ /var/tmp/pjproject-2.6/pjsip/include/pjsip/sip_module.h \
+ /var/tmp/pjproject-2.6/pjsip/include/pjsip/sip_endpoint.h \
+ /var/tmp/pjproject-2.6/pjsip/include/pjsip/sip_transport.h \
+ /var/tmp/pjproject-2.6/pjsip/include/pjsip/sip_resolve.h \
+ /var/tmp/pjproject-2.6/pjlib-util/include/pjlib-util/resolver.h \
+ /var/tmp/pjproject-2.6/pjlib-util/include/pjlib-util/dns.h \
+ /var/tmp/pjproject-2.6/pjsip/include/pjsip/sip_util.h \
+ /var/tmp/pjproject-2.6/pjsip/include/pjsip/sip_transport_udp.h \
+ /var/tmp/pjproject-2.6/pjsip/include/pjsip/sip_transport_loop.h \
+ /var/tmp/pjproject-2.6/pjsip/include/pjsip/sip_transport_tcp.h \
+ /var/tmp/pjproject-2.6/pjsip/include/pjsip/sip_transport_tls.h \
+ /var/tmp/pjproject-2.6/pjsip/include/pjsip/sip_auth.h \
+ /var/tmp/pjproject-2.6/pjsip/include/pjsip/sip_auth_msg.h \
+ /var/tmp/pjproject-2.6/pjsip/include/pjsip/sip_auth_aka.h \
+ /var/tmp/pjproject-2.6/pjsip/include/pjsip/sip_transaction.h \
+ /var/tmp/pjproject-2.6/pjsip/include/pjsip/sip_ua_layer.h \
+ /var/tmp/pjproject-2.6/pjsip/include/pjsip/sip_dialog.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/alaw_ulaw.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/types.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/config.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/config_auto.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/avi_stream.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/port.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/clock.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/event.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/format.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/signatures.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/frame.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/bidirectional.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/circbuf.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/codec.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/conference.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/converter.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/delaybuf.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/echo.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/echo_port.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/endpoint.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/sdp.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/transport.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/errno.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia-audiodev/audiodev.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/audiodev.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia-audiodev/config.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia-audiodev/errno.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/g711.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia-codec/types.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia-codec/config.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia-codec/config_auto.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/jbuf.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/master_port.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/mem_port.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/null_port.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/plc.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/resample.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/rtcp.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/rtcp_xr.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/rtp.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/sdp_neg.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/silencedet.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/sound.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/sound_port.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/splitcomb.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/stereo.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/stream.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/vid_codec.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/stream_common.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/tonegen.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/transport_adapter_sample.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/transport_ice.h \
+ /var/tmp/pjproject-2.6/pjnath/include/pjnath/ice_strans.h \
+ /var/tmp/pjproject-2.6/pjnath/include/pjnath/ice_session.h \
+ /var/tmp/pjproject-2.6/pjnath/include/pjnath/types.h \
+ /var/tmp/pjproject-2.6/pjnath/include/pjnath/config.h \
+ /var/tmp/pjproject-2.6/pjnath/include/pjnath/stun_session.h \
+ /var/tmp/pjproject-2.6/pjnath/include/pjnath/stun_msg.h \
+ /var/tmp/pjproject-2.6/pjnath/include/pjnath/stun_auth.h \
+ /var/tmp/pjproject-2.6/pjnath/include/pjnath/stun_config.h \
+ /var/tmp/pjproject-2.6/pjnath/include/pjnath/stun_transaction.h \
+ /var/tmp/pjproject-2.6/pjnath/include/pjnath/errno.h \
+ /var/tmp/pjproject-2.6/pjnath/include/pjnath/stun_sock.h \
+ /var/tmp/pjproject-2.6/pjnath/include/pjnath/turn_sock.h \
+ /var/tmp/pjproject-2.6/pjnath/include/pjnath/turn_session.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/transport_loop.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/transport_srtp.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/transport_udp.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/vid_port.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia-videodev/videodev.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/videodev.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia-videodev/config.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia-videodev/errno.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/vid_stream.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/vid_tee.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/wav_playlist.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/wav_port.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/wave.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia/wsola.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia-codec.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia-codec/audio_codecs.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia-codec/passthrough.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia-codec/l16.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia-codec/ffmpeg_vid_codecs.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia-codec/gsm.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia-codec/speex.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia-codec/ilbc.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia-codec/g722.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia-codec/g7221.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia-codec/ipp_codecs.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia-codec/opencore_amr.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia-codec/openh264.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia-codec/silk.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia-codec/opus.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia_videodev.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia-videodev/videodev_imp.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia-videodev/avi_dev.h \
+ /var/tmp/pjproject-2.6/pjsip/include/pjsip_ua.h \
+ /var/tmp/pjproject-2.6/pjsip/include/pjsip-ua/sip_inv.h \
+ /var/tmp/pjproject-2.6/pjsip/include/pjsip-ua/sip_regc.h \
+ /var/tmp/pjproject-2.6/pjsip/include/pjsip-ua/sip_replaces.h \
+ /var/tmp/pjproject-2.6/pjsip/include/pjsip-ua/sip_xfer.h \
+ /var/tmp/pjproject-2.6/pjsip/include/pjsip-simple/evsub.h \
+ /var/tmp/pjproject-2.6/pjsip/include/pjsip-simple/types.h \
+ /var/tmp/pjproject-2.6/pjsip/include/pjsip-ua/sip_100rel.h \
+ /var/tmp/pjproject-2.6/pjsip/include/pjsip-ua/sip_timer.h \
+ /var/tmp/pjproject-2.6/pjsip/include/pjsip_simple.h \
+ /var/tmp/pjproject-2.6/pjsip/include/pjsip-simple/evsub_msg.h \
+ /var/tmp/pjproject-2.6/pjsip/include/pjsip-simple/iscomposing.h \
+ /var/tmp/pjproject-2.6/pjlib-util/include/pjlib-util/xml.h \
+ /var/tmp/pjproject-2.6/pjsip/include/pjsip-simple/mwi.h \
+ /var/tmp/pjproject-2.6/pjsip/include/pjsip-simple/presence.h \
+ /var/tmp/pjproject-2.6/pjsip/include/pjsip-simple/pidf.h \
+ /var/tmp/pjproject-2.6/pjsip/include/pjsip-simple/xpidf.h \
+ /var/tmp/pjproject-2.6/pjsip/include/pjsip-simple/rpid.h \
+ /var/tmp/pjproject-2.6/pjsip/include/pjsip-simple/publish.h \
+ /var/tmp/pjproject-2.6/pjnath/include/pjnath.h \
+ /var/tmp/pjproject-2.6/pjnath/include/pjnath/nat_detect.h \
+ /var/tmp/pjproject-2.6/pjlib-util/include/pjlib-util.h \
+ /var/tmp/pjproject-2.6/pjlib-util/include/pjlib-util/errno.h \
+ /var/tmp/pjproject-2.6/pjlib-util/include/pjlib-util/getopt.h \
+ /var/tmp/pjproject-2.6/pjlib-util/include/pjlib-util/base64.h \
+ /var/tmp/pjproject-2.6/pjlib-util/include/pjlib-util/crc32.h \
+ /var/tmp/pjproject-2.6/pjlib-util/include/pjlib-util/hmac_md5.h \
+ /var/tmp/pjproject-2.6/pjlib-util/include/pjlib-util/md5.h \
+ /var/tmp/pjproject-2.6/pjlib-util/include/pjlib-util/hmac_sha1.h \
+ /var/tmp/pjproject-2.6/pjlib-util/include/pjlib-util/sha1.h \
+ /var/tmp/pjproject-2.6/pjlib-util/include/pjlib-util/srv_resolver.h \
+ /var/tmp/pjproject-2.6/pjlib-util/include/pjlib-util/dns_server.h \
+ /var/tmp/pjproject-2.6/pjlib-util/include/pjlib-util/string.h \
+ /var/tmp/pjproject-2.6/pjlib-util/include/pjlib-util/json.h \
+ /var/tmp/pjproject-2.6/pjlib-util/include/pjlib-util/stun_simple.h \
+ /var/tmp/pjproject-2.6/pjlib-util/include/pjlib-util/pcap.h \
+ /var/tmp/pjproject-2.6/pjlib-util/include/pjlib-util/http_client.h \
+ /var/tmp/pjproject-2.6/pjlib-util/include/pjlib-util/cli.h \
+ /var/tmp/pjproject-2.6/pjlib-util/include/pjlib-util/cli_console.h \
+ /var/tmp/pjproject-2.6/pjlib-util/include/pjlib-util/cli_imp.h \
+ /var/tmp/pjproject-2.6/pjlib-util/include/pjlib-util/cli_telnet.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia_audiodev.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia-audiodev/audiodev_imp.h \
+ /var/tmp/pjproject-2.6/pjmedia/include/pjmedia-audiodev/audiotest.h
+output/pjsystest-x86_64-unknown-linux-gnu/main_console.o: ../src/pjsystest/main_console.c \
+ ../src/pjsystest/systest.h /var/tmp/pjproject-2.6/pjlib/include/pjlib.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/activesock.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/ioqueue.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/types.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/config.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/compat/cc_gcc.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/compat/os_auto.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/compat/m_auto.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/compat/size_t.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.4.7/include/stddef.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/config_site.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/sock.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/addr_resolv.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/array.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/assert.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/compat/assert.h \
+ /usr/include/assert.h /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-64.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/ctype.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/compat/ctype.h \
+ /usr/include/ctype.h /usr/include/bits/types.h \
+ /usr/include/bits/typesizes.h /usr/include/endian.h \
+ /usr/include/bits/endian.h /usr/include/bits/byteswap.h \
+ /usr/include/xlocale.h /var/tmp/pjproject-2.6/pjlib/include/pj/errno.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/compat/errno.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.4.7/include/stdarg.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/except.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/compat/setjmp.h \
+ /usr/include/setjmp.h /usr/include/bits/setjmp.h \
+ /usr/include/bits/sigset.h /var/tmp/pjproject-2.6/pjlib/include/pj/log.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/fifobuf.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/file_access.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/file_io.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/guid.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/hash.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/ip_helper.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/list.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/lock.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/math.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/string.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/compat/string.h \
+ /usr/include/string.h /usr/include/bits/string.h \
+ /usr/include/bits/string2.h /usr/include/stdlib.h /usr/include/stdio.h \
+ /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ /usr/include/bits/stdio.h /usr/include/bits/waitflags.h \
+ /usr/include/bits/waitstatus.h /usr/include/sys/types.h \
+ /usr/include/time.h /usr/include/sys/select.h /usr/include/bits/select.h \
+ /usr/include/bits/time.h /usr/include/sys/sysmacros.h \
+ /usr/include/bits/pthreadtypes.h /usr/include/alloca.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/compat/high_precision.h \
+ /usr/include/math.h /usr/include/bits/huge_val.h \
+ /usr/include/bits/huge_valf.h /usr/include/bits/huge_vall.h \
+ /usr/include/bits/inf.h /usr/include/bits/nan.h \
+ /usr/include/bits/mathdef.h /usr/include/bits/mathcalls.h \
+ /usr/include/bits/mathinline.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/os.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/pool.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/pool_buf.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/rand.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/rbtree.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/sock_qos.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/sock_select.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/ssl_sock.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/timer.h \
+ /var/tmp/pjproject-2.6/pjlib/include/pj/unicode.h ../src/pjsystest/gui.h
+../bin/pjsystest-x86_64-unknown-linux-gnu: /var/tmp/pjproject-2.6/pjsip/lib/libpjsua-x86_64-unknown-linux-gnu.a /var/tmp/pjproject-2.6/pjsip/lib/libpjsip-ua-x86_64-unknown-linux-gnu.a /var/tmp/pjproject-2.6/pjsip/lib/libpjsip-simple-x86_64-unknown-linux-gnu.a /var/tmp/pjproject-2.6/pjsip/lib/libpjsip-x86_64-unknown-linux-gnu.a /var/tmp/pjproject-2.6/pjmedia/lib/libpjmedia-codec-x86_64-unknown-linux-gnu.a /var/tmp/pjproject-2.6/pjmedia/lib/libpjmedia-videodev-x86_64-unknown-linux-gnu.a /var/tmp/pjproject-2.6/pjmedia/lib/libpjmedia-x86_64-unknown-linux-gnu.a /var/tmp/pjproject-2.6/pjmedia/lib/libpjmedia-audiodev-x86_64-unknown-linux-gnu.a /var/tmp/pjproject-2.6/pjnath/lib/libpjnath-x86_64-unknown-linux-gnu.a /var/tmp/pjproject-2.6/pjlib-util/lib/libpjlib-util-x86_64-unknown-linux-gnu.a  /var/tmp/pjproject-2.6/third_party/lib/libsrtp-x86_64-unknown-linux-gnu.a /var/tmp/pjproject-2.6/third_party/lib/libresample-x86_64-unknown-linux-gnu.a /var/tmp/pjproject-2.6/third_party/lib/libgsmcodec-x86_64-unknown-linux-gnu.a /var/tmp/pjproject-2.6/third_party/lib/libspeex-x86_64-unknown-linux-gnu.a /var/tmp/pjproject-2.6/third_party/lib/libg7221codec-x86_64-unknown-linux-gnu.a /var/tmp/pjproject-2.6/pjlib/lib/libpj-x86_64-unknown-linux-gnu.a

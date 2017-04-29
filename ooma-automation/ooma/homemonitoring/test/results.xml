@@ -1,0 +1,578 @@
+<?xml version="1.0" ?>
+<testsuite errors="4" failures="0" name="HmsNotificationSettingsTests-20170407182711" tests="4" time="0.001">
+	<testcase classname="HmsNotificationSettingsTests" name="test_configure_and_update_all_modes_notification_settings" time="0.000">
+		<error message="No module named py_frame.notification_settings" type="ImportError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/disen.chitilapilly/Documents/workspace/Ooma_Automation/ooma-automation/ooma/homemonitoring/test/smoke_test.py", line 354, in setUp
+    mod = __import__("py_frame.notification_settings")
+ImportError: No module named py_frame.notification_settings
+]]>		</error>
+	</testcase>
+	<testcase classname="HmsNotificationSettingsTests" name="test_configure_and_update_away_mode_notification_settings" time="0.000">
+		<error message="No module named py_frame.notification_settings" type="ImportError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/disen.chitilapilly/Documents/workspace/Ooma_Automation/ooma-automation/ooma/homemonitoring/test/smoke_test.py", line 354, in setUp
+    mod = __import__("py_frame.notification_settings")
+ImportError: No module named py_frame.notification_settings
+]]>		</error>
+	</testcase>
+	<testcase classname="HmsNotificationSettingsTests" name="test_configure_and_update_home_mode_notification_settings" time="0.000">
+		<error message="No module named py_frame.notification_settings" type="ImportError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/disen.chitilapilly/Documents/workspace/Ooma_Automation/ooma-automation/ooma/homemonitoring/test/smoke_test.py", line 354, in setUp
+    mod = __import__("py_frame.notification_settings")
+ImportError: No module named py_frame.notification_settings
+]]>		</error>
+	</testcase>
+	<testcase classname="HmsNotificationSettingsTests" name="test_configure_and_update_night_mode_notification_settings" time="0.000">
+		<error message="No module named py_frame.notification_settings" type="ImportError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/disen.chitilapilly/Documents/workspace/Ooma_Automation/ooma-automation/ooma/homemonitoring/test/smoke_test.py", line 354, in setUp
+    mod = __import__("py_frame.notification_settings")
+ImportError: No module named py_frame.notification_settings
+]]>		</error>
+	</testcase>
+	<system-out>
+<![CDATA[2017/04/07 18:27:11
+-----------------Checking configuration--------------------
+Check Tomcat status
+hms-proxy-qa.ooma.com:8084 is up!
+Check HMS status
+Result of ping:  200
+Check BCS status
+URL:  http://hms-proxy-qa.ooma.com:8083/bcs/accounts/47/devices
+2017/04/07 18:27:12
+-----------------Checking configuration--------------------
+Check Tomcat status
+hms-proxy-qa.ooma.com:8084 is up!
+Check HMS status
+Result of ping:  200
+Check BCS status
+URL:  http://hms-proxy-qa.ooma.com:8083/bcs/accounts/47/devices
+2017/04/07 18:27:12
+-----------------Checking configuration--------------------
+Check Tomcat status
+hms-proxy-qa.ooma.com:8084 is up!
+Check HMS status
+Result of ping:  200
+Check BCS status
+URL:  http://hms-proxy-qa.ooma.com:8083/bcs/accounts/47/devices
+2017/04/07 18:27:12
+-----------------Checking configuration--------------------
+Check Tomcat status
+hms-proxy-qa.ooma.com:8084 is up!
+Check HMS status
+Result of ping:  200
+Check BCS status
+URL:  http://hms-proxy-qa.ooma.com:8083/bcs/accounts/47/devices
+2017/04/07 18:27:12
+-----------------Checking configuration--------------------
+Check Tomcat status
+hms-proxy-qa.ooma.com:8084 is up!
+Check HMS status
+Result of ping:  200
+Check BCS status
+URL:  http://hms-proxy-qa.ooma.com:8083/bcs/accounts/47/devices
+2017/04/07 18:27:12
+-----------------Checking configuration--------------------
+Check Tomcat status
+hms-proxy-qa.ooma.com:8084 is up!
+Check HMS status
+Result of ping:  200
+Check BCS status
+URL:  http://hms-proxy-qa.ooma.com:8083/bcs/accounts/47/devices
+2017/04/07 18:27:12
+-----------------Checking configuration--------------------
+Check Tomcat status
+hms-proxy-qa.ooma.com:8084 is up!
+Check HMS status
+Result of ping:  200
+Check BCS status
+URL:  http://hms-proxy-qa.ooma.com:8083/bcs/accounts/47/devices
+]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+</testsuite>
+<?xml version="1.0" ?>
+<testsuite errors="1" failures="0" name="HmsPairingModeTests-20170407182711" tests="1" time="0.030">
+	<testcase classname="HmsPairingModeTests" name="test_pairing_mode_enable_disable" time="0.030">
+		<error message="&lt;urlopen error [Errno 61] Connection refused&gt;" type="URLError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/disen.chitilapilly/Documents/workspace/Ooma_Automation/ooma-automation/ooma/homemonitoring/test/smoke_test.py", line 228, in setUp
+    self.check_configuration()
+  File "/Users/disen.chitilapilly/Documents/workspace/Ooma_Automation/ooma-automation/ooma/homemonitoring/test/smoke_test.py", line 55, in check_configuration
+    res = bcs.get_devices()
+  File "/Users/disen.chitilapilly/Documents/workspace/Ooma_Automation/ooma-automation/ooma/homemonitoring/server/sensor.py", line 289, in get_devices
+    f = urllib2.urlopen(req)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 154, in urlopen
+    return opener.open(url, data, timeout)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 431, in open
+    response = self._open(req, data)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 449, in _open
+    '_open', req)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 409, in _call_chain
+    result = func(*args)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 1227, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 1197, in do_open
+    raise URLError(err)
+URLError: <urlopen error [Errno 61] Connection refused>
+]]>		</error>
+	</testcase>
+	<system-out>
+<![CDATA[2017/04/07 18:27:11
+-----------------Checking configuration--------------------
+Check Tomcat status
+hms-proxy-qa.ooma.com:8084 is up!
+Check HMS status
+Result of ping:  200
+Check BCS status
+URL:  http://hms-proxy-qa.ooma.com:8083/bcs/accounts/47/devices
+2017/04/07 18:27:12
+-----------------Checking configuration--------------------
+Check Tomcat status
+hms-proxy-qa.ooma.com:8084 is up!
+Check HMS status
+Result of ping:  200
+Check BCS status
+URL:  http://hms-proxy-qa.ooma.com:8083/bcs/accounts/47/devices
+2017/04/07 18:27:12
+-----------------Checking configuration--------------------
+Check Tomcat status
+hms-proxy-qa.ooma.com:8084 is up!
+Check HMS status
+Result of ping:  200
+Check BCS status
+URL:  http://hms-proxy-qa.ooma.com:8083/bcs/accounts/47/devices
+2017/04/07 18:27:12
+-----------------Checking configuration--------------------
+Check Tomcat status
+hms-proxy-qa.ooma.com:8084 is up!
+Check HMS status
+Result of ping:  200
+Check BCS status
+URL:  http://hms-proxy-qa.ooma.com:8083/bcs/accounts/47/devices
+2017/04/07 18:27:12
+-----------------Checking configuration--------------------
+Check Tomcat status
+hms-proxy-qa.ooma.com:8084 is up!
+Check HMS status
+Result of ping:  200
+Check BCS status
+URL:  http://hms-proxy-qa.ooma.com:8083/bcs/accounts/47/devices
+2017/04/07 18:27:12
+-----------------Checking configuration--------------------
+Check Tomcat status
+hms-proxy-qa.ooma.com:8084 is up!
+Check HMS status
+Result of ping:  200
+Check BCS status
+URL:  http://hms-proxy-qa.ooma.com:8083/bcs/accounts/47/devices
+2017/04/07 18:27:12
+-----------------Checking configuration--------------------
+Check Tomcat status
+hms-proxy-qa.ooma.com:8084 is up!
+Check HMS status
+Result of ping:  200
+Check BCS status
+URL:  http://hms-proxy-qa.ooma.com:8083/bcs/accounts/47/devices
+]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+</testsuite>
+<?xml version="1.0" ?>
+<testsuite errors="1" failures="0" name="HmsCustomModesTests-20170407182711" tests="1" time="0.037">
+	<testcase classname="HmsCustomModesTests" name="test_create_get_update_delete_custom_mode" time="0.037">
+		<error message="&lt;urlopen error [Errno 61] Connection refused&gt;" type="URLError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/disen.chitilapilly/Documents/workspace/Ooma_Automation/ooma-automation/ooma/homemonitoring/test/smoke_test.py", line 495, in setUp
+    self.check_configuration()
+  File "/Users/disen.chitilapilly/Documents/workspace/Ooma_Automation/ooma-automation/ooma/homemonitoring/test/smoke_test.py", line 55, in check_configuration
+    res = bcs.get_devices()
+  File "/Users/disen.chitilapilly/Documents/workspace/Ooma_Automation/ooma-automation/ooma/homemonitoring/server/sensor.py", line 289, in get_devices
+    f = urllib2.urlopen(req)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 154, in urlopen
+    return opener.open(url, data, timeout)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 431, in open
+    response = self._open(req, data)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 449, in _open
+    '_open', req)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 409, in _call_chain
+    result = func(*args)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 1227, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 1197, in do_open
+    raise URLError(err)
+URLError: <urlopen error [Errno 61] Connection refused>
+]]>		</error>
+	</testcase>
+	<system-out>
+<![CDATA[2017/04/07 18:27:11
+-----------------Checking configuration--------------------
+Check Tomcat status
+hms-proxy-qa.ooma.com:8084 is up!
+Check HMS status
+Result of ping:  200
+Check BCS status
+URL:  http://hms-proxy-qa.ooma.com:8083/bcs/accounts/47/devices
+2017/04/07 18:27:12
+-----------------Checking configuration--------------------
+Check Tomcat status
+hms-proxy-qa.ooma.com:8084 is up!
+Check HMS status
+Result of ping:  200
+Check BCS status
+URL:  http://hms-proxy-qa.ooma.com:8083/bcs/accounts/47/devices
+2017/04/07 18:27:12
+-----------------Checking configuration--------------------
+Check Tomcat status
+hms-proxy-qa.ooma.com:8084 is up!
+Check HMS status
+Result of ping:  200
+Check BCS status
+URL:  http://hms-proxy-qa.ooma.com:8083/bcs/accounts/47/devices
+2017/04/07 18:27:12
+-----------------Checking configuration--------------------
+Check Tomcat status
+hms-proxy-qa.ooma.com:8084 is up!
+Check HMS status
+Result of ping:  200
+Check BCS status
+URL:  http://hms-proxy-qa.ooma.com:8083/bcs/accounts/47/devices
+2017/04/07 18:27:12
+-----------------Checking configuration--------------------
+Check Tomcat status
+hms-proxy-qa.ooma.com:8084 is up!
+Check HMS status
+Result of ping:  200
+Check BCS status
+URL:  http://hms-proxy-qa.ooma.com:8083/bcs/accounts/47/devices
+2017/04/07 18:27:12
+-----------------Checking configuration--------------------
+Check Tomcat status
+hms-proxy-qa.ooma.com:8084 is up!
+Check HMS status
+Result of ping:  200
+Check BCS status
+URL:  http://hms-proxy-qa.ooma.com:8083/bcs/accounts/47/devices
+2017/04/07 18:27:12
+-----------------Checking configuration--------------------
+Check Tomcat status
+hms-proxy-qa.ooma.com:8084 is up!
+Check HMS status
+Result of ping:  200
+Check BCS status
+URL:  http://hms-proxy-qa.ooma.com:8083/bcs/accounts/47/devices
+]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+</testsuite>
+<?xml version="1.0" ?>
+<testsuite errors="3" failures="0" name="HmsNotificationRecipientsTests-20170407182711" tests="3" time="0.103">
+	<testcase classname="HmsNotificationRecipientsTests" name="test_notification_recipients_set_email" time="0.036">
+		<error message="&lt;urlopen error [Errno 61] Connection refused&gt;" type="URLError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/disen.chitilapilly/Documents/workspace/Ooma_Automation/ooma-automation/ooma/homemonitoring/test/smoke_test.py", line 140, in setUp
+    self.check_configuration()
+  File "/Users/disen.chitilapilly/Documents/workspace/Ooma_Automation/ooma-automation/ooma/homemonitoring/test/smoke_test.py", line 55, in check_configuration
+    res = bcs.get_devices()
+  File "/Users/disen.chitilapilly/Documents/workspace/Ooma_Automation/ooma-automation/ooma/homemonitoring/server/sensor.py", line 289, in get_devices
+    f = urllib2.urlopen(req)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 154, in urlopen
+    return opener.open(url, data, timeout)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 431, in open
+    response = self._open(req, data)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 449, in _open
+    '_open', req)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 409, in _call_chain
+    result = func(*args)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 1227, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 1197, in do_open
+    raise URLError(err)
+URLError: <urlopen error [Errno 61] Connection refused>
+]]>		</error>
+	</testcase>
+	<testcase classname="HmsNotificationRecipientsTests" name="test_notification_recipients_set_phone" time="0.034">
+		<error message="&lt;urlopen error [Errno 61] Connection refused&gt;" type="URLError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/disen.chitilapilly/Documents/workspace/Ooma_Automation/ooma-automation/ooma/homemonitoring/test/smoke_test.py", line 140, in setUp
+    self.check_configuration()
+  File "/Users/disen.chitilapilly/Documents/workspace/Ooma_Automation/ooma-automation/ooma/homemonitoring/test/smoke_test.py", line 55, in check_configuration
+    res = bcs.get_devices()
+  File "/Users/disen.chitilapilly/Documents/workspace/Ooma_Automation/ooma-automation/ooma/homemonitoring/server/sensor.py", line 289, in get_devices
+    f = urllib2.urlopen(req)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 154, in urlopen
+    return opener.open(url, data, timeout)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 431, in open
+    response = self._open(req, data)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 449, in _open
+    '_open', req)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 409, in _call_chain
+    result = func(*args)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 1227, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 1197, in do_open
+    raise URLError(err)
+URLError: <urlopen error [Errno 61] Connection refused>
+]]>		</error>
+	</testcase>
+	<testcase classname="HmsNotificationRecipientsTests" name="test_notification_recipients_set_sms" time="0.033">
+		<error message="&lt;urlopen error [Errno 61] Connection refused&gt;" type="URLError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/disen.chitilapilly/Documents/workspace/Ooma_Automation/ooma-automation/ooma/homemonitoring/test/smoke_test.py", line 140, in setUp
+    self.check_configuration()
+  File "/Users/disen.chitilapilly/Documents/workspace/Ooma_Automation/ooma-automation/ooma/homemonitoring/test/smoke_test.py", line 55, in check_configuration
+    res = bcs.get_devices()
+  File "/Users/disen.chitilapilly/Documents/workspace/Ooma_Automation/ooma-automation/ooma/homemonitoring/server/sensor.py", line 289, in get_devices
+    f = urllib2.urlopen(req)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 154, in urlopen
+    return opener.open(url, data, timeout)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 431, in open
+    response = self._open(req, data)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 449, in _open
+    '_open', req)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 409, in _call_chain
+    result = func(*args)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 1227, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 1197, in do_open
+    raise URLError(err)
+URLError: <urlopen error [Errno 61] Connection refused>
+]]>		</error>
+	</testcase>
+	<system-out>
+<![CDATA[2017/04/07 18:27:11
+-----------------Checking configuration--------------------
+Check Tomcat status
+hms-proxy-qa.ooma.com:8084 is up!
+Check HMS status
+Result of ping:  200
+Check BCS status
+URL:  http://hms-proxy-qa.ooma.com:8083/bcs/accounts/47/devices
+2017/04/07 18:27:12
+-----------------Checking configuration--------------------
+Check Tomcat status
+hms-proxy-qa.ooma.com:8084 is up!
+Check HMS status
+Result of ping:  200
+Check BCS status
+URL:  http://hms-proxy-qa.ooma.com:8083/bcs/accounts/47/devices
+2017/04/07 18:27:12
+-----------------Checking configuration--------------------
+Check Tomcat status
+hms-proxy-qa.ooma.com:8084 is up!
+Check HMS status
+Result of ping:  200
+Check BCS status
+URL:  http://hms-proxy-qa.ooma.com:8083/bcs/accounts/47/devices
+2017/04/07 18:27:12
+-----------------Checking configuration--------------------
+Check Tomcat status
+hms-proxy-qa.ooma.com:8084 is up!
+Check HMS status
+Result of ping:  200
+Check BCS status
+URL:  http://hms-proxy-qa.ooma.com:8083/bcs/accounts/47/devices
+2017/04/07 18:27:12
+-----------------Checking configuration--------------------
+Check Tomcat status
+hms-proxy-qa.ooma.com:8084 is up!
+Check HMS status
+Result of ping:  200
+Check BCS status
+URL:  http://hms-proxy-qa.ooma.com:8083/bcs/accounts/47/devices
+2017/04/07 18:27:12
+-----------------Checking configuration--------------------
+Check Tomcat status
+hms-proxy-qa.ooma.com:8084 is up!
+Check HMS status
+Result of ping:  200
+Check BCS status
+URL:  http://hms-proxy-qa.ooma.com:8083/bcs/accounts/47/devices
+2017/04/07 18:27:12
+-----------------Checking configuration--------------------
+Check Tomcat status
+hms-proxy-qa.ooma.com:8084 is up!
+Check HMS status
+Result of ping:  200
+Check BCS status
+URL:  http://hms-proxy-qa.ooma.com:8083/bcs/accounts/47/devices
+]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+</testsuite>
+<?xml version="1.0" ?>
+<testsuite errors="1" failures="0" name="SmokeTests-20170407182711" tests="1" time="0.029">
+	<testcase classname="SmokeTests" name="test_conroller" time="0.029">
+		<error message="&lt;urlopen error [Errno 61] Connection refused&gt;" type="URLError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/disen.chitilapilly/Documents/workspace/Ooma_Automation/ooma-automation/ooma/homemonitoring/test/smoke_test.py", line 72, in setUp
+    self.check_configuration()
+  File "/Users/disen.chitilapilly/Documents/workspace/Ooma_Automation/ooma-automation/ooma/homemonitoring/test/smoke_test.py", line 55, in check_configuration
+    res = bcs.get_devices()
+  File "/Users/disen.chitilapilly/Documents/workspace/Ooma_Automation/ooma-automation/ooma/homemonitoring/server/sensor.py", line 289, in get_devices
+    f = urllib2.urlopen(req)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 154, in urlopen
+    return opener.open(url, data, timeout)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 431, in open
+    response = self._open(req, data)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 449, in _open
+    '_open', req)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 409, in _call_chain
+    result = func(*args)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 1227, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 1197, in do_open
+    raise URLError(err)
+URLError: <urlopen error [Errno 61] Connection refused>
+]]>		</error>
+	</testcase>
+	<system-out>
+<![CDATA[2017/04/07 18:27:11
+-----------------Checking configuration--------------------
+Check Tomcat status
+hms-proxy-qa.ooma.com:8084 is up!
+Check HMS status
+Result of ping:  200
+Check BCS status
+URL:  http://hms-proxy-qa.ooma.com:8083/bcs/accounts/47/devices
+2017/04/07 18:27:12
+-----------------Checking configuration--------------------
+Check Tomcat status
+hms-proxy-qa.ooma.com:8084 is up!
+Check HMS status
+Result of ping:  200
+Check BCS status
+URL:  http://hms-proxy-qa.ooma.com:8083/bcs/accounts/47/devices
+2017/04/07 18:27:12
+-----------------Checking configuration--------------------
+Check Tomcat status
+hms-proxy-qa.ooma.com:8084 is up!
+Check HMS status
+Result of ping:  200
+Check BCS status
+URL:  http://hms-proxy-qa.ooma.com:8083/bcs/accounts/47/devices
+2017/04/07 18:27:12
+-----------------Checking configuration--------------------
+Check Tomcat status
+hms-proxy-qa.ooma.com:8084 is up!
+Check HMS status
+Result of ping:  200
+Check BCS status
+URL:  http://hms-proxy-qa.ooma.com:8083/bcs/accounts/47/devices
+2017/04/07 18:27:12
+-----------------Checking configuration--------------------
+Check Tomcat status
+hms-proxy-qa.ooma.com:8084 is up!
+Check HMS status
+Result of ping:  200
+Check BCS status
+URL:  http://hms-proxy-qa.ooma.com:8083/bcs/accounts/47/devices
+2017/04/07 18:27:12
+-----------------Checking configuration--------------------
+Check Tomcat status
+hms-proxy-qa.ooma.com:8084 is up!
+Check HMS status
+Result of ping:  200
+Check BCS status
+URL:  http://hms-proxy-qa.ooma.com:8083/bcs/accounts/47/devices
+2017/04/07 18:27:12
+-----------------Checking configuration--------------------
+Check Tomcat status
+hms-proxy-qa.ooma.com:8084 is up!
+Check HMS status
+Result of ping:  200
+Check BCS status
+URL:  http://hms-proxy-qa.ooma.com:8083/bcs/accounts/47/devices
+]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+</testsuite>
+<?xml version="1.0" ?>
+<testsuite errors="1" failures="0" name="DevicesTest-20170407182711" tests="1" time="0.044">
+	<testcase classname="DevicesTest" name="test_get_all_devices" time="0.044">
+		<error message="&lt;urlopen error [Errno 61] Connection refused&gt;" type="URLError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/disen.chitilapilly/Documents/workspace/Ooma_Automation/ooma-automation/ooma/homemonitoring/test/smoke_test.py", line 558, in setUp
+    self.check_configuration()
+  File "/Users/disen.chitilapilly/Documents/workspace/Ooma_Automation/ooma-automation/ooma/homemonitoring/test/smoke_test.py", line 55, in check_configuration
+    res = bcs.get_devices()
+  File "/Users/disen.chitilapilly/Documents/workspace/Ooma_Automation/ooma-automation/ooma/homemonitoring/server/sensor.py", line 289, in get_devices
+    f = urllib2.urlopen(req)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 154, in urlopen
+    return opener.open(url, data, timeout)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 431, in open
+    response = self._open(req, data)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 449, in _open
+    '_open', req)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 409, in _call_chain
+    result = func(*args)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 1227, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 1197, in do_open
+    raise URLError(err)
+URLError: <urlopen error [Errno 61] Connection refused>
+]]>		</error>
+	</testcase>
+	<system-out>
+<![CDATA[2017/04/07 18:27:11
+-----------------Checking configuration--------------------
+Check Tomcat status
+hms-proxy-qa.ooma.com:8084 is up!
+Check HMS status
+Result of ping:  200
+Check BCS status
+URL:  http://hms-proxy-qa.ooma.com:8083/bcs/accounts/47/devices
+2017/04/07 18:27:12
+-----------------Checking configuration--------------------
+Check Tomcat status
+hms-proxy-qa.ooma.com:8084 is up!
+Check HMS status
+Result of ping:  200
+Check BCS status
+URL:  http://hms-proxy-qa.ooma.com:8083/bcs/accounts/47/devices
+2017/04/07 18:27:12
+-----------------Checking configuration--------------------
+Check Tomcat status
+hms-proxy-qa.ooma.com:8084 is up!
+Check HMS status
+Result of ping:  200
+Check BCS status
+URL:  http://hms-proxy-qa.ooma.com:8083/bcs/accounts/47/devices
+2017/04/07 18:27:12
+-----------------Checking configuration--------------------
+Check Tomcat status
+hms-proxy-qa.ooma.com:8084 is up!
+Check HMS status
+Result of ping:  200
+Check BCS status
+URL:  http://hms-proxy-qa.ooma.com:8083/bcs/accounts/47/devices
+2017/04/07 18:27:12
+-----------------Checking configuration--------------------
+Check Tomcat status
+hms-proxy-qa.ooma.com:8084 is up!
+Check HMS status
+Result of ping:  200
+Check BCS status
+URL:  http://hms-proxy-qa.ooma.com:8083/bcs/accounts/47/devices
+2017/04/07 18:27:12
+-----------------Checking configuration--------------------
+Check Tomcat status
+hms-proxy-qa.ooma.com:8084 is up!
+Check HMS status
+Result of ping:  200
+Check BCS status
+URL:  http://hms-proxy-qa.ooma.com:8083/bcs/accounts/47/devices
+2017/04/07 18:27:12
+-----------------Checking configuration--------------------
+Check Tomcat status
+hms-proxy-qa.ooma.com:8084 is up!
+Check HMS status
+Result of ping:  200
+Check BCS status
+URL:  http://hms-proxy-qa.ooma.com:8083/bcs/accounts/47/devices
+]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+</testsuite>

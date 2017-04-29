@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<openremote xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openremote.org http://www.openremote.org/schemas/controller.xsd" xmlns="http://www.openremote.org">
+  <components/>
+  <sensors>
+    <sensor id="65946" name="0000000000-Announcement-U0" type="range">
+      <include ref="36412" type="command"/>
+      <min value="-1000"/>
+      <max value="1000"/>
+    </sensor>
+    <sensor id="65948" name="0000000000-OomaBaseStationRegistration-U1" type="range">
+      <include ref="36414" type="command"/>
+      <min value="-1000"/>
+      <max value="1000"/>
+    </sensor>
+    <sensor id="65950" name="dataProvider" type="custom">
+      <include ref="36430" type="command"/>
+    </sensor>
+    <sensor id="65952" name="0000000000-OomaBaseStationRegistration-U0" type="range">
+      <include ref="36418" type="command"/>
+      <min value="-1000"/>
+      <max value="1000"/>
+    </sensor>
+    <sensor id="65954" name="0000000000-ActiveDevice-U0" type="range">
+      <include ref="36432" type="command"/>
+      <min value="-1000"/>
+      <max value="1000"/>
+    </sensor>
+    <sensor id="65956" name="0000000000-OomaBaseStationFlashFIRE-U4" type="range">
+      <include ref="36434" type="command"/>
+      <min value="-1000"/>
+      <max value="1000"/>
+    </sensor>
+    <sensor id="65958" name="0000000000-OomaBaseStationFlashRedBlue-U3" type="range">
+      <include ref="36436" type="command"/>
+      <min value="-1000"/>
+      <max value="1000"/>
+    </sensor>
+    <sensor id="66368" name="02e9e03544-BatteryIndicator-U1" type="range">
+      <include ref="36946" type="command"/>
+      <min value="-1000"/>
+      <max value="1000"/>
+    </sensor>
+    <sensor id="66370" name="02e9e03544-Alert-U1" type="range">
+      <include ref="36952" type="command"/>
+      <min value="-1000"/>
+      <max value="1000"/>
+    </sensor>
+    <sensor id="66372" name="02e9e03544-IdentifyInputDevice-U1" type="range">
+      <include ref="36954" type="command"/>
+      <min value="-1000"/>
+      <max value="1000"/>
+    </sensor>
+    <sensor id="66374" name="02e9e03544-UnregisterDevice-U1" type="range">
+      <include ref="36956" type="command"/>
+      <min value="-1000"/>
+      <max value="1000"/>
+    </sensor>
+    <sensor id="66376" name="02e9e03544-TamperDetector-U1" type="range">
+      <include ref="36958" type="command"/>
+      <min value="-1000"/>
+      <max value="1000"/>
+    </sensor>
+    <sensor id="66378" name="02e9e03544-IdentifyDevice-U1" type="range">
+      <include ref="36960" type="command"/>
+      <min value="-1000"/>
+      <max value="1000"/>
+    </sensor>
+    <sensor id="66380" name="02e9e03544-Announcement-U1" type="range">
+      <include ref="36962" type="command"/>
+      <min value="-1000"/>
+      <max value="1000"/>
+    </sensor>
+    <sensor id="66382" name="02e9e03544-ActiveDevice-U1" type="range">
+      <include ref="36964" type="command"/>
+      <min value="-1000"/>
+      <max value="1000"/>
+    </sensor>
+    <sensor id="66384" name="02e9e03544-RSSI128-U1" type="range">
+      <include ref="36966" type="command"/>
+      <min value="-1000"/>
+      <max value="1000"/>
+    </sensor>
+  </sensors>
+  <commands>
+    <command id="36412" protocol="ooma_ule">
+      <property name="command" value="0000000000-Announcement-U0"/>
+      <property name="name" value="0000000000-Announcement-U0-command"/>
+      <property name="urn:openremote:device-command:device-name" value="0000000000"/>
+      <property name="urn:openremote:device-command:device-id" value="3128"/>
+    </command>
+    <command id="36414" protocol="ooma_ule">
+      <property name="command" value="1"/>
+      <property name="name" value="0000000000-OomaBaseStationRegistration-U1-start"/>
+      <property name="urn:openremote:device-command:device-name" value="0000000000"/>
+      <property name="urn:openremote:device-command:device-id" value="3128"/>
+    </command>
+    <command id="36416" protocol="ooma_ule">
+      <property name="command" value="0"/>
+      <property name="name" value="0000000000-OomaBaseStationRegistration-U1-end"/>
+      <property name="urn:openremote:device-command:device-name" value="0000000000"/>
+      <property name="urn:openremote:device-command:device-id" value="3128"/>
+    </command>
+    <command id="36418" protocol="ooma_ule">
+      <property name="command" value="1"/>
+      <property name="name" value="0000000000-OomaBaseStationRegistration-U0-start"/>
+      <property name="urn:openremote:device-command:device-name" value="0000000000"/>
+      <property name="urn:openremote:device-command:device-id" value="3128"/>
+    </command>
+    <command id="36420" protocol="ooma_ule">
+      <property name="command" value="0"/>
+      <property name="name" value="0000000000-OomaBaseStationRegistration-U0-end"/>
+      <property name="urn:openremote:device-command:device-name" value="0000000000"/>
+      <property name="urn:openremote:device-command:device-id" value="3128"/>
+    </command>
+    <command id="36422" protocol="ooma_base">
+      <property name="device" value="0000000000"/>
+      <property name="command" value="SET_DEVICE_DATA"/>
+      <property name="name" value="SET_DEVICE_DATA"/>
+      <property name="urn:openremote:device-command:device-name" value="0000000000"/>
+      <property name="urn:openremote:device-command:device-id" value="3128"/>
+    </command>
+    <command id="36424" protocol="ooma_base">
+      <property name="device" value="0000000000"/>
+      <property name="command" value="UPDATE_DEVICE_DATA"/>
+      <property name="name" value="UPDATE_DEVICE_DATA"/>
+      <property name="urn:openremote:device-command:device-name" value="0000000000"/>
+      <property name="urn:openremote:device-command:device-id" value="3128"/>
+    </command>
+    <command id="36426" protocol="ooma_base">
+      <property name="device" value="0000000000"/>
+      <property name="command" value="DELETE_DEVICE_DATA"/>
+      <property name="name" value="DELETE_DEVICE_DATA"/>
+      <property name="urn:openremote:device-command:device-name" value="0000000000"/>
+      <property name="urn:openremote:device-command:device-id" value="3128"/>
+    </command>
+    <command id="36428" protocol="ooma_base">
+      <property name="device" value="0000000000"/>
+      <property name="command" value="PAUSE_ALL_NOTIFICATIONS"/>
+      <property name="name" value="PAUSE_ALL_NOTIFICATIONS"/>
+      <property name="urn:openremote:device-command:device-name" value="0000000000"/>
+      <property name="urn:openremote:device-command:device-id" value="3128"/>
+    </command>
+    <command id="36430" protocol="ooma_base">
+      <property name="device" value="0000000000"/>
+      <property name="command" value="GET_ALL_DEVICES_DATA"/>
+      <property name="name" value="GET_ALL_DEVICES_DATA"/>
+      <property name="urn:openremote:device-command:device-name" value="0000000000"/>
+      <property name="urn:openremote:device-command:device-id" value="3128"/>
+    </command>
+    <command id="36432" protocol="ooma_ule">
+      <property name="command" value="0000000000-ActiveDevice-U0"/>
+      <property name="name" value="0000000000-ActiveDevice-U0-command"/>
+      <property name="urn:openremote:device-command:device-name" value="0000000000"/>
+      <property name="urn:openremote:device-command:device-id" value="3128"/>
+    </command>
+    <command id="36434" protocol="ooma_ule">
+      <property name="command" value="0000000000-OomaBaseStationFlashFIRE-U4"/>
+      <property name="name" value="0000000000-OomaBaseStationFlashFIRE-U4-command"/>
+      <property name="urn:openremote:device-command:device-name" value="0000000000"/>
+      <property name="urn:openremote:device-command:device-id" value="3128"/>
+    </command>
+    <command id="36436" protocol="ooma_ule">
+      <property name="command" value="0000000000-OomaBaseStationFlashRedBlue-U3"/>
+      <property name="name" value="0000000000-OomaBaseStationFlashRedBlue-U3-command"/>
+      <property name="urn:openremote:device-command:device-name" value="0000000000"/>
+      <property name="urn:openremote:device-command:device-id" value="3128"/>
+    </command>
+    <command id="36946" protocol="ooma_ule">
+      <property name="command" value="02e9e03544-BatteryIndicator-U1"/>
+      <property name="name" value="02e9e03544-BatteryIndicator-U1-command"/>
+      <property name="urn:openremote:device-command:device-name" value="02e9e03544"/>
+      <property name="urn:openremote:device-command:device-id" value="3176"/>
+    </command>
+    <command id="36948" protocol="ooma_base">
+      <property name="device" value="02e9e03544"/>
+      <property name="command" value="SET_RAISED"/>
+      <property name="name" value="02e9e03544-Alert-U1-set_raised"/>
+      <property name="urn:openremote:device-command:device-name" value="02e9e03544"/>
+      <property name="urn:openremote:device-command:device-id" value="3176"/>
+    </command>
+    <command id="36950" protocol="ooma_base">
+      <property name="device" value="02e9e03544"/>
+      <property name="command" value="SET_CEASED"/>
+      <property name="name" value="02e9e03544-Alert-U1-set_ceased"/>
+      <property name="urn:openremote:device-command:device-name" value="02e9e03544"/>
+      <property name="urn:openremote:device-command:device-id" value="3176"/>
+    </command>
+    <command id="36952" protocol="ooma_ule">
+      <property name="command" value="02e9e03544-Alert-U1"/>
+      <property name="name" value="02e9e03544-Alert-U1-command"/>
+      <property name="urn:openremote:device-command:device-name" value="02e9e03544"/>
+      <property name="urn:openremote:device-command:device-id" value="3176"/>
+    </command>
+    <command id="36954" protocol="ooma_ule">
+      <property name="command" value="02e9e03544-IdentifyInputDevice-U1"/>
+      <property name="name" value="02e9e03544-IdentifyInputDevice-U1-command"/>
+      <property name="urn:openremote:device-command:device-name" value="02e9e03544"/>
+      <property name="urn:openremote:device-command:device-id" value="3176"/>
+    </command>
+    <command id="36956" protocol="ooma_ule">
+      <property name="command" value="1"/>
+      <property name="name" value="02e9e03544-UnregisterDevice-U1-unpair"/>
+      <property name="urn:openremote:device-command:device-name" value="02e9e03544"/>
+      <property name="urn:openremote:device-command:device-id" value="3176"/>
+    </command>
+    <command id="36958" protocol="ooma_ule">
+      <property name="command" value="02e9e03544-TamperDetector-U1"/>
+      <property name="name" value="02e9e03544-TamperDetector-U1-command"/>
+      <property name="urn:openremote:device-command:device-name" value="02e9e03544"/>
+      <property name="urn:openremote:device-command:device-id" value="3176"/>
+    </command>
+    <command id="36960" protocol="ooma_ule">
+      <property name="command" value="02e9e03544-IdentifyDevice-U1"/>
+      <property name="name" value="02e9e03544-IdentifyDevice-U1-command"/>
+      <property name="urn:openremote:device-command:device-name" value="02e9e03544"/>
+      <property name="urn:openremote:device-command:device-id" value="3176"/>
+    </command>
+    <command id="36962" protocol="ooma_ule">
+      <property name="command" value="02e9e03544-Announcement-U1"/>
+      <property name="name" value="02e9e03544-Announcement-U1-command"/>
+      <property name="urn:openremote:device-command:device-name" value="02e9e03544"/>
+      <property name="urn:openremote:device-command:device-id" value="3176"/>
+    </command>
+    <command id="36964" protocol="ooma_ule">
+      <property name="command" value="02e9e03544-ActiveDevice-U1"/>
+      <property name="name" value="02e9e03544-ActiveDevice-U1-command"/>
+      <property name="urn:openremote:device-command:device-name" value="02e9e03544"/>
+      <property name="urn:openremote:device-command:device-id" value="3176"/>
+    </command>
+    <command id="36966" protocol="ooma_ule">
+      <property name="command" value="02e9e03544-RSSI128-U1"/>
+      <property name="name" value="02e9e03544-RSSI128-U1-command"/>
+      <property name="urn:openremote:device-command:device-name" value="02e9e03544"/>
+      <property name="urn:openremote:device-command:device-id" value="3176"/>
+    </command>
+  </commands>
+  <config>
+    <property name="protocol.ooma_base.classname" value="org.openremote.controller.protocol.ooma_base.OomaBaseCommandBuilder"/>
+  </config>
+</openremote>

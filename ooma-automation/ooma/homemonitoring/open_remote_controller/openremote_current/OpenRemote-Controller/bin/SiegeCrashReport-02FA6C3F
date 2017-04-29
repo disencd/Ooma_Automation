@@ -1,0 +1,435 @@
+CEE-J Version refcb771-15.8.1.119-3
+Build options: little-endian, jit, jni, jvmti, standardembedded, profiler, icu
+Segmentation Fault in thread "H2 TCP Server (tcp://localhost:9092) thread" [0x46186F14] [PID:3760 TID:4028] 
+PC at exception 0x000E4D20 [0x000E5588]
+	r0  : 0x0000001C   r1  : 0x449D7FC0
+	r2  : 0x0000001C   r3  : 0x00000001
+	r4  : 0x00000024   r5  : 0x43BF8DFC
+	r6  : 0x00000000   r7  : 0x43BF8E98
+	r8  : 0x000000BF   r9  : 0x40326020
+	r10 : 0x00000000   fp  : 0x40326EC0
+	ip  : 0x002EDD10   sp  : 0x4654A508
+	lr  : 0x000E5588  cpsr : 0x20000010
+
+Native stacktrace:
+	0x000E4D20 : <unknown>+0xE4D20 (siege)
+	0x000E5588 : <unknown>+0xE5588 (siege)
+
+
+-------------------------------------------------------------------------
+	at java/lang/String.<init>([C)V (:6:0x6 <JIT>)
+	at org/h2/command/Parser.initialize(Ljava/lang/String;)V (Parser.java:3670:0xe56 <JIT>)
+	at org/h2/command/Parser.parse(Ljava/lang/String;Z)Lorg/h2/command/Prepared; (Parser.java:302:2)
+	at org/h2/command/Parser.parse(Ljava/lang/String;)Lorg/h2/command/Prepared; (Parser.java:287:3)
+	at org/h2/command/Parser.prepareCommand(Ljava/lang/String;)Lorg/h2/command/Command; (Parser.java:252:2)
+	at org/h2/engine/Session.prepareLocal(Ljava/lang/String;)Lorg/h2/command/Command; (Session.java:560:123)
+	at org/h2/server/TcpServerThread.process()V (TcpServerThread.java:264:0xfc <JIT>)
+	at org/h2/server/TcpServerThread.run()V (TcpServerThread.java:159:0x9c4 <JIT>)
+	at java/lang/Thread.run()V (:0:11)
+
+-------------------------------------------------------------------------
+main [pid:3760 OSID:0x400B2000] [mc:0]
+-------------------------------------------------------------------------
+--- Java Stack for main:
+	at java/net/PlainSocketImpl.accept(Ljava/net/SocketImpl;)V (:0:2)
+	at java/net/ServerSocket.implAccept(Ljava/net/Socket;)V (:0:35)
+	at java/net/ServerSocket.accept()Ljava/net/Socket; (:0:49)
+	at org/apache/catalina/core/StandardServer.await()V (StandardServer.java:389:0x24c <JIT>)
+	at org/apache/catalina/startup/Catalina.await()V (Catalina.java:642:4)
+	at org/apache/catalina/startup/Catalina.start()V (Catalina.java:602:154)
+	at org/apache/catalina/startup/Bootstrap.start()V (Bootstrap.java:288:37)
+	at org/apache/catalina/startup/Bootstrap.main([Ljava/lang/String;)V (Bootstrap.java:413:125)
+------------------------------------------------------------
+Thread-0 [pid:3767 OSID:0x42E73460] [mc:0]
+-------------------------------------------------------------------------
+--- Java Stack for Thread-0:
+	at org/apache/log4j/helpers/FileWatchdog.run()V (FileWatchdog.java:103:0x4c <JIT>)
+------------------------------------------------------------
+H2 TCP Server (tcp://localhost:9092) [pid:3773 OSID:0x438F2460] [mc:0]
+-------------------------------------------------------------------------
+--- Java Stack for H2 TCP Server (tcp://localhost:9092):
+	at java/net/PlainSocketImpl.accept(Ljava/net/SocketImpl;)V (:0:2)
+	at java/net/ServerSocket.implAccept(Ljava/net/Socket;)V (:0:35)
+	at java/net/ServerSocket.accept()Ljava/net/Socket; (:0:49)
+	at org/h2/server/TcpServer.listen()V (TcpServer.java:250:0x8c <JIT>)
+	at org/h2/tools/Server.run()V (Server.java:578:4)
+	at java/lang/Thread.run()V (:0:11)
+------------------------------------------------------------
+OomaListener Port: 4443 [pid:3777 OSID:0x43975460] [mc:0]
+-------------------------------------------------------------------------
+--- Java Stack for OomaListener Port: 4443:
+	at java/net/PlainDatagramSocketImpl.receiveWithBlockMode(Ljava/net/DatagramPacket;Z)V (:0:3)
+	at java/net/DatagramSocket.receiveWithBlockMode(Ljava/net/DatagramPacket;Z)V (:0:57)
+	at java/net/DatagramSocket.receive(Ljava/net/DatagramPacket;)V (:0:3)
+	at org/openremote/controller/protocol/ooma/OomaListenerCommandSingleton$OomaListenerThread.run()V (OomaListenerCommandSingleton.java:312:0x154 <JIT>)
+------------------------------------------------------------
+Controller Auto-Discovery [pid:3800 OSID:0x43AD2460] [mc:0]
+-------------------------------------------------------------------------
+--- Java Stack for Controller Auto-Discovery:
+	at java/net/PlainDatagramSocketImpl.receiveWithBlockMode(Ljava/net/DatagramPacket;Z)V (:0:3)
+	at java/net/DatagramSocket.receiveWithBlockMode(Ljava/net/DatagramPacket;Z)V (:0:57)
+	at java/net/DatagramSocket.receive(Ljava/net/DatagramPacket;)V (:0:3)
+	at org/openremote/controller/net/IPAutoDiscoveryServer.run()V (IPAutoDiscoveryServer.java:74:0x498 <JIT>)
+	at java/lang/Thread.run()V (:0:11)
+------------------------------------------------------------
+DiscoveredDevicesAnnouncement [pid:3805 OSID:0x43F47460] [mc:0]
+-------------------------------------------------------------------------
+--- Java Stack for DiscoveredDevicesAnnouncement:
+	at org/openremote/controller/service/Deployer$DiscoveredDevicesAnnouncement.run()V (Deployer.java:2518:0x850 <JIT>)
+------------------------------------------------------------
+pool-2-thread-1 [pid:3893 OSID:0x43DE2460] [mc:0]
+-------------------------------------------------------------------------
+--- Java Stack for pool-2-thread-1:
+	at sun/misc/Unsafe.park(ZJ)V (:0:12)
+	at java/util/concurrent/locks/LockSupport.park(Ljava/lang/Object;)V (LockSupport.java:157:14)
+	at java/util/concurrent/locks/AbstractQueuedSynchronizer$ConditionObject.await()V (AbstractQueuedSynchronizer.java:2009:42)
+	at java/util/concurrent/LinkedBlockingQueue.take()Ljava/lang/Object; (LinkedBlockingQueue.java:410:29)
+	at java/util/concurrent/ThreadPoolExecutor.getTask()Ljava/lang/Runnable; (ThreadPoolExecutor.java:1038:156)
+	at java/util/concurrent/ThreadPoolExecutor.runWorker(Ljava/util/concurrent/ThreadPoolExecutor$Worker;)V (ThreadPoolExecutor.java:1100:26)
+	at java/util/concurrent/ThreadPoolExecutor$Worker.run()V (ThreadPoolExecutor.java:586:5)
+	at java/lang/Thread.run()V (:0:11)
+------------------------------------------------------------
+pool-1-thread-1 [pid:3920 OSID:0x440F2460] [mc:0]
+-------------------------------------------------------------------------
+--- Java Stack for pool-1-thread-1:
+	at sun/misc/Unsafe.park(ZJ)V (:0:12)
+	at java/util/concurrent/locks/LockSupport.parkNanos(Ljava/lang/Object;J)V (LockSupport.java:197:20)
+	at java/util/concurrent/locks/AbstractQueuedSynchronizer$ConditionObject.awaitNanos(J)J (AbstractQueuedSynchronizer.java:2048:78)
+	at java/util/concurrent/ScheduledThreadPoolExecutor$DelayedWorkQueue.take()Ljava/util/concurrent/RunnableScheduledFuture; (ScheduledThreadPoolExecutor.java:1084:122)
+	at java/util/concurrent/ScheduledThreadPoolExecutor$DelayedWorkQueue.take()Ljava/lang/Object; (ScheduledThreadPoolExecutor.java:801:1)
+	at java/util/concurrent/ThreadPoolExecutor.getTask()Ljava/lang/Runnable; (ThreadPoolExecutor.java:1038:156)
+	at java/util/concurrent/ThreadPoolExecutor.runWorker(Ljava/util/concurrent/ThreadPoolExecutor$Worker;)V (ThreadPoolExecutor.java:1100:26)
+	at java/util/concurrent/ThreadPoolExecutor$Worker.run()V (ThreadPoolExecutor.java:586:5)
+	at java/lang/Thread.run()V (:0:11)
+------------------------------------------------------------
+Retrofit-Idle [pid:3924 OSID:0x44F7D460] [mc:0]
+-------------------------------------------------------------------------
+--- Java Stack for Retrofit-Idle:
+	at sun/misc/Unsafe.park(ZJ)V (:0:12)
+	at java/util/concurrent/locks/LockSupport.parkNanos(Ljava/lang/Object;J)V (LockSupport.java:197:20)
+	at java/util/concurrent/SynchronousQueue$TransferStack.awaitFulfill(Ljava/util/concurrent/SynchronousQueue$TransferStack$SNode;ZJ)Ljava/util/concurrent/SynchronousQueue$TransferStack$SNode; (SynchronousQueue.java:429:160)
+	at java/util/concurrent/SynchronousQueue$TransferStack.transfer(Ljava/lang/Object;ZJ)Ljava/lang/Object; (SynchronousQueue.java:331:102)
+	at java/util/concurrent/SynchronousQueue.poll(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object; (SynchronousQueue.java:910:11)
+	at java/util/concurrent/ThreadPoolExecutor.getTask()Ljava/lang/Runnable; (ThreadPoolExecutor.java:1038:141)
+	at java/util/concurrent/ThreadPoolExecutor.runWorker(Ljava/util/concurrent/ThreadPoolExecutor$Worker;)V (ThreadPoolExecutor.java:1100:26)
+	at java/util/concurrent/ThreadPoolExecutor$Worker.run()V (ThreadPoolExecutor.java:586:5)
+	at retrofit/Platform$Base$2$1.run()V (Platform.java:94:11)
+	at java/lang/Thread.run()V (:0:11)
+------------------------------------------------------------
+H2 TCP Server (tcp://localhost:9092) thread [pid:3936 OSID:0x44B41460] [mc:0]
+-------------------------------------------------------------------------
+--- Java Stack for H2 TCP Server (tcp://localhost:9092) thread:
+	at java/net/SocketInputStream.read([BII)I (:0:11)
+	at java/net/Socket$ReadBlockedStream.read([BII)I (:0:32)
+	at java/io/FilterInputStream.read([BII)I (:10:0x30 <JIT>)
+	at java/io/BufferedInputStream.fillBuffer()Z (:0:225)
+	at java/io/BufferedInputStream.read()I (:15:0xf <JIT>)
+	at java/io/DataInputStream.readInt()I (:7:0x7 <JIT>)
+	at org/h2/value/Transfer.readInt()I (Transfer.java:153:0x14 <JIT>)
+	at org/h2/server/TcpServerThread.process()V (TcpServerThread.java:257:0x34 <JIT>)
+	at org/h2/server/TcpServerThread.run()V (TcpServerThread.java:159:0x9c4 <JIT>)
+	at java/lang/Thread.run()V (:0:11)
+------------------------------------------------------------
+H2 File Lock Watchdog /opt/openremote_resources/database/controller.lock.db [pid:3938 OSID:0x45618460] [mc:0] [blocked on:0x002EE534]
+-------------------------------------------------------------------------
+--- Java Stack for H2 File Lock Watchdog /opt/openremote_resources/database/controller.lock.db:
+	at org/h2/store/FileLock.run()V (FileLock.java:517:0xd4 <JIT>)
+	at java/lang/Thread.run()V (:0:11)
+------------------------------------------------------------
+H2 Log Writer CONTROLLER [pid:4018 OSID:0x45A0E460] [mc:0] [blocked on:0x002EE534]
+-------------------------------------------------------------------------
+--- Java Stack for H2 Log Writer CONTROLLER:
+	at java/lang/Object.wait(J)V (:2:0x2 <JIT>)
+	at org/h2/store/WriterThread.run()V (WriterThread.java:102:0x66 <JIT>)
+	at java/lang/Thread.run()V (:0:11)
+------------------------------------------------------------
+H2 TCP Server (tcp://localhost:9092) thread [pid:4026 OSID:0x4644C460] [mc:0]
+-------------------------------------------------------------------------
+--- Java Stack for H2 TCP Server (tcp://localhost:9092) thread:
+	at java/net/SocketInputStream.read([BII)I (:0:11)
+	at java/net/Socket$ReadBlockedStream.read([BII)I (:0:32)
+	at java/io/FilterInputStream.read([BII)I (:10:0x30 <JIT>)
+	at java/io/BufferedInputStream.fillBuffer()Z (:0:225)
+	at java/io/BufferedInputStream.read()I (:15:0xf <JIT>)
+	at java/io/DataInputStream.readInt()I (:7:0x7 <JIT>)
+	at org/h2/value/Transfer.readInt()I (Transfer.java:153:0x14 <JIT>)
+	at org/h2/server/TcpServerThread.process()V (TcpServerThread.java:257:0x34 <JIT>)
+	at org/h2/server/TcpServerThread.run()V (TcpServerThread.java:159:0x9c4 <JIT>)
+	at java/lang/Thread.run()V (:0:11)
+------------------------------------------------------------
+H2 TCP Server (tcp://localhost:9092) thread [pid:4027 OSID:0x464CC460] [mc:0]
+-------------------------------------------------------------------------
+--- Java Stack for H2 TCP Server (tcp://localhost:9092) thread:
+	at java/net/SocketInputStream.read([BII)I (:0:11)
+	at java/net/Socket$ReadBlockedStream.read([BII)I (:0:32)
+	at java/io/FilterInputStream.read([BII)I (:10:0x30 <JIT>)
+	at java/io/BufferedInputStream.fillBuffer()Z (:0:225)
+	at java/io/BufferedInputStream.read()I (:15:0xf <JIT>)
+	at java/io/DataInputStream.readInt()I (:7:0x7 <JIT>)
+	at org/h2/value/Transfer.readInt()I (Transfer.java:153:0x14 <JIT>)
+	at org/h2/server/TcpServerThread.process()V (TcpServerThread.java:257:0x34 <JIT>)
+	at org/h2/server/TcpServerThread.run()V (TcpServerThread.java:159:0x9c4 <JIT>)
+	at java/lang/Thread.run()V (:0:11)
+------------------------------------------------------------
+H2 TCP Server (tcp://localhost:9092) thread [pid:4028 OSID:0x4654C460] [mc:1]
+-------------------------------------------------------------------------
+--- Java Stack for H2 TCP Server (tcp://localhost:9092) thread:
+	at java/lang/String.<init>([C)V (:6:0x6 <JIT>)
+	at org/h2/command/Parser.initialize(Ljava/lang/String;)V (Parser.java:3670:0xe56 <JIT>)
+	at org/h2/command/Parser.parse(Ljava/lang/String;Z)Lorg/h2/command/Prepared; (Parser.java:302:2)
+	at org/h2/command/Parser.parse(Ljava/lang/String;)Lorg/h2/command/Prepared; (Parser.java:287:3)
+	at org/h2/command/Parser.prepareCommand(Ljava/lang/String;)Lorg/h2/command/Command; (Parser.java:252:2)
+	at org/h2/engine/Session.prepareLocal(Ljava/lang/String;)Lorg/h2/command/Command; (Session.java:560:123)
+	at org/h2/server/TcpServerThread.process()V (TcpServerThread.java:264:0xfc <JIT>)
+	at org/h2/server/TcpServerThread.run()V (TcpServerThread.java:159:0x9c4 <JIT>)
+	at java/lang/Thread.run()V (:0:11)
+------------------------------------------------------------
+nioEventLoopGroup-2-1 [pid:4160 OSID:0x45C94460] [mc:0]
+-------------------------------------------------------------------------
+--- Java Stack for nioEventLoopGroup-2-1:
+	at java/net/SelectorImpl.selectInternal(J)I (:0:79)
+	at java/net/SelectorImpl.select(J)I (:0:28)
+	at io/netty/channel/nio/NioEventLoop.select(Z)V (NioEventLoop.java:759:0x1cc <JIT>)
+	at io/netty/channel/nio/NioEventLoop.run()V (NioEventLoop.java:400:0xc0 <JIT>)
+	at io/netty/util/concurrent/SingleThreadEventExecutor$5.run()V (SingleThreadEventExecutor.java:873:0xd0 <JIT>)
+	at io/netty/util/concurrent/DefaultThreadFactory$DefaultRunnableDecorator.run()V (DefaultThreadFactory.java:144:4)
+	at java/lang/Thread.run()V (:0:11)
+------------------------------------------------------------
+Controller Definition File Watcher for Default Deployer [pid:4163 OSID:0x46C18460] [mc:0]
+-------------------------------------------------------------------------
+--- Java Stack for Controller Definition File Watcher for Default Deployer:
+	at org/openremote/controller/service/Deployer$ControllerDefinitionWatch.run()V (Deployer.java:1804:0x28c <JIT>)
+	at java/lang/Thread.run()V (:0:11)
+------------------------------------------------------------
+threadDeathWatcher-3-1 [pid:4242 OSID:0x46F8D460] [mc:0] [blocked on:0x002EE534]
+-------------------------------------------------------------------------
+--- Java Stack for threadDeathWatcher-3-1:
+	at io/netty/util/ThreadDeathWatcher$Watcher.run()V (ThreadDeathWatcher.java:150:0x7c <JIT>)
+	at io/netty/util/concurrent/DefaultThreadFactory$DefaultRunnableDecorator.run()V (DefaultThreadFactory.java:144:4)
+	at java/lang/Thread.run()V (:0:11)
+------------------------------------------------------------
+ContainerBackgroundProcessor[StandardEngine[Catalina]] [pid:4264 OSID:0x47195460] [mc:0]
+-------------------------------------------------------------------------
+--- Java Stack for ContainerBackgroundProcessor[StandardEngine[Catalina]]:
+	at org/apache/catalina/core/ContainerBase$ContainerBackgroundProcessor.run()V (ContainerBase.java:1579:0x7c <JIT>)
+	at java/lang/Thread.run()V (:0:11)
+------------------------------------------------------------
+http-8688-Acceptor-0 [pid:4265 OSID:0x45069460] [mc:0]
+-------------------------------------------------------------------------
+--- Java Stack for http-8688-Acceptor-0:
+	at java/net/PlainSocketImpl.accept(Ljava/net/SocketImpl;)V (:0:2)
+	at java/net/ServerSocket.implAccept(Ljava/net/Socket;)V (:0:35)
+	at java/net/ServerSocket.accept()Ljava/net/Socket; (:0:49)
+	at org/apache/tomcat/util/net/DefaultServerSocketFactory.acceptSocket(Ljava/net/ServerSocket;)Ljava/net/Socket; (DefaultServerSocketFactory.java:61:1)
+	at org/apache/tomcat/util/net/JIoEndpoint$Acceptor.run()V (JIoEndpoint.java:310:0xb8 <JIT>)
+	at java/lang/Thread.run()V (:0:11)
+------------------------------------------------------------
+HTTPURLConnectionCache.CacheManager [pid:11353 OSID:0x4428A460] [mc:0]
+-------------------------------------------------------------------------
+--- Java Stack for HTTPURLConnectionCache.CacheManager:
+	at ceej/net/http/HttpURLConnectionCache$CacheManager.run()V (:0:220)
+	at java/lang/Thread.run()V (:0:11)
+------------------------------------------------------------
+Thread-7 [pid:11357 OSID:0x474D2460] [mc:0]
+-------------------------------------------------------------------------
+--- Java Stack for Thread-7:
+	at java/net/SocketInputStream.read([BII)I (:0:11)
+	at java/net/Socket$ReadBlockedStream.read([BII)I (:0:32)
+	at java/net/SocketInputStream.read([B)I (:0:5)
+	at org/openremote/controller/proxy/Proxy.run()V (Proxy.java:102:0x244 <JIT>)
+------------------------------------------------------------
+HTTP-Thread-1 [pid:11358 OSID:0x478C7460] [mc:0] [blocked on:0x41B38BF4]
+-------------------------------------------------------------------------
+--- Java Stack for HTTP-Thread-1:
+	at org/openremote/controller/service/impl/CommandServiceImpl.execute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V (CommandServiceImpl.java:54:0)
+	at org/openremote/controller/rest/CommandRESTServlet.handleRequest(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V (CommandRESTServlet.java:148:66)
+	at org/openremote/controller/rest/DeviceRESTServlet.handleRequest(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V (DeviceRESTServlet.java:145:86)
+	at org/openremote/controller/rest/RESTAPI.doPost(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V (RESTAPI.java:174:103)
+	at javax/servlet/http/HttpServlet.service(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V (HttpServlet.java:637:139)
+	at javax/servlet/http/HttpServlet.service(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;)V (HttpServlet.java:717:30)
+	at org/apache/catalina/core/ApplicationFilterChain.internalDoFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;)V (ApplicationFilterChain.java:290:374)
+	at org/apache/catalina/core/ApplicationFilterChain.doFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;)V (ApplicationFilterChain.java:206:101)
+	at org/openremote/controller/rest/support/json/JSONCallbackFilter.doFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;Ljavax/servlet/FilterChain;)V (JSONCallbackFilter.java:63:125)
+	at org/apache/catalina/core/ApplicationFilterChain.internalDoFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;)V (ApplicationFilterChain.java:235:117)
+	at org/apache/catalina/core/ApplicationFilterChain.doFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;)V (ApplicationFilterChain.java:206:101)
+	at org/springframework/web/filter/CharacterEncodingFilter.doFilterInternal(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;Ljavax/servlet/FilterChain;)V (CharacterEncodingFilter.java:78:29)
+	at org/springframework/web/filter/OncePerRequestFilter.doFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;Ljavax/servlet/FilterChain;)V (OncePerRequestFilter.java:77:90)
+	at org/apache/catalina/core/ApplicationFilterChain.internalDoFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;)V (ApplicationFilterChain.java:235:117)
+	at org/apache/catalina/core/ApplicationFilterChain.doFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;)V (ApplicationFilterChain.java:206:101)
+	at org/apache/catalina/core/StandardWrapperValve.invoke(Lorg/apache/catalina/connector/Request;Lorg/apache/catalina/connector/Response;)V (StandardWrapperValve.java:233:804)
+	at org/apache/catalina/core/StandardContextValve.invoke(Lorg/apache/catalina/connector/Request;Lorg/apache/catalina/connector/Response;)V (StandardContextValve.java:191:0x16d <JIT>)
+	at org/apache/catalina/authenticator/AuthenticatorBase.invoke(Lorg/apache/catalina/connector/Request;Lorg/apache/catalina/connector/Response;)V (AuthenticatorBase.java:525:0xc30 <JIT>)
+	at org/apache/catalina/core/StandardHostValve.invoke(Lorg/apache/catalina/connector/Request;Lorg/apache/catalina/connector/Response;)V (StandardHostValve.java:128:64)
+	at org/apache/catalina/valves/ErrorReportValve.invoke(Lorg/apache/catalina/connector/Request;Lorg/apache/catalina/connector/Response;)V (ErrorReportValve.java:102:6)
+	at org/apache/catalina/core/StandardEngineValve.invoke(Lorg/apache/catalina/connector/Request;Lorg/apache/catalina/connector/Response;)V (StandardEngineValve.java:109:42)
+	at org/apache/catalina/connector/CoyoteAdapter.service(Lorg/apache/coyote/Request;Lorg/apache/coyote/Response;)V (CoyoteAdapter.java:286:157)
+	at org/apache/coyote/http11/Http11Processor.process(Ljava/net/Socket;)V (Http11Processor.java:845:0x6c0 <JIT>)
+	at org/apache/coyote/http11/Http11Protocol$Http11ConnectionHandler.process(Ljava/net/Socket;)Z (Http11Protocol.java:583:82)
+	at org/apache/tomcat/util/net/JIoEndpoint$SocketProcessor.run()V (JIoEndpoint.java:354:25)
+	at java/util/concurrent/ThreadPoolExecutor.runWorker(Ljava/util/concurrent/ThreadPoolExecutor$Worker;)V (ThreadPoolExecutor.java:1115:95)
+	at java/util/concurrent/ThreadPoolExecutor$Worker.run()V (ThreadPoolExecutor.java:586:5)
+	at java/lang/Thread.run()V (:0:11)
+------------------------------------------------------------
+Thread-8 [pid:11359 OSID:0x47947460] [mc:0]
+-------------------------------------------------------------------------
+--- Java Stack for Thread-8:
+	at org/conscrypt/OpenSSLSocketImpl$SSLInputStream.read([BII)I (:0:113)
+	at java/io/InputStream.read([B)I (:0:5)
+	at org/openremote/controller/proxy/Proxy$1.run()V (Proxy.java:77:0x40 <JIT>)
+------------------------------------------------------------
+Thread-9 [pid:11360 OSID:0x47A7B460] [mc:0]
+-------------------------------------------------------------------------
+--- Java Stack for Thread-9:
+	at java/net/SocketInputStream.read([BII)I (:0:11)
+	at java/net/Socket$ReadBlockedStream.read([BII)I (:0:32)
+	at java/net/SocketInputStream.read([B)I (:0:5)
+	at org/openremote/controller/proxy/Proxy.run()V (Proxy.java:102:0x244 <JIT>)
+------------------------------------------------------------
+HTTP-Thread-2 [pid:11361 OSID:0x47CBE460] [mc:0] [blocked on:0x002EDF94]
+-------------------------------------------------------------------------
+--- Java Stack for HTTP-Thread-2:
+	at java/io/BufferedInputStream.read()I (:15:0xf <JIT>)
+	at java/io/DataInputStream.readInt()I (:7:0x7 <JIT>)
+	at org/h2/value/Transfer.readInt()I (Transfer.java:153:0x14 <JIT>)
+	at org/h2/engine/SessionRemote.done(Lorg/h2/value/Transfer;)V (SessionRemote.java:617:5)
+	at org/h2/command/CommandRemote.prepare(Lorg/h2/engine/SessionRemote;Z)V (CommandRemote.java:68:0x1ec <JIT>)
+	at org/h2/command/CommandRemote.<init>(Lorg/h2/engine/SessionRemote;Ljava/util/ArrayList;Ljava/lang/String;I)V (CommandRemote.java:45:32)
+	at org/h2/engine/SessionRemote.prepareCommand(Ljava/lang/String;I)Lorg/h2/command/CommandInterface; (SessionRemote.java:494:15)
+	at org/h2/jdbc/JdbcConnection.prepareCommand(Ljava/lang/String;I)Lorg/h2/command/CommandInterface; (JdbcConnection.java:1188:6)
+	at org/h2/jdbc/JdbcPreparedStatement.<init>(Lorg/h2/jdbc/JdbcConnection;Ljava/lang/String;IIIZ)V (JdbcPreparedStatement.java:73:39)
+	at org/h2/jdbc/JdbcConnection.prepareStatement(Ljava/lang/String;)Ljava/sql/PreparedStatement; (JdbcConnection.java:276:70)
+	at org/hibernate/jdbc/AbstractBatcher.getPreparedStatement(Ljava/sql/Connection;Ljava/lang/String;ZZ[Ljava/lang/String;Lorg/hibernate/ScrollMode;Z)Ljava/sql/PreparedStatement; (AbstractBatcher.java:534:185)
+	at org/hibernate/jdbc/AbstractBatcher.getPreparedStatement(Ljava/sql/Connection;Ljava/lang/String;ZLorg/hibernate/ScrollMode;)Ljava/sql/PreparedStatement; (AbstractBatcher.java:452:9)
+	at org/hibernate/jdbc/AbstractBatcher.prepareQueryStatement(Ljava/lang/String;ZLorg/hibernate/ScrollMode;)Ljava/sql/PreparedStatement; (AbstractBatcher.java:161:15)
+	at org/hibernate/loader/Loader.prepareQueryStatement(Lorg/hibernate/engine/QueryParameters;ZLorg/hibernate/engine/SessionImplementor;)Ljava/sql/PreparedStatement; (Loader.java:1700:250)
+	at org/hibernate/loader/Loader.doQuery(Lorg/hibernate/engine/SessionImplementor;Lorg/hibernate/engine/QueryParameters;Z)Ljava/util/List; (Loader.java:801:0x134 <JIT>)
+	at org/hibernate/loader/Loader.doQueryAndInitializeNonLazyCollections(Lorg/hibernate/engine/SessionImplementor;Lorg/hibernate/engine/QueryParameters;Z)Ljava/util/List; (Loader.java:274:60)
+	at org/hibernate/loader/Loader.doList(Lorg/hibernate/engine/SessionImplementor;Lorg/hibernate/engine/QueryParameters;)Ljava/util/List; (Loader.java:2542:31)
+	at org/hibernate/loader/Loader.listIgnoreQueryCache(Lorg/hibernate/engine/SessionImplementor;Lorg/hibernate/engine/QueryParameters;)Ljava/util/List; (Loader.java:2276:4)
+	at org/hibernate/loader/Loader.list(Lorg/hibernate/engine/SessionImplementor;Lorg/hibernate/engine/QueryParameters;Ljava/util/Set;[Lorg/hibernate/type/Type;)Ljava/util/List; (Loader.java:2271:47)
+	at org/hibernate/loader/hql/QueryLoader.list(Lorg/hibernate/engine/SessionImplementor;Lorg/hibernate/engine/QueryParameters;)Ljava/util/List; (QueryLoader.java:459:19)
+	at org/hibernate/hql/ast/QueryTranslatorImpl.list(Lorg/hibernate/engine/SessionImplementor;Lorg/hibernate/engine/QueryParameters;)Ljava/util/List; (QueryTranslatorImpl.java:365:0x218 <JIT>)
+	at org/hibernate/engine/query/HQLQueryPlan.performList(Lorg/hibernate/engine/QueryParameters;Lorg/hibernate/engine/SessionImplementor;)Ljava/util/List; (HQLQueryPlan.java:196:0x350 <JIT>)
+	at org/hibernate/impl/SessionImpl.list(Ljava/lang/String;Lorg/hibernate/engine/QueryParameters;)Ljava/util/List; (SessionImpl.java:1268:49)
+	at org/hibernate/impl/QueryImpl.list()Ljava/util/List; (QueryImpl.java:102:27)
+	at org/hibernate/impl/AbstractQueryImpl.uniqueResult()Ljava/lang/Object; (AbstractQueryImpl.java:890:1)
+	at org/openremote/controller/ooma/DAO/Impl/DaoImpl.getObjectByAttribute(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object; (DaoImpl.java:75:74)
+	at org/openremote/controller/protocol/ooma_base/OomaBaseHandler.saveDeviceWithDefaultSettingsToDB(Lorg/openremote/controller/ooma/entity/DeviceEntity;Ljava/lang/String;)V (OomaBaseHandler.java:83:39)
+	at org/openremote/controller/protocol/ooma_base/OomaBaseHandler.updateDeviceData(Ljava/lang/String;)V (OomaBaseHandler.java:132:158)
+	at org/openremote/controller/protocol/ooma_base/OomaBaseCommand.send()V (OomaBaseCommand.java:60:0x1f8 <JIT>)
+	at org/openremote/controller/model/Command.execute(Ljava/lang/String;)V (Command.java:289:41)
+	at org/openremote/controller/service/impl/CommandServiceImpl.execute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V (CommandServiceImpl.java:115:279)
+	at org/openremote/controller/rest/CommandRESTServlet.handleRequest(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V (CommandRESTServlet.java:148:66)
+	at org/openremote/controller/rest/DeviceRESTServlet.handleRequest(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V (DeviceRESTServlet.java:145:86)
+	at org/openremote/controller/rest/RESTAPI.doPost(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V (RESTAPI.java:174:103)
+	at javax/servlet/http/HttpServlet.service(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V (HttpServlet.java:637:139)
+	at javax/servlet/http/HttpServlet.service(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;)V (HttpServlet.java:717:30)
+	at org/apache/catalina/core/ApplicationFilterChain.internalDoFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;)V (ApplicationFilterChain.java:290:374)
+	at org/apache/catalina/core/ApplicationFilterChain.doFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;)V (ApplicationFilterChain.java:206:101)
+	at org/openremote/controller/rest/support/json/JSONCallbackFilter.doFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;Ljavax/servlet/FilterChain;)V (JSONCallbackFilter.java:63:125)
+	at org/apache/catalina/core/ApplicationFilterChain.internalDoFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;)V (ApplicationFilterChain.java:235:117)
+	at org/apache/catalina/core/ApplicationFilterChain.doFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;)V (ApplicationFilterChain.java:206:101)
+	at org/springframework/web/filter/CharacterEncodingFilter.doFilterInternal(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;Ljavax/servlet/FilterChain;)V (CharacterEncodingFilter.java:78:29)
+	at org/springframework/web/filter/OncePerRequestFilter.doFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;Ljavax/servlet/FilterChain;)V (OncePerRequestFilter.java:77:90)
+	at org/apache/catalina/core/ApplicationFilterChain.internalDoFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;)V (ApplicationFilterChain.java:235:117)
+	at org/apache/catalina/core/ApplicationFilterChain.doFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;)V (ApplicationFilterChain.java:206:101)
+	at org/apache/catalina/core/StandardWrapperValve.invoke(Lorg/apache/catalina/connector/Request;Lorg/apache/catalina/connector/Response;)V (StandardWrapperValve.java:233:804)
+	at org/apache/catalina/core/StandardContextValve.invoke(Lorg/apache/catalina/connector/Request;Lorg/apache/catalina/connector/Response;)V (StandardContextValve.java:191:0x6f0 <JIT>)
+	at org/apache/catalina/authenticator/AuthenticatorBase.invoke(Lorg/apache/catalina/connector/Request;Lorg/apache/catalina/connector/Response;)V (AuthenticatorBase.java:525:0xc30 <JIT>)
+	at org/apache/catalina/core/StandardHostValve.invoke(Lorg/apache/catalina/connector/Request;Lorg/apache/catalina/connector/Response;)V (StandardHostValve.java:128:64)
+	at org/apache/catalina/valves/ErrorReportValve.invoke(Lorg/apache/catalina/connector/Request;Lorg/apache/catalina/connector/Response;)V (ErrorReportValve.java:102:6)
+	at org/apache/catalina/core/StandardEngineValve.invoke(Lorg/apache/catalina/connector/Request;Lorg/apache/catalina/connector/Response;)V (StandardEngineValve.java:109:42)
+	at org/apache/catalina/connector/CoyoteAdapter.service(Lorg/apache/coyote/Request;Lorg/apache/coyote/Response;)V (CoyoteAdapter.java:286:157)
+	at org/apache/coyote/http11/Http11Processor.process(Ljava/net/Socket;)V (Http11Processor.java:845:0x6c0 <JIT>)
+	at org/apache/coyote/http11/Http11Protocol$Http11ConnectionHandler.process(Ljava/net/Socket;)Z (Http11Protocol.java:583:82)
+	at org/apache/tomcat/util/net/JIoEndpoint$SocketProcessor.run()V (JIoEndpoint.java:354:25)
+	at java/util/concurrent/ThreadPoolExecutor.runWorker(Ljava/util/concurrent/ThreadPoolExecutor$Worker;)V (ThreadPoolExecutor.java:1115:95)
+	at java/util/concurrent/ThreadPoolExecutor$Worker.run()V (ThreadPoolExecutor.java:586:5)
+	at java/lang/Thread.run()V (:0:11)
+------------------------------------------------------------
+Thread-10 [pid:11362 OSID:0x47DB0460] [mc:0]
+-------------------------------------------------------------------------
+--- Java Stack for Thread-10:
+	at org/conscrypt/OpenSSLSocketImpl$SSLInputStream.read([BII)I (:0:113)
+	at java/io/InputStream.read([B)I (:0:5)
+	at org/openremote/controller/proxy/Proxy$1.run()V (Proxy.java:77:0x40 <JIT>)
+------------------------------------------------------------
+===============================================================================
+Object     instanceof           Thread                       Thread name
+===============================================================================
+0x46323A04 java/io/BufferedInputStream              java/lang/Thread                                 H2 TCP Server (tcp://localho
+0x4540EC9C org/h2/engine/SessionRemote              java/lang/Thread                                 HTTP-Thread-2               
+0x44C23AD4 java/util/Collections$UnmodifiableSet    io/netty/util/concurrent/FastThreadLocalThread   nioEventLoopGroup-2-1       
+0x468009E8 java/net/SelectorImpl                    io/netty/util/concurrent/FastThreadLocalThread   nioEventLoopGroup-2-1       
+0x425A5520 java/lang/Object                         org/openremote/controller/proxy/Proxy$1          Thread-10                   
+0x46B3E744 java/lang/Object                         org/openremote/controller/proxy/Proxy$1          Thread-8                    
+0x43134420 java/net/MulticastSocket                 java/lang/Thread                                 Controller Auto-Discovery   
+0x43B99CF0 java/net/DatagramSocket                  org/openremote/controller/protocol/ooma/OomaList OomaListener Port: 4443     
+0x43B9A8AC org/openremote/controller/service/impl/C java/lang/Thread                                 HTTP-Thread-2               
+0x44D69114 java/net/SelectorImpl$UnaddableSet       io/netty/util/concurrent/FastThreadLocalThread   nioEventLoopGroup-2-1       
+0x460CC700 java/io/BufferedInputStream              java/lang/Thread                                 HTTP-Thread-2               
+0x442018B4 java/io/BufferedInputStream              java/lang/Thread                                 H2 TCP Server (tcp://localho
+0x451AB054 java/io/BufferedInputStream              java/lang/Thread                                 H2 TCP Server (tcp://localho
+===============================================================================
+[pool-2-thread-1] (java/lang/Thread) is waiting for 0x441ED55C (java/lang/Object) for 4360680 ms
+[DiscoveredDevicesAnnouncement] (org/openremote/controller/service/Deployer$DiscoveredDevicesAnnouncement) is waiting for 0x43BEA204 (java/lang/Object) for 39854 ms
+[HTTPURLConnectionCache.CacheManager] (java/lang/Thread) is waiting for 0x4724BD40 (java/lang/Object) for 7674 ms
+[pool-1-thread-1] (java/lang/Thread) is waiting for 0x44371344 (java/lang/Object) for 7671 ms
+[Retrofit-Idle] (java/lang/Thread) is waiting for 0x44CE4CDC (java/lang/Object) for 7493 ms
+[ContainerBackgroundProcessor[StandardEngine[Catalina]]] (java/lang/Thread) is waiting for 0x46CCF834 (java/lang/Object) for 6939 ms
+[Thread-0] (org/apache/log4j/PropertyWatchdog) is waiting for 0x42D6B8D0 (java/lang/Object) for 4309 ms
+[threadDeathWatcher-3-1] (io/netty/util/concurrent/FastThreadLocalThread) is waiting for 0x46D03108 (java/lang/Object) for 2095 ms
+[H2 File Lock Watchdog /opt/openremote_resources/database/controller.lock.db] (java/lang/Thread) is waiting for 0x44E02850 (java/lang/Object) for 2094 ms
+[Controller Definition File Watcher for Default Deployer] (java/lang/Thread) is waiting for 0x4691B524 (java/lang/Object) for 1561 ms
+[H2 Log Writer CONTROLLER] (java/lang/Thread) is waiting for 0x44C7A2E8 (org/h2/store/WriterThread) for 1277 ms
+===============================================================================
+===============================================================================
+0x002EDF94 [Memory::AllocLock:3:2] is owned by (H2 TCP Server (tcp://localhost:9092) thread:0x4654C460 pid:4028 OSID:0x4654C460)
+0x002E2FE4 [Thread::MustComplete:0:1] is owned by (H2 TCP Server (tcp://localhost:9092) thread:0x4654C460 pid:4028 OSID:0x4654C460)
+0x002EE534 [ThreadQueue::Lock:3:1] is owned by (H2 TCP Server (tcp://localhost:9092) thread:0x4654C460 pid:4028 OSID:0x4654C460)
+0x40D4D1F0 [Thread::MustComplete:0:1] is owned by (H2 TCP Server (tcp://localhost:9092) thread:0x4654C460 pid:4028 OSID:0x4654C460)
+0x40D4D86C [Thread::MustComplete:0:1] is owned by (H2 TCP Server (tcp://localhost:9092) thread:0x4654C460 pid:4028 OSID:0x4654C460)
+0x42D6EFB4 [Thread::MustComplete:0:1] is owned by (H2 TCP Server (tcp://localhost:9092) thread:0x4654C460 pid:4028 OSID:0x4654C460)
+0x4368DA08 [Thread::MustComplete:0:1] is owned by (H2 TCP Server (tcp://localhost:9092) thread:0x4654C460 pid:4028 OSID:0x4654C460)
+0x4368F6B0 [Thread::MustComplete:0:1] is owned by (H2 TCP Server (tcp://localhost:9092) thread:0x4654C460 pid:4028 OSID:0x4654C460)
+0x4364A1C0 [Thread::MustComplete:0:1] is owned by (H2 TCP Server (tcp://localhost:9092) thread:0x4654C460 pid:4028 OSID:0x4654C460)
+0x41B33A64 [0x43134420:java/net/MulticastSocket:0:1] is owned by (Controller Auto-Discovery:0x43AD2460 pid:3800 OSID:0x43AD2460)
+0x4368A758 [Thread::MustComplete:0:1] is owned by (H2 TCP Server (tcp://localhost:9092) thread:0x4654C460 pid:4028 OSID:0x4654C460)
+0x41B38BF4 [0x43B9A8AC:org/openremote/controller/service/impl/CommandServiceImpl:1:1] is owned by (HTTP-Thread-2:0x47CBE460 pid:11361 OSID:0x47CBE460) PC:0x43C708EC
+0x41B340DC [0x43B99CF0:java/net/DatagramSocket:0:1] is owned by (OomaListener Port: 4443:0x43975460 pid:3777 OSID:0x43975460)
+0x441BD524 [Thread::MustComplete:0:1] is owned by (H2 TCP Server (tcp://localhost:9092) thread:0x4654C460 pid:4028 OSID:0x4654C460)
+0x44182E68 [Thread::MustComplete:0:1] is owned by (H2 TCP Server (tcp://localhost:9092) thread:0x4654C460 pid:4028 OSID:0x4654C460)
+0x449BF414 [Thread::MustComplete:0:1] is owned by (H2 TCP Server (tcp://localhost:9092) thread:0x4654C460 pid:4028 OSID:0x4654C460)
+0x45289F78 [Thread::MustComplete:0:1] is owned by (H2 TCP Server (tcp://localhost:9092) thread:0x4654C460 pid:4028 OSID:0x4654C460)
+0x41B436AC [0x451AB054:java/io/BufferedInputStream:0:1] is owned by (H2 TCP Server (tcp://localhost:9092) thread:0x44B41460 pid:3936 OSID:0x44B41460) PC:0x4124E968
+0x44A2C5BC [Thread::MustComplete:0:1] is owned by (H2 TCP Server (tcp://localhost:9092) thread:0x4654C460 pid:4028 OSID:0x4654C460)
+0x452340D8 [Thread::MustComplete:0:1] is owned by (H2 TCP Server (tcp://localhost:9092) thread:0x4654C460 pid:4028 OSID:0x4654C460)
+0x4619E148 [Thread::MustComplete:0:1] is owned by (H2 TCP Server (tcp://localhost:9092) thread:0x4654C460 pid:4028 OSID:0x4654C460)
+0x41B3FB0C [0x442018B4:java/io/BufferedInputStream:0:1] is owned by (H2 TCP Server (tcp://localhost:9092) thread:0x4644C460 pid:4026 OSID:0x4644C460) PC:0x4124E968
+0x46329AF0 [Thread::MustComplete:0:1] is owned by (H2 TCP Server (tcp://localhost:9092) thread:0x4654C460 pid:4028 OSID:0x4654C460)
+0x44E57D24 [0x46323A04:java/io/BufferedInputStream:0:1] is owned by (H2 TCP Server (tcp://localhost:9092) thread:0x464CC460 pid:4027 OSID:0x464CC460) PC:0x4124E968
+0x46187198 [Thread::MustComplete:0:1] is owned by (H2 TCP Server (tcp://localhost:9092) thread:0x4654C460 pid:4028 OSID:0x4654C460)
+0x41B3C794 [0x460CC700:java/io/BufferedInputStream:0:1] is owned by (HTTP-Thread-2:0x47CBE460 pid:11361 OSID:0x47CBE460) PC:0x4124E968
+0x44E57D6C [0x4540EC9C:org/h2/engine/SessionRemote:0:1] is owned by (HTTP-Thread-2:0x47CBE460 pid:11361 OSID:0x47CBE460) PC:0x43D44E78
+0x46B3A2D4 [Thread::MustComplete:0:1] is owned by (H2 TCP Server (tcp://localhost:9092) thread:0x4654C460 pid:4028 OSID:0x4654C460)
+0x46AB61E0 [Thread::MustComplete:0:1] is owned by (H2 TCP Server (tcp://localhost:9092) thread:0x4654C460 pid:4028 OSID:0x4654C460)
+0x44E5BD44 [0x468009E8:java/net/SelectorImpl:0:1] is owned by (nioEventLoopGroup-2-1:0x45C94460 pid:4160 OSID:0x45C94460)
+0x44E5BB94 [0x44C23AD4:java/util/Collections$UnmodifiableSet:0:1] is owned by (nioEventLoopGroup-2-1:0x45C94460 pid:4160 OSID:0x45C94460)
+0x41B3BB7C [0x44D69114:java/net/SelectorImpl$UnaddableSet:0:1] is owned by (nioEventLoopGroup-2-1:0x45C94460 pid:4160 OSID:0x45C94460)
+0x46C5A428 [Thread::MustComplete:0:1] is owned by (H2 TCP Server (tcp://localhost:9092) thread:0x4654C460 pid:4028 OSID:0x4654C460)
+0x4727F340 [Thread::MustComplete:0:1] is owned by (H2 TCP Server (tcp://localhost:9092) thread:0x4654C460 pid:4028 OSID:0x4654C460)
+0x4725BDFC [Thread::MustComplete:0:1] is owned by (H2 TCP Server (tcp://localhost:9092) thread:0x4654C460 pid:4028 OSID:0x4654C460)
+0x423D3540 [Thread::MustComplete:0:1] is owned by (H2 TCP Server (tcp://localhost:9092) thread:0x4654C460 pid:4028 OSID:0x4654C460)
+0x42B013B4 [Thread::MustComplete:0:1] is owned by (H2 TCP Server (tcp://localhost:9092) thread:0x4654C460 pid:4028 OSID:0x4654C460)
+0x42663A80 [Thread::MustComplete:0:1] is owned by (H2 TCP Server (tcp://localhost:9092) thread:0x4654C460 pid:4028 OSID:0x4654C460)
+0x42963B04 [Thread::MustComplete:0:1] is owned by (H2 TCP Server (tcp://localhost:9092) thread:0x4654C460 pid:4028 OSID:0x4654C460)
+0x41B30BFC [0x46B3E744:java/lang/Object:0:1] is owned by (Thread-8:0x47947460 pid:11359 OSID:0x47947460)
+0x0213C544 [Thread::MustComplete:0:1] is owned by (H2 TCP Server (tcp://localhost:9092) thread:0x4654C460 pid:4028 OSID:0x4654C460)
+0x0215B150 [Thread::MustComplete:0:1] is owned by (H2 TCP Server (tcp://localhost:9092) thread:0x4654C460 pid:4028 OSID:0x4654C460)
+0x02163F04 [Thread::MustComplete:0:1] is owned by (H2 TCP Server (tcp://localhost:9092) thread:0x4654C460 pid:4028 OSID:0x4654C460)
+0x44E64A2C [0x425A5520:java/lang/Object:0:1] is owned by (Thread-10:0x47DB0460 pid:11362 OSID:0x47DB0460)
+===============================================================================
+
+-------------------------------------------------------------------------
+SYSTEM STATUS DUMP COMPLETE
+-------------------------------------------------------------------------
