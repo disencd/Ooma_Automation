@@ -2,7 +2,7 @@ import urllib2
 import time
 from hms_actions import HMSActions
 from field_generator import FieldGenerator
-from homemonitoring.setup.json_parse import JsonConfig
+from setup.json_parse import JsonConfig
 
 
 class Transaction1(object):
