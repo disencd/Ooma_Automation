@@ -2,6 +2,6 @@
 
 
 chmod 777 *
-sudo python settings.py
+python settings.py
 
-sudo python ./test_scripts/create_oss_hms_acc.py
+python ./test_scripts/create_oss_hms_acc.py
