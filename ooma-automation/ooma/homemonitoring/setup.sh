@@ -4,8 +4,8 @@
 chmod 777 *
 python settings.py
 
-echo $PATH
+env
 
-PATH:/Users/Shared/Jenkins/Home/workspace/HomeSecurity/ooma-automation/ooma/homemonitoring
-
-echo $PATH
+PYTHONPATH="${PYTHONPATH}/Users/Shared/Jenkins/Home/workspace/HomeSecurity/ooma-automation/ooma/homemonitoring/"
+export PYTHONPATH
+env
