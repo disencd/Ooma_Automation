@@ -10,4 +10,4 @@ env
 #export PYTHONPATH
 #env
 
-ln -s "/Users/Shared/Jenkins/Home/workspace/HomeSecurity/ooma-automation/ooma/homemonitoring/" /usr/lib/pymodules/python2.7/
+ln -s "/Users/Shared/Jenkins/Home/workspace/HomeSecurity/ooma-automation/ooma/homemonitoring/" /usr/lib/python2.7/
