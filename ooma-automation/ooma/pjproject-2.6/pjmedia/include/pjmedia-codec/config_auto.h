@@ -56,7 +56,7 @@
 
 /* iLBC codec */
 #ifndef PJMEDIA_HAS_ILBC_CODEC
-#define PJMEDIA_HAS_ILBC_CODEC 0
+/* #undef PJMEDIA_HAS_ILBC_CODEC */
 #endif
 
 

@@ -444,11 +444,54 @@ output/pjmedia-codec-x86_64-unknown-linux-gnu/speex_codec.o: ../src/pjmedia-code
  ../include/pjmedia/transport.h ../include/pjmedia-audiodev/audiodev.h \
  ../include/pjmedia/audiodev.h ../include/pjmedia-audiodev/config.h \
  ../include/pjmedia-audiodev/errno.h \
- /var/tmp/pjproject-2.6/third_party/speex/include/speex/speex.h \
- /var/tmp/pjproject-2.6/third_party/speex/include/speex/speex_bits.h \
- /var/tmp/pjproject-2.6/third_party/speex/include/speex/speex_types.h \
- /var/tmp/pjproject-2.6/third_party/build/speex/speex/speex_config_types.h \
+ /usr/automation/Ooma_Automation/ooma-automation/ooma/pjproject-2.6/third_party/speex/include/speex/speex.h \
+ /usr/automation/Ooma_Automation/ooma-automation/ooma/pjproject-2.6/third_party/speex/include/speex/speex_bits.h \
+ /usr/automation/Ooma_Automation/ooma-automation/ooma/pjproject-2.6/third_party/speex/include/speex/speex_types.h \
+ /usr/automation/Ooma_Automation/ooma-automation/ooma/pjproject-2.6/third_party/build/speex/speex/speex_config_types.h \
  ../../pjlib/include/pj/log.h
+output/pjmedia-codec-x86_64-unknown-linux-gnu/ilbc.o: ../src/pjmedia-codec/ilbc.c ../include/pjmedia-codec/ilbc.h \
+ ../include/pjmedia-codec/types.h ../include/pjmedia-codec/config.h \
+ ../include/pjmedia/types.h ../include/pjmedia/config.h \
+ ../../pjlib/include/pj/config.h ../../pjlib/include/pj/compat/cc_gcc.h \
+ ../../pjlib/include/pj/compat/os_auto.h \
+ ../../pjlib/include/pj/compat/m_auto.h \
+ ../../pjlib/include/pj/compat/size_t.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.4.7/include/stddef.h \
+ ../../pjlib/include/pj/config_site.h ../include/pjmedia/config_auto.h \
+ ../../pjlib/include/pj/sock.h ../../pjlib/include/pj/types.h \
+ ../include/pjmedia-codec/config_auto.h ../include/pjmedia/codec.h \
+ ../include/pjmedia/port.h ../include/pjmedia/clock.h \
+ ../include/pjmedia/event.h ../include/pjmedia/format.h \
+ ../include/pjmedia/signatures.h ../include/pjmedia/frame.h \
+ ../../pjlib/include/pj/string.h ../../pjlib/include/pj/compat/string.h \
+ /usr/include/string.h /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-64.h /usr/include/xlocale.h \
+ /usr/include/bits/string.h /usr/include/bits/string2.h \
+ /usr/include/endian.h /usr/include/bits/endian.h \
+ /usr/include/bits/byteswap.h /usr/include/bits/types.h \
+ /usr/include/bits/typesizes.h /usr/include/stdlib.h /usr/include/stdio.h \
+ /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.4.7/include/stdarg.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ /usr/include/bits/stdio.h /usr/include/bits/waitflags.h \
+ /usr/include/bits/waitstatus.h /usr/include/sys/types.h \
+ /usr/include/time.h /usr/include/sys/select.h /usr/include/bits/select.h \
+ /usr/include/bits/sigset.h /usr/include/bits/time.h \
+ /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h \
+ /usr/include/alloca.h ../../pjlib/include/pj/assert.h \
+ ../../pjlib/include/pj/compat/assert.h /usr/include/assert.h \
+ ../../pjlib/include/pj/os.h ../../pjlib/include/pj/errno.h \
+ ../../pjlib/include/pj/compat/errno.h ../../pjlib/include/pj/list.h \
+ ../../pjlib/include/pj/pool.h ../include/pjmedia/errno.h \
+ ../include/pjmedia/endpoint.h ../include/pjmedia/sdp.h \
+ ../include/pjmedia/transport.h ../include/pjmedia-audiodev/audiodev.h \
+ ../include/pjmedia/audiodev.h ../include/pjmedia-audiodev/config.h \
+ ../include/pjmedia-audiodev/errno.h ../include/pjmedia/plc.h \
+ ../include/pjmedia/silencedet.h ../../pjlib/include/pj/log.h \
+ ../include/../../third_party/ilbc/iLBC_encode.h \
+ ../include/../../third_party/ilbc/iLBC_define.h \
+ ../include/../../third_party/ilbc/iLBC_decode.h
 output/pjmedia-codec-x86_64-unknown-linux-gnu/g722.o: ../src/pjmedia-codec/g722.c ../include/pjmedia-codec/g722.h \
  ../include/pjmedia-codec/types.h ../include/pjmedia-codec/config.h \
  ../include/pjmedia/types.h ../include/pjmedia/config.h \

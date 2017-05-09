@@ -1,4 +1,4 @@
-export PJDIR := /var/tmp/pjproject-2.6
+export PJDIR := /usr/automation/Ooma_Automation/ooma-automation/ooma/pjproject-2.6
 include $(PJDIR)/version.mak
 export PJ_DIR := $(PJDIR)
 
@@ -12,14 +12,14 @@ export CROSS_COMPILE :=
 export LINUX_POLL := select 
 export SHLIB_SUFFIX := so
 
-export prefix := /usr/local
+export prefix := /usr
 export exec_prefix := ${prefix}
 export includedir := ${prefix}/include
 export libdir := ${exec_prefix}/lib
 
 LIB_SUFFIX := $(TARGET_NAME).a
 
-ifeq (,1)
+ifeq (1,1)
 export PJ_SHARED_LIBRARIES := 1
 endif
 
@@ -41,7 +41,7 @@ APP_THIRD_PARTY_LIB_FILES += $(PJ_DIR)/third_party/lib/libsrtp.$(SHLIB_SUFFIX).$
 endif
 endif
 
-ifeq (libresample,libresample)
+ifeq (none,libresample)
 APP_THIRD_PARTY_LIB_FILES += $(PJ_DIR)/third_party/lib/libresample-$(LIB_SUFFIX)
 ifeq ($(PJ_SHARED_LIBRARIES),)
 ifeq (,1)
@@ -86,7 +86,7 @@ endif
 endif
 endif
 
-ifneq (1,1)
+ifneq (,1)
 APP_THIRD_PARTY_LIB_FILES += $(PJ_DIR)/third_party/lib/libilbccodec-$(LIB_SUFFIX)
 ifeq ($(PJ_SHARED_LIBRARIES),)
 APP_THIRD_PARTY_LIBS += -lilbccodec-$(TARGET_NAME)
@@ -106,7 +106,7 @@ APP_THIRD_PARTY_LIB_FILES += $(PJ_DIR)/third_party/lib/libg7221codec.$(SHLIB_SUF
 endif
 endif
 
-ifneq ($(findstring pa,alsa),)
+ifneq ($(findstring pa,null),)
 ifeq (0,1)
 # External PA
 APP_THIRD_PARTY_EXT += -lportaudio
@@ -163,8 +163,8 @@ SDL_CFLAGS =
 SDL_LDFLAGS = 
 
 # FFMPEG flags
-FFMPEG_CFLAGS =   -DPJMEDIA_USE_OLD_FFMPEG=1 
-FFMPEG_LDFLAGS =   
+FFMPEG_CFLAGS =  
+FFMPEG_LDFLAGS =  
 
 # Video4Linux2
 V4L2_CFLAGS = 
@@ -196,7 +196,7 @@ PJ_VIDEO_LDFLAGS += $(SDL_LDFLAGS) $(FFMPEG_LDFLAGS) $(V4L2_LDFLAGS) \
 export APP_CC := gcc
 export APP_CXX := g++
 export APP_CFLAGS := -DPJ_AUTOCONF=1\
-	-O2 -fPIC -DPJ_IS_BIG_ENDIAN=0 -DPJ_IS_LITTLE_ENDIAN=1\
+	-O2 -DNDEBUG -DPJ_IS_BIG_ENDIAN=0 -DPJ_IS_LITTLE_ENDIAN=1 -fPIC\
 	$(PJ_VIDEO_CFLAGS) \
 	-I$(PJDIR)/pjlib/include\
 	-I$(PJDIR)/pjlib-util/include\
@@ -290,7 +290,7 @@ export APP_LDLIBS := $(PJSUA_LIB_LDLIB) \
 	$(APP_THIRD_PARTY_LIBS)\
 	$(APP_THIRD_PARTY_EXT)\
 	$(PJLIB_LDLIB) \
-	-lssl -lcrypto -lm -lrt -lpthread  -lasound  
+	-lssl -lcrypto -lm -lrt -lpthread 
 export APP_LDXXLIBS := $(PJSUA2_LIB_LDLIB) \
 	-lstdc++ \
 	$(APP_LDLIBS)
@@ -310,9 +310,9 @@ export PJ_LIBXX_FILES := $(APP_LIBXX_FILES)
 
 # And here are the variables to use if application is using the
 # library from the install location (i.e. --prefix)
-export PJ_INSTALL_DIR := /usr/local
+export PJ_INSTALL_DIR := /usr
 export PJ_INSTALL_INC_DIR := ${prefix}/include
 export PJ_INSTALL_LIB_DIR := ${exec_prefix}/lib
-export PJ_INSTALL_CFLAGS := -I$(PJ_INSTALL_INC_DIR) -DPJ_AUTOCONF=1	-O2 -fPIC -DPJ_IS_BIG_ENDIAN=0 -DPJ_IS_LITTLE_ENDIAN=1
+export PJ_INSTALL_CFLAGS := -I$(PJ_INSTALL_INC_DIR) -DPJ_AUTOCONF=1	-O2 -DNDEBUG -DPJ_IS_BIG_ENDIAN=0 -DPJ_IS_LITTLE_ENDIAN=1 -fPIC
 export PJ_INSTALL_CXXFLAGS := $(PJ_INSTALL_CFLAGS)
 export PJ_INSTALL_LDFLAGS := -L$(PJ_INSTALL_LIB_DIR) $(APP_LDLIBS)

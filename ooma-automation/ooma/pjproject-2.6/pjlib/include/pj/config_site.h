@@ -1,1 +1,1 @@
-#define PJMEDIA_HAS_VIDEO	0
+#define PJMEDIA_HAS_WEBRTC_AEC		0

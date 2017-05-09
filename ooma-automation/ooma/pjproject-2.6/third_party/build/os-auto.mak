@@ -7,7 +7,7 @@ DIRS += gsm
 endif
 endif
 
-ifneq (1,1)
+ifneq (,1)
 DIRS += ilbc
 endif
 
@@ -23,7 +23,7 @@ ifneq (,1)
 DIRS += g7221
 endif
 
-ifneq ($(findstring pa,alsa),)
+ifneq ($(findstring pa,null),)
 ifeq (0,1)
 # External PA
 else
@@ -53,7 +53,7 @@ endif
 
 endif
 
-ifeq (libresample,libresample)
+ifeq (none,libresample)
 DIRS += resample
 endif
 

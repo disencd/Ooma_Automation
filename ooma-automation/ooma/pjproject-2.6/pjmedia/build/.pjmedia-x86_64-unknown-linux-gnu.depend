@@ -30,10 +30,10 @@ output/pjmedia-x86_64-unknown-linux-gnu/echo_speex.o: ../src/pjmedia/echo_speex.
  ../../pjlib/include/pj/compat/assert.h /usr/include/assert.h \
  ../../pjlib/include/pj/log.h ../../pjlib/include/pj/pool.h \
  ../../pjlib/include/pj/list.h \
- /var/tmp/pjproject-2.6/third_party/speex/include/speex/speex_echo.h \
- /var/tmp/pjproject-2.6/third_party/speex/include/speex/speex_types.h \
- /var/tmp/pjproject-2.6/third_party/build/speex/speex/speex_config_types.h \
- /var/tmp/pjproject-2.6/third_party/speex/include/speex/speex_preprocess.h \
+ /usr/automation/Ooma_Automation/ooma-automation/ooma/pjproject-2.6/third_party/speex/include/speex/speex_echo.h \
+ /usr/automation/Ooma_Automation/ooma-automation/ooma/pjproject-2.6/third_party/speex/include/speex/speex_types.h \
+ /usr/automation/Ooma_Automation/ooma-automation/ooma/pjproject-2.6/third_party/build/speex/speex/speex_config_types.h \
+ /usr/automation/Ooma_Automation/ooma-automation/ooma/pjproject-2.6/third_party/speex/include/speex/speex_preprocess.h \
  ../src/pjmedia/echo_internal.h
 output/pjmedia-x86_64-unknown-linux-gnu/alaw_ulaw.o: ../src/pjmedia/alaw_ulaw.c ../include/pjmedia/alaw_ulaw.h \
  ../include/pjmedia/types.h ../include/pjmedia/config.h \
@@ -1029,8 +1029,7 @@ output/pjmedia-x86_64-unknown-linux-gnu/resample_resample.o: ../src/pjmedia/resa
  ../../pjlib/include/pj/os.h ../include/pjmedia/errno.h \
  ../../pjlib/include/pj/errno.h ../../pjlib/include/pj/compat/errno.h \
  ../../pjlib/include/pj/log.h ../../pjlib/include/pj/pool.h \
- ../../pjlib/include/pj/list.h \
- ../../third_party/resample/include/resamplesubs.h
+ ../../pjlib/include/pj/list.h
 output/pjmedia-x86_64-unknown-linux-gnu/resample_libsamplerate.o: ../src/pjmedia/resample_libsamplerate.c \
  ../include/pjmedia/resample.h ../include/pjmedia/types.h \
  ../include/pjmedia/config.h ../../pjlib/include/pj/config.h \
@@ -1933,30 +1932,30 @@ output/pjmedia-x86_64-unknown-linux-gnu/transport_srtp.o: ../src/pjmedia/transpo
  /usr/include/openssl/ossl_typ.h /usr/include/openssl/e_os2.h \
  /usr/include/openssl/opensslconf.h \
  /usr/include/openssl/opensslconf-x86_64.h \
- /var/tmp/pjproject-2.6/third_party/srtp/include/srtp.h \
+ /usr/automation/Ooma_Automation/ooma-automation/ooma/pjproject-2.6/third_party/srtp/include/srtp.h \
  /usr/include/stdint.h /usr/include/bits/wchar.h \
- /var/tmp/pjproject-2.6/third_party/srtp/crypto/include/crypto.h \
- /var/tmp/pjproject-2.6/third_party/srtp/crypto/include/err.h \
- /var/tmp/pjproject-2.6/third_party/srtp/crypto/include/crypto_types.h \
- /var/tmp/pjproject-2.6/third_party/srtp/crypto/include/err.h \
- /var/tmp/pjproject-2.6/third_party/srtp/crypto/include/crypto_kernel.h \
- /var/tmp/pjproject-2.6/third_party/srtp/crypto/include/rand_source.h \
- /var/tmp/pjproject-2.6/third_party/srtp/crypto/include/datatypes.h \
- /var/tmp/pjproject-2.6/third_party/srtp/crypto/include/integers.h \
- /var/tmp/pjproject-2.6/third_party/build/speex/config.h \
- /var/tmp/pjproject-2.6/third_party/srtp/crypto/include/alloc.h \
- /var/tmp/pjproject-2.6/third_party/srtp/crypto/include/prng.h \
- /var/tmp/pjproject-2.6/third_party/srtp/crypto/include/aes.h \
- /var/tmp/pjproject-2.6/third_party/srtp/crypto/include/gf2_8.h \
- /var/tmp/pjproject-2.6/third_party/srtp/crypto/include/aes_icm.h \
- /var/tmp/pjproject-2.6/third_party/srtp/crypto/include/cipher.h \
- /var/tmp/pjproject-2.6/third_party/srtp/crypto/include/rdbx.h \
- /var/tmp/pjproject-2.6/third_party/srtp/crypto/include/crypto.h \
- /var/tmp/pjproject-2.6/third_party/srtp/crypto/include/crypto_types.h \
- /var/tmp/pjproject-2.6/third_party/srtp/crypto/include/auth.h \
- /var/tmp/pjproject-2.6/third_party/srtp/crypto/include/cryptoalg.h \
- /var/tmp/pjproject-2.6/third_party/srtp/crypto/include/stat.h \
- /var/tmp/pjproject-2.6/third_party/srtp/crypto/include/key.h
+ /usr/automation/Ooma_Automation/ooma-automation/ooma/pjproject-2.6/third_party/srtp/crypto/include/crypto.h \
+ /usr/automation/Ooma_Automation/ooma-automation/ooma/pjproject-2.6/third_party/srtp/crypto/include/err.h \
+ /usr/automation/Ooma_Automation/ooma-automation/ooma/pjproject-2.6/third_party/srtp/crypto/include/crypto_types.h \
+ /usr/automation/Ooma_Automation/ooma-automation/ooma/pjproject-2.6/third_party/srtp/crypto/include/err.h \
+ /usr/automation/Ooma_Automation/ooma-automation/ooma/pjproject-2.6/third_party/srtp/crypto/include/crypto_kernel.h \
+ /usr/automation/Ooma_Automation/ooma-automation/ooma/pjproject-2.6/third_party/srtp/crypto/include/rand_source.h \
+ /usr/automation/Ooma_Automation/ooma-automation/ooma/pjproject-2.6/third_party/srtp/crypto/include/datatypes.h \
+ /usr/automation/Ooma_Automation/ooma-automation/ooma/pjproject-2.6/third_party/srtp/crypto/include/integers.h \
+ /usr/automation/Ooma_Automation/ooma-automation/ooma/pjproject-2.6/third_party/build/speex/config.h \
+ /usr/automation/Ooma_Automation/ooma-automation/ooma/pjproject-2.6/third_party/srtp/crypto/include/alloc.h \
+ /usr/automation/Ooma_Automation/ooma-automation/ooma/pjproject-2.6/third_party/srtp/crypto/include/prng.h \
+ /usr/automation/Ooma_Automation/ooma-automation/ooma/pjproject-2.6/third_party/srtp/crypto/include/aes.h \
+ /usr/automation/Ooma_Automation/ooma-automation/ooma/pjproject-2.6/third_party/srtp/crypto/include/gf2_8.h \
+ /usr/automation/Ooma_Automation/ooma-automation/ooma/pjproject-2.6/third_party/srtp/crypto/include/aes_icm.h \
+ /usr/automation/Ooma_Automation/ooma-automation/ooma/pjproject-2.6/third_party/srtp/crypto/include/cipher.h \
+ /usr/automation/Ooma_Automation/ooma-automation/ooma/pjproject-2.6/third_party/srtp/crypto/include/rdbx.h \
+ /usr/automation/Ooma_Automation/ooma-automation/ooma/pjproject-2.6/third_party/srtp/crypto/include/crypto.h \
+ /usr/automation/Ooma_Automation/ooma-automation/ooma/pjproject-2.6/third_party/srtp/crypto/include/crypto_types.h \
+ /usr/automation/Ooma_Automation/ooma-automation/ooma/pjproject-2.6/third_party/srtp/crypto/include/auth.h \
+ /usr/automation/Ooma_Automation/ooma-automation/ooma/pjproject-2.6/third_party/srtp/crypto/include/cryptoalg.h \
+ /usr/automation/Ooma_Automation/ooma-automation/ooma/pjproject-2.6/third_party/srtp/crypto/include/stat.h \
+ /usr/automation/Ooma_Automation/ooma-automation/ooma/pjproject-2.6/third_party/srtp/crypto/include/key.h
 output/pjmedia-x86_64-unknown-linux-gnu/transport_udp.o: ../src/pjmedia/transport_udp.c \
  ../include/pjmedia/transport_udp.h ../include/pjmedia/stream.h \
  ../include/pjmedia/codec.h ../include/pjmedia/port.h \

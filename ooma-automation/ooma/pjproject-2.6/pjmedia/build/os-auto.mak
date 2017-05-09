@@ -11,8 +11,8 @@ SDL_CFLAGS =
 SDL_LDFLAGS = 
 
 # FFMPEG dlags
-FFMPEG_CFLAGS =   -DPJMEDIA_USE_OLD_FFMPEG=1 
-FFMPEG_LDFLAGS =   
+FFMPEG_CFLAGS =  
+FFMPEG_LDFLAGS =  
 
 # Video4Linux2
 V4L2_CFLAGS = 
@@ -52,10 +52,10 @@ export LDFLAGS += $(SDL_LDFLAGS) $(FFMPEG_LDFLAGS) $(V4L2_LDFLAGS) \
 #   - alsa:		Unix ALSA (alsa_dev.c)
 #   - null:	    	Null sound device (nullsound.c)
 #   - external:		Link with no sounddev (app will provide)
-AC_PJMEDIA_SND=alsa
+AC_PJMEDIA_SND=null
 
 # For Unix, specify if ALSA should be supported
-AC_PA_USE_ALSA=1
+AC_PA_USE_ALSA=
 
 # Additional PortAudio CFLAGS are in  -DHAVE_SYS_SOUNDCARD_H -DHAVE_LINUX_SOUNDCARD_H -DPA_LITTLE_ENDIAN
 
@@ -66,7 +66,7 @@ AC_NO_G711_CODEC=
 AC_NO_L16_CODEC=
 AC_NO_GSM_CODEC=
 AC_NO_SPEEX_CODEC=
-AC_NO_ILBC_CODEC=1
+AC_NO_ILBC_CODEC=
 AC_NO_G722_CODEC=
 AC_NO_G7221_CODEC=
 AC_NO_OPENCORE_AMRNB=1
@@ -160,7 +160,7 @@ endif
 #
 # Resample
 #
-AC_PJMEDIA_RESAMPLE=libresample
+AC_PJMEDIA_RESAMPLE=none
 
 ifeq ($(AC_PJMEDIA_RESAMPLE),none)
 # No resample support
