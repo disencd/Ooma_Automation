@@ -1,5 +1,6 @@
 import urllib2
 import json, base64
+
 class HMSActions(object):
     def __init__(self, jsonconfig, node="cert"):
         self.node = node

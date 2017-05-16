@@ -5,12 +5,12 @@ from field_generator import FieldGenerator
 from setup.json_parse import JsonConfig
 
 
-class Transaction1(object):
+class HMS_Activation(object):
     def __init__(self, node = "cert"):
         self.custom_timers = {}
         self.node = node
         self.json_obj = JsonConfig()
-        self.json_server_obj = self.json_obj.dump_config("../../server_config.json")
+        self.json_server_obj = self.json_obj.dump_config("../server_config.json")
         self.json_server = self.json_server_obj[self.node]["oss-server"]
         self.headers = {
             'Content-Type': 'application/json',
@@ -89,6 +89,6 @@ class Transaction1(object):
             cnt += 1
 
 if __name__ == "__main__":
-    trans = Transaction1()
+    trans = HMS_Activation()
     trans.run()
     print trans.custom_timers

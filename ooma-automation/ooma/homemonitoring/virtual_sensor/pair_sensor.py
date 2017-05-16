@@ -1,19 +1,21 @@
-import urllib2
+import base64
 import time
+import urllib2
 from collections import OrderedDict
-from hms_actions import HMSActions
+
 from field_generator import FieldGenerator, DeviceDiscoveryGenerator
 from fill_dds_request import DDS_data
+from hms_actions import HMSActions
 from homemonitoring.setup.json_parse import JsonConfig
-from homemonitoring.virtual_sensor.test_scripts.hms_sql_query import HMSSqlQuery
-import base64
+from virtual_sensor.hms_sql_query import HMSSqlQuery
 
-class Transaction2(object, HMSSqlQuery):
+
+class Sensor_Addition(object, HMSSqlQuery):
     def __init__(self, node = "cert"):
         self.custom_timers = {}
         self.node = node
         self.json_obj = JsonConfig()
-        self.json_server_obj = self.json_obj.dump_config("../../server_config.json")
+        self.json_server_obj = self.json_obj.dump_config("../server_config.json")
         self.json_server = self.json_server_obj[self.node]["beehive-server"]
         self.dd_gen = DeviceDiscoveryGenerator()
         self.url = "dds/rest/rpc/devicediscovery/2/0/0/devicediscovery"
@@ -114,5 +116,5 @@ class Transaction2(object, HMSSqlQuery):
         self.get_sensor_status("1263")
 
 if __name__ == "__main__":
-    trans = Transaction2()
+    trans = Sensor_Addition()
     trans.run()

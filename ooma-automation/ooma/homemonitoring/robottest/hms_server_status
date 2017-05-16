@@ -1,0 +1,16 @@
+*** Settings ***
+| Library | homemonitoring.ClientParameters
+| Library | homemonitoring.client.rest_client import ClientRestURL
+| Library | homemonitoring.setup.json_parse import JsonConfig
+| Library | homemonitoring.server.server_status import ServerStatus
+| Library | homemonitoring.server.pairing_mode import PairingMode
+| Library | homemonitoring.sensor.flask_webclient.door_rest_cli import FlaskClientDoorSensor
+| Library | homemonitoring.sensor.flask_webclient.flood_rest_cli import FlaskClientWaterSensor
+
+*** Keywords ***
+| Example keyword
+| | log | hello, world
+
+*** Test Cases ***
+| Example of calling a python keyword that calls a robot keyword
+| | Call keyword | Example keyword
