@@ -3,6 +3,7 @@ import time
 from collections import OrderedDict
 from hms_actions import HMSActions
 from field_generator import FieldGenerator, DeviceDiscoveryGenerator
+from fill_dds_request import DDS_data
 from homemonitoring.setup.json_parse import JsonConfig
 from homemonitoring.virtual_sensor.test_scripts.hms_sql_query import HMSSqlQuery
 import base64
@@ -23,91 +24,30 @@ class Transaction2(object, HMSSqlQuery):
     Authorization: Basic MzlyNXRoOHJyOnVtbTdqNHpheg==
     Content-Type: application/vnd.openremote.device-discovery+json
     Cache-Control: no-cache
-    Postman-Token: db7873ac-1889-27de-0089-0b5a71229383
-
-    {
-        "libraryName": "OpenRemote Object Model",
-        "javaFullClassName": "org.openremote.model.DeviceDiscovery",
-        "schemaVersion": "2.0.0",
-        "apiVersion": "0.2",
-        "model": {
-            "deviceIdentifier": "disen_sensor_water",
-            "deviceName": "Window Sensor3",
-            "deviceProtocol": "ooma_ule",
-            "deviceModel": "ActiveDevice",
-            "deviceType": "ActiveDevice",
-            "deviceAttributes": {
-                "rootId": "02e9e0009d1",
-                "deviceId": "D2U0S1I2771DISEN_WATER",
-                "unitId": "U1",
-                "interfaceType": "output",
-                "deviceType": "interface"
-            }
-        }
-    }   
-
+    Postman-Token: db7873ac-1889-27de-0089-0b5a71229383  
     '''
 
-    def pair_water_sensor(self):
+    def pair_water_sensor(self, or_id):
 
-        device_id = self.dd_gen.generate_water_deviceIdentifier()
-
-        _sensor_data = {
-            "model": {
-                "deviceIdentifier": device_id,
-                "deviceName": self.dd_gen.generate_water_deviceName(),
-                "deviceProtocol": "ooma_ule",
-                "deviceModel": self.dd_gen.generate_water_deviceModel(),
-                "deviceType": "ActiveDevice",
-                "deviceAttributes": {
-                    "rootId": self.dd_gen.generate_water_rootId(),
-                    "deviceId": device_id,
-                    "unitId": "U1",
-                    "interfaceType": "output",
-                    "deviceType": "interface"
-                }
-            },
-            "apiVersion": "0.2",
-            "schemaVersion": "2.0.0",
-            "javaFullClassName": "org.openremote.model.DeviceDiscovery",
-            "libraryName": "OpenRemote Object Model"
-        }
-
+        dd_req = DDS_data()
+        _sensor_data = dd_req.fill_dds_data("water")
+        device_id = dd_req.fill_deviceidentifier("water", "BatteryIndicator-U1")
         _start_timer = time.time()
-        response = self.post_sensor_data(_sensor_data, device_id)
+        response = self.post_sensor_data(_sensor_data, device_id, or_id)
         _latency = time.time() - _start_timer
         self.custom_timers['pair_water_sensor Time'] = _latency
         print "Pairing the water Sensor - ", device_id
         print response
 
 
-    def pair_door_sensor(self):
+    def pair_door_sensor(self, or_id):
 
-        device_id = self.dd_gen.generate_water_deviceIdentifier()
-
-        _sensor_data = {
-            "model": {
-                "deviceIdentifier": device_id,
-                "deviceName": self.dd_gen.generate_door_deviceName(),
-                "deviceProtocol": "ooma_ule",
-                "deviceModel": self.dd_gen.generate_door_deviceModel(),
-                "deviceType": "ActiveDevice",
-                "deviceAttributes": {
-                    "rootId": self.dd_gen.generate_door_rootId(),
-                    "deviceId": device_id,
-                    "unitId": "U1",
-                    "interfaceType": "output",
-                    "deviceType": "interface"
-                }
-            },
-            "apiVersion": "0.2",
-            "schemaVersion": "2.0.0",
-            "javaFullClassName": "org.openremote.model.DeviceDiscovery",
-            "libraryName": "OpenRemote Object Model"
-        }
+        dd_req = DDS_data()
+        _sensor_data = dd_req.fill_dds_data("door")
+        device_id = dd_req.fill_deviceidentifier("door", "BatteryIndicator-U1")
 
         _start_timer = time.time()
-        response = self.post_sensor_data(_sensor_data, device_id)
+        response = self.post_sensor_data(_sensor_data, device_id, or_id)
         _latency = time.time() - _start_timer
         self.custom_timers['pair_door_sensor Time'] = _latency
 
@@ -115,33 +55,14 @@ class Transaction2(object, HMSSqlQuery):
         print response
 
 
-    def pair_motion_sensor(self):
+    def pair_motion_sensor(self, or_id):
 
-        device_id = self.dd_gen.generate_motion_deviceIdentifier()
-
-        _sensor_data = {
-            "model": {
-                "deviceIdentifier": device_id,
-                "deviceName": self.dd_gen.generate_motion_deviceName(),
-                "deviceProtocol": "ooma_ule",
-                "deviceModel": self.dd_gen.generate_motion_deviceModel(),
-                "deviceType": "ActiveDevice",
-                "deviceAttributes": {
-                    "rootId": self.dd_gen.generate_motion_rootId(),
-                    "deviceId": device_id,
-                    "unitId": "U1",
-                    "interfaceType": "output",
-                    "deviceType": "interface"
-                }
-            },
-            "apiVersion": "0.2",
-            "schemaVersion": "2.0.0",
-            "javaFullClassName": "org.openremote.model.DeviceDiscovery",
-            "libraryName": "OpenRemote Object Model"
-        }
+        dd_req = DDS_data()
+        _sensor_data = dd_req.fill_dds_data("motion")
+        device_id = dd_req.fill_deviceidentifier("motion", "BatteryIndicator-U1")
 
         _start_timer = time.time()
-        response = self.post_sensor_data(_sensor_data, device_id)
+        response = self.post_sensor_data(_sensor_data, device_id, or_id)
         _latency = time.time() - _start_timer
         self.custom_timers['pair_motion_sensor Time'] = _latency
 
@@ -164,9 +85,9 @@ class Transaction2(object, HMSSqlQuery):
         }
         return _headers
 
-    def post_sensor_data(self, sensor_data, device_id):
+    def post_sensor_data(self, sensor_data, device_id, or_id):
 
-        _headers = self.construct_sensor_headers("1263")
+        _headers = self.construct_sensor_headers(or_id)
         print sensor_data
 
         #Posting the urls
@@ -176,9 +97,9 @@ class Transaction2(object, HMSSqlQuery):
 
         return response
 
-    def get_sensor_status(self):
+    def get_sensor_status(self, or_id):
 
-        _headers = self.construct_sensor_headers("1263")
+        _headers = self.construct_sensor_headers(or_id)
         # Posting the urls
         response = HMSActions(self.json_obj, self.node).vs_request_add_sensor(self.json_server, self.url). \
             sensor_get(self.or_dict)
@@ -186,16 +107,11 @@ class Transaction2(object, HMSSqlQuery):
         return response
 
     def run(self):
-        self.pair_water_sensor()
+        self.pair_water_sensor("1263")
 
         time.sleep(1)
-        self.pair_door_sensor()
 
-        time.sleep(1)
-        self.pair_motion_sensor()
-
-        time.sleep(1)
-        self.get_sensor_status()
+        self.get_sensor_status("1263")
 
 if __name__ == "__main__":
     trans = Transaction2()
