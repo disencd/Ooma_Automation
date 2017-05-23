@@ -2,15 +2,17 @@ import time, datetime
 
 class FieldGenerator():
     def __init__(self):
-        self.std_id = 11
+        self.cust_pk = datetime.datetime.now().strftime("%Y%m%d%H%M%S%f")
+        self.std_id = 10000
 
     #Customer PK - vn5j9av6ru7hjue7fpzek3r73m4ec8mq
     def generate_pk(self):
-        self.std_id = self.std_id + 1
-        return "virtualsensors" + str(self.std_id).zfill(18)
+        self.cust_pk = datetime.datetime.now().strftime("%Y%m%d%H%M%S%f")
+        return "virtualaccount" + str(self.cust_pk)
 
     #orUsername - ui89dg3p4
     def generate_orUsername(self):
+
         return "Vir" + str(self.std_id).zfill(6)
 
     #orPassword - YmJoajlqaWJi
@@ -27,6 +29,7 @@ class FieldGenerator():
 
     #spn - 9712732945
     def generate_SPN(self):
+        self.std_id = self.std_id + 1
         return '1' + str(self.std_id).zfill(9)
 
     #timezone - "America/Los_Angeles"
@@ -35,27 +38,22 @@ class FieldGenerator():
 
 class DeviceDiscoveryGenerator():
     def __init__(self):
-        # time.now().strftime("%Y%m%d%H%M%S")
-        # 20120515155045
-        self.unique_id = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
-        self.cnt = 0
+        # time.now().strftime("%M%S%f")
+        # 1524559582
+        #self.unique_id = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
+        self.unique_id = datetime.datetime.now().strftime("%M%S%f")
 
-    #rootId - 20120515155045
+    def generate_uniqueID_for_sensor(self):
+        self.unique_id = datetime.datetime.now().strftime("%M%S%f")
+
+    #rootId - 1524559582
     def generate_rootId(self):
         return str(self.unique_id)
 
-    #deviceIdentifier - vw20120515155045-Alert-U1
-    def generate_water_deviceIdentifier(self, interface):
-        return "vw" + str(self.unique_id) + '-' + interface
-
-    # deviceIdentifier - vd20120515155045-Alert-U1
-    def generate_door_deviceIdentifier(self, interface):
-        return "vd" + str(self.unique_id) + '-' + interface
-
-    # deviceIdentifier - vm20120515155045-Alert-U1
-    def generate_motion_deviceIdentifier(self, interface):
-        return "vm" + str(self.unique_id) + '-' + interface
+    #deviceIdentifier - 1524559582-Alert-U1
+    def generate_deviceIdentifier(self, interface):
+        return str(self.unique_id) + interface
 
     #"deviceId": "D1U0S1I4"
-    def generate_deviceId(self, std_id):
-        return "D" + str(self.cnt) + std_id
+    def generate_deviceId(self, cnt, std_id):
+        return "D" + str(cnt) + std_id

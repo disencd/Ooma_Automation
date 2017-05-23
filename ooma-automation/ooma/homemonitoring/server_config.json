@@ -8,7 +8,7 @@
           "oss-server" : "oss1-cert1.cn.ooma.com:8001",
           "hms-db" : {
                     "hostname" : "hmsdb1-cert1.cn.ooma.com",
-                    "username" : "root",
+                    "username" : "hms",
                     "password" : "!hello123",
                     "db" : "hms"
 

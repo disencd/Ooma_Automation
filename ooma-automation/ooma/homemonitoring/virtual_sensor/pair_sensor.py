@@ -1,24 +1,20 @@
 import base64
 import time
-import urllib2
 from collections import OrderedDict
-
 from field_generator import FieldGenerator, DeviceDiscoveryGenerator
 from fill_dds_request import DDS_data
 from hms_actions import HMSActions
 from homemonitoring.setup.json_parse import JsonConfig
-from virtual_sensor.hms_sql_query import HMSSqlQuery
+from post_sensor_data import Post_sensor
 
 
-class Sensor_Addition(object, HMSSqlQuery):
+class Sensor_Addition(object):
     def __init__(self, node = "cert"):
         self.custom_timers = {}
         self.node = node
         self.json_obj = JsonConfig()
         self.json_server_obj = self.json_obj.dump_config("../server_config.json")
         self.json_server = self.json_server_obj[self.node]["beehive-server"]
-        self.dd_gen = DeviceDiscoveryGenerator()
-        self.url = "dds/rest/rpc/devicediscovery/2/0/0/devicediscovery"
 
     '''
     POST /dds/rest/rpc/devicediscovery/2/0/0/devicediscovery/disen_sensor_water HTTP/1.1
@@ -32,88 +28,62 @@ class Sensor_Addition(object, HMSSqlQuery):
     def pair_water_sensor(self, or_id):
 
         dd_req = DDS_data()
-        _sensor_data = dd_req.fill_dds_data("water")
-        device_id = dd_req.fill_deviceidentifier("water", "BatteryIndicator-U1")
-        _start_timer = time.time()
-        response = self.post_sensor_data(_sensor_data, device_id, or_id)
-        _latency = time.time() - _start_timer
-        self.custom_timers['pair_water_sensor Time'] = _latency
-        print "Pairing the water Sensor - ", device_id
-        print response
+        _sensor_data = dd_req.fill_dds_flood_data(or_id)
+        #
+        # _start_timer = time.time()
+        # response = self.post_sensor_data(_sensor_data, device_id, or_id)
+        # _latency = time.time() - _start_timer
+        # self.custom_timers['pair_water_sensor Time'] = _latency
+        # print "Pairing the water Sensor - ", device_id
+        # print response
 
 
     def pair_door_sensor(self, or_id):
 
         dd_req = DDS_data()
-        _sensor_data = dd_req.fill_dds_data("door")
-        device_id = dd_req.fill_deviceidentifier("door", "BatteryIndicator-U1")
+        _sensor_data = dd_req.fill_dds_windows_data(or_id)
 
-        _start_timer = time.time()
-        response = self.post_sensor_data(_sensor_data, device_id, or_id)
-        _latency = time.time() - _start_timer
-        self.custom_timers['pair_door_sensor Time'] = _latency
-
-        print "Pairing the door Sensor - ", device_id
-        print response
+        # _start_timer = time.time()
+        # response = self.post_sensor_data(_sensor_data, device_id, or_id)
+        # _latency = time.time() - _start_timer
+        # self.custom_timers['pair_door_sensor Time'] = _latency
+        #
+        # print "Pairing the door Sensor - ", device_id
+        # print response
 
 
     def pair_motion_sensor(self, or_id):
 
         dd_req = DDS_data()
-        _sensor_data = dd_req.fill_dds_data("motion")
-        device_id = dd_req.fill_deviceidentifier("motion", "BatteryIndicator-U1")
+        _sensor_data = dd_req.fill_dds_motion_data(or_id)
 
-        _start_timer = time.time()
-        response = self.post_sensor_data(_sensor_data, device_id, or_id)
-        _latency = time.time() - _start_timer
-        self.custom_timers['pair_motion_sensor Time'] = _latency
+        # _start_timer = time.time()
+        # response = self.post_sensor_data(_sensor_data, device_id, or_id)
+        # _latency = time.time() - _start_timer
+        # self.custom_timers['pair_motion_sensor Time'] = _latency
+        #
+        # print "Pairing the Motion Sensor - ", device_id
+        # print response
 
-        print "Pairing the Motion Sensor - ", device_id
+    def sensor_status(self, or_id):
+        post_obj = Post_sensor()
+        response = post_obj.get_sensor_status(or_id)
         print response
-
-    def construct_sensor_headers(self, or_id):
-
-        # Calling the hms_sql_query class for getting OR credentials
-        self.or_dict = super(Transaction2, self).sql_query(or_id)
-
-        # Basic Authentication Algorithm
-        b64_str = self.or_dict['beehive_id'] + ":" + self.or_dict['beehive_pwd']
-        base64string = base64.b64encode(b64_str)
-        auth_str = "Basic " + base64string
-        print auth_str
-        _headers = {
-            'Content-Type': 'application/vnd.openremote.device-discovery+json',
-            'Authorization': auth_str
-        }
-        return _headers
-
-    def post_sensor_data(self, sensor_data, device_id, or_id):
-
-        _headers = self.construct_sensor_headers(or_id)
-        print sensor_data
-
-        #Posting the urls
-        response = HMSActions(self.json_obj, self.node).vs_request_activate(self.json_server, self.url, device_id). \
-             post(_headers, sensor_data)
-        print response
-
-        return response
-
-    def get_sensor_status(self, or_id):
-
-        _headers = self.construct_sensor_headers(or_id)
-        # Posting the urls
-        response = HMSActions(self.json_obj, self.node).vs_request_add_sensor(self.json_server, self.url). \
-            sensor_get(self.or_dict)
-        print response
-        return response
 
     def run(self):
         self.pair_water_sensor("1263")
 
         time.sleep(1)
 
-        self.get_sensor_status("1263")
+        self.pair_door_sensor("1263")
+
+        time.sleep(1)
+
+        self.pair_motion_sensor("1263")
+
+        time.sleep(1)
+
+        self.sensor_status("1263")
 
 if __name__ == "__main__":
     trans = Sensor_Addition()

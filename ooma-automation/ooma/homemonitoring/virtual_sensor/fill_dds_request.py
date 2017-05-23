@@ -1,182 +1,92 @@
 from field_generator import FieldGenerator, DeviceDiscoveryGenerator
+#from pair_sensor import Sensor_Addition
+from post_sensor_data import Post_sensor
+from homemonitoring.setup.json_parse import JsonConfig
+import os, json
 
 class DDS_data():
     def __init__(self):
         self.dd_gen = DeviceDiscoveryGenerator()
+        self.json_obj = JsonConfig()
+        self.sensor = Post_sensor()
+        self.dds_cnt = 0
 
-    def fill_deviceidentifier(self, sensor, iface):
-        if sensor == "door":
-            device_identifier = self.dd_gen.generate_door_deviceIdentifier(iface)
-        elif sensor == "motion":
-            device_identifier = self.dd_gen.generate_motion_deviceIdentifier(iface)
-        elif sensor == "water":
-            device_identifier = self.dd_gen.generate_water_deviceIdentifier(iface)
+    def fill_dds_windows_data(self, or_id):
+        self.dd_obj = self.json_obj.dump_config("dds_config.json")
+        self.dd_gen.generate_uniqueID_for_sensor()
+        self.dds_cnt += 1
+        for key, val in self.dd_obj.iteritems():
+            if key != "dds_std_header" and \
+               key != "model_motion_sensor" and \
+               key != "model_flood_sensor":
+                deviceidentifier, dd_request = self.construct_dds_header(key)
+                #print("%s %s" % (deviceidentifier, dd_request))
+                response = self.sensor.post_sensor_data(dd_request, deviceidentifier, or_id)
+                #print("%s %s %s" % (response, deviceidentifier, dd_request))
 
-        return device_identifier
+    def fill_dds_motion_data(self, or_id):
+        self.dd_obj = self.json_obj.dump_config("dds_config.json")
+        self.dd_gen.generate_uniqueID_for_sensor()
+        self.dds_cnt += 1
+        for key, val in self.dd_obj.iteritems():
+            if key != "dds_std_header" and \
+               key != "model_window_sensor" and \
+               key != "model_flood_sensor":
+                deviceidentifier, dd_request = self.construct_dds_header(key)
+                response = self.sensor.post_sensor_data(dd_request, deviceidentifier, or_id)
+                #print(response, deviceidentifier,dd_request)
 
-    def fill_dds_data(self, sensor_type):
+    def fill_dds_flood_data(self, or_id):
+        self.dd_obj = self.json_obj.dump_config("dds_config.json")
+        self.dd_gen.generate_uniqueID_for_sensor()
+        self.dds_cnt += 1
+        for key, val in self.dd_obj.iteritems():
+            if key != "dds_std_header" and \
+               key != "model_motion_sensor" and \
+               key != "model_window_sensor":
+                deviceidentifier, dd_request = self.construct_dds_header(key)
+                self.sensor.post_sensor_data(dd_request, deviceidentifier, or_id)
+                #print("%s %s %s" % (response, deviceidentifier, dd_request))
 
+    def construct_dds_header(self, key):
+        dd_request = {}
+        # Adding the standard headers in DDS
+        dd_request = self.dd_obj["dds_std_header"]
 
-        dds_request = {
-            "libraryName": "OpenRemote Object Model",
-            "javaFullClassName": "org.openremote.model.DeviceDiscovery",
-            "schemaVersion": "2.0.0",
-            "apiVersion": "0.2",
-            "model": {
-                "devices": [
-                    {
-                        "deviceIdentifier": self.fill_deviceidentifier(sensor_type, "BatteryIndicator-U1"),
-                        "deviceName": "Battery Indicator",
-                        "deviceProtocol": "ooma_ule",
-                        "deviceModel": "BatteryIndicator",
-                        "deviceType": "BatteryIndicator",
-                        "deviceAttributes": {
-                            "rootId": self.dd_gen.generate_rootId(),
-                            "deviceId": self.dd_gen.generate_deviceId("U0S1I272"),
-                            "unitId": "U1",
-                            "interfaceType": "output",
-                            "deviceType": "interface"
-                        }
-                    },
-                    {
-                        "deviceIdentifier": self.fill_deviceidentifier(sensor_type, "Alert-U1"),
-                        "deviceName": "Alert",
-                        "deviceProtocol": "ooma_ule",
-                        "deviceModel": "Alert",
-                        "deviceType": "Alert",
-                        "deviceAttributes": {
-                            "rootId": self.dd_gen.generate_rootId(),
-                            "deviceId": self.dd_gen.generate_deviceId("U1S1I256"),
-                            "unitId": "U1",
-                            "interfaceType": "output",
-                            "deviceType": "interface"
-                        }
-                    },
-                    {
-                        "deviceIdentifier": self.fill_deviceidentifier(sensor_type, "Announcement-U1"),
-                        "deviceName": "Announcement",
-                        "deviceProtocol": "ooma_ule",
-                        "deviceModel": "Announcement",
-                        "deviceType": "Announcement",
-                        "deviceAttributes": {
-                            "rootId": self.dd_gen.generate_rootId(),
-                            "deviceId": self.dd_gen.generate_deviceId("U0S1I342458093"),
-                            "unitId": "U1",
-                            "interfaceType": "output",
-                            "deviceType": "interface"
-                        }
-                    },
-                    {
-                        "deviceIdentifier": self.fill_deviceidentifier(sensor_type, "IdentifyDevice-U1"),
-                        "deviceName": "Identify Device",
-                        "deviceProtocol": "ooma_ule",
-                        "deviceModel": "IdentifyDevice",
-                        "deviceType": "IdentifyDevice",
-                        "deviceAttributes": {
-                            "rootId": self.dd_gen.generate_rootId(),
-                            "deviceId": self.dd_gen.generate_deviceId("U0S1I4"),
-                            "unitId": "U1",
-                            "interfaceType": "output",
-                            "deviceType": "interface"
-                        }
-                    },
-                    {
-                        "deviceIdentifier": self.fill_deviceidentifier(sensor_type, "TamperDetector-U1"),
-                        "deviceName": "TamperDetector",
-                        "deviceProtocol": "ooma_ule",
-                        "deviceModel": "TamperDetector",
-                        "deviceType": "TamperDetector",
-                        "deviceAttributes": {
-                            "rootId": self.dd_gen.generate_rootId(),
-                            "deviceId": self.dd_gen.generate_deviceId("U0S1I257"),
-                            "unitId": "U1",
-                            "interfaceType": "output",
-                            "deviceType": "interface"
-                        }
-                    },
-                    {
-                        "deviceIdentifier": self.fill_deviceidentifier(sensor_type, "UnregisterDevice-U1"),
-                        "deviceName": "Unregister Device",
-                        "deviceProtocol": "ooma_ule",
-                        "deviceModel": "UnregisterDevice",
-                        "deviceType": "UnregisterDevice",
-                        "deviceAttributes": {
-                            "rootId": self.dd_gen.generate_rootId(),
-                            "deviceId": self.dd_gen.generate_deviceId("U0S1I342458094"),
-                            "unitId": "U1",
-                            "interfaceType": "output",
-                            "deviceType": "interface"
-                        }
-                    },
-                    {
-                        "deviceIdentifier": self.fill_deviceidentifier(sensor_type, "ActiveDevice-U1"),
-                        "deviceName": "Active Device",
-                        "deviceProtocol": "ooma_ule",
-                        "deviceModel": "ActiveDevice",
-                        "deviceType": "ActiveDevice",
-                        "deviceAttributes": {
-                            "rootId": self.dd_gen.generate_rootId(),
-                            "deviceId": self.dd_gen.generate_deviceId("U0S1I277"),
-                            "unitId": "U1",
-                            "interfaceType": "output",
-                            "deviceType": "interface"
-                        }
-                    },
-                    {
-                        "deviceIdentifier": self.fill_deviceidentifier(sensor_type, "Window Sensor-root"),
-                        "deviceName": "Window Sensor",
-                        "deviceProtocol": "ooma_ule",
-                        "deviceModel": "Window Sensor",
-                        "deviceType": "Window Sensor",
-                        "deviceAttributes": {
-                            "Battery Rated Voltage (mV)": "3000",
-                            "Friendly Name": "Window Sensor",
-                            "deviceId": self.dd_gen.generate_rootId(),
-                            "Battery Rated Capacity (mAHr)": "1050",
-                            "Software Version": "187135",
-                            "Battery Number of Cells": "2",
-                            "Response Time": "0",
-                            "Battery Manufacturer": "CHARGER MONSTER",
-                            "Battery Maximum Voltage (mV)": "2800",
-                            "Hardware Version": "dhx91-ooma-c",
-                            "Battery Voltage (mV)": "2900",
-                            "deviceType": "root",
-                            "Battery Minimum Voltage (mV)": "2600",
-                            "Manufacturer": "Ooma"
-                        }
-                    },
-                    {
-                        "deviceIdentifier": self.fill_deviceidentifier(sensor_type, "IdentifyInputDevice-U1"),
-                        "deviceName": "Identify Input Device",
-                        "deviceProtocol": "ooma_ule",
-                        "deviceModel": "IdentifyInputDevice",
-                        "deviceType": "IdentifyInputDevice",
-                        "deviceAttributes": {
-                            "rootId": self.dd_gen.generate_rootId(),
-                            "deviceId": self.dd_gen.generate_deviceId("U0S1I342458095"),
-                            "unitId": "U1",
-                            "interfaceType": "output",
-                            "deviceType": "interface"
-                        }
-                    },
-                    {
-                        "deviceIdentifier": self.fill_deviceidentifier(sensor_type, "RSSI128-U1"),
-                        "deviceName": "RSSI biased +128",
-                        "deviceProtocol": "ooma_ule",
-                        "deviceModel": "RSSI+128",
-                        "deviceType": "RSSI+128",
-                        "deviceAttributes": {
-                            "rootId": self.dd_gen.generate_rootId(),
-                            "deviceId": self.dd_gen.generate_deviceId("1U0S1I273"),
-                            "unitId": "U1",
-                            "interfaceType": "output",
-                            "deviceType": "interface"
-                        }
-                    }
-                ]
-            }
-        }
+        if "rootId" in self.dd_obj[key]["deviceAttributes"].keys():
 
-        return dds_request
+            self.dd_obj[key]["deviceAttributes"] \
+                ["rootId"] = self.dd_gen.generate_rootId()
 
-obj = DDS_data()
+        self.dd_obj[key]["deviceAttributes"]["deviceId"] = \
+            self.dd_gen.generate_deviceId(self.dds_cnt, self.dd_obj \
+                    [key]["deviceAttributes"]["deviceId"])
+
+        #Device Identifier is -Flood Sensor-root
+        deviceidentifier = self.dd_obj[key]["deviceIdentifier"]
+
+        self.dd_obj[key]["deviceIdentifier"] = \
+            self.dd_gen.generate_deviceIdentifier(deviceidentifier)
+
+        #Device Identifier is Updated 4536027208-Flood Sensor-root
+        deviceidentifier = self.dd_obj[key]["deviceIdentifier"]
+
+        # Adding the model headers
+        dd_request["model"] = \
+            self.dd_obj[key]
+
+        return deviceidentifier, dd_request
+
+# obj = DDS_data()
+#
+# obj.fill_dds_flood_data()
+#
+# print "__________________________"
+#
+# obj.fill_dds_motion_data()
+#
+# print "__________________________"
+#
+# obj.fill_dds_windows_data()
+#
+# print "__________________________"

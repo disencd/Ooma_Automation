@@ -2,8 +2,7 @@ import urllib2
 import time
 from hms_actions import HMSActions
 from field_generator import FieldGenerator
-from setup.json_parse import JsonConfig
-
+from homemonitoring.setup.json_parse import JsonConfig
 
 class HMS_Activation(object):
     def __init__(self, node = "cert"):
@@ -83,7 +82,10 @@ class HMS_Activation(object):
         while cnt < 1000:
             self.activate_hms_account()
 
+            time.sleep(3)
             self.get_status_hms_account()
+
+            time.sleep(3)
 
             self.deactivate_hms_account()
             cnt += 1

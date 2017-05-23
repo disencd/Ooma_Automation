@@ -1,0 +1,190 @@
+{
+  "dds_std_header": {
+        "libraryName": "OpenRemote Object Model",
+        "javaFullClassName": "org.openremote.model.DeviceDiscovery",
+        "schemaVersion": "2.0.0",
+        "apiVersion": "0.2",
+        "model": {}
+  },
+  "model_window_sensor": {
+        "deviceIdentifier": "-Window Sensor-root",
+        "deviceName": "Window Sensor",
+        "deviceProtocol": "ooma_ule",
+        "deviceModel": "Window Sensor",
+        "deviceType": "Window Sensor",
+        "deviceAttributes": {
+            "Battery Rated Voltage (mV)": "3000",
+            "Friendly Name": "Window Sensor",
+            "deviceId": "U0S1I280",
+            "Battery Rated Capacity (mAHr)": "1050",
+            "Software Version": "187135",
+            "Battery Number of Cells": "2",
+            "Response Time": "0",
+            "Battery Manufacturer": "CHARGER MONSTER",
+            "Battery Maximum Voltage (mV)": "2800",
+            "Hardware Version": "dhx91-ooma-c",
+            "Battery Voltage (mV)": "2900",
+            "deviceType": "root",
+            "Battery Minimum Voltage (mV)": "2600",
+            "Manufacturer": "Ooma"
+        }
+  },
+  "model_flood_sensor": {
+        "deviceIdentifier": "-Flood Sensor-root",
+        "deviceName": "Flood Sensor",
+        "deviceProtocol": "ooma_ule",
+        "deviceModel": "Flood Sensor",
+        "deviceType": "Flood Sensor",
+        "deviceAttributes": {
+            "Battery Rated Voltage (mV)": "3000",
+            "Friendly Name": "Flood Sensor",
+            "deviceId": "U0S1I280",
+            "Battery Rated Capacity (mAHr)": "1050",
+            "Software Version": "187135",
+            "Battery Number of Cells": "2",
+            "Response Time": "0",
+            "Battery Manufacturer": "CHARGER MONSTER",
+            "Battery Maximum Voltage (mV)": "2800",
+            "Hardware Version": "dhx91-ooma-c",
+            "Battery Voltage (mV)": "2900",
+            "deviceType": "root",
+            "Battery Minimum Voltage (mV)": "2600",
+            "Manufacturer": "Ooma"
+        }
+  },
+  "model_motion_sensor": {
+        "deviceIdentifier": "-Motion Sensor-root",
+        "deviceName": "Motion Sensor",
+        "deviceProtocol": "ooma_ule",
+        "deviceModel": "Motion Sensor",
+        "deviceType": "Motion Sensor",
+        "deviceAttributes": {
+            "Battery Rated Voltage (mV)": "3000",
+            "Friendly Name": "Motion Sensor",
+            "deviceId": "U0S1I280",
+            "Battery Rated Capacity (mAHr)": "1050",
+            "Software Version": "187135",
+            "Battery Number of Cells": "2",
+            "Response Time": "0",
+            "Battery Manufacturer": "CHARGER MONSTER",
+            "Battery Maximum Voltage (mV)": "2800",
+            "Hardware Version": "dhx91-ooma-c",
+            "Battery Voltage (mV)": "2900",
+            "deviceType": "root",
+            "Battery Minimum Voltage (mV)": "2600",
+            "Manufacturer": "Ooma"
+        }
+  },
+  "model_BatteryIndicator" : {
+        "deviceIdentifier": "-BatteryIndicator-U1",
+        "deviceName": "Battery Indicator",
+        "deviceProtocol": "ooma_ule",
+        "deviceModel": "BatteryIndicator",
+        "deviceType": "BatteryIndicator",
+        "deviceAttributes": {
+            "rootId": "",
+            "deviceId": "U0S1I272",
+            "unitId": "U1",
+            "interfaceType": "output",
+            "deviceType": "interface"
+        }
+  },
+  "model_Alert" : {
+        "deviceIdentifier": "-Alert-U1",
+        "deviceName": "Alert",
+        "deviceProtocol": "ooma_ule",
+        "deviceModel": "Alert",
+        "deviceType": "Alert",
+        "deviceAttributes": {
+            "rootId": "",
+            "deviceId": "U1S1I256",
+            "unitId": "U1",
+            "interfaceType": "output",
+            "deviceType": "interface"
+        }
+  },
+  "model_RSSI128" : {
+        "deviceIdentifier": "-RSSI128-U1",
+        "deviceName": "RSSI biased +128",
+        "deviceProtocol": "ooma_ule",
+        "deviceModel": "RSSI+128",
+        "deviceType": "RSSI+128",
+        "deviceAttributes": {
+            "rootId": "",
+            "deviceId": "U0S1I273",
+            "unitId": "U1",
+            "interfaceType": "output",
+            "deviceType": "interface"
+        }
+  },
+  "model_ActiveDevice" : {
+        "deviceIdentifier": "-ActiveDevice-U1",
+        "deviceName": "ActiveDevice",
+        "deviceProtocol": "ooma_ule",
+        "deviceModel": "ActiveDevice",
+        "deviceType": "ActiveDevice",
+        "deviceAttributes": {
+            "rootId": "",
+            "deviceId": "U0S1I277",
+            "unitId": "U1",
+            "interfaceType": "output",
+            "deviceType": "interface"
+        }
+  },
+  "model_TamperDetector" : {
+        "deviceIdentifier": "-TamperDetector-U1",
+        "deviceName": "TamperDetector",
+        "deviceProtocol": "ooma_ule",
+        "deviceModel": "TamperDetector",
+        "deviceType": "TamperDetector",
+        "deviceAttributes": {
+            "rootId": "",
+            "deviceId": "U0S1I257",
+            "unitId": "U1",
+            "interfaceType": "output",
+            "deviceType": "interface"
+        }
+  },
+  "model_IdentifyInputDevice" : {
+        "deviceIdentifier": "-IdentifyInputDevice-U1",
+        "deviceName": "IdentifyInputDevice",
+        "deviceProtocol": "ooma_ule",
+        "deviceModel": "IdentifyInputDevice",
+        "deviceType": "IdentifyInputDevice",
+        "deviceAttributes": {
+            "rootId": "",
+            "deviceId": "U0S1I342458095",
+            "unitId": "U1",
+            "interfaceType": "output",
+            "deviceType": "interface"
+        }
+  },
+  "model_Announcement" : {
+        "deviceIdentifier": "-Announcement-U1",
+        "deviceName": "Announcement",
+        "deviceProtocol": "ooma_ule",
+        "deviceModel": "Announcement",
+        "deviceType": "Announcement",
+        "deviceAttributes": {
+            "rootId": "",
+            "deviceId": "U0S1I342458093",
+            "unitId": "U1",
+            "interfaceType": "output",
+            "deviceType": "interface"
+        }
+  },
+  "model_UnregisterDevice" : {
+        "deviceIdentifier": "-UnregisterDevice-U1",
+        "deviceName": "UnregisterDevice",
+        "deviceProtocol": "ooma_ule",
+        "deviceModel": "UnregisterDevice",
+        "deviceType": "UnregisterDevice",
+        "deviceAttributes": {
+            "rootId": "",
+            "deviceId": "U0S1I342458094",
+            "unitId": "U1",
+            "interfaceType": "output",
+            "deviceType": "interface"
+        }
+  }
+}
