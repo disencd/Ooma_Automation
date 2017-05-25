@@ -17,7 +17,9 @@ class Post_sensor(object, HMSSqlQuery):
         self.custom_timers = {}
         self.node = node
         self.json_obj = JsonConfig()
-        self.json_server_obj = self.json_obj.dump_config("../server_config.json")
+        abs_path = os.path.dirname(os.path.abspath(__file__))
+        server_f_path =  abs_path + "/../server_config.json"
+        self.json_server_obj = self.json_obj.dump_config(server_f_path)
         self.json_server = self.json_server_obj[self.node]["beehive-server"]
         self.dd_gen = DeviceDiscoveryGenerator()
         self.url = "dds/rest/rpc/devicediscovery/2/0/0/devicediscovery"
@@ -30,7 +32,6 @@ class Post_sensor(object, HMSSqlQuery):
         #Posting the urls
         response = HMSActions(self.json_obj, self.node).vs_request_activate(self.json_server, self.url, device_id). \
              post(_headers, sensor_data)
-        print response
 
         return response
 
@@ -40,7 +41,6 @@ class Post_sensor(object, HMSSqlQuery):
         # Posting the urls
         response = HMSActions(self.json_obj, self.node).vs_request_add_sensor(self.json_server, self.url). \
             sensor_get(self.or_dict)
-        print response
         return response
 
     def construct_sensor_headers(self, or_id):
@@ -52,7 +52,6 @@ class Post_sensor(object, HMSSqlQuery):
         b64_str = self.or_dict['beehive_id'] + ":" + self.or_dict['beehive_pwd']
         base64string = base64.b64encode(b64_str)
         auth_str = "Basic " + base64string
-        print auth_str
         _headers = {
             'Content-Type': 'application/vnd.openremote.device-discovery+json',
             'Authorization': auth_str

@@ -1,5 +1,5 @@
 import base64
-import time
+import time, os
 from collections import OrderedDict
 from field_generator import FieldGenerator, DeviceDiscoveryGenerator
 from fill_dds_request import DDS_data
@@ -13,7 +13,9 @@ class Sensor_Addition(object):
         self.custom_timers = {}
         self.node = node
         self.json_obj = JsonConfig()
-        self.json_server_obj = self.json_obj.dump_config("../server_config.json")
+        abs_path = os.path.dirname(os.path.abspath(__file__))
+        server_f_path = abs_path + "/../server_config.json"
+        self.json_server_obj = self.json_obj.dump_config(server_f_path)
         self.json_server = self.json_server_obj[self.node]["beehive-server"]
 
     '''
@@ -70,21 +72,21 @@ class Sensor_Addition(object):
         response = post_obj.get_sensor_status(or_id)
         print response
 
-    def run(self):
-        self.pair_water_sensor("1263")
-
-        time.sleep(1)
-
-        self.pair_door_sensor("1263")
-
-        time.sleep(1)
-
-        self.pair_motion_sensor("1263")
-
-        time.sleep(1)
-
-        self.sensor_status("1263")
-
-if __name__ == "__main__":
-    trans = Sensor_Addition()
-    trans.run()
+#     def run(self):
+#         self.pair_water_sensor("1263")
+#
+#         time.sleep(1)
+#
+#         self.pair_door_sensor("1263")
+#
+#         time.sleep(1)
+#
+#         self.pair_motion_sensor("1263")
+#
+#         time.sleep(1)
+#
+#         self.sensor_status("1263")
+#
+# if __name__ == "__main__":
+#     trans = Sensor_Addition()
+#     trans.run()

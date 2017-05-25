@@ -3,7 +3,7 @@ import time, datetime
 class FieldGenerator():
     def __init__(self):
         self.cust_pk = datetime.datetime.now().strftime("%Y%m%d%H%M%S%f")
-        self.std_id = 10000
+        self.std_id = 20000
 
     #Customer PK - vn5j9av6ru7hjue7fpzek3r73m4ec8mq
     def generate_pk(self):
@@ -29,8 +29,8 @@ class FieldGenerator():
 
     #spn - 9712732945
     def generate_SPN(self):
-        self.std_id = self.std_id + 1
-        return '1' + str(self.std_id).zfill(9)
+        return datetime.datetime.now().strftime("%M%S%f")
+
 
     #timezone - "America/Los_Angeles"
     def generate_timezone(self):
