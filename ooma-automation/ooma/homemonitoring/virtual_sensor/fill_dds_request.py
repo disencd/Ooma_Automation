@@ -57,8 +57,11 @@ class DDS_data():
 
         if "rootId" in self.dd_obj[key]["deviceAttributes"].keys():
 
-            self.dd_obj[key]["deviceAttributes"] \
-                ["rootId"] = self.dd_gen.generate_rootId()
+            # self.dd_obj[key]["deviceAttributes"] \
+            #     ["rootId"] = self.dd_gen.generate_rootId()
+            self.dd_obj[key]["deviceAttributes"]["rootId"] = \
+                self.dd_gen.generate_deviceId(self.dds_cnt, self.dd_obj \
+                    [key]["deviceAttributes"]["rootId"])
 
         self.dd_obj[key]["deviceAttributes"]["deviceId"] = \
             self.dd_gen.generate_deviceId(self.dds_cnt, self.dd_obj \

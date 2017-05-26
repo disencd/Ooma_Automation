@@ -40,7 +40,7 @@ class VStest(unittest.TestCase):
         sensor_add = Sensor_Addition()
         cnt = 0
         _id = 0
-        while cnt < 100:
+        while cnt < 1:
             _start_timer = time.time()
             cust_pk,code = oss_hms.activate_hms_account()
             _latency = time.time() - _start_timer
@@ -53,7 +53,7 @@ class VStest(unittest.TestCase):
             _latency = time.time() - _start_timer
             self.custom_timers['HMS_Information_Get'] = _latency
 
-            print "ID is ", _id
+            print "cust_pk is ", cust_pk
             time.sleep(3)
 
             # _start_timer = time.time()
@@ -61,5 +61,7 @@ class VStest(unittest.TestCase):
             # _latency = time.time() - _start_timer
             # self.custom_timers['HMS_Deactivation_Time'] = _latency
 
-            sensor_add.pair_door_sensor(str(_id))
+            sensor_add.pair_door_sensor(str(cust_pk))
+
+            sensor_add.sensor_status("1263")
             cnt += 1

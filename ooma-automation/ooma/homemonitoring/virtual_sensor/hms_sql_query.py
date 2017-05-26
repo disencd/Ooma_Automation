@@ -24,11 +24,66 @@ class HMSSqlQuery():
     def sql_disconnect(self):
         self._db.close()
 
-    #Hack for accessing sql DB
-    def sql_query(self, or_id = "1263"):
-
+    def sql_query_pk(self, cust_pk = "c3bw6mu485ea3z67tnjcqws7dhuv5wsv"):
+        print "cust_pk = ", cust_pk
         or_dict = {}
         cur = self.sql_connect()
+
+
+        '''
+            mysql> select * from NIMBITS_USER where ID = '1263'
+            +------+-----------+--------------------+
+            | ID   | PASSWORD  | USERNAME           |
+            +------+-----------+--------------------+
+            | 1263 | j8bp9ett2 | ekpdbw7ii@ooma.com |
+            +------+-----------+--------------------+
+
+            mysql> select * from BEEHIVE_USER where ID = '1263';
+            +------+-----------+--------------+--------------+-----------+-----------+
+            | ID   | ACCOUNTID | CONTROLLERID | EMAIL        | PASSWORD  | USERNAME  |
+            +------+-----------+--------------+--------------+-----------+-----------+
+            | 1263 |      1432 |         1414 | hms@ooma.com | zb66zydtq | n9xr8wvju |
+            +------+-----------+--------------+--------------+-----------+-----------+
+        '''
+
+        _ooma_userid = "select * from OOMA_USER where PK = '" + str(cust_pk) + "';"
+        print _ooma_userid
+        cur.execute(_ooma_userid)
+
+        for _row in cur.fetchall():
+            or_dict['BEEHIVEUSER_ID_OID'] = _row[2]
+            or_dict['NIMBITSUSER_ID_OID'] = _row[3]
+            print _row
+
+        _beehives_query = "select * from BEEHIVE_USER where ID = '" + str(or_dict['BEEHIVEUSER_ID_OID']) + "';"
+        _nimbits_query = "select * from NIMBITS_USER where ID = '" + str(or_dict['NIMBITSUSER_ID_OID']) + "';"
+
+        cur.execute(_beehives_query)
+
+        for _row in cur.fetchall():
+            or_dict['beehive_id'] = _row[5]
+            or_dict['beehive_pwd'] = _row[4]
+            print _row
+
+        cur.execute(_nimbits_query)
+
+        for _row in cur.fetchall():
+            print _row
+            or_dict['or_id'] = _row[0]
+            or_dict['nimbits_id'] = _row[1]
+            or_dict['nimbits_pwd'] = _row[2]
+
+        self.sql_disconnect()
+        print or_dict
+        return or_dict
+
+
+    #Hack for accessing sql DB
+    def sql_query(self, or_id = "1263"):
+        print "or_id = ", or_id
+        or_dict = {}
+        cur = self.sql_connect()
+
         '''
             mysql> select * from NIMBITS_USER where ID = '1263'
             +------+-----------+--------------------+
@@ -59,7 +114,6 @@ class HMSSqlQuery():
 
         for row in cur.fetchall():
             print row
-            or_dict['or_id'] = row[0]
             or_dict['nimbits_id'] = row[1]
             or_dict['nimbits_pwd'] = row[2]
 

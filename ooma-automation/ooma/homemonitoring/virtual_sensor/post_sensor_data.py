@@ -23,6 +23,7 @@ class Post_sensor(object, HMSSqlQuery):
         self.json_server = self.json_server_obj[self.node]["beehive-server"]
         self.dd_gen = DeviceDiscoveryGenerator()
         self.url = "dds/rest/rpc/devicediscovery/2/0/0/devicediscovery"
+        self.or_dict = {}
 
     def post_sensor_data(self, sensor_data, device_id, or_id):
 
@@ -37,7 +38,11 @@ class Post_sensor(object, HMSSqlQuery):
 
     def get_sensor_status(self, or_id):
 
-        _headers = self.construct_sensor_headers(or_id)
+        if "beehive_id" not in self.or_dict.keys():
+            # Calling the hms_sql_query class for getting OR credentials
+            self.or_dict = super(Post_sensor, self).sql_query_pk(or_id)
+
+        _headers = self.construct_sensor_headers(self.or_dict['or_id'])
         # Posting the urls
         response = HMSActions(self.json_obj, self.node).vs_request_add_sensor(self.json_server, self.url). \
             sensor_get(self.or_dict)
@@ -45,8 +50,9 @@ class Post_sensor(object, HMSSqlQuery):
 
     def construct_sensor_headers(self, or_id):
 
-        # Calling the hms_sql_query class for getting OR credentials
-        self.or_dict = super(Post_sensor, self).sql_query(or_id)
+        if "beehive_id" not in self.or_dict.keys():
+            # Calling the hms_sql_query class for getting OR credentials
+            self.or_dict = super(Post_sensor, self).sql_query_pk(or_id)
 
         # Basic Authentication Algorithm
         b64_str = self.or_dict['beehive_id'] + ":" + self.or_dict['beehive_pwd']
