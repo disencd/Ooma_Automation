@@ -27,10 +27,10 @@ class Sensor_Addition(object):
     Postman-Token: db7873ac-1889-27de-0089-0b5a71229383  
     '''
 
-    def pair_water_sensor(self, or_id):
+    def pair_water_sensor(self, cust_pk):
 
         dd_req = DDS_data()
-        _sensor_data = dd_req.fill_dds_flood_data(or_id)
+        _sensor_data = dd_req.fill_dds_flood_data(cust_pk)
         #
         # _start_timer = time.time()
         # response = self.post_sensor_data(_sensor_data, device_id, or_id)
@@ -40,10 +40,10 @@ class Sensor_Addition(object):
         # print response
 
 
-    def pair_door_sensor(self, or_id):
+    def pair_door_sensor(self, cust_pk):
 
         dd_req = DDS_data()
-        _sensor_data = dd_req.fill_dds_windows_data(or_id)
+        _sensor_data = dd_req.fill_dds_windows_data(cust_pk)
 
         # _start_timer = time.time()
         # response = self.post_sensor_data(_sensor_data, device_id, or_id)
@@ -54,10 +54,10 @@ class Sensor_Addition(object):
         # print response
 
 
-    def pair_motion_sensor(self, or_id):
+    def pair_motion_sensor(self, cust_pk):
 
         dd_req = DDS_data()
-        _sensor_data = dd_req.fill_dds_motion_data(or_id)
+        _sensor_data = dd_req.fill_dds_motion_data(cust_pk)
 
         # _start_timer = time.time()
         # response = self.post_sensor_data(_sensor_data, device_id, or_id)
@@ -67,9 +67,9 @@ class Sensor_Addition(object):
         # print "Pairing the Motion Sensor - ", device_id
         # print response
 
-    def sensor_status(self, or_id):
+    def sensor_status(self, cust_pk):
         post_obj = Post_sensor()
-        response = post_obj.get_sensor_status(or_id)
+        response = post_obj.get_sensor_status(cust_pk)
         print response
 
 #     def run(self):

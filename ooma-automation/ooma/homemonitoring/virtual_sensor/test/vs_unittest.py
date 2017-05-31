@@ -63,6 +63,12 @@ class VStest(unittest.TestCase):
 
             sensor_add.pair_door_sensor(str(cust_pk))
 
+            time.sleep(10)
+
+            sensor_add.pair_motion_sensor(str(cust_pk))
+
+            time.sleep(10)
+
             sensor_add.sensor_status(cust_pk)
             cnt += 1
             time.sleep(10)

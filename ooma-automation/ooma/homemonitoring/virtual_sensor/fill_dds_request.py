@@ -29,7 +29,9 @@ class DDS_data():
                 #print("%s %s %s" % (response, deviceidentifier, dd_request))
 
     def fill_dds_motion_data(self, or_id):
-        self.dd_obj = self.json_obj.dump_config("dds_config.json")
+        abs_path = os.path.dirname(os.path.abspath(__file__))
+        dds_f_path =  abs_path + "/dds_config.json"
+        self.dd_obj = self.json_obj.dump_config(dds_f_path)
         self.dd_gen.generate_uniqueID_for_sensor()
         self.dds_cnt += 1
         for key, val in self.dd_obj.iteritems():
@@ -41,7 +43,9 @@ class DDS_data():
                 #print(response, deviceidentifier,dd_request)
 
     def fill_dds_flood_data(self, or_id):
-        self.dd_obj = self.json_obj.dump_config("dds_config.json")
+        abs_path = os.path.dirname(os.path.abspath(__file__))
+        dds_f_path =  abs_path + "/dds_config.json"
+        self.dd_obj = self.json_obj.dump_config(dds_f_path)
         self.dd_gen.generate_uniqueID_for_sensor()
         self.dds_cnt += 1
         for key, val in self.dd_obj.iteritems():
