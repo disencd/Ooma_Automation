@@ -50,6 +50,7 @@ class Post_sensor(object, HMSSqlQuery):
 
     def construct_sensor_headers(self, or_id):
 
+        print self.or_dict
         if "beehive_id" not in self.or_dict.keys():
             # Calling the hms_sql_query class for getting OR credentials
             self.or_dict = super(Post_sensor, self).sql_query_pk(or_id)

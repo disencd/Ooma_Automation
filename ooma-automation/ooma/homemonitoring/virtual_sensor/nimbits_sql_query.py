@@ -2,19 +2,19 @@ import MySQLdb
 from homemonitoring.setup.json_parse import JsonConfig
 
 
-class HMSSqlQuery():
+class NimbitsSqlQuery():
     def __init__(self, node = "cert"):
         self.node = node
         self.json_obj = JsonConfig()
         self.json_server_obj = self.json_obj.dump_config("../server_config.json")
-        self.sql_server_dict = self.json_server_obj[self.node]["hms-db"]
+        self.sql_server_dict = self.json_server_obj[self.node]["nimbits-db"]
         self._db = ""
 
     def sql_connect(self):
         #print self.sql_server_dict
-        self._db = MySQLdb.connect(host=self.json_server_obj[self.node]["hms-db"]["hostname"],  # your host, usually localhost
-                             user=self.json_server_obj[self.node]["hms-db"]["username"],  # your username
-                             db=self.json_server_obj[self.node]["hms-db"]["db"])  # name of the data base
+        self._db = MySQLdb.connect(host=self.json_server_obj[self.node]["nimbits-db"]["hostname"],  # your host, usually localhost
+                             user=self.json_server_obj[self.node]["nimbits-db"]["username"],  # your username
+                             db=self.json_server_obj[self.node]["nimbits-db"]["db"])  # name of the data base
 
         # you must create a Cursor object. It will let
         #  you execute all the queries you need
@@ -70,8 +70,8 @@ class HMSSqlQuery():
         for _row in cur.fetchall():
             print _row
             or_dict['or_id'] = _row[0]
-            or_dict['nimbits_id'] = _row[2]
-            or_dict['nimbits_pwd'] = _row[1]
+            or_dict['nimbits_id'] = _row[1]
+            or_dict['nimbits_pwd'] = _row[2]
 
         self.sql_disconnect()
         print or_dict
@@ -114,13 +114,13 @@ class HMSSqlQuery():
 
         for row in cur.fetchall():
             print row
-            or_dict['nimbits_id'] = row[2]
-            or_dict['nimbits_pwd'] = row[1]
+            or_dict['nimbits_id'] = row[1]
+            or_dict['nimbits_pwd'] = row[2]
 
         self.sql_disconnect()
         print or_dict
         return or_dict
 
 if __name__ == "__main__":
-    sql = HMSSqlQuery()
+    sql = NimbitsSqlQuery()
     sql.sql_query()

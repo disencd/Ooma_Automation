@@ -8,11 +8,19 @@
           "oss-server" : "oss1-cert1.cn.ooma.com:8001",
           "hms-db" : {
                     "hostname" : "hmsdb1-cert1.cn.ooma.com",
-                    "username" : "hms",
-                    "password" : "!hello123",
+                    "username" : "hms_readonly",
                     "db" : "hms"
-
-                      }
+          },
+          "nimbits-db" : {
+                    "hostname" : "dbnimbits1-cert1.cn.ooma.com",
+                    "username" : "nimbits_readonly",
+                    "db" : "nimbits"
+          },
+          "beehive-db" : {
+                    "hostname" : "dbbeehive1-cert1.cn.ooma.com",
+                    "username" : "beehive_readonly",
+                    "db" : "beehive"
+          }
         },
  "sandbox":
         {

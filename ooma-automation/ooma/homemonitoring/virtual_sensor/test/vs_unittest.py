@@ -40,7 +40,7 @@ class VStest(unittest.TestCase):
         sensor_add = Sensor_Addition()
         cnt = 0
         _id = 0
-        while cnt < 1:
+        while cnt < 10:
             _start_timer = time.time()
             cust_pk,code = oss_hms.activate_hms_account()
             _latency = time.time() - _start_timer
@@ -63,5 +63,6 @@ class VStest(unittest.TestCase):
 
             sensor_add.pair_door_sensor(str(cust_pk))
 
-            sensor_add.sensor_status("1263")
+            sensor_add.sensor_status(cust_pk)
             cnt += 1
+            time.sleep(10)

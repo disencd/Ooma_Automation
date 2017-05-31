@@ -17,10 +17,12 @@ class DDS_data():
         self.dd_obj = self.json_obj.dump_config(dds_f_path)
         self.dd_gen.generate_uniqueID_for_sensor()
         self.dds_cnt += 1
+
         for key, val in self.dd_obj.iteritems():
             if key != "dds_std_header" and \
                key != "model_motion_sensor" and \
                key != "model_flood_sensor":
+
                 deviceidentifier, dd_request = self.construct_dds_header(key)
                 #print("%s %s" % (deviceidentifier, dd_request))
                 response = self.sensor.post_sensor_data(dd_request, deviceidentifier, or_id)
@@ -57,15 +59,19 @@ class DDS_data():
 
         if "rootId" in self.dd_obj[key]["deviceAttributes"].keys():
 
-            # self.dd_obj[key]["deviceAttributes"] \
-            #     ["rootId"] = self.dd_gen.generate_rootId()
-            self.dd_obj[key]["deviceAttributes"]["rootId"] = \
-                self.dd_gen.generate_deviceId(self.dds_cnt, self.dd_obj \
-                    [key]["deviceAttributes"]["rootId"])
+            self.dd_obj[key]["deviceAttributes"] \
+                 ["rootId"] = self.dd_gen.generate_rootId()
+            # self.dd_obj[key]["deviceAttributes"]["rootId"] = \
+            #     self.dd_gen.generate_deviceId(self.dds_cnt, self.dd_obj \
+            #         [key]["deviceAttributes"]["rootId"])
 
-        self.dd_obj[key]["deviceAttributes"]["deviceId"] = \
-            self.dd_gen.generate_deviceId(self.dds_cnt, self.dd_obj \
-                    [key]["deviceAttributes"]["deviceId"])
+        if "rootId" not in self.dd_obj[key]["deviceAttributes"].keys():
+            self.dd_obj[key]["deviceAttributes"]["deviceId"] = \
+                                        self.dd_gen.generate_rootId()
+        else:
+            self.dd_obj[key]["deviceAttributes"]["deviceId"] = \
+                self.dd_gen.generate_deviceId(self.dds_cnt, self.dd_obj \
+                        [key]["deviceAttributes"]["deviceId"])
 
         #Device Identifier is -Flood Sensor-root
         deviceidentifier = self.dd_obj[key]["deviceIdentifier"]
