@@ -60,6 +60,7 @@ class HMSActions(object):
         try:
             request = urllib2.Request(self.__url)
             request.add_header('Content-Type', 'application/json')
+            #Not needed for all the get messages
             request.add_header("X-ooma-oToken", "TrustMe")
             response = urllib2.urlopen(request)
             data = response.read()
