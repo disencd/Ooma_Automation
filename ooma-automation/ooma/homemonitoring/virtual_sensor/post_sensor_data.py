@@ -10,7 +10,10 @@ import urllib2
 from collections import OrderedDict
 #from fill_dds_request import DDS_data
 from hms_actions import HMSActions
+import logging
 
+logging.basicConfig(level=logging.DEBUG)
+logger = logging.getLogger(__name__)
 
 class Post_sensor(object, HMSSqlQuery):
     def __init__(self, node="cert"):
@@ -28,7 +31,7 @@ class Post_sensor(object, HMSSqlQuery):
     def post_sensor_data(self, sensor_data, device_id, or_id):
 
         _headers = self.construct_sensor_headers(or_id)
-        print sensor_data
+        logger.info(" sensor_data %s", sensor_data)
 
         #Posting the urls
         response = HMSActions(self.json_obj, self.node).vs_request_activate(self.json_server, self.url, device_id). \
@@ -50,7 +53,7 @@ class Post_sensor(object, HMSSqlQuery):
 
     def construct_sensor_headers(self, or_id):
 
-        print self.or_dict
+        logger.info(" self.or_dict %s",  self.or_dict)
         if "beehive_id" not in self.or_dict.keys():
             # Calling the hms_sql_query class for getting OR credentials
             self.or_dict = super(Post_sensor, self).sql_query_pk(or_id)

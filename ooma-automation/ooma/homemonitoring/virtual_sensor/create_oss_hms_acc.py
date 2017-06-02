@@ -4,6 +4,10 @@ from hms_actions import HMSActions
 from field_generator import FieldGenerator
 from homemonitoring.setup.json_parse import JsonConfig
 from homemonitoring.setup.mongodb_setup import MongoDBQuery
+import logging
+
+logging.basicConfig(level=logging.DEBUG)
+logger = logging.getLogger(__name__)
 
 class HMS_Activation(object):
     def __init__(self, node = "cert"):
@@ -12,8 +16,6 @@ class HMS_Activation(object):
         self.json_obj = JsonConfig()
         abs_path = os.path.dirname(os.path.abspath(__file__))
         server_f_path =  abs_path + "/../server_config.json"
-        print server_f_path
-        print os.getcwd()
         self.json_server_obj = self.json_obj.dump_config(server_f_path)
         self.json_server = self.json_server_obj[self.node]["oss-server"]
         self.headers = {
@@ -32,7 +34,7 @@ class HMS_Activation(object):
         }
     '''
     def activate_hms_account(self):
-
+        logger.debug("activate_hms_account Started")
         self.mongodb_dict = {}
         self.cust_pk = self.field_gen.generate_pk()
         self.url = "ems/v1/hms/account"
@@ -52,12 +54,13 @@ class HMS_Activation(object):
             "X-ooma-oToken": "TrustMe"
         }
 
-        response, code = HMSActions(self.json_obj, self.node).vs_request_activate(self.json_server, self.url, self.cust_pk). \
+        code = HMSActions(self.json_obj, self.node).vs_request_activate(self.json_server, self.url, self.cust_pk). \
             post(self.headers, self.act_data)
 
         self.mongodb_dict["activation_status"] = code
 
-        print "Activating the HMS Account - ", self.act_data['spn']
+        logger.info("Activating the HMS Account - %s", self.act_data['spn'])
+        logger.debug("activate_hms_account End")
         return self.cust_pk, code
 
     '''
@@ -67,35 +70,40 @@ class HMS_Activation(object):
         {"timezone":"America/Los_Angeles","spn":"1000000395"},"sensors":[]}]', 200)
     '''
     def get_status_hms_account(self):
+        logger.debug("get_status_hms_account Started")
         _mong_obj = MongoDBQuery()
 
-        response, code = HMSActions(self.json_obj, self.node).vs_request_activate(self.json_server, self.url, self.cust_pk). \
+        response = HMSActions(self.json_obj, self.node).vs_request_activate(self.json_server, self.url, self.cust_pk). \
             get(self.headers, self.act_data)
 
-        mongo_resp = json.loads(response)
-        self.mongodb_dict["_id"] = mongo_resp[0]["id"]
-        self.mongodb_dict["status"] = mongo_resp[0]["status"]
+        #mongo_resp = json.load(response)
+        # self.mongodb_dict["_id"] = mongo_resp[0]["id"]
+        # self.mongodb_dict["status"] = mongo_resp[0]["status"]
 
-        if self.mongodb_dict["activation_status"]:
-            _mong_obj.mongo_connect()
-            _mong_obj.mongo_addition(self.mongodb_dict)
-            _mong_obj.mongo_disconnect()
+        # if self.mongodb_dict["activation_status"]:
+        #     _mong_obj.mongo_connect()
+        #     _mong_obj.mongo_addition(self.mongodb_dict)
+        #     _mong_obj.mongo_disconnect()
 
-        print "Getting Info of The HMS Account ", response
-        return self.mongodb_dict["_id"]
+        #assert response is "Not Found", "HMS Activation Failed"
+
+        logger.info("Getting Info of The HMS Account %s", response)
+        logger.debug("get_status_hms_account Ended")
+        return response[0]["id"]
     '''
     PATCH http://oss1-cert1.cn.ooma.com:8001/ems/v1/hms/account/virtualsensors000000000000000395
     Headers : {'X-ooma-otoken': 'TrustMe', 'Content-type': 'application/json', 'Accept': 'application/json'}
     Payload : {"enable": "False"}
     '''
     def deactivate_hms_account(self):
-
+        logger.debug("deactivate_hms_account Started")
         deac_data = {'enable': "False"}
         self.headers = {'Content-Type': 'application/json'}
         response, code = HMSActions(self.json_obj, self.node).vs_request_activate(self.json_server, self.url, self.cust_pk). \
             patch(self.headers, deac_data)
 
-        print "Deactivating The HMS Account ", response
+        logger.info("Deactivating The HMS Account ", response)
+        logger.debug("deactivate_hms_account Ended")
         return response, code
 
 #     def run(self):

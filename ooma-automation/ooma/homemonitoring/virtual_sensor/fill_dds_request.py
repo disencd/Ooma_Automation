@@ -3,6 +3,10 @@ from field_generator import FieldGenerator, DeviceDiscoveryGenerator
 from post_sensor_data import Post_sensor
 from homemonitoring.setup.json_parse import JsonConfig
 import os, json
+import logging
+
+logging.basicConfig(level=logging.DEBUG)
+logger = logging.getLogger(__name__)
 
 class DDS_data():
     def __init__(self):
@@ -24,9 +28,9 @@ class DDS_data():
                key != "model_flood_sensor":
 
                 deviceidentifier, dd_request = self.construct_dds_header(key)
-                #print("%s %s" % (deviceidentifier, dd_request))
+                #logger.info("("%s %s" % (deviceidentifier, dd_request))
                 response = self.sensor.post_sensor_data(dd_request, deviceidentifier, or_id)
-                #print("%s %s %s" % (response, deviceidentifier, dd_request))
+                #logger.info("("%s %s %s" % (response, deviceidentifier, dd_request))
 
     def fill_dds_motion_data(self, or_id):
         abs_path = os.path.dirname(os.path.abspath(__file__))
@@ -40,7 +44,7 @@ class DDS_data():
                key != "model_flood_sensor":
                 deviceidentifier, dd_request = self.construct_dds_header(key)
                 response = self.sensor.post_sensor_data(dd_request, deviceidentifier, or_id)
-                #print(response, deviceidentifier,dd_request)
+                #logger.info("(response, deviceidentifier,dd_request)
 
     def fill_dds_flood_data(self, or_id):
         abs_path = os.path.dirname(os.path.abspath(__file__))
@@ -54,7 +58,7 @@ class DDS_data():
                key != "model_window_sensor":
                 deviceidentifier, dd_request = self.construct_dds_header(key)
                 self.sensor.post_sensor_data(dd_request, deviceidentifier, or_id)
-                #print("%s %s %s" % (response, deviceidentifier, dd_request))
+                #logger.info("("%s %s %s" % (response, deviceidentifier, dd_request))
 
     def construct_dds_header(self, key):
         dd_request = {}
@@ -96,12 +100,12 @@ class DDS_data():
 #
 # obj.fill_dds_flood_data()
 #
-# print "__________________________"
+# logger.info(" "__________________________"
 #
 # obj.fill_dds_motion_data()
 #
-# print "__________________________"
+# logger.info(" "__________________________"
 #
 # obj.fill_dds_windows_data()
 #
-# print "__________________________"
+# logger.info(" "__________________________"

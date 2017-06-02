@@ -1,5 +1,10 @@
-import urllib2
+import urllib2, urllib
 import json, base64
+import time
+import logging
+
+logging.basicConfig(level=logging.DEBUG)
+logger = logging.getLogger(__name__)
 
 class HMSActions(object):
     def __init__(self, jsonconfig, node="cert"):
@@ -21,16 +26,15 @@ class HMSActions(object):
     '''
     def vs_request_activate(self, hostname_port, req_url, cust_pk):
         self.__url = "http://{0}/{1}/{2}".format(hostname_port, req_url, cust_pk)
-        print self.__url
         return self
 
     '''
-        Adding sensor
-            Post : http://hms1-cert1.cn.ooma.com:8083/dds/rest/rpc/devicediscovery/2/0/0/devicediscovery/124
+    Adding sensor
+    Post : http://hms1-cert1.cn.ooma.com:8083/dds/rest/rpc/devicediscovery/2/0/0/devicediscovery/124
     '''
     def vs_request_add_sensor(self, hostname_port, req_url):
+        logger.info("hostname_port - %s", hostname_port)
         self.__url = "http://{0}/{1}".format(hostname_port, req_url)
-        print self.__url
         return self
 
 
@@ -39,21 +43,21 @@ class HMSActions(object):
         assert isinstance(data, dict)\
                 or isinstance(data, list), "Data should be dictionary or list"
         data = json.dumps(data)
-        print data
+        logger.info("data %s", data)
         try:
-            print self.__url
+            logger.info(" __url %s" , self.__url)
             request = urllib2.Request(self.__url, data, headers)
             response = urllib2.urlopen(request)
             data = response.read()
             code = response.getcode()
             response.close()
-            print data, code
-            return data, code
+            logger.info(" data %s code %s" % (data, code))
+            return code
         except urllib2.URLError, e:
             return e.reason
 
 
-    def get(self, headers, data = None):
+    def get(self, headers = None, data = None):
         assert self.__url is not None, "Use 'request' method to specify URL"
         data = json.dumps(data)
         headers = json.dumps(headers)
@@ -63,10 +67,11 @@ class HMSActions(object):
             #Not needed for all the get messages
             request.add_header("X-ooma-oToken", "TrustMe")
             response = urllib2.urlopen(request)
-            data = response.read()
-            code = response.getcode()
+            #data = response.read()
+            data = json.load(response)
+            logger.info(" data =  %s" , data)
             response.close()
-            return data, code
+            return data
         except urllib2.URLError, e:
             return e.reason
 
@@ -77,7 +82,7 @@ class HMSActions(object):
         b64_str = or_dict['beehive_id'] + ":" + or_dict['beehive_pwd']
         base64string = base64.b64encode(b64_str)
         auth_str = "Basic " + base64string
-        print auth_str
+        logger.info(" auth_str - %s", auth_str)
         try:
             request = urllib2.Request(self.__url)
             request.add_header('Authorization', auth_str)
@@ -110,14 +115,14 @@ class HMSActions(object):
         headers = json.dumps(headers)
 
         try:
-            print "PATCH"
+            logger.info(" PATCH ")
             request = urllib2.Request(self.__url, data)
             request.get_method = lambda: "PATCH"
             request.add_header('Content-Type', 'application/json')
             request.add_header("X-ooma-oToken", "TrustMe")
             request.add_header('Accept', 'application/json')
-            print request.headers
-            print request.data
+            logger.info("request.headers - ", request.headers)
+            logger.info("request.data - ", request.data)
             #request.add_data(json.dumps(data))
             response = urllib2.urlopen(request)
             data = response.read()
@@ -127,3 +132,42 @@ class HMSActions(object):
         except urllib2.URLError, e:
             return e.reason
 
+    def get_register_sensor(self, url):
+        logger.info("get_register_sensor started")
+        assert url is not None, "Use 'request' method to specify URL"
+        try:
+            request = urllib2.Request(url)
+
+            request.add_header('Accept', 'application/json')
+            response = urllib2.urlopen(request)
+
+            response = json.load(response)
+            logger.info("response %s" , response)
+            logger.info("get_register_sensor ended")
+            return response
+        except urllib2.URLError, e:
+            return e.reason
+
+    def post_register_sensor(self, url, data):
+        data = json.dumps(data)
+        # logger.info(" url
+        headers = {
+            'Accept': 'application/json'
+        }
+        # assert url is not None, "Use 'request' method to specify URL"
+        # assert isinstance(data, dict) \
+        #        or isinstance(data, list), "Data should be dictionary or list"
+        data = json.dumps(data)
+        logger.info("data - %s", data)
+        try:
+            logger.info(" url - %s", url)
+            request = urllib2.Request(url, data, headers)
+            response = urllib2.urlopen(request)
+            data = response.read()
+            code = response.getcode()
+            logger.info(" data %s, code %s " % (data, code))
+            response.close()
+
+            return code
+        except urllib2.URLError, e:
+            return e.reason

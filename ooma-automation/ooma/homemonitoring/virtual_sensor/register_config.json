@@ -1,0 +1,78 @@
+{
+  "post-register-door" : {
+    "device": {
+      "id": "",
+      "name": "",
+      "type": "DOOR_SENSOR"
+    },
+    "deviceNotification": [
+          {
+            "modeId": 0,
+            "push": "on",
+            "telo": "off",
+            "phone": "off",
+            "email": "off",
+            "sms": "off",
+            "conditionRaised": 0,
+            "conditionCeased": 0
+          }
+    ]
+  },
+  "post-register-window" : {
+    "device": {
+      "id": "",
+      "name": "",
+      "type": "WINDOW_SENSOR"
+    },
+    "deviceNotification": [
+          {
+            "modeId": 0,
+            "push": "on",
+            "telo": "off",
+            "phone": "off",
+            "email": "off",
+            "sms": "off",
+            "conditionRaised": 0,
+            "conditionCeased": 0
+          }
+    ]
+  },
+  "post-register-water" : {
+    "device": {
+      "id": "",
+      "name": "",
+      "type": "FLOOD_SENSOR"
+    },
+    "deviceNotification": [
+          {
+            "modeId": 0,
+            "push": "on",
+            "telo": "off",
+            "phone": "off",
+            "email": "off",
+            "sms": "off",
+            "conditionRaised": 0,
+            "conditionCeased": 0
+          }
+    ]
+  },
+  "post-register-motion" : {
+    "device": {
+      "id": "",
+      "name": "",
+      "type": "MOTION_DETECTOR"
+    },
+    "deviceNotification": [
+      {
+        "modeId": 0,
+        "push": "on",
+        "telo": "off",
+        "phone": "off",
+        "email": "off",
+        "sms": "off",
+        "conditionRaised": 0,
+        "conditionCeased": 0
+      }
+    ]
+  }
+}

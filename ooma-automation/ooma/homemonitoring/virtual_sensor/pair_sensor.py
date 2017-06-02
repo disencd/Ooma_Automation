@@ -6,7 +6,11 @@ from fill_dds_request import DDS_data
 from hms_actions import HMSActions
 from homemonitoring.setup.json_parse import JsonConfig
 from post_sensor_data import Post_sensor
+from register_sensor import Register_sensor
+import logging
 
+logging.basicConfig(level=logging.DEBUG)
+logger = logging.getLogger(__name__)
 
 class Sensor_Addition(object):
     def __init__(self, node = "cert"):
@@ -31,13 +35,17 @@ class Sensor_Addition(object):
 
         dd_req = DDS_data()
         _sensor_data = dd_req.fill_dds_flood_data(cust_pk)
+
+        reg_sensor = Register_sensor()
+
+        reg_sensor.register_water_sensor(cust_pk)
         #
         # _start_timer = time.time()
         # response = self.post_sensor_data(_sensor_data, device_id, or_id)
         # _latency = time.time() - _start_timer
         # self.custom_timers['pair_water_sensor Time'] = _latency
-        # print "Pairing the water Sensor - ", device_id
-        # print response
+        # logger.info(" "Pairing the water Sensor - ", device_id
+        # logger.info(" response
 
 
     def pair_door_sensor(self, cust_pk):
@@ -45,13 +53,17 @@ class Sensor_Addition(object):
         dd_req = DDS_data()
         _sensor_data = dd_req.fill_dds_windows_data(cust_pk)
 
+        reg_sensor = Register_sensor()
+
+        reg_sensor.register_door_sensor(cust_pk)
+
         # _start_timer = time.time()
         # response = self.post_sensor_data(_sensor_data, device_id, or_id)
         # _latency = time.time() - _start_timer
         # self.custom_timers['pair_door_sensor Time'] = _latency
         #
-        # print "Pairing the door Sensor - ", device_id
-        # print response
+        # logger.info(" "Pairing the door Sensor - ", device_id
+        # logger.info(" response
 
 
     def pair_motion_sensor(self, cust_pk):
@@ -59,18 +71,22 @@ class Sensor_Addition(object):
         dd_req = DDS_data()
         _sensor_data = dd_req.fill_dds_motion_data(cust_pk)
 
+        reg_sensor = Register_sensor()
+
+        reg_sensor.register_motion_sensor(cust_pk)
+
         # _start_timer = time.time()
         # response = self.post_sensor_data(_sensor_data, device_id, or_id)
         # _latency = time.time() - _start_timer
         # self.custom_timers['pair_motion_sensor Time'] = _latency
         #
-        # print "Pairing the Motion Sensor - ", device_id
-        # print response
+        # logger.info(" "Pairing the Motion Sensor - ", device_id
+        # logger.info(" response
 
     def sensor_status(self, cust_pk):
         post_obj = Post_sensor()
         response = post_obj.get_sensor_status(cust_pk)
-        print response
+        logger.info(" response %s", response)
 
 #     def run(self):
 #         self.pair_water_sensor("1263")
