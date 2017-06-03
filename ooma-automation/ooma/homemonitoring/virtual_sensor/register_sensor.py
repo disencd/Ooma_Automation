@@ -186,6 +186,7 @@ class Register_sensor():
 
     def update_door_sensor_message(self, response):
         sensor_post = self.reg_header.copy()
+        logger.info("sensor_post - %s", sensor_post)
         logger.info("Updating the Door Sensor Message")
         # urllib2 is unable to access the list in GET message
         if response["newDevices"]:

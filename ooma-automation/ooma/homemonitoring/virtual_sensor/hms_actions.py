@@ -1,4 +1,7 @@
-import urllib2, urllib
+import urllib2
+import requests
+from homemonitoring.setup.json_parse import JsonConfig
+#from urllib.request import Request, urlope n
 import json, base64
 import time
 import logging
@@ -6,7 +9,7 @@ import logging
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
-class HMSActions(object):
+class HMSActions():
     def __init__(self, jsonconfig, node="cert"):
         self.node = node
         self._jsonconfig = jsonconfig
@@ -136,16 +139,13 @@ class HMSActions(object):
         logger.info("get_register_sensor started")
         assert url is not None, "Use 'request' method to specify URL"
         try:
-            request = urllib2.Request(url)
-
-            request.add_header('Accept', 'application/json')
-            response = urllib2.urlopen(request)
-
-            response = json.load(response)
-            logger.info("response %s" , response)
-            logger.info("get_register_sensor ended")
-            return response
+            time.sleep(5)
+            response = requests.get(url)
+            resp = response.json()
+            logger.info("response = %s", resp)
+            return resp
         except urllib2.URLError, e:
+            logger.info(e.reason)
             return e.reason
 
     def post_register_sensor(self, url, data):
@@ -171,3 +171,9 @@ class HMSActions(object):
             return code
         except urllib2.URLError, e:
             return e.reason
+
+
+# json_obj = JsonConfig()
+# hms = HMSActions(json_obj)
+# res = hms.get_register_sensor("http://hms1-cert1.cn.ooma.com:8084/hms/api/base/status?username=virtualaccount20170603150648554833")
+# print res

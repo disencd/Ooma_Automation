@@ -29,7 +29,7 @@ class FieldGenerator():
 
     #spn - 9712732945
     def generate_SPN(self):
-        return datetime.datetime.now().strftime("%M%S%f")
+        return datetime.datetime.now().strftime("%f%M%S")
 
 
     #timezone - "America/Los_Angeles"

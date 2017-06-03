@@ -40,6 +40,7 @@ homemonitoring/server_smoke/sensor_events.py
 homemonitoring/server_smoke/utils.py
 homemonitoring/setup/__init__.py
 homemonitoring/setup/json_parse.py
+homemonitoring/setup/mongodb_setup.py
 homemonitoring/setup/ssh_apis.py
 homemonitoring/test/__init__.py
 homemonitoring/test/client_hms_config.py
@@ -49,9 +50,14 @@ homemonitoring/virtual_sensor/create_hms_account.py
 homemonitoring/virtual_sensor/create_oss_hms_acc.py
 homemonitoring/virtual_sensor/field_generator.py
 homemonitoring/virtual_sensor/fill_dds_request.py
+homemonitoring/virtual_sensor/generate_sensor_events.py
 homemonitoring/virtual_sensor/hms_actions.py
 homemonitoring/virtual_sensor/hms_sql_query.py
+homemonitoring/virtual_sensor/nimbits_actions.py
+homemonitoring/virtual_sensor/nimbits_sql_query.py
 homemonitoring/virtual_sensor/pair_sensor.py
+homemonitoring/virtual_sensor/post_sensor_data.py
+homemonitoring/virtual_sensor/register_sensor.py
 oss/__init__.py
 oss/pages/CustmBuyerOSSSearch.py
 oss/pages/DevSearchResult.py

@@ -72,7 +72,7 @@ class HMS_Activation(object):
     def get_status_hms_account(self):
         logger.debug("get_status_hms_account Started")
         _mong_obj = MongoDBQuery()
-
+        time.sleep(1)
         response = HMSActions(self.json_obj, self.node).vs_request_activate(self.json_server, self.url, self.cust_pk). \
             get(self.headers, self.act_data)
 

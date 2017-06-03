@@ -31,11 +31,12 @@ class NimbitsActions(object, HMSSqlQuery):
             # Calling the hms_sql_query class for getting OR credentials
             self.or_dict = super(NimbitsActions, self).sql_query_pk(cust_pk)
 
+        self.auth_str = 'basic ' + self.or_dict['nimbits_id'] + ':' + \
+                                self.or_dict['nimbits_pwd']
+
         self.headers = {
             'Accept': 'application/json',
-            'Content-Type':'application/json',
-            'Authorization':'basic ' + self.or_dict['nimbits_id'] + ':' + \
-                                                self.or_dict['nimbits_pwd']
+            'Content-Type':'application/json'
         }
         return self.headers
 
@@ -52,18 +53,18 @@ class NimbitsActions(object, HMSSqlQuery):
         headers = json.dumps(self.headers)
         try:
             request = urllib2.Request(self.__url)
-
-            request.add_header('Accept', 'application/json')
+            request.add_header('Authorization', self.auth_str)
+            #request.add_header('Accept', 'application/json')
             response = urllib2.urlopen(request)
 
             #response = json.load(response)
             data = response.read()
             code = response.getcode()
             response.close()
-            logger.info(" data %s, code %s "% ( data, code))
-            logger.info("response %s" , response)
-            logger.info("get_register_sensor ended")
-            return response
+            logger.info("data %s, code %s" % ( data, code))
+            #logger.info("response %s" , response)
+            logger.info("get_nimbits_events ended")
+            return data
         except urllib2.URLError, e:
             logger.info("e.reason - %s", e.reason)
             return e.reason
