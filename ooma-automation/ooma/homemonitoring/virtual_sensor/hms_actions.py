@@ -1,7 +1,6 @@
 import urllib2
 import requests
 from homemonitoring.setup.json_parse import JsonConfig
-#from urllib.request import Request, urlope n
 import json, base64
 import time
 import logging
@@ -56,7 +55,7 @@ class HMSActions():
             response.close()
             logger.info(" data %s code %s" % (data, code))
             return code
-        except urllib2.URLError, e:
+        except urllib2.URLError as e:
             return e.reason
 
 
@@ -75,7 +74,7 @@ class HMSActions():
             logger.info(" data =  %s" , data)
             response.close()
             return data
-        except urllib2.URLError, e:
+        except urllib2.URLError as e:
             return e.reason
 
     def sensor_get(self, or_dict):
@@ -95,7 +94,7 @@ class HMSActions():
             code = response.getcode()
             response.close()
             return data, code
-        except urllib2.URLError, e:
+        except urllib2.URLError as e:
             return e.reason
 
 
@@ -109,7 +108,7 @@ class HMSActions():
             code = response.getcode()
             response.close()
             return data, code
-        except urllib2.URLError, e:
+        except urllib2.URLError as e:
             return e.reason
 
     def patch(self, headers, data):
@@ -132,7 +131,7 @@ class HMSActions():
             code = response.getcode()
             response.close()
             return data, code
-        except urllib2.URLError, e:
+        except urllib2.URLError as e:
             return e.reason
 
     def get_register_sensor(self, url):
@@ -144,7 +143,7 @@ class HMSActions():
             resp = response.json()
             logger.info("response = %s", resp)
             return resp
-        except urllib2.URLError, e:
+        except urllib2.URLError as e:
             logger.info(e.reason)
             return e.reason
 
@@ -169,7 +168,7 @@ class HMSActions():
             response.close()
 
             return code
-        except urllib2.URLError, e:
+        except urllib2.URLError as e:
             return e.reason
 
 

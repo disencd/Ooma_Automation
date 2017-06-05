@@ -20,7 +20,7 @@ class NimbitsActions(object, HMSSqlQuery):
         server_f_path =  abs_path + "/../server_config.json"
         self.json_server_obj = self.json_obj.dump_config(server_f_path)
         self.json_server = self.json_server_obj[self.node]["nimbits-server"]
-        self.geturl = "service/v3/rest/me?children=true"
+
         self.posturl = "hms/hms/api/devices/register?username="
 
     def generate_url(self, req_url):
@@ -40,10 +40,10 @@ class NimbitsActions(object, HMSSqlQuery):
         }
         return self.headers
 
-    def get_nimbits_events(self, cust_pk):
+    def get_nimbits_events(self, cust_pk, geturl):
         logger.debug("get_nimbits_events started")
 
-        self.__url = self.generate_url(self.geturl)
+        self.__url = self.generate_url(geturl)
 
         self.headers = self.construct_nimbits_request_headers(cust_pk)
         logger.info("Nimbits URL - %s", self.__url)
@@ -65,7 +65,7 @@ class NimbitsActions(object, HMSSqlQuery):
             #logger.info("response %s" , response)
             logger.info("get_nimbits_events ended")
             return data
-        except urllib2.URLError, e:
+        except urllib2.URLError as e:
             logger.info("e.reason - %s", e.reason)
             return e.reason
 
@@ -84,5 +84,5 @@ class NimbitsActions(object, HMSSqlQuery):
             response.close()
             logger.info(" data %s, code %s "% ( data, code))
             return code
-        except urllib2.URLError, e:
+        except urllib2.URLError as e:
             return e.reason
