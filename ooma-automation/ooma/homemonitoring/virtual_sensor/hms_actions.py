@@ -148,7 +148,6 @@ class HMSActions():
             return e.reason
 
     def post_register_sensor(self, url, data):
-        data = json.dumps(data)
         # logger.info(" url
         headers = {
             'Accept': 'application/json'

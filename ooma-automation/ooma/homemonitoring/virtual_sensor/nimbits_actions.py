@@ -21,7 +21,7 @@ class NimbitsActions(object, HMSSqlQuery):
         self.json_server_obj = self.json_obj.dump_config(server_f_path)
         self.json_server = self.json_server_obj[self.node]["nimbits-server"]
 
-        self.posturl = "hms/hms/api/devices/register?username="
+
 
     def generate_url(self, req_url):
         return "http://{0}/{1}".format(self.json_server, req_url)
@@ -69,15 +69,15 @@ class NimbitsActions(object, HMSSqlQuery):
             logger.info("e.reason - %s", e.reason)
             return e.reason
 
-    def post_nimbits_events(self, headers, data):
-        assert self.__url is not None, "Use 'request' method to specify URL"
-        assert isinstance(data, dict) \
-               or isinstance(data, list), "Data should be dictionary or list"
+    def post_nimbits_events(self, posturl, cust_pk, data):
+        self.__url = self.generate_url(posturl)
+        self.headers = self.construct_nimbits_request_headers(cust_pk)
+
         data = json.dumps(data)
         logger.info(" data %s", data)
         try:
             logger.info(" self.__url", self.__url)
-            request = urllib2.Request(self.__url, data, headers)
+            request = urllib2.Request(self.__url, data, self.headers)
             response = urllib2.urlopen(request)
             data = response.read()
             code = response.getcode()

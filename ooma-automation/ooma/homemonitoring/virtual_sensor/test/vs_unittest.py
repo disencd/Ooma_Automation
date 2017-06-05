@@ -79,5 +79,6 @@ class VStest(unittest.TestCase):
 
             sens_obj = Sensor_Action()
             sens_obj.configure_door_Sensor(cust_pk)
+            sens_obj.post_sensor_events(cust_pk)
             cnt += 1
             time.sleep(1)

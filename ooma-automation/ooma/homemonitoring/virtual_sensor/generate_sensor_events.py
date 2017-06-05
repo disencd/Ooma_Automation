@@ -12,6 +12,7 @@ class Sensor_Action(object):
     def __init__(self, node = "cert"):
         self.nimbits_action = NimbitsActions()
         self.geturl = "service/v3/rest/me?name="
+        self.posturl = "service/v3/rest/"
 
     def configure_door_Sensor(self, cust_pk):
         self.get_sensor_nimbits_request(cust_pk, "door")
@@ -41,6 +42,16 @@ class Sensor_Action(object):
         logger.info(device_id_dict)
 
         logger.info("get_sensor_nimbitsid ended")
+        fill_dds_request.device_id_dict = device_id_dict
 
-    def post_sensor_events(self):
-        pass
+    def post_sensor_events(self, cust_pk):
+        device_id_dict = fill_dds_request.device_id_dict
+        posturl = self.posturl + device_id_dict[cust_pk]["TamperDetector"]["id"] \
+                            + "/series"
+
+
+        logger.info("Nimbits Teamper Post URL = %s", posturl)
+
+        data = "[{\"d\":1.0}]"
+
+        response = self.nimbits_action.post_nimbits_events(posturl, cust_pk, data)
