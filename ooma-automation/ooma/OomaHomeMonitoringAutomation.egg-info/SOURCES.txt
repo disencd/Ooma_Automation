@@ -1,4 +1,3 @@
-setup.py
 OomaHomeMonitoringAutomation.egg-info/PKG-INFO
 OomaHomeMonitoringAutomation.egg-info/SOURCES.txt
 OomaHomeMonitoringAutomation.egg-info/dependency_links.txt

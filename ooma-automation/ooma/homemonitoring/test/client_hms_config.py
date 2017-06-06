@@ -33,13 +33,13 @@ class HMStest(unittest.TestCase):
         self.serv_obj = ServerStatus(self.json_server_obj)
 
         __hms_status = self.serv_obj.ping_hms()
-        print "HMS Status is ", __hms_status
+        print('HMS Status is ', __hms_status)
 
         __beehive_status = self.serv_obj.ping_beehive()
-        print "Beehive Server Status is ", __beehive_status
+        print('Beehive Server Status is ', __beehive_status)
 
         __nimbits_status = self.serv_obj.ping_nimbits()
-        print "Nimbits Server Status is ", __nimbits_status
+        print("Nimbits Server Status is ", __nimbits_status)
 
         print ("test_1_hms_server_status - Completed")
         print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
@@ -54,11 +54,11 @@ class HMStest(unittest.TestCase):
 
         #Checking Telo is online with IP Address
         ip_addr = cli_obj.is_telo_online()
-        print "IP Address of Client Telo " , ip_addr
+        print("IP Address of Client Telo " , ip_addr)
 
         #Checking the HMS Configuration
         controller_info = cli_obj.get_hms_config()
-        print "Controller Info ", controller_info
+        print("Controller Info ", controller_info)
 
         cli_obj = rest_cli.load_client_debugconfig(cli_obj)
 
@@ -91,9 +91,6 @@ class HMStest(unittest.TestCase):
         # door_obj.door_sensor_pairing_enabled()
         # time.sleep(120)
         # print ("test_trigger_pairing_mode For Door Sensor - Completed")
-
-
-
         print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
 
     def test_4_door_sensor_status(self):
@@ -130,7 +127,7 @@ class HMStest(unittest.TestCase):
 
         flood_obj = FlaskClientWaterSensor(self.json_rest_obj)
         flood_obj.water_sensor_status()
-        __cnt  = 0
+        __cnt = 0
         __max = 1000
         while( __cnt < __max):
             __cnt += 1

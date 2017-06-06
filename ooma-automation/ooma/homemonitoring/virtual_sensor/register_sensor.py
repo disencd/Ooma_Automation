@@ -1,6 +1,7 @@
 from homemonitoring.setup.json_parse import JsonConfig
 import os, json
 from hms_actions import HMSActions
+import time
 import logging
 
 logging.basicConfig(level=logging.DEBUG)
@@ -137,6 +138,13 @@ class Register_sensor():
         logger.info("url %s", url)
 
         response = self.hms_action.get_register_sensor(url)
+
+        while(1):
+            if not response["newDevices"]:
+                time.sleep(3)
+                response = self.hms_action.get_register_sensor(url)
+            else:
+                break
 
         return response
 

@@ -74,15 +74,15 @@ class NimbitsActions(object, HMSSqlQuery):
         self.headers = self.construct_nimbits_request_headers(cust_pk)
 
         data = json.dumps(data)
-        logger.info(" data %s", data)
+        logger.info("Nimbits data %s", data)
         try:
-            logger.info(" self.__url", self.__url)
+            logger.info("Post Nimbits url %s", self.__url)
             request = urllib2.Request(self.__url, data, self.headers)
             response = urllib2.urlopen(request)
             data = response.read()
             code = response.getcode()
             response.close()
-            logger.info(" data %s, code %s "% ( data, code))
+            logger.info(" data %s, code %s "% (data, code))
             return code
         except urllib2.URLError as e:
             return e.reason

@@ -50,7 +50,7 @@ class Sensor_Action(object):
                             + "/series"
 
 
-        logger.info("Nimbits Teamper Post URL = %s", posturl)
+        logger.info("Nimbits Tamper Post URL = %s", posturl)
 
         data = "[{\"d\":1.0}]"
 
