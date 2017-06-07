@@ -33,7 +33,7 @@ class FieldGenerator():
         spn = datetime.datetime.now().strftime("%f%M%S")
         list_spn = spn
         if list_spn[0] == '0':
-            list_spn[0] = 9
+            list_spn = '9' + list_spn[1:]
 
         return str(list_spn)
 
