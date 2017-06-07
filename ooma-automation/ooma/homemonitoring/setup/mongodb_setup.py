@@ -20,7 +20,7 @@ class MongoDBQuery():
         self.client.close()
 
     def mongo_addition(self, dict):
-        print dict
+        print(dict)
         self.vs_account.insert_one(dict)
 
     def mongo_find(self, or_id):

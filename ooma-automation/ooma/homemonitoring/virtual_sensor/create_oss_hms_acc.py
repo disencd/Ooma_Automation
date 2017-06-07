@@ -77,14 +77,15 @@ class HMS_Activation(object):
         response = HMSActions(self.json_obj, self.node).vs_request_activate(self.json_server, self.url, self.cust_pk). \
             get(self.headers, self.act_data)
 
-        #mongo_resp = json.load(response)
-        # self.mongodb_dict["_id"] = mongo_resp[0]["id"]
-        # self.mongodb_dict["status"] = mongo_resp[0]["status"]
+        mongo_resp = response
+        if mongo_resp[0]:
+            self.mongodb_dict["_id"] = mongo_resp[0]["id"]
+            self.mongodb_dict["status"] = mongo_resp[0]["status"]
 
-        # if self.mongodb_dict["activation_status"]:
-        #     _mong_obj.mongo_connect()
-        #     _mong_obj.mongo_addition(self.mongodb_dict)
-        #     _mong_obj.mongo_disconnect()
+        if self.mongodb_dict["activation_status"]:
+            _mong_obj.mongo_connect()
+            _mong_obj.mongo_addition(self.mongodb_dict)
+            _mong_obj.mongo_disconnect()
 
         #assert response is "Not Found", "HMS Activation Failed"
 

@@ -93,41 +93,41 @@ class DDS_data():
 
     def construct_dds_header(self, key):
         dd_request = {}
-        # Adding the standard headers in DDS
+        # adding the standard headers in dds
         dd_request = self.dd_obj["dds_std_header"]
 
-        if "rootId" in self.dd_obj[key]["deviceAttributes"].keys():
+        if "rootid" in self.dd_obj[key]["deviceattributes"].keys():
 
-            self.dd_obj[key]["deviceAttributes"] \
-                 ["rootId"] = self.dd_gen.generate_rootId()
-            # self.dd_obj[key]["deviceAttributes"]["rootId"] = \
-            #     self.dd_gen.generate_deviceId(self.dds_cnt, self.dd_obj \
-            #         [key]["deviceAttributes"]["rootId"])
+            self.dd_obj[key]["deviceattributes"] \
+                 ["rootid"] = self.dd_gen.generate_rootid()
+            # self.dd_obj[key]["deviceattributes"]["rootid"] = \
+            #     self.dd_gen.generate_deviceid(self.dds_cnt, self.dd_obj \
+            #         [key]["deviceattributes"]["rootid"])
 
-        if "rootId" not in self.dd_obj[key]["deviceAttributes"].keys():
-            self.dd_obj[key]["deviceAttributes"]["deviceId"] = \
-                                        self.dd_gen.generate_rootId()
+        if "rootid" not in self.dd_obj[key]["deviceattributes"].keys():
+            self.dd_obj[key]["deviceattributes"]["deviceid"] = \
+                                        self.dd_gen.generate_rootid()
         else:
-            self.dd_obj[key]["deviceAttributes"]["deviceId"] = \
-                self.dd_gen.generate_deviceId(self.dds_cnt, self.dd_obj \
-                        [key]["deviceAttributes"]["deviceId"])
+            self.dd_obj[key]["deviceattributes"]["deviceid"] = \
+                self.dd_gen.generate_deviceid(self.dds_cnt, self.dd_obj \
+                        [key]["deviceattributes"]["deviceid"])
 
-        #Device Identifier is -Flood Sensor-root
-        deviceidentifier = self.dd_obj[key]["deviceIdentifier"]
+        #device identifier is -flood sensor-root
+        deviceidentifier = self.dd_obj[key]["deviceidentifier"]
 
-        self.dd_obj[key]["deviceIdentifier"] = \
-            self.dd_gen.generate_deviceIdentifier(deviceidentifier)
+        self.dd_obj[key]["deviceidentifier"] = \
+            self.dd_gen.generate_deviceidentifier(deviceidentifier)
 
-        #Device Identifier is Updated 4536027208-Flood Sensor-root
-        deviceidentifier = self.dd_obj[key]["deviceIdentifier"]
+        #device identifier is updated 4536027208-flood sensor-root
+        deviceidentifier = self.dd_obj[key]["deviceidentifier"]
 
-        # Adding the model headers
+        # adding the model headers
         dd_request["model"] = \
             self.dd_obj[key]
 
         return deviceidentifier, dd_request
 
-# obj = DDS_data()
+# obj = dds_data()
 #
 # obj.fill_dds_flood_data()
 #
