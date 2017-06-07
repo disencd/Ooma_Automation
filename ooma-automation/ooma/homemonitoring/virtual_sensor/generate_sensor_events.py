@@ -1,5 +1,5 @@
 import logging
-from virtual_sensor.hms_sql_query import HMSSqlQuery
+from homemonitoring.virtual_sensor.hms_sql_query import HMSSqlQuery
 from homemonitoring.setup.json_parse import JsonConfig
 import fill_dds_request
 import json

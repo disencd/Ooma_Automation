@@ -3,7 +3,7 @@ from field_generator import FieldGenerator, DeviceDiscoveryGenerator
 from homemonitoring.setup.json_parse import JsonConfig
 #from fill_dds_request import DDS_data
 import os, json
-from virtual_sensor.hms_sql_query import HMSSqlQuery
+from homemonitoring.virtual_sensor.hms_sql_query import HMSSqlQuery
 import base64
 import time
 import urllib2
