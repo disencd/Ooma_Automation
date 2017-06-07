@@ -1,4 +1,5 @@
 import logging
+import colorlog
 import sys
 import unittest
 import time
@@ -16,7 +17,6 @@ stream_handler = logging.StreamHandler(sys.stdout)
 logger.addHandler(stream_handler)
 #logging.basicConfig(filename='hms.log',level=logging.DEBUG)
 #Unittest framework for testing the Client Home Security Functionalities
-
 
 class HMStest(unittest.TestCase):
     def setUp(self):

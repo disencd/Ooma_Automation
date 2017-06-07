@@ -5,6 +5,7 @@ from field_generator import FieldGenerator
 from homemonitoring.setup.json_parse import JsonConfig
 from homemonitoring.setup.mongodb_setup import MongoDBQuery
 import logging
+import colorlog
 
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)

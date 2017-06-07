@@ -8,6 +8,7 @@ from homemonitoring.setup.json_parse import JsonConfig
 from post_sensor_data import Post_sensor
 from register_sensor import Register_sensor
 import logging
+import colorlog
 
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)

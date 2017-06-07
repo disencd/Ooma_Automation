@@ -11,6 +11,7 @@ from collections import OrderedDict
 #from fill_dds_request import DDS_data
 from hms_actions import HMSActions
 import logging
+import colorlog
 
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)

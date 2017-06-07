@@ -1,4 +1,5 @@
 import time, datetime
+import colorlog
 
 class FieldGenerator():
     def __init__(self):
@@ -29,8 +30,12 @@ class FieldGenerator():
 
     #spn - 9712732945
     def generate_SPN(self):
-        return datetime.datetime.now().strftime("%f%M%S")
+        spn = datetime.datetime.now().strftime("%f%M%S")
+        list_spn = spn
+        if list_spn[0] == '0':
+            list_spn[0] = 9
 
+        return str(list_spn)
 
     #timezone - "America/Los_Angeles"
     def generate_timezone(self):

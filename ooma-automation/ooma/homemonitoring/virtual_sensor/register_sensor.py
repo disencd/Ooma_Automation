@@ -3,6 +3,7 @@ import os, json
 from hms_actions import HMSActions
 import time
 import logging
+import colorlog
 
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)

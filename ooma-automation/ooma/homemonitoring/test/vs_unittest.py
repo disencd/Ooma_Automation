@@ -15,11 +15,11 @@ class VStest(unittest.TestCase):
         logger.info("Setting up Virtual Test Automation")
         self.custom_timers = {}
 
-    def abc_test_1_activate_hms(self):
+    def test_1_activate_hms(self):
         logger.info("Activating the OSS HMS Account")
         oss_hms = HMS_Activation()
         cnt = 0
-        while cnt < 100:
+        while cnt < 1000:
             _start_timer = time.time()
             cust_pk,code = oss_hms.activate_hms_account()
             _latency = time.time() - _start_timer
@@ -82,3 +82,7 @@ class VStest(unittest.TestCase):
             sens_obj.post_sensor_events(cust_pk)
             cnt += 1
             time.sleep(1)
+
+
+if __name__ == "__main__":
+    unittest.main()
