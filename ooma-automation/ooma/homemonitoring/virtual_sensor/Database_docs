@@ -1,0 +1,20 @@
+> show dbs
+VirtualAutomation       0.203125GB
+
+> show collections
+SensorCount
+SensorInterface
+SensorLog
+UserCredentials
+VirtualAccount
+
+> db.VirtualAccount.count();
+532
+
+> db.VirtualAccount.find().limit(300);
+{ "_id" : 15488, "cust_pk" : "virtualaccount20170607170503714435", "status" : "ENABLED", "activation_status" : 200, "spn" : "7144500503" }
+{ "_id" : 15490, "cust_pk" : "virtualaccount20170607170513889931", "status" : "ENABLED", "activation_status" : 200, "spn" : "8899680513" }
+{ "_id" : 15492, "cust_pk" : "virtualaccount20170607170524487288", "status" : "ENABLED", "activation_status" : 200, "spn" : "4873270524" }
+{ "_id" : 15494, "cust_pk" : "virtualaccount20170607170535268195", "status" : "ENABLED", "activation_status" : 200, "spn" : "2682300535" }
+{ "_id" : 15496, "cust_pk" : "virtualaccount20170607170545586718", "status" : "ENABLED", "activation_status" : 200, "spn" : "5867550545" }
+{ "_id" : 15498, "cust_pk" : "virtualaccount20170607170556950241", "status" : "ENABLED", "activation_status" : 200, "spn" : "9503020556" }

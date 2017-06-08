@@ -1,4 +1,8 @@
 {
-  "url" : "mongodb://localhost:27017/VirtualAutomation",
-  "acc_collection" : "VirtualAccount"
+  "url": "mongodb://localhost:27017/VirtualAutomation",
+  "acc_collection": "VirtualAccount",
+  "SensorCount_collection": "SensorCount",
+  "SensorInterface_collection": "SensorInterface",
+  "SensorLog_collection": "SensorLog",
+  "UserCredentials_collection": "UserCredentials"
 }

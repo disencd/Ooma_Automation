@@ -1,5 +1,6 @@
 import MySQLdb
 from homemonitoring.setup.json_parse import JsonConfig
+from homemonitoring.setup.mongodb_setup import MongoDBQuery
 import logging
 import colorlog
 
@@ -76,6 +77,14 @@ class HMSSqlQuery():
             or_dict['or_id'] = _row[0]
             or_dict['nimbits_id'] = _row[2]
             or_dict['nimbits_pwd'] = _row[1]
+
+        #Adding the or_dict dictionary to Local MongoDB
+        mongo_dict = or_dict
+        mongo_dict['cust_pk'] = cust_pk
+        _mong_obj = MongoDBQuery()
+        _mong_obj.mongo_connect("UserCredentials_collection")
+        _mong_obj.mongo_addition(mongodb_dict)
+        _mong_obj.mongo_disconnect()
 
         self.sql_disconnect()
         logger.info(" or_dict %s", or_dict)

@@ -12,11 +12,12 @@ class MongoDBQuery():
         server_f_path =  abs_path + "/../database_config.json"
         self.json_server_obj = self.json_obj.dump_config(server_f_path)
         self.mongo_url = self.json_server_obj["url"]
-        self.mongo_coll = self.json_server_obj["acc_collection"]
 
-    def mongo_connect(self):
+
+    def mongo_connect(self, collection_name):
         logger.info("Mongo Connection Established")
         self.client = pymongo.MongoClient(self.mongo_url)
+        self.mongo_coll = self.json_server_obj[collection_name]
         m_db = self.client.get_default_database()
         self.vs_account = m_db[self.mongo_coll]
 
@@ -36,6 +37,19 @@ class MongoDBQuery():
     def mongo_update(self, or_id, dict):
         search_query = {"_id": or_id}
         return self.vs_account.update(search_query, dict)
+
+    #Added seperate function if we dont have this table itself
+    def mongo_reset_sensor_count(self, id):
+        user_dict = {}
+        user_dict["_id"] = id
+        user_dict["total"] = 0
+        user_dict["motion"] = 0
+        user_dict["door"] = 0
+        user_dict["water"] = 0
+
+        self.mongo_connect("SensorCount_collection")
+        self.mongo_addition(user_dict)
+        self.mongo_disconnect()
 
 # m = MongoDBQuery()
 # m.mongo_connect()
