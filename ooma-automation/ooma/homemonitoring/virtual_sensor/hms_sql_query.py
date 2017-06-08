@@ -4,7 +4,9 @@ from homemonitoring.setup.mongodb_setup import MongoDBQuery
 import logging
 import colorlog
 
-logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(format='%(asctime)s,%(msecs)d %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s',
+    datefmt='%d-%m-%Y:%H:%M:%S',
+    level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
 class HMSSqlQuery():
@@ -14,6 +16,8 @@ class HMSSqlQuery():
         self.json_server_obj = self.json_obj.dump_config("../server_config.json")
         self.sql_server_dict = self.json_server_obj[self.node]["hms-db"]
         self._db = ""
+
+
 
     def sql_connect(self):
         #logger.info(" self.sql_server_dict
@@ -78,13 +82,14 @@ class HMSSqlQuery():
             or_dict['nimbits_id'] = _row[2]
             or_dict['nimbits_pwd'] = _row[1]
 
-        #Adding the or_dict dictionary to Local MongoDB
-        mongo_dict = or_dict
-        mongo_dict['cust_pk'] = cust_pk
-        _mong_obj = MongoDBQuery()
-        _mong_obj.mongo_connect("UserCredentials_collection")
-        _mong_obj.mongo_addition(mongodb_dict)
-        _mong_obj.mongo_disconnect()
+        # Adding the or_dict dictionary to Local MongoDB
+        if self.json_server_obj[self.node]["mongodb_enable"] == "enable":
+            mongo_dict = or_dict
+            mongo_dict['cust_pk'] = cust_pk
+            _mong_obj = MongoDBQuery()
+            _mong_obj.mongo_connect("UserCredentials_collection")
+            _mong_obj.mongo_addition(mongo_dict)
+            _mong_obj.mongo_disconnect()
 
         self.sql_disconnect()
         logger.info(" or_dict %s", or_dict)

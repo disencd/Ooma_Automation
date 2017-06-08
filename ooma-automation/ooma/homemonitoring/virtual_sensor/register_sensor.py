@@ -5,7 +5,9 @@ import time
 import logging
 import colorlog
 
-logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(format='%(asctime)s,%(msecs)d %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s',
+    datefmt='%d-%m-%Y:%H:%M:%S',
+    level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 '''
     1.       Get new devices list:
@@ -139,8 +141,9 @@ class Register_sensor():
         logger.info("url %s", url)
 
         response = self.hms_action.get_register_sensor(url)
-
-        while(1):
+        _cnt = 0
+        while(_cnt < 3):
+            _cnt +=1
             if not response["newDevices"]:
                 time.sleep(3)
                 response = self.hms_action.get_register_sensor(url)

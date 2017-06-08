@@ -1,6 +1,7 @@
 import time, datetime
 import colorlog
 
+
 class FieldGenerator():
     def __init__(self):
         self.cust_pk = datetime.datetime.now().strftime("%Y%m%d%H%M%S%f")
