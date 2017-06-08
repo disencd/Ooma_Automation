@@ -1,6 +1,7 @@
 {
  "cert":
         {
+          "mongodb_enable" : "disable",
           "prv-server" : "prv1-cert1.cn.ooma.com:0000",
 	      "hms-server" : "hms1-cert1.cn.ooma.com:8084",
           "nimbits-server" : "nimbits1-cert1.cn.ooma.com:9080",

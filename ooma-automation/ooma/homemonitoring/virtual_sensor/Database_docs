@@ -18,3 +18,21 @@ VirtualAccount
 { "_id" : 15494, "cust_pk" : "virtualaccount20170607170535268195", "status" : "ENABLED", "activation_status" : 200, "spn" : "2682300535" }
 { "_id" : 15496, "cust_pk" : "virtualaccount20170607170545586718", "status" : "ENABLED", "activation_status" : 200, "spn" : "5867550545" }
 { "_id" : 15498, "cust_pk" : "virtualaccount20170607170556950241", "status" : "ENABLED", "activation_status" : 200, "spn" : "9503020556" }
+
+> db.SensorCount.count();
+10
+
+> db.SensorCount.find();
+{ "_id" : 17540, "total" : 0, "motion" : 0, "door" : 0, "water" : 0 }
+{ "_id" : 17542, "total" : 0, "motion" : 0, "door" : 0, "water" : 0 }
+{ "_id" : 17544, "total" : 0, "motion" : 0, "door" : 0, "water" : 0 }
+{ "_id" : 17546, "total" : 0, "motion" : 0, "door" : 0, "water" : 0 }
+{ "_id" : 17548, "total" : 0, "motion" : 0, "door" : 0, "water" : 0 }
+{ "_id" : 17550, "total" : 0, "motion" : 0, "door" : 0, "water" : 0 }
+{ "_id" : 17552, "total" : 0, "motion" : 0, "door" : 0, "water" : 0 }
+
+> db.SensorCount.find({"_id" : 17540});
+{ "_id" : 17540, "total" : 0, "motion" : 0, "door" : 0, "water" : 0 }
+> db.VirtualAccount.find({"_id" : 17540});
+{ "_id" : 17540, "cust_pk" : "virtualaccount20170607210617773435", "status" : "ENABLED", "activation_status" : 200, "spn" : "7734500617" }
+
