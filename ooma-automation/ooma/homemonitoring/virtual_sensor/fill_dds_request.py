@@ -8,7 +8,10 @@ import colorlog
 
 logging.basicConfig(format='%(asctime)s,%(msecs)d %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s',
     datefmt='%d-%m-%Y:%H:%M:%S',
-    level=logging.DEBUG)
+    level=logging.DEBUG,
+    filename='/var/tmp/virtual_automation.log',
+    filemode='w')
+
 logger = logging.getLogger(__name__)
 global device_id_dict
 device_id_dict = {}

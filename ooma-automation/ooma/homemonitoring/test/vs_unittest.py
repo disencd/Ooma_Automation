@@ -6,7 +6,11 @@ from homemonitoring.virtual_sensor.pair_sensor import Sensor_Addition
 from homemonitoring.virtual_sensor.generate_sensor_events import Sensor_Action
 import logging
 
-logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(format='%(asctime)s,%(msecs)d %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s',
+    datefmt='%d-%m-%Y:%H:%M:%S',
+    level=logging.DEBUG,
+    filename='/var/tmp/virtual_automation.log',
+    filemode='w')
 logger = logging.getLogger(__name__)
 
 class VStest(unittest.TestCase):
