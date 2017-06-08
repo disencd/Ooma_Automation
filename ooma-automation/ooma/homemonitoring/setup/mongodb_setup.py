@@ -1,7 +1,8 @@
 import sys, os
 import pymongo
 from homemonitoring.setup.json_parse import JsonConfig
-
+import logging
+import colorlog
 class MongoDBQuery():
     def __init__(self):
         self.json_obj = JsonConfig()
@@ -12,6 +13,7 @@ class MongoDBQuery():
         self.mongo_coll = self.json_server_obj["acc_collection"]
 
     def mongo_connect(self):
+        logger.info("Mongo Connection Established")
         self.client = pymongo.MongoClient(self.mongo_url)
         m_db = self.client.get_default_database()
         self.vs_account = m_db[self.mongo_coll]
@@ -20,7 +22,7 @@ class MongoDBQuery():
         self.client.close()
 
     def mongo_addition(self, dict):
-        print(dict)
+        logger.info("Inserting to mongo DB - %s", dict)
         self.vs_account.insert_one(dict)
 
     def mongo_find(self, or_id):
