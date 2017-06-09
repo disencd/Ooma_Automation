@@ -84,6 +84,7 @@ class HMSSqlQuery():
             or_dict['nimbits_pwd'] = _row[1]
 
         # Adding the or_dict dictionary to Local MongoDB
+        print("If", self.json_server_obj[self.node]["mongodb_enable"])
         if self.json_server_obj[self.node]["mongodb_enable"] == "enable":
             mongo_dict = or_dict
             mongo_dict['cust_pk'] = cust_pk
