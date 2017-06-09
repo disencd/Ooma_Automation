@@ -89,12 +89,13 @@ class HMSSqlQuery():
             mongo_dict['cust_pk'] = cust_pk
             _mong_obj = MongoDBQuery()
             _mong_obj.mongo_connect("UserCredentials_collection")
+            logger.info("Adding mongo_dict %s", mongo_dict)
             _mong_obj.mongo_addition(mongo_dict)
             _mong_obj.mongo_disconnect()
 
         self.sql_disconnect()
         time.sleep(1)
-        logger.info(" or_dict %s", or_dict)
+
         return or_dict
 
 
