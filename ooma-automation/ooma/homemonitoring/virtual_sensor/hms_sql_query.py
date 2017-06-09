@@ -10,6 +10,7 @@ logging.basicConfig(format='%(asctime)s,%(msecs)d %(levelname)-8s [%(filename)s:
 logger = logging.getLogger(__name__)
 
 class HMSSqlQuery():
+    
     def __init__(self, node = "cert"):
         self.node = node
         self.json_obj = JsonConfig()

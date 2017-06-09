@@ -20,6 +20,7 @@ class MongoDBQuery():
         self.mongo_coll = self.json_server_obj[collection_name]
         m_db = self.client.get_default_database()
         self.vs_account = m_db[self.mongo_coll]
+        return self.vs_account
 
     def mongo_disconnect(self):
         self.client.close()
@@ -50,6 +51,7 @@ class MongoDBQuery():
         self.mongo_connect("SensorCount_collection")
         self.mongo_addition(user_dict)
         self.mongo_disconnect()
+
 
 # m = MongoDBQuery()
 # m.mongo_connect()

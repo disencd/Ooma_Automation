@@ -52,6 +52,7 @@ class Post_sensor(object, HMSSqlQuery):
         # Posting the urls
         response = HMSActions(self.json_obj, self.node).vs_request_add_sensor(self.json_server, self.url). \
             sensor_get(self.or_dict)
+        logger.info(response)
         return response
 
     def construct_sensor_headers(self, or_id):

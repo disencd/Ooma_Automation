@@ -42,7 +42,10 @@ class VStest(unittest.TestCase):
             # self.custom_timers['HMS_Deactivation_Time'] = _latency
             cnt += 1
 
-    def test_2_activate_addsensor_hms(self):
+    def test3_add_sensor_to_activated_accounts(self):
+        logger.info("Add Sensor to Activated Accounts")
+
+    def abc_test_2_activate_addsensor_hms(self):
         logger.info("Activating the OSS HMS Account")
         oss_hms = HMS_Activation()
         sensor_add = Sensor_Addition()

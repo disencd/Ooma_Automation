@@ -83,25 +83,27 @@ class HMS_Activation(object):
             get(self.headers, self.act_data)
 
         mongo_resp = response
-        if mongo_resp[0]:
+        try:
             self.mongodb_dict["_id"] = mongo_resp[0]["id"]
             self.mongodb_dict["status"] = mongo_resp[0]["status"]
 
-        if self.mongodb_dict["activation_status"] and self.mongo_enable == "enable":
-            _mong_obj.mongo_connect("acc_collection")
-            _mong_obj.mongo_addition(self.mongodb_dict)
-            _mong_obj.mongo_disconnect()
-            _mong_obj.mongo_reset_sensor_count(mongo_resp[0]["id"])
+            if self.mongodb_dict["activation_status"] and self.mongo_enable == "enable":
+                _mong_obj.mongo_connect("acc_collection")
+                _mong_obj.mongo_addition(self.mongodb_dict)
+                _mong_obj.mongo_disconnect()
+                _mong_obj.mongo_reset_sensor_count(mongo_resp[0]["id"])
 
-        #assert response is "Not Found", "HMS Activation Failed"
+            logger.info("Getting Info of The HMS Account %s", response)
+            logger.debug("get_status_hms_account Ended")
 
-        logger.info("Getting Info of The HMS Account %s", response)
-        logger.debug("get_status_hms_account Ended")
-
-        if not response[0]["id"]:
-            return None
+        except:
+            logger.error("OSS HMS Account Activation Failed")
+            assert response is "Not Found", "HMS Activation Failed"
 
         return response[0]["id"]
+
+
+
     '''
     PATCH http://oss1-cert1.cn.ooma.com:8001/ems/v1/hms/account/virtualsensors000000000000000395
     Headers : {'X-ooma-otoken': 'TrustMe', 'Content-type': 'application/json', 'Accept': 'application/json'}
