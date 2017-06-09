@@ -3,14 +3,14 @@ from homemonitoring.setup.json_parse import JsonConfig
 from homemonitoring.setup.mongodb_setup import MongoDBQuery
 import logging
 import colorlog
-
+import time
 logging.basicConfig(format='%(asctime)s,%(msecs)d %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s',
     datefmt='%d-%m-%Y:%H:%M:%S',
     level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
 class HMSSqlQuery():
-    
+
     def __init__(self, node = "cert"):
         self.node = node
         self.json_obj = JsonConfig()
@@ -93,6 +93,7 @@ class HMSSqlQuery():
             _mong_obj.mongo_disconnect()
 
         self.sql_disconnect()
+        time.sleep(1)
         logger.info(" or_dict %s", or_dict)
         return or_dict
 

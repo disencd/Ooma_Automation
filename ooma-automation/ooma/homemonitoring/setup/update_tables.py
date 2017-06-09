@@ -1,6 +1,7 @@
 import MySQLdb
 from homemonitoring.setup.json_parse import JsonConfig
 from homemonitoring.setup.mongodb_setup import MongoDBQuery
+from homemonitoring.virtual_sensor.hms_sql_query import HMSSqlQuery
 
 class UpdateTables():
     def __init__(self):
@@ -9,13 +10,14 @@ class UpdateTables():
     def update_credentials(self):
         _mong_obj = MongoDBQuery()
         mongo_acc = _mong_obj.mongo_connect("acc_collection")
-
+        sql = HMSSqlQuery()
         cursor = mongo_acc.find({})
         results = [res for res in cursor]
         cursor.close()
 
         for val in results:
-            print("%s", val)
+            print(val["cust_pk"])
+            sql.sql_query_pk(val["cust_pk"])
 
         _mong_obj.mongo_disconnect()
 
