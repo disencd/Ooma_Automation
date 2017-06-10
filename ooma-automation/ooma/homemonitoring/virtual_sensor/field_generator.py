@@ -75,7 +75,7 @@ class SensorNamegenerator():
     def generate_sensor_name(self, name, cust_pk):
         _mong_obj = MongoDBQuery()
         mongo_acc = _mong_obj.mongo_connect("SensorCount_collection")
-        cursor = mongo_acc.find({"or_id" : cust_pk})
+        cursor = mongo_acc.find({"_id" : cust_pk})
         results = [res for res in cursor]
         logger.info("Sensor total - %s door %s" % (results["total"], results["door"]))
         return results
