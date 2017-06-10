@@ -21,7 +21,19 @@ class UpdateTables():
 
         _mong_obj.mongo_disconnect()
 
+    def update_sensorcount(self):
+        _mong_obj = MongoDBQuery()
+        mongo_acc = _mong_obj.mongo_connect("acc_collection")
+        cursor = mongo_acc.find({})
+        results = [res for res in cursor]
+        cursor.close()
+
+        for val in results:
+            print(val["_id"])
+            _mong_obj.mongo_reset_sensor_count(val["_id"])
+
 table_obj = UpdateTables()
-table_obj.update_credentials()
+table_obj.update_sensorcount()
+#table_obj.update_credentials()
 
 
