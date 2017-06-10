@@ -44,6 +44,8 @@ class VStest(unittest.TestCase):
 
     def test3_add_sensor_to_activated_accounts(self):
         logger.info("Add Sensor to Activated Accounts")
+        sensor_add = Sensor_Addition()
+        sensor_add.pair_door_sensor("virtualaccount20170607170503714435")
 
     def abc_test_2_activate_addsensor_hms(self):
         logger.info("Activating the OSS HMS Account")
