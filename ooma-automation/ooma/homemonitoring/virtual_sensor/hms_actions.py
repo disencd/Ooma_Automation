@@ -59,6 +59,8 @@ class HMSActions():
             logger.info(" data %s code %s" % (data, code))
             return code
         except urllib2.URLError as e:
+            logger.info("Activation Failure - Reason %s", e.reason)
+            assert "HMS Activation Failed"
             return e.reason
 
 
