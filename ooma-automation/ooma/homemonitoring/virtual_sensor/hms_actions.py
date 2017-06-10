@@ -78,6 +78,8 @@ class HMSActions():
             response.close()
             return data
         except urllib2.URLError as e:
+            logger.info("Activation Failure - Reason %s", e.reason)
+            assert "HMS Activation Failed"
             return e.reason
 
     def sensor_get(self, or_dict):

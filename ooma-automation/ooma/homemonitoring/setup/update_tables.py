@@ -32,8 +32,8 @@ class UpdateTables():
             print(val["_id"])
             _mong_obj.mongo_reset_sensor_count(val["_id"])
 
-table_obj = UpdateTables()
-table_obj.update_sensorcount()
+# table_obj = UpdateTables()
+# table_obj.update_sensorcount()
 #table_obj.update_credentials()
 
 
