@@ -1,10 +1,12 @@
 import sys, os
 import pymongo
 from homemonitoring.setup.json_parse import JsonConfig
+
 import logging
 import colorlog
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
+
 class MongoDBQuery():
     def __init__(self):
         self.json_obj = JsonConfig()

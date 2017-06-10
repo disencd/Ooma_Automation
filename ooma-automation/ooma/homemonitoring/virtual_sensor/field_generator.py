@@ -1,6 +1,10 @@
 import time, datetime
 import colorlog
-
+import logging
+import colorlog
+from homemonitoring.setup.mongodb_setup import MongoDBQuery
+logging.basicConfig(level=logging.DEBUG)
+logger = logging.getLogger(__name__)
 
 class FieldGenerator():
     def __init__(self):
@@ -63,3 +67,15 @@ class DeviceDiscoveryGenerator():
     #"deviceId": "D1U0S1I4"
     def generate_deviceId(self, cnt, std_id):
         return "D" + str(cnt) + std_id
+
+class SensorNamegenerator():
+    def __init__(self):
+        pass
+
+    def generate_sensor_name(self, name, cust_pk):
+        _mong_obj = MongoDBQuery()
+        mongo_acc = _mong_obj.mongo_connect("SensorCount_collection")
+        cursor = mongo_acc.find({"or_id" : cust_pk})
+        logger.info(cursor)
+        results = [res for res in cursor]
+        return results
