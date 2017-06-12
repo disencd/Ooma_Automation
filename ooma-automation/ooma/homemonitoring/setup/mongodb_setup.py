@@ -40,11 +40,9 @@ class MongoDBQuery():
         cursor.close()
 
         for val in results:
-
+            logger.info("Loop - %s", val["_id"])
             if val["_id"] == or_id:
-                print(val["_id"])
-
-        cursor.close()
+                logger.info("found %s", val["_id"])
 
     def mongo_count(self):
         return self.vs_account.count()
