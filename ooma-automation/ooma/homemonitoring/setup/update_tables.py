@@ -23,8 +23,8 @@ class UpdateTables():
 
     def update_sensorcount(self):
         _mong_obj = MongoDBQuery()
-        mongo_acc = _mong_obj.mongo_connect("acc_collection")
-        cursor = mongo_acc.find({})
+        _mong_obj.mongo_connect("acc_collection")
+        cursor = _mong_obj.find({})
         results = [res for res in cursor]
         cursor.close()
 
