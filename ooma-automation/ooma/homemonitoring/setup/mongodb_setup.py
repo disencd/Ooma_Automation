@@ -36,9 +36,9 @@ class MongoDBQuery():
 
     def mongo_find_one_element(self, or_id):
         cursor = self.vs_account.find({"_id": or_id})
-        results = [res for res in cursor]
+        #results = [res for res in cursor]
 
-        for key, val in results.items():
+        for key, val in cursor.items():
             logger.info("key - %s val - %s", key, val)
 
         cursor.close()
