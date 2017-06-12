@@ -34,6 +34,15 @@ class MongoDBQuery():
     def mongo_find(self, or_id):
         return self.vs_account.find_one({"_id": or_id})
 
+    def mongo_find_one_element(self):
+        cursor = self.vs_account.find({"_id": or_id})
+        results = [res for res in cursor]
+
+        for key, val in results.items():
+            logger.info("key - %s val - %s", key, val)
+
+        cursor.close()
+
     def mongo_count(self):
         return self.vs_account.count()
 
