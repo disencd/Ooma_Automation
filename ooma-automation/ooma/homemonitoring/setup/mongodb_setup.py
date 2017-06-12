@@ -40,6 +40,7 @@ class MongoDBQuery():
         cursor.close()
 
         for val in results:
+
             if val["_id"] == or_id:
                 print(val["_id"])
 
