@@ -35,11 +35,13 @@ class MongoDBQuery():
         return self.vs_account.find_one({"_id": or_id})
 
     def mongo_find_one_element(self, or_id):
-        cursor = self.vs_account.find({"_id": or_id})
-        #results = [res for res in cursor]
+        cursor = _mong_obj.find({})
+        results = [res for res in cursor]
+        cursor.close()
 
-        for key, val in cursor.items():
-            logger.info("key - %s val - %s", key, val)
+        for val in results:
+            if val["_id"] == or_id:
+                print(val["_id"])
 
         cursor.close()
 
