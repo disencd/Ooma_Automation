@@ -35,7 +35,7 @@ class MongoDBQuery():
         return self.vs_account.find_one({"_id": or_id})
 
     def mongo_find_one_element(self, or_id):
-        cursor = _mong_obj.find({})
+        cursor = self.vs_account.find({})
         results = [res for res in cursor]
         cursor.close()
 
