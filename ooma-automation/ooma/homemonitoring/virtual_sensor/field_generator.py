@@ -72,10 +72,11 @@ class SensorNamegenerator():
     def __init__(self):
         pass
 
-    def generate_sensor_name(self, name, cust_pk):
+    def generate_sensor_name(self, cust_pk, name):
         _mong_obj = MongoDBQuery()
         _mong_obj.mongo_connect("SensorCount_collection")
         cursor = _mong_obj.mongo_find_one_element({"_id" : cust_pk})
+        logger.info("Name is %s", name)
         if name is "door":
             sensorname = "VS Door Sensor "
         elif name is "water":
