@@ -41,7 +41,7 @@ class MongoDBQuery():
 
         for val in results:
             logger.info("Loop - %s", val["_id"])
-            if val["_id"] == or_id:
+            if val["_id"] is or_id:
                 logger.info("found %s", val["_id"])
 
     def mongo_count(self):
