@@ -76,6 +76,18 @@ class SensorNamegenerator():
         _mong_obj = MongoDBQuery()
         _mong_obj.mongo_connect("SensorCount_collection")
         cursor = _mong_obj.mongo_find_one_element({"_id" : cust_pk})
-
-        logger.info("Total %s Door %s"% (cursor["total"], cursor["door"]))
+        if name is "door":
+            sensorname = "VS Door Sensor "
+        elif name is "water":
+            sensorname = "VS Water Sensor "
+        elif name is "motion":
+            sensorname = "VS Motion Sensor "
+        else:
+            return None
+        logger.info("before Adding %s", cursor)
+        cursor[name] = str(int(cursor[name]) + 1)
+        cursor["total"] = str(int(cursor["total"]) + 1)
+        sensorname += cursor[name]
+        logger.info("After Adding %s", cursor)
+        logger.info("Sensor Name - %s", sensorname)
         return cursor

@@ -38,13 +38,11 @@ class MongoDBQuery():
         cursor = self.vs_account.find({})
         results = [res for res in cursor]
         cursor.close()
-
+        val = None
         for val in results:
-            logger.info("Loop - %s", val["_id"])
             if val["_id"] is or_id:
-                logger.info("found %s", val["_id"])
+                break
 
-        logger.info("found %s", val)
         return val
 
     def mongo_count(self):
