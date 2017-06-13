@@ -34,6 +34,17 @@ class MongoDBQuery():
     def mongo_find(self, or_id):
         return self.vs_account.find_one({"_id": or_id})
 
+    def map_or_id_with_custpk(self, custpk):
+        cursor = self.vs_account.find({})
+        results = [res for res in cursor]
+        cursor.close()
+        val = None
+        for val in results:
+            if val["cust_pk"] is custpk:
+                break
+
+        return val["_id"]
+
     def mongo_find_one_element(self, or_id):
         cursor = self.vs_account.find({})
         results = [res for res in cursor]
