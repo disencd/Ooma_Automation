@@ -32,7 +32,7 @@ class DDS_data():
 
         #Dictionary used for generating events using device ids
         device_id_dict[cust_pk] = {}
-
+        device_id_dict[cust_pk][sensor_name] = {}
         for key, val in self.dd_obj.iteritems():
             if key != "dds_std_header" and \
                key != "model_motion_sensor" and \
