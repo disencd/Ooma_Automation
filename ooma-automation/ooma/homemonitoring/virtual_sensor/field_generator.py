@@ -91,4 +91,4 @@ class SensorNamegenerator():
         sensorname += cursor[name]
         logger.info("After Adding %s", cursor)
         logger.info("Sensor Name - %s", sensorname)
-        return cursor, sensorname
+        return cursor, str(sensorname)
