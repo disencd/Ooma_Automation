@@ -44,6 +44,9 @@ class MongoDBQuery():
             if val["_id"] is or_id:
                 logger.info("found %s", val["_id"])
 
+        logger.info("found %s", val["_id"])
+        return val["_id"]
+
     def mongo_count(self):
         return self.vs_account.count()
 
