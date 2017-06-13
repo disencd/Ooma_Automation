@@ -28,9 +28,7 @@ class DDS_data():
         self.dd_obj = self.json_obj.dump_config(dds_f_path)
         self.dd_gen.generate_uniqueID_for_sensor()
         self.dds_cnt += 1
-        name = self.sensorname_obj.generate_sensor_name(cust_pk, "door")
-        name = self.sensorname_obj.generate_sensor_name(cust_pk, "motion")
-        name = self.sensorname_obj.generate_sensor_name(cust_pk, "water")
+        sen_cnt, sensor_name = self.sensorname_obj.generate_sensor_name(cust_pk, "door")
 
         #Dictionary used for generating events using device ids
         device_id_dict[cust_pk] = {}
@@ -42,10 +40,9 @@ class DDS_data():
 
                 deviceidentifier, dd_request = self.construct_dds_header(key)
                 logger.info("%s %s" % (deviceidentifier, dd_request))
-                device_id_dict[cust_pk][self.dd_obj[key]["deviceName"]] = {}
-                device_id_dict[cust_pk][self.dd_obj[key]["deviceName"]]["deviceidentifier"] \
-                                                                        = deviceidentifier
-
+                device_id_dict[cust_pk][sensor_name][self.dd_obj[key]["deviceName"]] = {}
+                device_id_dict[cust_pk][sensor_name][self.dd_obj[key]["deviceName"]] \
+                                    ["deviceidentifier"] = deviceidentifier
                 response = self.sensor.post_sensor_data(dd_request, deviceidentifier, cust_pk)
                 #logger.info("("%s %s %s" % (response, deviceidentifier, dd_request))
 
@@ -57,19 +54,18 @@ class DDS_data():
         self.dd_obj = self.json_obj.dump_config(dds_f_path)
         self.dd_gen.generate_uniqueID_for_sensor()
         self.dds_cnt += 1
-        name = self.sensorname_obj.generate_sensor_name(cust_pk, "motion")
-
+        sen_cnt, sensor_name = self.sensorname_obj.generate_sensor_name(cust_pk, "motion")
         #Dictionary used for generating events using device ids
         device_id_dict[cust_pk] = {}
-
+        device_id_dict[cust_pk][sensor_name] = {}
         for key, val in self.dd_obj.iteritems():
             if key != "dds_std_header" and \
                key != "model_window_sensor" and \
                key != "model_flood_sensor":
                 deviceidentifier, dd_request = self.construct_dds_header(key)
-                device_id_dict[cust_pk][self.dd_obj[key]["deviceName"]] = {}
-                device_id_dict[cust_pk][self.dd_obj[key]["deviceName"]]["deviceidentifier"] \
-                                                                        = deviceidentifier
+                device_id_dict[cust_pk][sensor_name][self.dd_obj[key]["deviceName"]] = {}
+                device_id_dict[cust_pk][sensor_name][self.dd_obj[key]["deviceName"]] \
+                                    ["deviceidentifier"] = deviceidentifier
 
                 response = self.sensor.post_sensor_data(dd_request, deviceidentifier, cust_pk)
                 #logger.info("(response, deviceidentifier,dd_request)
@@ -82,8 +78,8 @@ class DDS_data():
         self.dd_obj = self.json_obj.dump_config(dds_f_path)
         self.dd_gen.generate_uniqueID_for_sensor()
         self.dds_cnt += 1
-        name = self.sensorname_obj.generate_sensor_name(cust_pk, "water")
 
+        sen_cnt, sensor_name = self.sensorname_obj.generate_sensor_name(cust_pk, "water")
         #Dictionary used for generating events using device ids
         device_id_dict[cust_pk] = {}
 
@@ -94,9 +90,9 @@ class DDS_data():
                 deviceidentifier, dd_request = self.construct_dds_header(key)
                 self.sensor.post_sensor_data(dd_request, deviceidentifier, cust_pk)
                 #logger.info("("%s %s %s" % (response, deviceidentifier, dd_request))
-                device_id_dict[cust_pk][self.dd_obj[key]["deviceName"]] = {}
-                device_id_dict[cust_pk][self.dd_obj[key]["deviceName"]]["deviceIdentifier"] \
-                                                                        = deviceidentifier
+                device_id_dict[cust_pk][sensor_name][self.dd_obj[key]["deviceName"]] = {}
+                device_id_dict[cust_pk][sensor_name][self.dd_obj[key]["deviceName"]] \
+                                    ["deviceidentifier"] = deviceidentifier
 
         logger.info("device_id_dict = %s", device_id_dict)
 
