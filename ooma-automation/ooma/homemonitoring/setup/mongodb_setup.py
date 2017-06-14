@@ -56,6 +56,12 @@ class MongoDBQuery():
 
         return val
 
+    def mongo_return_elements(self):
+        cursor = self.vs_account.find({})
+        results = [res for res in cursor]
+        cursor.close()
+        return results
+
     def mongo_count(self):
         return self.vs_account.count()
 
