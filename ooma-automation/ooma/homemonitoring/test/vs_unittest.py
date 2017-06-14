@@ -17,7 +17,7 @@ class VStest(unittest.TestCase):
         logger.info("Setting up Virtual Test Automation")
         self.custom_timers = {}
 
-    def test_1_activate_hms(self):
+    def sdfsdftest_1_activate_hms(self):
         logger.info("Activating the OSS HMS Account")
         oss_hms = HMS_Activation()
         cnt = 0
@@ -42,7 +42,7 @@ class VStest(unittest.TestCase):
             # self.custom_timers['HMS_Deactivation_Time'] = _latency
             cnt += 1
 
-    def abctest3_add_sensor_to_activated_accounts(self):
+    def test3_add_sensor_to_activated_accounts(self):
         logger.info("Add Sensor to Activated Accounts")
         sensor_add = Sensor_Addition()
         id = "virtualaccount20170607170607296891"
