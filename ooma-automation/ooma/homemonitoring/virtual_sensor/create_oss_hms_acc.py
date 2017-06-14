@@ -103,7 +103,6 @@ class HMS_Activation(object):
         return response[0]["id"]
 
 
-
     '''
     PATCH http://oss1-cert1.cn.ooma.com:8001/ems/v1/hms/account/virtualsensors000000000000000395
     Headers : {'X-ooma-otoken': 'TrustMe', 'Content-type': 'application/json', 'Accept': 'application/json'}
