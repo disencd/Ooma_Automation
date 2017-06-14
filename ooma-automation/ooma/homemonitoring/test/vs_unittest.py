@@ -45,8 +45,17 @@ class VStest(unittest.TestCase):
     def test3_add_sensor_to_activated_accounts(self):
         logger.info("Add Sensor to Activated Accounts")
         sensor_add = Sensor_Addition()
-        id = "virtualaccount20170607170607296891"
-        sensor_add.pair_door_sensor(id)
+        _mong_obj = MongoDBQuery()
+        _mong_obj.mongo_connect("acc_collection")
+        cursor = _mong_obj.find({})
+        results = [res for res in cursor]
+        cursor.close()
+
+        for val in results:
+            logger.info("pairing the PK with %s", val["cust_pk"])
+            sensor_add.pair_door_sensor(id)
+        #id = "virtualaccount20170607170607296891"
+
 
     def abc_test_2_activate_addsensor_hms(self):
         logger.info("Activating the OSS HMS Account")
