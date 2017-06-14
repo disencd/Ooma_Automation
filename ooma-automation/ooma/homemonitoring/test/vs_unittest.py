@@ -42,7 +42,7 @@ class VStest(unittest.TestCase):
             # self.custom_timers['HMS_Deactivation_Time'] = _latency
             cnt += 1
 
-    def test3_add_sensor_to_activated_accounts(self):
+    def abctest3_add_sensor_to_activated_accounts(self):
         logger.info("Add Sensor to Activated Accounts")
         sensor_add = Sensor_Addition()
         id = "virtualaccount20170607170607296891"
