@@ -70,7 +70,7 @@ class MongoDBQuery():
         return self.vs_account.count()
 
     def mongo_update(self, dict):
-        search_query = {{'_id' : dict['_id']}}
+        search_query = {'cust_pk' : dict['cust_pk']}
         return self.vs_account.update(search_query, dict)
 
     #Added seperate function if we dont have this table itself
