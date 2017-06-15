@@ -47,7 +47,7 @@ class DDS_data():
                 logger.info("response - %s deviceidentifier %s dd_request %s" % (response, deviceidentifier, dd_request))
 
         logger.info("sensor_name %s device_id_dict = %s", sensor_name, device_id_dict)
-        return sensor_name
+        return sen_cnt, sensor_name
 
     def fill_dds_motion_data(self, cust_pk):
         abs_path = os.path.dirname(os.path.abspath(__file__))
@@ -72,7 +72,7 @@ class DDS_data():
                 #logger.info("(response, deviceidentifier,dd_request)
 
         logger.info("sensor_name %s device_id_dict = %s", sensor_name, device_id_dict)
-        return sensor_name
+        return sen_cnt, sensor_name
 
     def fill_dds_flood_data(self, cust_pk):
         abs_path = os.path.dirname(os.path.abspath(__file__))
@@ -97,7 +97,7 @@ class DDS_data():
                                     ["deviceidentifier"] = deviceidentifier
 
         logger.info("sensor_name %s device_id_dict = %s", sensor_name, device_id_dict)
-        return sensor_name
+        return sen_cnt, sensor_name
 
     def construct_dds_header(self, key):
         dd_request = {}

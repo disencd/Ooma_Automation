@@ -7,6 +7,7 @@ from hms_actions import HMSActions
 from homemonitoring.setup.json_parse import JsonConfig
 from post_sensor_data import Post_sensor
 from register_sensor import Register_sensor
+
 import logging
 import colorlog
 
@@ -25,6 +26,7 @@ class Sensor_Addition(object):
         self.json_server_obj = self.json_obj.dump_config(server_f_path)
         self.json_server = self.json_server_obj[self.node]["beehive-server"]
 
+
     '''
     POST /dds/rest/rpc/devicediscovery/2/0/0/devicediscovery/disen_sensor_water HTTP/1.1
     Host: beehive-cert.hms.ooma.com:8083
@@ -37,9 +39,9 @@ class Sensor_Addition(object):
     def pair_water_sensor(self, cust_pk):
 
         dd_req = DDS_data()
-        sensor_name = dd_req.fill_dds_flood_data(cust_pk)
+        sensor_dict, sensor_name = dd_req.fill_dds_flood_data(cust_pk)
 
-        reg_sensor = Register_sensor(sensor_name)
+        reg_sensor = Register_sensor(sensor_name, sensor_dict)
 
         reg_sensor.register_water_sensor(cust_pk)
         #
@@ -54,9 +56,9 @@ class Sensor_Addition(object):
     def pair_door_sensor(self, cust_pk):
 
         dd_req = DDS_data()
-        sensor_name = dd_req.fill_dds_windows_data(cust_pk)
+        sensor_dict, sensor_name = dd_req.fill_dds_windows_data(cust_pk)
 
-        reg_sensor = Register_sensor(sensor_name)
+        reg_sensor = Register_sensor(sensor_name, sensor_dict)
 
         reg_sensor.register_door_sensor(cust_pk)
 
@@ -72,9 +74,9 @@ class Sensor_Addition(object):
     def pair_motion_sensor(self, cust_pk):
 
         dd_req = DDS_data()
-        sensor_name = dd_req.fill_dds_motion_data(cust_pk)
+        sensor_dict, sensor_name = dd_req.fill_dds_motion_data(cust_pk)
 
-        reg_sensor = Register_sensor(sensor_name)
+        reg_sensor = Register_sensor(sensor_name, sensor_dict)
 
         reg_sensor.register_motion_sensor(cust_pk)
 

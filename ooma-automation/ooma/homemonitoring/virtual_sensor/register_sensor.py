@@ -5,6 +5,7 @@ import fill_dds_request
 import time
 import logging
 import colorlog
+from homemonitoring.setup.mongodb_setup import MongoDBQuery
 
 logging.basicConfig(format='%(asctime)s,%(msecs)d %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s',
     datefmt='%d-%m-%Y:%H:%M:%S',
@@ -73,14 +74,16 @@ Postman-Token: d06ff2a0-06d4-467e-ca76-cfb787ad2204
 }
 '''
 class Register_sensor():
-    def __init__(self, sensorname, node = "cert"):
+    def __init__(self, sensorname, sensor_dict, node = "cert"):
         self.node = node
         self.json_obj = JsonConfig()
         abs_path = os.path.dirname(os.path.abspath(__file__))
         self.sensorname = sensorname
+        self.sensor_dict = sensor_dict
         server_f_path =  abs_path + "/../server_config.json"
         self.json_server_obj = self.json_obj.dump_config(server_f_path)
         self.json_server = self.json_server_obj[self.node]["hms-server"]
+        self.mongo_enable = self.json_server_obj[self.node]["mongodb_enable"]
         self.geturl = "hms/api/base/status?username="
         self.posturl = "hms/api/devices/register?username="
 
@@ -96,8 +99,9 @@ class Register_sensor():
         logger.debug("register_motion_sensor started")
         time.sleep(2)
         response = self.get_sensor_register(cust_pk)
+        logger.info("response %s", response)
 
-        response, sensor_dict = self.update_motion_sensor_message(cust_pk, response)
+        response, sens_iface_dict = self.update_motion_sensor_message(cust_pk, response)
 
         code = self.post_sensor_register(cust_pk, response)
         logger.info("Code - ", code)
@@ -106,9 +110,19 @@ class Register_sensor():
         response = self.get_sensor_register(cust_pk)
         logger.info("Get response - ", response)
 
-        sensor_dict["cust_pk"] = cust_pk
-        sensor_dict["sensorname"] = self.sensorname
-        logger.info("Insert into %s", sensor_dict)
+        sens_iface_dict["cust_pk"] = cust_pk
+        sens_iface_dict["sensorname"] = self.sensorname
+        logger.info("Updating MongoDB with Sensorcount %s & SensorInterface MongoDB %s" % \
+                                                        (self.sensor_dict, sens_iface_dict))
+        if self.mongo_enable == "enable":
+            _mong_obj.mongo_connect("SensorCount_collection")
+            _mong_obj.mongo_addition(self.sensor_dict)
+            _mong_obj.mongo_disconnect()
+
+            _mong_obj.mongo_connect("SensorInterface_collection")
+            _mong_obj.mongo_addition(sens_iface_dict)
+            _mong_obj.mongo_disconnect()
+
         logger.debug("register_motion_sensor Ended")
 
     def register_water_sensor(self, cust_pk):
@@ -117,17 +131,26 @@ class Register_sensor():
         response = self.get_sensor_register(cust_pk)
         logger.info("response %s", response)
 
-        response, sensor_dict = self.update_water_sensor_message(cust_pk, response)
+        response, sens_iface_dict = self.update_water_sensor_message(cust_pk, response)
         code = self.post_sensor_register(cust_pk, response)
         logger.info("Code - ", code)
         assert code is not "200", "Sensor Registration Failed"
 
         response = self.get_sensor_register(cust_pk)
         logger.info("Get response - ", response)
-        sensor_dict["cust_pk"] = cust_pk
-        sensor_dict["sensorname"] = self.sensorname
+        sens_iface_dict["cust_pk"] = cust_pk
+        sens_iface_dict["sensorname"] = self.sensorname
+        logger.info("Updating MongoDB with Sensorcount %s & SensorInterface MongoDB %s" % \
+                    (self.sensor_dict, sens_iface_dict))
+        if self.mongo_enable == "enable":
+            _mong_obj.mongo_connect("SensorCount_collection")
+            _mong_obj.mongo_addition(self.sensor_dict)
+            _mong_obj.mongo_disconnect()
 
-        logger.info("Insert into %s", sensor_dict)
+            _mong_obj.mongo_connect("SensorInterface_collection")
+            _mong_obj.mongo_addition(sens_iface_dict)
+            _mong_obj.mongo_disconnect()
+
         logger.debug("register_water_sensor Ended")
 
     def register_door_sensor(self, cust_pk):
@@ -136,16 +159,29 @@ class Register_sensor():
         response = self.get_sensor_register(cust_pk)
         logger.info("response %s", response)
 
-        response, sensor_dict = self.update_door_sensor_message(cust_pk, response)
+        response, sens_iface_dict = self.update_door_sensor_message(cust_pk, response)
         code = self.post_sensor_register(cust_pk, response)
         logger.info("Code - %s", code)
         assert code is not "200", "Sensor Registration Failed"
 
         response = self.get_sensor_register(cust_pk)
         logger.info("Get response - ", response)
-        sensor_dict["cust_pk"] = cust_pk
-        sensor_dict["sensorname"] = self.sensorname
-        logger.info("Insert into MongoDB %s", sensor_dict)
+
+        if self.mongo_enable == "enable":
+
+            sens_iface_dict["cust_pk"] = cust_pk
+            sens_iface_dict["sensorname"] = self.sensorname
+            logger.info("Updating MongoDB with Sensorcount %s & SensorInterface MongoDB %s" % \
+                        (self.sensor_dict, sens_iface_dict))
+
+            _mong_obj.mongo_connect("SensorCount_collection")
+            _mong_obj.mongo_addition(self.sensor_dict)
+            _mong_obj.mongo_disconnect()
+
+            _mong_obj.mongo_connect("SensorInterface_collection")
+            _mong_obj.mongo_addition(sens_iface_dict)
+            _mong_obj.mongo_disconnect()
+
         logger.debug("register_door_sensor Ended")
 
     def get_sensor_register(self, cust_pk):
