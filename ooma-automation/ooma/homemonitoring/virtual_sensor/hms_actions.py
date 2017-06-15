@@ -30,7 +30,7 @@ class HMSActions():
      }
     '''
     def vs_request_activate(self, hostname_port, req_url, cust_pk):
-        self.__url = "http://{0}/{1}/{2}".format(hostname_port, req_url, cust_pk)
+        self.__url = "https://{0}/{1}/{2}".format(hostname_port, req_url, cust_pk)
         return self
 
     '''
@@ -39,7 +39,7 @@ class HMSActions():
     '''
     def vs_request_add_sensor(self, hostname_port, req_url):
         logger.info("hostname_port - %s", hostname_port)
-        self.__url = "https://{0}/{1}".format(hostname_port, req_url)
+        self.__url = "http://{0}/{1}".format(hostname_port, req_url)
         return self
 
 
