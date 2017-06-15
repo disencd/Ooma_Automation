@@ -97,7 +97,7 @@ class Register_sensor():
         time.sleep(2)
         response = self.get_sensor_register(cust_pk)
 
-        response = self.update_motion_sensor_message(cust_pk, response)
+        response, sensor_dict = self.update_motion_sensor_message(cust_pk, response)
 
         code = self.post_sensor_register(cust_pk, response)
         logger.info("Code - ", code)
@@ -105,21 +105,23 @@ class Register_sensor():
 
         response = self.get_sensor_register(cust_pk)
         logger.info("Get response - ", response)
+        logger.info("Insert into %s", sensor_dict)
         logger.debug("register_motion_sensor Ended")
 
     def register_water_sensor(self, cust_pk):
         logger.debug("register_water_sensor started")
         time.sleep(2)
-        repsonse = self.get_sensor_register(cust_pk)
+        response = self.get_sensor_register(cust_pk)
         logger.info("response %s", response)
 
-        response = self.update_water_sensor_message(cust_pk, response)
+        response, sensor_dict = self.update_water_sensor_message(cust_pk, response)
         code = self.post_sensor_register(cust_pk, response)
         logger.info("Code - ", code)
         assert code is not "200", "Sensor Registration Failed"
 
         response = self.get_sensor_register(cust_pk)
         logger.info("Get response - ", response)
+        logger.info("Insert into %s", sensor_dict)
         logger.debug("register_water_sensor Ended")
 
     def register_door_sensor(self, cust_pk):
@@ -128,13 +130,14 @@ class Register_sensor():
         response = self.get_sensor_register(cust_pk)
         logger.info("response %s", response)
 
-        response = self.update_door_sensor_message(cust_pk, response)
+        response, sensor_dict = self.update_door_sensor_message(cust_pk, response)
         code = self.post_sensor_register(cust_pk, response)
         logger.info("Code - %s", code)
         assert code is not "200", "Sensor Registration Failed"
 
         response = self.get_sensor_register(cust_pk)
         logger.info("Get response - ", response)
+        logger.info("Insert into %s", sensor_dict)
         logger.debug("register_door_sensor Ended")
 
     def get_sensor_register(self, cust_pk):
@@ -190,7 +193,7 @@ class Register_sensor():
                                                          sensor_post["device"]["type"],\
                                                          sensor_post["device"]["name"]))
 
-        return sensor_post
+        return sensor_post, sensor_dict
 
     def update_water_sensor_message(self, cust_pk, response):
         sensor_post = self.reg_header.copy()
@@ -213,7 +216,7 @@ class Register_sensor():
             sensor_post["device"]["type"] = "WATER_SENSOR"
             sensor_post["device"]["name"] = "Disen Water Sensor"
 
-        return sensor_post
+        return sensor_post, sensor_dict
 
     def update_door_sensor_message(self, cust_pk, response):
         sensor_post = self.reg_header.copy()
@@ -238,4 +241,4 @@ class Register_sensor():
             sensor_post["device"]["type"] = "DOOR_SENSOR"
             sensor_post["device"]["name"] = "Disen Door Sensor"
 
-        return sensor_post
+        return sensor_post, sensor_dict
