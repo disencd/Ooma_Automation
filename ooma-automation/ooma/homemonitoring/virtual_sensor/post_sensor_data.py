@@ -34,7 +34,7 @@ class Post_sensor(object, HMSSqlQuery):
     def post_sensor_data(self, sensor_data, device_id, or_id):
 
         _headers = self.construct_sensor_headers(or_id)
-        logger.info("Device ID %s sensor_data %s" % (device_id, sensor_data))
+        #logger.info("Device ID %s sensor_data %s" % (device_id, sensor_data))
 
         #Posting the urls
         response = HMSActions(self.json_obj, self.node).vs_request_activate(self.json_server, self.url, device_id). \
