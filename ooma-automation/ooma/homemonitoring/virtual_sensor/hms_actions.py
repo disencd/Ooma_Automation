@@ -165,8 +165,7 @@ class HMSActions():
         data = json.dumps(data)
         #logger.info("data - %s", data)
         headers = {
-            'Content-Type': 'application/json',
-            "Accept": "application/json"
+            "Content-Type": "application/json"
         }
         try:
 
