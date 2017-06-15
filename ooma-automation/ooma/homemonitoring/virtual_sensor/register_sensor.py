@@ -115,6 +115,7 @@ class Register_sensor():
         logger.info("Updating MongoDB with Sensorcount %s & SensorInterface MongoDB %s" % \
                                                         (self.sensor_dict, sens_iface_dict))
         if self.mongo_enable == "enable":
+            _mong_obj = MongoDBQuery()
             _mong_obj.mongo_connect("SensorCount_collection")
             _mong_obj.mongo_addition(self.sensor_dict)
             _mong_obj.mongo_disconnect()
@@ -143,6 +144,7 @@ class Register_sensor():
         logger.info("Updating MongoDB with Sensorcount %s & SensorInterface MongoDB %s" % \
                     (self.sensor_dict, sens_iface_dict))
         if self.mongo_enable == "enable":
+            _mong_obj = MongoDBQuery()
             _mong_obj.mongo_connect("SensorCount_collection")
             _mong_obj.mongo_addition(self.sensor_dict)
             _mong_obj.mongo_disconnect()
@@ -173,7 +175,7 @@ class Register_sensor():
             sens_iface_dict["sensorname"] = self.sensorname
             logger.info("Updating MongoDB with Sensorcount %s & SensorInterface MongoDB %s" % \
                         (self.sensor_dict, sens_iface_dict))
-
+            _mong_obj = MongoDBQuery()
             _mong_obj.mongo_connect("SensorCount_collection")
             _mong_obj.mongo_addition(self.sensor_dict)
             _mong_obj.mongo_disconnect()
