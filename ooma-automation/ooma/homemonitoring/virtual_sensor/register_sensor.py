@@ -105,6 +105,9 @@ class Register_sensor():
 
         response = self.get_sensor_register(cust_pk)
         logger.info("Get response - ", response)
+
+        sensor_dict["cust_pk"] = cust_pk
+        sensor_dict["sensorname"] = self.sensorname
         logger.info("Insert into %s", sensor_dict)
         logger.debug("register_motion_sensor Ended")
 
@@ -121,6 +124,9 @@ class Register_sensor():
 
         response = self.get_sensor_register(cust_pk)
         logger.info("Get response - ", response)
+        sensor_dict["cust_pk"] = cust_pk
+        sensor_dict["sensorname"] = self.sensorname
+
         logger.info("Insert into %s", sensor_dict)
         logger.debug("register_water_sensor Ended")
 
@@ -137,7 +143,9 @@ class Register_sensor():
 
         response = self.get_sensor_register(cust_pk)
         logger.info("Get response - ", response)
-        logger.info("Insert into %s", sensor_dict)
+        sensor_dict["cust_pk"] = cust_pk
+        sensor_dict["sensorname"] = self.sensorname
+        logger.info("Insert into MongoDB %s", sensor_dict)
         logger.debug("register_door_sensor Ended")
 
     def get_sensor_register(self, cust_pk):
