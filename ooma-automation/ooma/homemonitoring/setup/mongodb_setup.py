@@ -28,8 +28,12 @@ class MongoDBQuery():
         self.client.close()
 
     def mongo_addition(self, dict):
-        logger.info("Inserting to mongo DB - %s", dict)
-        self.vs_account.insert_one(dict)
+
+        if not self.vs_account.find({'cust_pk' : dict['cust_pk']}):
+            logger.info("Inserting to mongo DB - %s", dict)
+            self.vs_account.insert_one(dict)
+        else:
+            logger.info("Already inserted to mongo DB - %s", dict)
 
     def mongo_find(self, or_id):
         return self.vs_account.find_one({"_id": or_id})
