@@ -39,7 +39,7 @@ class HMSActions():
     '''
     def vs_request_add_sensor(self, hostname_port, req_url):
         logger.info("hostname_port - %s", hostname_port)
-        self.__url = "http://{0}/{1}".format(hostname_port, req_url)
+        self.__url = "https://{0}/{1}".format(hostname_port, req_url)
         return self
 
 
@@ -56,7 +56,7 @@ class HMSActions():
             data = response.read()
             code = response.getcode()
             response.close()
-            logger.info(" data %s code %s" % (data, code))
+            logger.info("data %s code %s" % (data, code))
             return code
         except urllib2.URLError as e:
             logger.info("Activation Failure - Reason %s", e.reason)
