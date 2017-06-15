@@ -30,7 +30,7 @@ class HMSActions():
      }
     '''
     def vs_request_activate(self, hostname_port, req_url, cust_pk):
-        self.__url = "http://{0}/{1}/{2}".format(hostname_port, req_url, cust_pk)
+        self.__url = "https://{0}/{1}/{2}".format(hostname_port, req_url, cust_pk)
         return self
 
     '''
