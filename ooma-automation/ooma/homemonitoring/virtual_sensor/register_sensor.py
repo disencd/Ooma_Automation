@@ -270,7 +270,7 @@ class Register_sensor():
         sensor_post = self.reg_header.copy()
         device_id_dict = fill_dds_request.device_id_dict
         sensor_dict = device_id_dict[cust_pk][self.sensorname]
-        logger.info("sensor_post - %s", device_id_dict)
+        #logger.info("sensor_post - %s", device_id_dict)
         logger.info("Updating the Door Sensor Message")
         # urllib2 is unable to access the list in GET message
         if response["newDevices"]:
