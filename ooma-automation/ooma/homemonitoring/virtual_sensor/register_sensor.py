@@ -220,7 +220,9 @@ class Register_sensor():
         logger.info("Updating the Door Sensor Message")
         # urllib2 is unable to access the list in GET message
         if response["newDevices"]:
+            logger.info("List - %s", response["newDevices"])
             for index in range(len(response["newDevices"])):
+                logger.info("name = %s", response["newDevices"][index]["name"])
                 if response["newDevices"][index]["name"] in sensor_dict["Announcement"]["deviceidentifier"]:
                     sensor_post["device"]["id"] = response["newDevices"][index]["id"]
                     sensor_post["device"]["type"] = response["newDevices"][index]["type"]
