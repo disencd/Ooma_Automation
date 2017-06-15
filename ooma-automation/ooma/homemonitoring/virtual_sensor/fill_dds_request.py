@@ -44,7 +44,7 @@ class DDS_data():
                 device_id_dict[cust_pk][sensor_name][self.dd_obj[key]["deviceName"]] \
                                     ["deviceidentifier"] = deviceidentifier
                 response = self.sensor.post_sensor_data(dd_request, deviceidentifier, cust_pk)
-                #logger.info("("%s %s %s" % (response, deviceidentifier, dd_request))
+                logger.info("response - %s deviceidentifier %s dd_request %s" % (response, deviceidentifier, dd_request))
 
         logger.info("device_id_dict = %s", device_id_dict)
 
@@ -105,6 +105,7 @@ class DDS_data():
 
             self.dd_obj[key]["deviceAttributes"] \
                  ["rootid"] = self.dd_gen.generate_rootid()
+            logger.info("rootid - %s", self.dd_obj[key]["deviceAttributes"]["rootid"])
             # self.dd_obj[key]["deviceattributes"]["rootid"] = \
             #     self.dd_gen.generate_deviceid(self.dds_cnt, self.dd_obj \
             #         [key]["deviceattributes"]["rootid"])
@@ -112,20 +113,22 @@ class DDS_data():
         if "rootid" not in self.dd_obj[key]["deviceAttributes"].keys():
             self.dd_obj[key]["deviceAttributes"]["deviceId"] = \
                                         self.dd_gen.generate_rootId()
+            logger.info("Device ID  %s", self.dd_obj[key]["deviceAttributes"]["deviceId"])
         else:
             self.dd_obj[key]["deviceAttributes"]["deviceId"] = \
                 self.dd_gen.generate_deviceid(self.dds_cnt, self.dd_obj \
                         [key]["deviceAttributes"]["deviceId"])
+            logger.info("Device ID  %s", self.dd_obj[key]["deviceAttributes"]["deviceId"])
 
         #device identifier is -flood sensor-root
         deviceidentifier = self.dd_obj[key]["deviceIdentifier"]
-
+        logger.info("Before - deviceidentifier %s", deviceidentifier)
         self.dd_obj[key]["deviceIdentifier"] = \
             self.dd_gen.generate_deviceIdentifier(deviceidentifier)
 
         #device identifier is updated 4536027208-flood sensor-root
         deviceidentifier = self.dd_obj[key]["deviceIdentifier"]
-
+        logger.info("After - deviceidentifier %s", deviceidentifier)
         # adding the model headers
         dd_request["model"] = \
             self.dd_obj[key]
