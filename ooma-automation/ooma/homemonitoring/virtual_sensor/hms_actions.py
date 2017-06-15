@@ -163,8 +163,9 @@ class HMSActions():
         # assert isinstance(data, dict) \
         #        or isinstance(data, list), "Data should be dictionary or list"
         data = json.dumps(data)
-        logger.info("data - %s", data)
+        #logger.info("data - %s", data)
         try:
+
             logger.info(" url - %s", url)
             request = urllib2.Request(url, data, headers)
             response = urllib2.urlopen(request)
