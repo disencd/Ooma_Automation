@@ -39,12 +39,13 @@ class DDS_data():
                key != "model_flood_sensor":
 
                 deviceidentifier, dd_request = self.construct_dds_header(key)
-                logger.info("%s %s" % (deviceidentifier, dd_request))
+                #logger.info("%s %s" % (deviceidentifier, dd_request))
                 device_id_dict[cust_pk][sensor_name][self.dd_obj[key]["deviceName"]] = {}
                 device_id_dict[cust_pk][sensor_name][self.dd_obj[key]["deviceName"]] \
                                     ["deviceidentifier"] = deviceidentifier
                 response = self.sensor.post_sensor_data(dd_request, deviceidentifier, cust_pk)
-                logger.info("response - %s deviceidentifier %s dd_request %s" % (response, deviceidentifier, dd_request))
+                #logger.info("response - %s deviceidentifier %s dd_request %s" % (response, deviceidentifier, dd_request))
+                logger.info("deviceidentifier %s", deviceidentifier)
 
         #logger.info("sensor_name %s device_id_dict = %s", sensor_name, device_id_dict)
         return sen_cnt, sensor_name

@@ -48,7 +48,7 @@ class HMSActions():
         assert isinstance(data, dict)\
                 or isinstance(data, list), "Data should be dictionary or list"
         data = json.dumps(data)
-        logger.info("data %s", data)
+        logger.info("post ")
         try:
             logger.info(" __url %s" , self.__url)
             request = urllib2.Request(self.__url, data, headers)
