@@ -164,6 +164,10 @@ class HMSActions():
         #        or isinstance(data, list), "Data should be dictionary or list"
         data = json.dumps(data)
         #logger.info("data - %s", data)
+        headers = {
+            'Content-Type': 'application/json',
+            "Accept": "application/json"
+        }
         try:
 
             logger.info(" url - %s", url)
