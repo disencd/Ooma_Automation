@@ -117,11 +117,11 @@ class Register_sensor():
         if self.mongo_enable == "enable":
             _mong_obj = MongoDBQuery()
             _mong_obj.mongo_connect("SensorCount_collection")
-            _mong_obj.mongo_addition(self.sensor_dict)
+            _mong_obj.mongo_modification(self.sensor_dict)
             _mong_obj.mongo_disconnect()
 
             _mong_obj.mongo_connect("SensorInterface_collection")
-            _mong_obj.mongo_addition(sens_iface_dict)
+            _mong_obj.mongo_modification(sens_iface_dict)
             _mong_obj.mongo_disconnect()
 
         logger.debug("register_motion_sensor Ended")
@@ -147,11 +147,11 @@ class Register_sensor():
         if self.mongo_enable == "enable":
             _mong_obj = MongoDBQuery()
             _mong_obj.mongo_connect("SensorCount_collection")
-            _mong_obj.mongo_addition(self.sensor_dict)
+            _mong_obj.mongo_modification(self.sensor_dict)
             _mong_obj.mongo_disconnect()
 
             _mong_obj.mongo_connect("SensorInterface_collection")
-            _mong_obj.mongo_addition(sens_iface_dict)
+            _mong_obj.mongo_modification(sens_iface_dict)
             _mong_obj.mongo_disconnect()
 
         logger.debug("register_water_sensor Ended")
@@ -179,11 +179,11 @@ class Register_sensor():
                         (self.sensor_dict, sens_iface_dict))
             _mong_obj = MongoDBQuery()
             _mong_obj.mongo_connect("SensorCount_collection")
-            _mong_obj.mongo_addition(self.sensor_dict)
+            _mong_obj.mongo_modification(self.sensor_dict)
             _mong_obj.mongo_disconnect()
 
             _mong_obj.mongo_connect("SensorInterface_collection")
-            _mong_obj.mongo_addition(sens_iface_dict)
+            _mong_obj.mongo_modification(sens_iface_dict)
             _mong_obj.mongo_disconnect()
 
         logger.debug("register_door_sensor Ended")
