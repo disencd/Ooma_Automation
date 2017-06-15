@@ -113,12 +113,13 @@ class DDS_data():
         if "rootid" not in self.dd_obj[key]["deviceAttributes"].keys():
             self.dd_obj[key]["deviceAttributes"]["deviceId"] = \
                                         self.dd_gen.generate_rootId()
-            logger.info("Device ID  %s", self.dd_obj[key]["deviceAttributes"]["deviceId"])
+            logger.info("First time - Root - Device ID  %s", self.dd_obj[key]["deviceAttributes"]["deviceId"])
         else:
-            self.dd_obj[key]["deviceAttributes"]["deviceId"] = \
+            self.dd_obj[key]["deviceAttributes"]["rootId"] = \
                 self.dd_gen.generate_deviceid(self.dds_cnt, self.dd_obj \
                         [key]["deviceAttributes"]["deviceId"])
-            logger.info("Device ID  %s", self.dd_obj[key]["deviceAttributes"]["deviceId"])
+            logger.info("Next time onwards - Device ID  %s", self.dd_obj[key]["deviceAttributes"]["deviceId"])
+            logger.info("Next time onwards - rootId %s", self.dd_obj[key]["deviceAttributes"]["rootId"])
 
         #device identifier is -flood sensor-root
         deviceidentifier = self.dd_obj[key]["deviceIdentifier"]
