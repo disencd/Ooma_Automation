@@ -176,8 +176,8 @@ class HMSActions():
 
             return code
         except urllib2.URLError as e:
-            logger.info(e.reason)
-            return e.reason
+            logger.info("code - %s reasone %s" % (e.code, e.read()) )
+            return e.code
 
 
 # json_obj = JsonConfig()
