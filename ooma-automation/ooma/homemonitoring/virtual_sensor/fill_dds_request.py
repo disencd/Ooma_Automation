@@ -110,12 +110,12 @@ class DDS_data():
             #     self.dd_gen.generate_deviceid(self.dds_cnt, self.dd_obj \
             #         [key]["deviceattributes"]["rootid"])
 
-        if "rootid" not in self.dd_obj[key]["deviceAttributes"].keys():
+        if "rootId" not in self.dd_obj[key]["deviceAttributes"].keys():
             self.dd_obj[key]["deviceAttributes"]["deviceId"] = \
                                         self.dd_gen.generate_rootId()
             logger.info("First time - Root - Device ID  %s", self.dd_obj[key]["deviceAttributes"]["deviceId"])
         else:
-            self.dd_obj[key]["deviceAttributes"]["rootId"] = \
+            self.dd_obj[key]["deviceAttributes"]["deviceId"] = \
                 self.dd_gen.generate_deviceid(self.dds_cnt, self.dd_obj \
                         [key]["deviceAttributes"]["deviceId"])
             logger.info("Next time onwards - Device ID  %s", self.dd_obj[key]["deviceAttributes"]["deviceId"])
