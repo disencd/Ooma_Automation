@@ -94,8 +94,9 @@ class Register_sensor():
 
     def register_motion_sensor(self, cust_pk):
         logger.debug("register_motion_sensor started")
-        response = self.get_sensor_register(cust_pk)
         time.sleep(2)
+        response = self.get_sensor_register(cust_pk)
+
         response = self.update_motion_sensor_message(cust_pk, response)
 
         code = self.post_sensor_register(cust_pk, response)
@@ -108,9 +109,10 @@ class Register_sensor():
 
     def register_water_sensor(self, cust_pk):
         logger.debug("register_water_sensor started")
+        time.sleep(2)
         repsonse = self.get_sensor_register(cust_pk)
         logger.info("response %s", response)
-        time.sleep(2)
+
         response = self.update_water_sensor_message(cust_pk, response)
         code = self.post_sensor_register(cust_pk, response)
         logger.info("Code - ", code)
@@ -122,9 +124,10 @@ class Register_sensor():
 
     def register_door_sensor(self, cust_pk):
         logger.debug("register_door_sensor started")
+        time.sleep(2)
         response = self.get_sensor_register(cust_pk)
         logger.info("response %s", response)
-        time.sleep(2)
+
         response = self.update_door_sensor_message(cust_pk, response)
         code = self.post_sensor_register(cust_pk, response)
         logger.info("Code - %s", code)
