@@ -109,7 +109,7 @@ class Register_sensor():
 
         response = self.get_sensor_register(cust_pk)
         logger.info("Get response - ", response)
-
+        self.sensor_dict["cust_pk"] = cust_pk
         sens_iface_dict["cust_pk"] = cust_pk
         sens_iface_dict["sensorname"] = self.sensorname
         logger.info("Updating MongoDB with Sensorcount %s & SensorInterface MongoDB %s" % \
@@ -141,6 +141,7 @@ class Register_sensor():
         logger.info("Get response - ", response)
         sens_iface_dict["cust_pk"] = cust_pk
         sens_iface_dict["sensorname"] = self.sensorname
+        self.sensor_dict["cust_pk"] = cust_pk
         logger.info("Updating MongoDB with Sensorcount %s & SensorInterface MongoDB %s" % \
                     (self.sensor_dict, sens_iface_dict))
         if self.mongo_enable == "enable":
@@ -173,6 +174,7 @@ class Register_sensor():
 
             sens_iface_dict["cust_pk"] = cust_pk
             sens_iface_dict["sensorname"] = self.sensorname
+            self.sensor_dict["cust_pk"] = cust_pk
             logger.info("Updating MongoDB with Sensorcount %s & SensorInterface MongoDB %s" % \
                         (self.sensor_dict, sens_iface_dict))
             _mong_obj = MongoDBQuery()
