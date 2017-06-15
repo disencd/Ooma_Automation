@@ -27,10 +27,6 @@ class MongoDBQuery():
     def mongo_disconnect(self):
         self.client.close()
 
-    def mongo_modification(self, dict):
-        logger.info("Inserting to mongo DB - %s", dict)
-        self.vs_account.insert_one(dict)
-
     def mongo_addition(self, dict):
 
         if not self.vs_account.find({'cust_pk' : dict['cust_pk']}):
@@ -73,8 +69,8 @@ class MongoDBQuery():
     def mongo_count(self):
         return self.vs_account.count()
 
-    def mongo_update(self, or_id, dict):
-        search_query = {"_id": or_id}
+    def mongo_update(self, dict):
+        search_query = {{'cust_pk' : dict['cust_pk']}}
         return self.vs_account.update(search_query, dict)
 
     #Added seperate function if we dont have this table itself
