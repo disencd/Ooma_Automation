@@ -179,6 +179,7 @@ class Register_sensor():
                         (self.sensor_dict, sens_iface_dict))
             _mong_obj = MongoDBQuery()
             _mong_obj.mongo_connect("SensorCount_collection")
+            del self.sensor_dict['_id']
             _mong_obj.mongo_update(self.sensor_dict)
             _mong_obj.mongo_disconnect()
 
