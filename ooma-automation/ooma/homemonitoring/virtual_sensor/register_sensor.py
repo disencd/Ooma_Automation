@@ -1,6 +1,7 @@
 from homemonitoring.setup.json_parse import JsonConfig
 import os, json
 from hms_actions import HMSActions
+import fill_dds_request
 import time
 import logging
 import colorlog
@@ -72,11 +73,11 @@ Postman-Token: d06ff2a0-06d4-467e-ca76-cfb787ad2204
 }
 '''
 class Register_sensor():
-    def __init__(self, node = "cert"):
+    def __init__(self, sensorname, node = "cert"):
         self.node = node
         self.json_obj = JsonConfig()
         abs_path = os.path.dirname(os.path.abspath(__file__))
-
+        self.sensorname = sensorname
         server_f_path =  abs_path + "/../server_config.json"
         self.json_server_obj = self.json_obj.dump_config(server_f_path)
         self.json_server = self.json_server_obj[self.node]["hms-server"]
@@ -95,7 +96,7 @@ class Register_sensor():
         logger.debug("register_motion_sensor started")
         response = self.get_sensor_register(cust_pk)
 
-        response = self.update_motion_sensor_message(response)
+        response = self.update_motion_sensor_message(cust_pk, response)
 
         code = self.post_sensor_register(cust_pk, response)
         logger.info("Code - ", code)
@@ -110,7 +111,7 @@ class Register_sensor():
         repsonse = self.get_sensor_register(cust_pk)
         logger.info("response %s", response)
 
-        response = self.update_water_sensor_message(response)
+        response = self.update_water_sensor_message(cust_pk, response)
         code = self.post_sensor_register(cust_pk, response)
         logger.info("Code - ", code)
         assert code is not "200", "Sensor Registration Failed"
@@ -124,7 +125,7 @@ class Register_sensor():
         response = self.get_sensor_register(cust_pk)
         logger.info("response %s", response)
 
-        response = self.update_door_sensor_message(response)
+        response = self.update_door_sensor_message(cust_pk, response)
         code = self.post_sensor_register(cust_pk, response)
         logger.info("Code - %s", code)
         assert code is not "200", "Sensor Registration Failed"
@@ -161,35 +162,49 @@ class Register_sensor():
         logger.info("url %s, response %s" % (url, response))
         response = self.hms_action.post_register_sensor(url, response)
 
-    def update_motion_sensor_message(self, response):
+    def update_motion_sensor_message(self, cust_pk, response):
         sensor_post = self.reg_header.copy()
+        device_id_dict = fill_dds_request.device_id_dict
+        sensor_dict = device_id_dict[cust_pk][self.sensorname]
+
         logger.info("Updating the Motion Sensor Message")
         #urllib2 is unable to access the list in GET message
         if response["newDevices"]:
-            sensor_post["device"]["id"] = response["newDevices"][0]["id"]
-            sensor_post["device"]["type"] = response["newDevices"][0]["type"]
-            sensor_post["device"]["name"] = "Disen Motion Sensor"
-            logger.info("id - %s, type - %s, name %s" % (sensor_post["device"]["id"], \
-                                                         sensor_post["device"]["type"],\
-                                                         sensor_post["device"]["name"]))
+
+            for index in range(len(response["newDevices"])):
+                if response["newDevices"][index]["name"] in sensor_dict["Announcement"]["deviceidentifier"]:
+                    sensor_post["device"]["id"] = response["newDevices"][index]["id"]
+                    sensor_post["device"]["type"] = response["newDevices"][index]["type"]
+                    sensor_post["device"]["name"] = self.sensorname
+                    logger.info("id - %s, type - %s, name %s" % (sensor_post["device"]["id"], \
+                                                             sensor_post["device"]["type"],\
+                                                             sensor_post["device"]["name"]))
         else:
             sensor_post["device"]["id"] = "4323"
             sensor_post["device"]["type"] = "MOTION_DETECTOR"
-            sensor_post["device"]["name"] = "Disen Motion Sensor"
+            sensor_post["device"]["name"] = self.sensorname
             logger.info("id - %s, type - %s, name %s" % (sensor_post["device"]["id"], \
                                                          sensor_post["device"]["type"],\
                                                          sensor_post["device"]["name"]))
 
         return sensor_post
 
-    def update_water_sensor_message(self, response):
+    def update_water_sensor_message(self, cust_pk, response):
         sensor_post = self.reg_header.copy()
+        device_id_dict = fill_dds_request.device_id_dict
+        sensor_dict = device_id_dict[cust_pk][self.sensorname]
         logger.info("Updating the Water Sensor Message")
         # urllib2 is unable to access the list in GET message
         if response["newDevices"]:
-            sensor_post["device"]["id"] = response["newDevices"][0]["id"]
-            sensor_post["device"]["type"] = response["newDevices"][0]["type"]
-            sensor_post["device"]["name"] = "Disen Water Sensor"
+
+            for index in range(len(response["newDevices"])):
+                if response["newDevices"][index]["name"] in sensor_dict["Announcement"]["deviceidentifier"]:
+                    sensor_post["device"]["id"] = response["newDevices"][index]["id"]
+                    sensor_post["device"]["type"] = response["newDevices"][index]["type"]
+                    sensor_post["device"]["name"] = self.sensorname
+                    logger.info("id - %s, type - %s, name %s" % (sensor_post["device"]["id"], \
+                                                             sensor_post["device"]["type"],\
+                                                             sensor_post["device"]["name"]))
         else:
             sensor_post["device"]["id"] = "4323"
             sensor_post["device"]["type"] = "WATER_SENSOR"
@@ -197,15 +212,22 @@ class Register_sensor():
 
         return sensor_post
 
-    def update_door_sensor_message(self, response):
+    def update_door_sensor_message(self, cust_pk, response):
         sensor_post = self.reg_header.copy()
+        device_id_dict = fill_dds_request.device_id_dict
+        sensor_dict = device_id_dict[cust_pk][self.sensorname]
         logger.info("sensor_post - %s", sensor_post)
         logger.info("Updating the Door Sensor Message")
         # urllib2 is unable to access the list in GET message
         if response["newDevices"]:
-            sensor_post["device"]["id"] = response["newDevices"][0]["id"]
-            sensor_post["device"]["type"] = response["newDevices"][0]["type"]
-            sensor_post["device"]["name"] = "Disen Door Sensor"
+            for index in range(len(response["newDevices"])):
+                if response["newDevices"][index]["name"] in sensor_dict["Announcement"]["deviceidentifier"]:
+                    sensor_post["device"]["id"] = response["newDevices"][index]["id"]
+                    sensor_post["device"]["type"] = response["newDevices"][index]["type"]
+                    sensor_post["device"]["name"] = self.sensorname
+                    logger.info("id - %s, type - %s, name %s" % (sensor_post["device"]["id"], \
+                                                             sensor_post["device"]["type"],\
+                                                             sensor_post["device"]["name"]))
         else:
             sensor_post["device"]["id"] = "4323"
             sensor_post["device"]["type"] = "DOOR_SENSOR"
