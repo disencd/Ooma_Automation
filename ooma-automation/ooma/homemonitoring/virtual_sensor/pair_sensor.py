@@ -39,7 +39,7 @@ class Sensor_Addition(object):
         dd_req = DDS_data()
         sensor_name = dd_req.fill_dds_flood_data(cust_pk)
 
-        reg_sensor = Register_sensor()
+        reg_sensor = Register_sensor(sensor_name)
 
         reg_sensor.register_water_sensor(cust_pk)
         #
@@ -56,7 +56,7 @@ class Sensor_Addition(object):
         dd_req = DDS_data()
         sensor_name = dd_req.fill_dds_windows_data(cust_pk)
 
-        reg_sensor = Register_sensor()
+        reg_sensor = Register_sensor(sensor_name)
 
         reg_sensor.register_door_sensor(cust_pk)
 
@@ -74,7 +74,7 @@ class Sensor_Addition(object):
         dd_req = DDS_data()
         sensor_name = dd_req.fill_dds_motion_data(cust_pk)
 
-        reg_sensor = Register_sensor()
+        reg_sensor = Register_sensor(sensor_name)
 
         reg_sensor.register_motion_sensor(cust_pk)
 
