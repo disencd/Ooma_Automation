@@ -118,6 +118,9 @@ class DDS_data():
             self.dd_obj[key]["deviceAttributes"]["deviceId"] = \
                 self.dd_gen.generate_deviceId(self.dds_cnt, self.dd_obj \
                         [key]["deviceAttributes"]["deviceId"])
+
+            self.dd_obj[key]["deviceAttributes"]["rootId"] = \
+                self.dd_gen.generate_rootId()
             logger.info("Next time onwards - Device ID  %s", self.dd_obj[key]["deviceAttributes"]["deviceId"])
             logger.info("Next time onwards - rootId %s", self.dd_obj[key]["deviceAttributes"]["rootId"])
 
