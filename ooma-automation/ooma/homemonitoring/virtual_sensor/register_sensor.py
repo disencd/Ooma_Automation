@@ -177,7 +177,7 @@ class Register_sensor():
             for index in range(len(response["newDevices"])):
                 if response["newDevices"][index]["name"] in sensor_dict["Announcement"]["deviceidentifier"]:
                     sensor_post["device"]["id"] = response["newDevices"][index]["id"]
-                    sensor_post["device"]["type"] = response["newDevices"][index]["type"]
+                    sensor_post["device"]["type"] = "MOTION_DETECTOR"
                     sensor_post["device"]["name"] = self.sensorname
                     logger.info("id - %s, type - %s, name %s" % (sensor_post["device"]["id"], \
                                                              sensor_post["device"]["type"],\
@@ -203,7 +203,7 @@ class Register_sensor():
             for index in range(len(response["newDevices"])):
                 if response["newDevices"][index]["name"] in sensor_dict["Announcement"]["deviceidentifier"]:
                     sensor_post["device"]["id"] = response["newDevices"][index]["id"]
-                    sensor_post["device"]["type"] = response["newDevices"][index]["type"]
+                    sensor_post["device"]["type"] = "WATER_SENSOR"
                     sensor_post["device"]["name"] = self.sensorname
                     logger.info("id - %s, type - %s, name %s" % (sensor_post["device"]["id"], \
                                                              sensor_post["device"]["type"],\
@@ -225,10 +225,10 @@ class Register_sensor():
         if response["newDevices"]:
             #logger.info("List - %s", response["newDevices"])
             for index in range(len(response["newDevices"])):
-                logger.info("name = %s device id %s" % (response["newDevices"][index]["name"], sensor_dict["Announcement"]["deviceidentifier"]))
+                #logger.info("name = %s device id %s" % (response["newDevices"][index]["name"], sensor_dict["Announcement"]["deviceidentifier"]))
                 if response["newDevices"][index]["name"] in sensor_dict["Announcement"]["deviceidentifier"]:
                     sensor_post["device"]["id"] = response["newDevices"][index]["id"]
-                    sensor_post["device"]["type"] = response["newDevices"][index]["type"]
+                    sensor_post["device"]["type"] = "DOOR_SENSOR"
                     sensor_post["device"]["name"] = self.sensorname
                     logger.info("id - %s, type - %s, name %s" % (sensor_post["device"]["id"], \
                                                              sensor_post["device"]["type"],\
