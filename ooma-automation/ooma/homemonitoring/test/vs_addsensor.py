@@ -27,12 +27,9 @@ class VStest(unittest.TestCase):
         results = _mong_obj.mongo_return_elements()
         _mong_obj.mongo_disconnect()
 
-        cnt = 0
         for val in results:
-            if cnt < 1:
                 logger.info("pairing the PK with %s", val["cust_pk"])
                 sensor_add.pair_door_sensor(val["cust_pk"])
-                cnt += 1
         #id = "virtualaccount20170607170607296891"
 
 if __name__ == "__main__":
