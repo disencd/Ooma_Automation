@@ -30,10 +30,10 @@ class UpdateTables():
 
         for val in results:
             print(val["_id"])
-            _mong_obj.mongo_reset_sensor_count(val["_id"])
+            _mong_obj.mongo_reset_sensor_count(val["_id"], val["cust_pk"])
 
 table_obj = UpdateTables()
-# table_obj.update_sensorcount()
+table_obj.update_sensorcount()
 #table_obj.update_credentials()
 
 

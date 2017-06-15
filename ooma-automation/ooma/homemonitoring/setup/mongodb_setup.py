@@ -70,20 +70,21 @@ class MongoDBQuery():
         return self.vs_account.count()
 
     def mongo_update(self, dict):
-        search_query = {{'cust_pk' : dict['cust_pk']}}
+        search_query = {{'_id' : dict['_id']}}
         return self.vs_account.update(search_query, dict)
 
     #Added seperate function if we dont have this table itself
-    def mongo_reset_sensor_count(self, id):
+    def mongo_reset_sensor_count(self, id, cust_pk):
         user_dict = {}
         user_dict["_id"] = id
+        user_dict["cust_pk"] = cust_pk
         user_dict["total"] = 0
         user_dict["motion"] = 0
         user_dict["door"] = 0
         user_dict["water"] = 0
 
         self.mongo_connect("SensorCount_collection")
-        self.mongo_addition(user_dict)
+        self.mongo_update(user_dict)
         self.mongo_disconnect()
 
 
