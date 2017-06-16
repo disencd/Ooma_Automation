@@ -121,7 +121,7 @@ class Register_sensor():
             _mong_obj.mongo_disconnect()
 
             _mong_obj.mongo_connect("SensorInterface_collection")
-            _mong_obj.mongo_update(sens_iface_dict)
+            _mong_obj.MongoSensorIfaceAdd(sens_iface_dict)
             _mong_obj.mongo_disconnect()
 
         logger.debug("register_motion_sensor Ended")

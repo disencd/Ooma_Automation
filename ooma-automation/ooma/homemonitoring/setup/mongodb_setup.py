@@ -35,6 +35,10 @@ class MongoDBQuery():
         else:
             logger.info("Already inserted to mongo DB - %s", dict)
 
+    def MongoSensorIfaceAdd(self, dict):
+        logger.info("Inserting to mongo DB - %s", dict)
+        self.vs_account.insert_one(dict)
+
     def mongo_find(self, or_id):
         return self.vs_account.find_one({"_id": or_id})
 
