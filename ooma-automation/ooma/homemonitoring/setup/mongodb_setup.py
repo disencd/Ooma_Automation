@@ -49,13 +49,13 @@ class MongoDBQuery():
 
         return val["_id"]
 
-    def mongo_find_one_element(self, or_id):
+    def mongo_find_one_element(self, cust_pk):
         cursor = self.vs_account.find({})
         results = [res for res in cursor]
         cursor.close()
         val = None
         for val in results:
-            if val["_id"] is or_id:
+            if val["cust_pk"] is cust_pk:
                 break
 
         return val
