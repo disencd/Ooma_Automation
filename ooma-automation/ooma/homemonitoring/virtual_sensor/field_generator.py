@@ -74,8 +74,9 @@ class SensorNamegenerator():
 
     def generate_sensor_name(self, cust_pk, name):
         _mong_obj = MongoDBQuery()
-        logger.info("cust_pk %s", cust_pk)
+
         _mong_obj.mongo_connect("SensorCount_collection")
+        logger.info("cust_pk %s", cust_pk)
         cursor = _mong_obj.mongo_find_one_element(cust_pk)
         logger.info("Name is %s", name)
         if name is "door":

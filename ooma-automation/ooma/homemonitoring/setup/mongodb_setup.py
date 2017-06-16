@@ -55,9 +55,10 @@ class MongoDBQuery():
         cursor.close()
         val = None
         for val in results:
-            if val['cust_pk']  is cust_pk:
+            if val['cust_pk'] is cust_pk:
                 break
 
+        logger.info("val is %s", val)
         return val
 
     def mongo_return_elements(self):
