@@ -55,7 +55,9 @@ class MongoDBQuery():
         cursor.close()
         val = None
         for val in results:
+            logger.info("val['cust_pk'] %s cust_pk is %s" %(val['cust_pk'], cust_pk))
             if val['cust_pk'] is cust_pk:
+                logger.info("cust_pk is %s", cust_pk)
                 break
 
         logger.info("val is %s", val)
