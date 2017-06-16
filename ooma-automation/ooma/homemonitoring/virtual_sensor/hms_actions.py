@@ -148,7 +148,7 @@ class HMSActions():
             time.sleep(5)
             response = requests.get(url)
             resp = response.json()
-            logger.info("response = %s", resp)
+            #logger.info("response = %s", resp)
             return resp
         except urllib2.URLError as e:
             logger.info(e.reason)

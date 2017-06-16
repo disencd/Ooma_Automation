@@ -175,8 +175,7 @@ class Register_sensor():
             sens_iface_dict["cust_pk"] = cust_pk
             sens_iface_dict["sensorname"] = self.sensorname
             self.sensor_dict["cust_pk"] = cust_pk
-            logger.info("Updating MongoDB with Sensorcount %s & SensorInterface MongoDB %s" % \
-                        (self.sensor_dict, sens_iface_dict))
+            logger.info("Updating MongoDB with Sensorcount & SensorInterface MongoDB")
             _mong_obj = MongoDBQuery()
             _mong_obj.mongo_connect("SensorCount_collection")
             del self.sensor_dict['_id']
