@@ -31,13 +31,14 @@ class DDS_data():
         sen_cnt, sensor_name = self.sensorname_obj.generate_sensor_name(cust_pk, "door")
 
         #Dictionary used for generating events using device ids
+        device_id_dict = {}
         device_id_dict[cust_pk] = {}
         device_id_dict[cust_pk][sensor_name] = {}
         for key, val in self.dd_obj.iteritems():
             if key != "dds_std_header" and \
                key != "model_motion_sensor" and \
                key != "model_flood_sensor":
-                device_id_dict = {}
+
                 deviceidentifier, dd_request = self.construct_dds_header(key)
                 #logger.info("%s %s" % (deviceidentifier, dd_request))
                 device_id_dict[cust_pk][sensor_name][self.dd_obj[key]["deviceName"]] = {}
