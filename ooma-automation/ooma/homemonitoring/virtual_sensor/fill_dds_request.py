@@ -46,7 +46,7 @@ class DDS_data():
                                     ["deviceidentifier"] = deviceidentifier
                 response = self.sensor.post_sensor_data(dd_request, deviceidentifier, cust_pk)
                 logger.info("response - %s deviceidentifier %s dd_request %s" % (response, deviceidentifier, dd_request))
-                logger.info("deviceidentifier %s", deviceidentifier)
+                logger.info("cust_pk - %s device_id_dict %s" % (cust_pk, device_id_dict))
 
         #logger.info("sensor_name %s device_id_dict = %s", sensor_name, device_id_dict)
         return sen_cnt, sensor_name
@@ -72,7 +72,7 @@ class DDS_data():
                                     ["deviceidentifier"] = deviceidentifier
 
                 response = self.sensor.post_sensor_data(dd_request, deviceidentifier, cust_pk)
-                logger.info("device_id_dict %s", device_id_dict)
+                logger.info("cust_pk - %s device_id_dict %s" % (cust_pk, device_id_dict))
 
         #logger.info("sensor_name %s device_id_dict = %s", sensor_name, device_id_dict)
         return sen_cnt, sensor_name
