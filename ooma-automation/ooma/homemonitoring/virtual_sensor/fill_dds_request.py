@@ -12,7 +12,7 @@ logging.basicConfig(format='%(asctime)s,%(msecs)d %(levelname)-8s [%(filename)s:
 
 logger = logging.getLogger(__name__)
 global device_id_dict
-
+device_id_dict = {}
 
 class DDS_data():
     def __init__(self):
@@ -28,10 +28,11 @@ class DDS_data():
         self.dd_obj = self.json_obj.dump_config(dds_f_path)
         self.dd_gen.generate_uniqueID_for_sensor()
         self.dds_cnt += 1
+        print("cust_pk %s", cust_pk)
         sen_cnt, sensor_name = self.sensorname_obj.generate_sensor_name(cust_pk, "door")
 
         #Dictionary used for generating events using device ids
-        device_id_dict = {}
+
         device_id_dict[cust_pk] = {}
         logger.info("Before DDS cust_pk - %s device_id_dict %s" % (cust_pk, device_id_dict))
         device_id_dict[cust_pk][sensor_name] = {}
@@ -60,7 +61,7 @@ class DDS_data():
         self.dds_cnt += 1
         sen_cnt, sensor_name = self.sensorname_obj.generate_sensor_name(cust_pk, "motion")
         #Dictionary used for generating events using device ids
-        device_id_dict[cust_pk] = {}
+
         device_id_dict[cust_pk][sensor_name] = {}
         for key, val in self.dd_obj.iteritems():
             if key != "dds_std_header" and \
