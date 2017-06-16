@@ -55,8 +55,9 @@ class MongoDBQuery():
         cursor.close()
         val = None
         for val in results:
-            if val["cust_pk"] == cust_pk:
-                print("$$$$$$", cust_pk)
+            print("$$$$$$", cust_pk)
+            if val['cust_pk'] == str(cust_pk):
+                print("======================", cust_pk)
                 break
 
         print("val ", val)
