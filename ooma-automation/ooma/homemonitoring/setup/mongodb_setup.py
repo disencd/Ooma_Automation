@@ -51,11 +51,17 @@ class MongoDBQuery():
 
     def mongo_find_one_element(self, cust_pk):
         cursor = self.vs_account.find({'cust_pk':cust_pk})
-        results = [(key, val) for key, val in cursor.iteritems()]
+        results = [res for res in cursor]
         cursor.close()
+        val = None
+        for val in results:
+            #logger.info("val['cust_pk'] %s cust_pk is %s" %(val['cust_pk'], cust_pk))
+            if str(val['cust_pk']) in str(cust_pk):
+                logger.info("cust_pk is %s", cust_pk)
+                break
 
-        logger.info("results is %s", results)
-        return results
+        logger.info("val is %s", val)
+        return val
 
     def mongo_return_elements(self):
         cursor = self.vs_account.find({})
