@@ -82,11 +82,11 @@ class SensorNamegenerator():
         cursor = _mong_obj.mongo_find_one_element({"_id" : int(or_id)})
         logger.info("Name is %s", name)
         if name is "door":
-            sensorname = "VSDoorSensor"
+            sensorname = "VirtualDoorSensor"
         elif name is "water":
-            sensorname = "VSWaterSensor"
+            sensorname = "VirtualWaterSensor"
         elif name is "motion":
-            sensorname = "VSMotionSensor"
+            sensorname = "VirtualMotionSensor"
         else:
             return None
         logger.info("before Adding %s", cursor)
