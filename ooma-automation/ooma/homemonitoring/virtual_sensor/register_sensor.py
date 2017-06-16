@@ -183,6 +183,7 @@ class Register_sensor():
             _mong_obj.mongo_disconnect()
 
             _mong_obj.mongo_connect("SensorInterface_collection")
+            logger.info("SensorInterface MongoDB %s", sens_iface_dict)
             _mong_obj.mongo_addition(sens_iface_dict)
             _mong_obj.mongo_disconnect()
 
