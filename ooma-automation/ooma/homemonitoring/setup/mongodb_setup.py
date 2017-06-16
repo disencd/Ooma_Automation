@@ -17,11 +17,12 @@ class MongoDBQuery():
 
 
     def mongo_connect(self, collection_name):
-        logger.info("Mongo Connection Established")
+
         self.client = pymongo.MongoClient(self.mongo_url)
         self.mongo_coll = self.json_server_obj[collection_name]
         m_db = self.client.get_default_database()
         self.vs_account = m_db[self.mongo_coll]
+        logger.info("Mongo Connection Established with %s", collection_name)
         return self.vs_account
 
     def mongo_disconnect(self):
@@ -36,7 +37,7 @@ class MongoDBQuery():
             logger.info("Already inserted to mongo DB - %s", dict)
 
     def MongoSensorIfaceAdd(self, dict):
-        logger.info("Inserting to mongo DB - %s", dict)
+        logger.info("Inserting to MongoSensorIfaceAdd mongo DB - %s", dict)
         self.vs_account.insert_one(dict)
 
     def mongo_find(self, or_id):
