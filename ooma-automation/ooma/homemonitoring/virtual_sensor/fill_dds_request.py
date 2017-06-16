@@ -34,7 +34,7 @@ class DDS_data():
         #Dictionary used for generating events using device ids
 
         device_id_dict[cust_pk] = {}
-        logger.info("Before DDS cust_pk - %s device_id_dict %s" % (cust_pk, device_id_dict))
+        #logger.info("Before DDS cust_pk - %s device_id_dict %s" % (cust_pk, device_id_dict))
         device_id_dict[cust_pk][sensor_name] = {}
         for key, val in self.dd_obj.iteritems():
             if key != "dds_std_header" and \
@@ -47,7 +47,7 @@ class DDS_data():
                 device_id_dict[cust_pk][sensor_name][self.dd_obj[key]["deviceName"]] \
                                     ["deviceidentifier"] = deviceidentifier
                 response = self.sensor.post_sensor_data(dd_request, deviceidentifier, cust_pk)
-                logger.info("response - %s deviceidentifier %s dd_request %s" % (response, deviceidentifier, dd_request))
+                #logger.info("response - %s deviceidentifier %s dd_request %s" % (response, deviceidentifier, dd_request))
                 logger.info("After cust_pk - %s device_id_dict %s" % (cust_pk, device_id_dict))
 
         #logger.info("sensor_name %s device_id_dict = %s", sensor_name, device_id_dict)
