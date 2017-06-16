@@ -75,11 +75,8 @@ class SensorNamegenerator():
     def generate_sensor_name(self, cust_pk, name):
         _mong_obj = MongoDBQuery()
 
-        _mong_obj.mongo_connect("acc_collection")
-        or_id = _mong_obj.map_or_id_with_custpk(cust_pk)
-
         _mong_obj.mongo_connect("SensorCount_collection")
-        cursor = _mong_obj.mongo_find_one_element({"_id" : int(or_id)})
+        cursor = _mong_obj.mongo_find_one_element({"cust_pk" : cust_pk})
         logger.info("Name is %s", name)
         if name is "door":
             sensorname = "VirtualDoorSensor"
