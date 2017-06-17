@@ -27,8 +27,10 @@ class Sensor_Action(object):
         logger.info("iface_dict - %s ", iface_dict)
 
         if "id" not in iface_dict["Announcement"].keys():
+            time.sleep(3)
             iface_dict = self.get_sensor_nimbits_request(cust_pk, iface_dict)
 
+            time.sleep(3)
             #update the iface_dict to mongo SensorInterface_collection
             _mong_obj.mongo_update("SensorInterface_collection", iface_dict)
         else:
@@ -53,7 +55,7 @@ class Sensor_Action(object):
                 logger.info("%s Geturl %s" %(devicename, get_url))
 
                 response = self.nimbits_action.get_nimbits_events(cust_pk, get_url)
-
+                time.sleep(3)
                 if "404" != str(response):
                     nimbits_data = json.loads(response)
                     #logger.info("ID - %s" , nimbits_data['id'])
