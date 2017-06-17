@@ -42,7 +42,8 @@ class Sensor_Action(object):
             get_url = self.geturl
 
             if "cust_pk" not in devicename and \
-                "sensorname" not in devicename:
+                "sensorname" not in devicename and \
+                "_id" not in devicename:
 
                 get_url += iface_dict[devicename]["deviceidentifier"]
 
