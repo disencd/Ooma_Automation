@@ -50,7 +50,7 @@ class Sensor_Action(object):
 
                 response = self.nimbits_action.get_nimbits_events(cust_pk, get_url)
 
-                if "404" not in response:
+                if "404" != str(response):
                     nimbits_data = json.loads(response)
                     #logger.info("ID - %s" , nimbits_data['id'])
                     iface_dict[devicename]["id"] = nimbits_data['id']
