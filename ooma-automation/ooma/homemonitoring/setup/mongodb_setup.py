@@ -19,7 +19,7 @@ class MongoDBQuery():
     url = "mongodb://localhost:27017/VirtualAutomation"
     client = pymongo.MongoClient(url)
     @staticmethod
-    def __getInstance():
+    def __getInstance(self):
         if client is None:
             client = pymongo.MongoClient(url)
         return client
