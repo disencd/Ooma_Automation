@@ -25,12 +25,12 @@ class VStest(unittest.TestCase):
         _mong_obj = MongoDBQuery()
         results = _mong_obj.mongo_return_elements("acc_collection")
 
-        id = "virtualaccount20170614175103394885"
-        sensor_add.pair_door_sensor(id)
+        # id = "virtualaccount20170614175103394885"
+        # sensor_add.pair_door_sensor(id)
 
-        # for val in results:
-        #     logger.info("pairing the PK with %s", val["cust_pk"])
-        #     sensor_add.pair_door_sensor(val["cust_pk"])
+        for val in results:
+            logger.info("pairing the PK with %s", val["cust_pk"])
+            sensor_add.pair_door_sensor(val["cust_pk"])
         #id = "virtualaccount20170607170607296891"
 
 if __name__ == "__main__":
