@@ -26,7 +26,7 @@ class NimbitsActions(object, HMSSqlQuery):
 
 
     def generate_url(self, req_url):
-        return "http://{0}/{1}".format(self.json_server, req_url)
+        return "https://{0}/{1}".format(self.json_server, req_url)
 
     def construct_nimbits_request_headers(self, cust_pk):
         if "beehive_id" not in self.or_dict.keys():
