@@ -30,6 +30,7 @@ class Sensor_Action(object):
             iface_dict = self.get_sensor_nimbits_request(cust_pk, iface_dict)
 
             #update the iface_dict to mongo
+            _mong_obj.mongo_update("SensorInterface_collection", iface_dict)
         else:
             logger.info("Dictionary already configured")
 
@@ -61,7 +62,7 @@ class Sensor_Action(object):
         logger.info(iface_dict)
 
         logger.info("get_sensor_nimbitsid ended")
-        #fill_dds_request.device_id_dict = device_id_dict
+        return iface_dict
 
     def post_sensor_events(self, cust_pk):
         device_id_dict = fill_dds_request.device_id_dict
