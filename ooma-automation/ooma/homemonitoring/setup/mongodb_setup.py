@@ -78,7 +78,8 @@ class MongoDBQuery():
         logger.info("val is %s", val)
         return val
 
-    def mongo_return_elements(self):
+    def mongo_return_elements(self, collection):
+        self.__mongo_connect(collection)
         cursor = self.vs_account.find({})
         results = [res for res in cursor]
         cursor.close()
