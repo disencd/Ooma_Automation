@@ -22,7 +22,7 @@ class VStest(unittest.TestCase):
         # sens_obj.configure_door_Sensor("virtualaccount20170607170804362249", "VirtualDoorSensor3")
 
         _mong_obj = MongoDBQuery()
-        results = _mong_obj.mongo_return_elements("acc_collection")
+        results = _mong_obj.mongo_return_elements("SensorInterface_collection")
 
         for val in results:
             logger.info("Configuring the Sensor %s of PK %s"%\
