@@ -29,12 +29,13 @@ class Sensor_Action(object):
         if "id" not in iface_dict["Announcement"].keys():
             iface_dict = self.get_sensor_nimbits_request(cust_pk, iface_dict)
 
-            #update the iface_dict to mongo
+            #update the iface_dict to mongo SensorInterface_collection
             _mong_obj.mongo_update("SensorInterface_collection", iface_dict)
         else:
-            logger.info("Dictionary already configured")
+            logger.info("SensorInterface Dictionary already configured")
 
         logger.info("configure_door_Sensor ended")
+        return iface_dict
 
     def get_sensor_nimbits_request(self, cust_pk, iface_dict):
         logger.info("get_sensor_nimbitsid started")

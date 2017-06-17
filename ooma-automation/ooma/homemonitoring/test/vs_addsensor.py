@@ -23,7 +23,7 @@ class VStest(unittest.TestCase):
         sensor_add = Sensor_Addition()
 
         _mong_obj = MongoDBQuery()
-        results = _mong_obj.mongo_return_elements("acc_collection")
+        results = _mong_obj.mongo_return_elements("SensorInterface_collection")
 
         # id = "virtualaccount20170614175103394885"
         # sensor_add.pair_door_sensor(id)
