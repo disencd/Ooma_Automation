@@ -65,7 +65,8 @@ class MongoDBQuery():
 
         return val["_id"]
 
-    def mongo_find_one_element(self, cust_pk):
+    def mongo_find_one_element(self, collection, cust_pk):
+        self.__mongo_connect(collection)
         cursor = self.vs_account.find({'cust_pk':cust_pk})
         results = [res for res in cursor]
         cursor.close()
