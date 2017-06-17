@@ -41,6 +41,7 @@ class Sensor_Action(object):
         for devicename in iface_dict.keys():
             get_url = self.geturl
 
+            #Removing the cust_pk, sensorname and _id
             if "cust_pk" not in devicename and \
                 "sensorname" not in devicename and \
                 "_id" not in devicename:
