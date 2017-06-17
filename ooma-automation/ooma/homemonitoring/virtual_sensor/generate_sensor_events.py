@@ -26,7 +26,7 @@ class Sensor_Action(object):
                                                      cust_pk, name)
         logger.info("iface_dict - %s ", iface_dict)
 
-        if not iface_dict["Announcement"]["id"]:
+        if "id" not in iface_dict["Announcement"].keys():
             iface_dict = self.get_sensor_nimbits_request(cust_pk, iface_dict)
 
             #update the iface_dict to mongo
