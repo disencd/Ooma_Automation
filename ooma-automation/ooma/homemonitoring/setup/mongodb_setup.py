@@ -65,6 +65,26 @@ class MongoDBQuery():
 
         return val["_id"]
 
+    '''
+        Find the SensorInterface Collections dictionary from PK and
+        Sensor Name
+    '''
+
+    def mongo_find_one_dictionary(self, collection, cust_pk, sensor_name):
+        self.__mongo_connect(collection)
+        cursor = self.vs_account.find({'cust_pk':cust_pk})
+        results = [res for res in cursor]
+        cursor.close()
+        val = None
+        for val in results:
+            #logger.info("val['cust_pk'] %s cust_pk is %s" %(val['cust_pk'], cust_pk))
+            if val['sensorname'] in sensor_name:
+                logger.info("cust_pk is %s", cust_pk)
+                break
+
+        logger.info("Interface Dictionary is %s", val)
+        return val
+
     def mongo_find_one_element(self, collection, cust_pk):
         self.__mongo_connect(collection)
         cursor = self.vs_account.find({'cust_pk':cust_pk})

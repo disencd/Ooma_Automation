@@ -1,9 +1,10 @@
 import logging
-from homemonitoring.virtual_sensor.hms_sql_query import HMSSqlQuery
-from homemonitoring.setup.json_parse import JsonConfig
-import fill_dds_request
 import json
 import ast
+import fill_dds_request
+from homemonitoring.virtual_sensor.hms_sql_query import HMSSqlQuery
+from homemonitoring.setup.mongodb_setup import MongoDBQuery
+from homemonitoring.setup.json_parse import JsonConfig
 from homemonitoring.virtual_sensor.nimbits_actions import NimbitsActions
 logging.basicConfig(level=logging.DEBUG)
 logging.basicConfig(format='%(asctime)s,%(msecs)d %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s',
@@ -17,8 +18,15 @@ class Sensor_Action(object):
         self.geturl = "service/v3/rest/me?name="
         self.posturl = "service/v3/rest/"
 
-    def configure_door_Sensor(self, cust_pk):
-        self.get_sensor_nimbits_request(cust_pk, "door")
+    def configure_door_Sensor(self, cust_pk, name):
+        logger.info("configure_door_Sensor started")
+        _mong_obj = MongoDBQuery()
+        logger.info("cust_pk %s", cust_pk)
+        iface_dict = _mong_obj.mongo_find_one_dictionary("SensorInterface_collection",\
+                                                     cust_pk, name)
+        logger.info("iface_dict - %s ", iface_dict)
+        #self.get_sensor_nimbits_request(cust_pk, name)
+        logger.info("configure_door_Sensor ended")
 
     def get_sensor_nimbits_request(self, cust_pk, name):
         logger.info("get_sensor_nimbitsid started")
