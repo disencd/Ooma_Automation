@@ -8,35 +8,45 @@ logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
 class MongoDBQuery():
+
     def __init__(self):
         self.json_obj = JsonConfig()
         abs_path = os.path.dirname(os.path.abspath(__file__))
         server_f_path =  abs_path + "/../database_config.json"
         self.json_server_obj = self.json_obj.dump_config(server_f_path)
-        self.mongo_url = self.json_server_obj["url"]
+        #self.mongo_url = self.json_server_obj["url"]
 
+    url = "mongodb://localhost:27017/VirtualAutomation"
+    client = pymongo.MongoClient(url)
+    @staticmethod
+    def __getInstance(self):
+        if client is None:
+            client = pymongo.MongoClient(url)
+        return client
 
-    def mongo_connect(self, collection_name):
+    def __mongo_connect(self, collection_name):
 
-        self.client = pymongo.MongoClient(self.mongo_url)
+        client = MongoDBQuery.__getInstance()
         self.mongo_coll = self.json_server_obj[collection_name]
-        m_db = self.client.get_default_database()
+        m_db = client.get_default_database()
         self.vs_account = m_db[self.mongo_coll]
         logger.info("Mongo Connection Established with %s", collection_name)
         return self.vs_account
 
-    def mongo_disconnect(self):
-        self.client.close()
+    def __mongo_disconnect(self):
+        MongoDBQuery.__getInstance().close()
 
-    def mongo_addition(self, dict):
+    def mongo_insertion(self, collection, dict):
 
+        self.__mongo_connect(collection)
         if not self.vs_account.find({'cust_pk' : dict['cust_pk']}):
             logger.info("Inserting to mongo DB - %s", dict)
             self.vs_account.insert_one(dict)
         else:
             logger.info("Already inserted to mongo DB - %s", dict)
 
-    def MongoSensorIfaceAdd(self, dict):
+    def MongoSensorIfaceAdd(self, collection, dict):
+        self.__mongo_connect(collection)
         logger.info("Inserting to MongoSensorIfaceAdd mongo DB - %s", dict)
         self.vs_account.insert_one(dict)
 
@@ -77,8 +87,8 @@ class MongoDBQuery():
     def mongo_count(self):
         return self.vs_account.count()
 
-    def mongo_update(self, dict):
-
+    def mongo_update(self, collection, dict):
+        self.__mongo_connect(collection)
         search_query = {'cust_pk' : dict['cust_pk']}
         return self.vs_account.update(search_query, dict)
 
@@ -92,9 +102,8 @@ class MongoDBQuery():
         user_dict["door"] = 0
         user_dict["water"] = 0
 
-        self.mongo_connect("SensorCount_collection")
-        self.mongo_update(user_dict)
-        self.mongo_disconnect()
+        self.mongo_insertion("SensorCount_collection", user_dict)
+
 
 
 # m = MongoDBQuery()

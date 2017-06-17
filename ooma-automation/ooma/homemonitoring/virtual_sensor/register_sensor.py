@@ -98,6 +98,7 @@ class Register_sensor():
     def register_motion_sensor(self, cust_pk):
         logger.debug("register_motion_sensor started")
         time.sleep(2)
+
         response = self.get_sensor_register(cust_pk)
         logger.info("response %s", response)
 
@@ -116,13 +117,9 @@ class Register_sensor():
                                                         (self.sensor_dict, sens_iface_dict))
         if self.mongo_enable == "enable":
             _mong_obj = MongoDBQuery()
-            _mong_obj.mongo_connect("SensorCount_collection")
-            _mong_obj.mongo_update(self.sensor_dict)
-            _mong_obj.mongo_disconnect()
+            _mong_obj.mongo_update("SensorCount_collection", self.sensor_dict)
 
-            _mong_obj.mongo_connect("SensorInterface_collection")
-            _mong_obj.MongoSensorIfaceAdd(sens_iface_dict)
-            _mong_obj.mongo_disconnect()
+            _mong_obj.MongoSensorIfaceAdd("SensorInterface_collection", sens_iface_dict)
 
         logger.debug("register_motion_sensor Ended")
 
@@ -144,15 +141,13 @@ class Register_sensor():
         self.sensor_dict["cust_pk"] = cust_pk
         logger.info("Updating MongoDB with Sensorcount %s & SensorInterface MongoDB %s" % \
                     (self.sensor_dict, sens_iface_dict))
+
         if self.mongo_enable == "enable":
             _mong_obj = MongoDBQuery()
-            _mong_obj.mongo_connect("SensorCount_collection")
-            _mong_obj.mongo_update(self.sensor_dict)
-            _mong_obj.mongo_disconnect()
+            del self.sensor_dict['_id']
+            _mong_obj.mongo_update("SensorCount_collection", self.sensor_dict)
 
-            _mong_obj.mongo_connect("SensorInterface_collection")
-            _mong_obj.mongo_update(sens_iface_dict)
-            _mong_obj.mongo_disconnect()
+            _mong_obj.MongoSensorIfaceAdd("SensorInterface_collection", sens_iface_dict)
 
         logger.debug("register_water_sensor Ended")
 
@@ -177,15 +172,10 @@ class Register_sensor():
             self.sensor_dict["cust_pk"] = cust_pk
             logger.info("Updating MongoDB with Sensorcount & SensorInterface MongoDB")
             _mong_obj = MongoDBQuery()
-            _mong_obj.mongo_connect("SensorCount_collection")
             del self.sensor_dict['_id']
-            _mong_obj.mongo_update(self.sensor_dict)
-            _mong_obj.mongo_disconnect()
+            _mong_obj.mongo_update("SensorCount_collection", self.sensor_dict)
+            _mong_obj.MongoSensorIfaceAdd("SensorInterface_collection", sens_iface_dict)
 
-            _mong_obj.mongo_connect("SensorInterface_collection")
-            logger.info("SensorInterface MongoDB %s", sens_iface_dict)
-            _mong_obj.mongo_update(sens_iface_dict)
-            _mong_obj.mongo_disconnect()
 
         logger.debug("register_door_sensor Ended")
 
