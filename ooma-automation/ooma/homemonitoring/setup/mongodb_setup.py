@@ -20,7 +20,7 @@ class MongoDBQuery():
     client = pymongo.MongoClient(url)
     @staticmethod
     def __getInstance():
-        global client
+        client = MongoDBQuery.client
         if client is None:
             client = pymongo.MongoClient(url)
         return client
