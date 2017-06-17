@@ -68,8 +68,8 @@ class NimbitsActions(object, HMSSqlQuery):
             logger.info("get_nimbits_events ended")
             return data
         except urllib2.URLError as e:
-            logger.info("e.reason - %s", e.reason)
-            return e.reason
+            logger.info("code - %s reasone %s" % (e.code, e.read()))
+            return e.code
 
     def post_nimbits_events(self, posturl, cust_pk, data):
         self.__url = self.generate_url(posturl)
