@@ -25,35 +25,41 @@ class Sensor_Action(object):
         iface_dict = _mong_obj.mongo_find_one_dictionary("SensorInterface_collection",\
                                                      cust_pk, name)
         logger.info("iface_dict - %s ", iface_dict)
-        #self.get_sensor_nimbits_request(cust_pk, name)
+
+        if not iface_dict["Announcement"]["id"]:
+            iface_dict = self.get_sensor_nimbits_request(cust_pk, iface_dict)
+
+            #update the iface_dict to mongo
+        else:
+            logger.info("Dictionary already configured")
+
         logger.info("configure_door_Sensor ended")
 
-    def get_sensor_nimbits_request(self, cust_pk, name):
+    def get_sensor_nimbits_request(self, cust_pk, iface_dict):
         logger.info("get_sensor_nimbitsid started")
 
-        device_id_dict = fill_dds_request.device_id_dict
-
-        for devicename in device_id_dict[cust_pk].keys():
+        for devicename in iface_dict.keys():
             get_url = self.geturl
 
-            if "Sensor" not in devicename:
+            if "cust_pk" not in devicename and \
+                "sensorname" not in devicename:
 
-                get_url += device_id_dict[cust_pk][devicename]["deviceidentifier"]
+                get_url += iface_dict[devicename]["deviceidentifier"]
 
-                #logger.info("%s Geturl %s" %(devicename, get_url))
+                logger.info("%s Geturl %s" %(devicename, get_url))
 
                 response = self.nimbits_action.get_nimbits_events(cust_pk, get_url)
 
                 if "Not" not in response:
                     nimbits_data = json.loads(response)
                     #logger.info("ID - %s" , nimbits_data['id'])
-                    device_id_dict[cust_pk][devicename]["id"] = nimbits_data['id']
+                    iface_dict[devicename]["id"] = nimbits_data['id']
 
 
-        logger.info(device_id_dict)
+        logger.info(iface_dict)
 
         logger.info("get_sensor_nimbitsid ended")
-        fill_dds_request.device_id_dict = device_id_dict
+        #fill_dds_request.device_id_dict = device_id_dict
 
     def post_sensor_events(self, cust_pk):
         device_id_dict = fill_dds_request.device_id_dict
