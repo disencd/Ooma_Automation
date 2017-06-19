@@ -29,6 +29,8 @@ class NimbitsActions(object, HMSSqlQuery):
         return "https://{0}/{1}".format(self.json_server, req_url)
 
     def construct_nimbits_request_headers(self, cust_pk):
+        logger.info("construct_nimbits_request_headers started")
+        logger.info("OR Dict - %s", self.or_dict)
         if "beehive_id" not in self.or_dict.keys():
             # Calling the hms_sql_query class for getting OR credentials
             self.or_dict = super(NimbitsActions, self).sql_query_pk(cust_pk)
@@ -40,6 +42,9 @@ class NimbitsActions(object, HMSSqlQuery):
             'Accept': 'application/json',
             'Content-Type':'application/json'
         }
+
+
+        logger.info("construct_nimbits_request_headers ended")
         return self.headers
 
     def get_nimbits_events(self, cust_pk, geturl):
