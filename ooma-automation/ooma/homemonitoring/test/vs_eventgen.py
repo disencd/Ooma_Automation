@@ -24,13 +24,16 @@ class VStest(unittest.TestCase):
         _mong_obj = MongoDBQuery()
         results = _mong_obj.mongo_return_elements("SensorInterface_collection")
 
+        cnt = 0
         for val in results:
-            logger.info("Configuring the Sensor %s of PK %s"%\
-                        (val["sensorname"], val["cust_pk"]))
-            sens_obj.configure_door_Sensor(val["cust_pk"], \
-                                        val["sensorname"])
-            time.sleep(5)
 
+            if cnt < 3:
+                logger.info("Configuring the Sensor %s of PK %s"%\
+                            (val["sensorname"], val["cust_pk"]))
+                sens_obj.configure_door_Sensor(val["cust_pk"], \
+                                            val["sensorname"])
+                time.sleep(5)
+                cnt += 1
         #sens_obj.post_sensor_events(cust_pk)
 
 if __name__ == "__main__":
