@@ -41,7 +41,7 @@ class Sensor_Action(object):
 
     def get_sensor_nimbits_request(self, cust_pk, iface_dict):
         logger.info("get_sensor_nimbitsid started")
-
+        or_dict = {}
         for devicename in iface_dict.keys():
             get_url = self.geturl
 
@@ -54,7 +54,7 @@ class Sensor_Action(object):
 
                 logger.info("%s Geturl %s" %(devicename, get_url))
 
-                response = self.nimbits_action.get_nimbits_events(cust_pk, get_url)
+                response, or_dict = self.nimbits_action.get_nimbits_events(cust_pk, get_url, or_dict)
                 time.sleep(3)
                 if "404" != str(response):
                     nimbits_data = json.loads(response)

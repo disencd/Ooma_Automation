@@ -28,15 +28,15 @@ class NimbitsActions(object, HMSSqlQuery):
     def generate_url(self, req_url):
         return "https://{0}/{1}".format(self.json_server, req_url)
 
-    def construct_nimbits_request_headers(self, cust_pk):
+    def construct_nimbits_request_headers(self, cust_pk, or_dict):
         logger.info("construct_nimbits_request_headers started")
-        logger.info("OR Dict - %s", self.or_dict)
-        if "beehive_id" not in self.or_dict.keys():
+        logger.info("OR Dict - %s", or_dict)
+        if "beehive_id" not in or_dict.keys():
             # Calling the hms_sql_query class for getting OR credentials
-            self.or_dict = super(NimbitsActions, self).sql_query_pk(cust_pk)
+            or_dict = super(NimbitsActions, self).sql_query_pk(cust_pk)
 
-        self.auth_str = 'basic ' + self.or_dict['nimbits_id'] + ':' + \
-                                self.or_dict['nimbits_pwd']
+        self.auth_str = 'basic ' + or_dict['nimbits_id'] + ':' + \
+                                or_dict['nimbits_pwd']
 
         self.headers = {
             'Accept': 'application/json',
@@ -45,14 +45,14 @@ class NimbitsActions(object, HMSSqlQuery):
 
 
         logger.info("construct_nimbits_request_headers ended")
-        return self.headers
+        return self.headers, or_dict
 
-    def get_nimbits_events(self, cust_pk, geturl):
+    def get_nimbits_events(self, cust_pk, geturl, or_dict):
         logger.debug("get_nimbits_events started")
 
         self.__url = self.generate_url(geturl)
 
-        self.headers = self.construct_nimbits_request_headers(cust_pk)
+        self.headers, or_dict = self.construct_nimbits_request_headers(cust_pk, or_dict)
         logger.info("Nimbits URL - %s", self.__url)
         logger.info("Nimbits Headers - %s", self.headers)
 
@@ -71,10 +71,10 @@ class NimbitsActions(object, HMSSqlQuery):
             logger.info("data %s, code %s" % ( data, code))
             #logger.info("response %s" , response)
             logger.info("get_nimbits_events ended")
-            return data
+            return data, or_dict
         except urllib2.URLError as e:
             logger.info("code - %s reasone %s" % (e.code, e.read()))
-            return e.code
+            return e.code, or_dict
 
     def post_nimbits_events(self, posturl, cust_pk, data):
         self.__url = self.generate_url(posturl)
