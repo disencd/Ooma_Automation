@@ -31,7 +31,7 @@ class VStest(unittest.TestCase):
                             (val["sensorname"], val["cust_pk"]))
             sens_obj.configure_door_Sensor(val["cust_pk"], \
                                             val["sensorname"])
-            time.sleep(5)
+            time.sleep(2)
 
         #sens_obj.post_sensor_events(cust_pk)
 
