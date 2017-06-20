@@ -99,7 +99,7 @@ class NimbitsActions(object, HMSSqlQuery):
         logger.info("fork_nimbits_events started")
         url = self.generate_url(events_dict["url"])
         headers = events_dict["headers"]
-        auth_header = events_dict["headers"]
+        auth_header = events_dict["Authorization"]
         for index in range(events_dict["no_events"]):
             data = "[{\"d\":1.1}]"
             logger.info("Nimbits data %s", data)
