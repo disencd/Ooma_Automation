@@ -102,12 +102,12 @@ class NimbitsActions(object, HMSSqlQuery):
         for index in range(events_dict["no_events"]):
             data = "[{\"d\":1.1}]"
             logger.info("Nimbits data %s", data)
-            self.post_data(url, header, auth_header, data)
+            self.post_data(url, headers, auth_header, data)
             time.sleep(events_dict["time_interval"])
 
             data = "[{\"d\":1.0}]"
             logger.info("Nimbits data %s", data)
-            self.post_data(url, header, auth_header, data)
+            self.post_data(url, headers, auth_header, data)
             time.sleep(events_dict["time_interval"])
 
         logger.info("fork_nimbits_events ended")
