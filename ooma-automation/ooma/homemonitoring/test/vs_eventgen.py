@@ -46,7 +46,7 @@ class VStest(unittest.TestCase):
         cnt = 0
         for val in results:
 
-            if "id" is val["TamperDetector"] and cnt <= 1:
+            if val["TamperDetector"]["id"] and cnt == 0 :
                 cnt += 1
                 config_dict = {
                     "no_events": 1,
