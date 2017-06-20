@@ -16,7 +16,7 @@ class VStest(unittest.TestCase):
         logger.info("Setting up Virtual Test Automation")
         self.custom_timers = {}
 
-    def test_sensor_generation(self):
+    def config_test_sensor_generation(self):
         logger.info("test_sensor_generation Started")
         sens_obj = Sensor_Action()
         # sens_obj.configure_door_Sensor("virtualaccount20170607170804362249", "VirtualDoorSensor3")
@@ -34,6 +34,33 @@ class VStest(unittest.TestCase):
             time.sleep(2)
 
         #sens_obj.post_sensor_events(cust_pk)
+
+    def test_sensor_generation(self):
+        logger.info("test_sensor_generation Started")
+        sens_obj = Sensor_Action()
+        # sens_obj.configure_door_Sensor("virtualaccount20170607170804362249", "VirtualDoorSensor3")
+
+        _mong_obj = MongoDBQuery()
+        results = _mong_obj.mongo_return_elements("SensorInterface_collection")
+
+        for val in results:
+
+            if val["TamperDetector"]["id"]:
+
+                config_dict = {
+                    "no_events": 10,
+                    "time_interval": 5,
+                    "event": "TamperDetector"
+                }
+
+                logger.info("Tampering %s Sensor of PK %s" % \
+                            (val["sensorname"], val["cust_pk"]))
+
+                config_dict.update(val)
+                sens_obj.trigger_sensor_events(config_dict)
+
+                time.sleep(2)
+
 
 if __name__ == "__main__":
     unittest.main()

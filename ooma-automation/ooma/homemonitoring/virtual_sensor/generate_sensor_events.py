@@ -21,7 +21,7 @@ class Sensor_Action(object):
     def configure_door_Sensor(self, cust_pk, name):
         logger.info("configure_door_Sensor started")
         _mong_obj = MongoDBQuery()
-        logger.info("cust_pk %s", cust_pk)
+        logger.info("Configuring cust_pk %s", cust_pk)
         iface_dict = _mong_obj.mongo_find_one_dictionary("SensorInterface_collection",\
                                                      cust_pk, name)
         logger.info("iface_dict - %s ", iface_dict)
@@ -66,6 +66,34 @@ class Sensor_Action(object):
 
         logger.info("get_sensor_nimbitsid ended")
         return iface_dict
+
+    def trigger_sensor_events(self, config_dict):
+        logger.info("Trigger_sensor_events started")
+        _mong_obj = MongoDBQuery()
+        logger.info("Querying Nimbits Details of cust_pk %s", config_dict["cust_pk"])
+
+        mongo_dict = _mong_obj.mongo_find_one_element("UserCredentials_collection", \
+                                config_dict["cust_pk"])
+
+        auth_str = 'basic ' + mongo_dict['nimbits_id'] + ':' + \
+                                mongo_dict['nimbits_pwd']
+
+        headers = {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+
+        }
+        url = self.posturl + config_dict["TamperDetector"]["id"] \
+                            + "/series"
+        sensor_trigger = {}
+        sensor_trigger["Authorization"] = auth_str
+        sensor_trigger["headers"] = headers
+        sensor_trigger["no_events"] = config_dict["no_events"]
+        sensor_trigger["time_interval"] = config_dict["time_interval"]
+        sensor_trigger["url"] = url
+
+        response = self.nimbits_action.fork_nimbits_events(sensor_trigger)
+        logger.info("Trigger_sensor_events Ended")
 
     def post_sensor_events(self, cust_pk):
         device_id_dict = fill_dds_request.device_id_dict

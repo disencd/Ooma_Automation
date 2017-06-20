@@ -93,3 +93,36 @@ class NimbitsActions(object, HMSSqlQuery):
             return code
         except urllib2.URLError as e:
             return e.reason
+
+    def fork_nimbits_events(self, events_dict):
+        logger.info("fork_nimbits_events started")
+        url = events_dict["url"]
+        headers = events_dict["headers"]
+        auth_header = events_dict["headers"]
+        for index in range(events_dict["no_events"]):
+            data = "[{\"d\":1.1}]"
+            logger.info("Nimbits data %s", data)
+            self.post_data(url, header, auth_str, data)
+            time.sleep(events_dict["time_interval"])
+
+            data = "[{\"d\":1.0}]"
+            logger.info("Nimbits data %s", data)
+            self.post_data(url, header, auth_str, data)
+            time.sleep(events_dict["time_interval"])
+
+        logger.info("fork_nimbits_events ended")
+
+    def post_data(self, url, header, auth_str, data):
+        logger.info("post_data started")
+        try:
+            logger.info("Post Nimbits url %s", url)
+            request = urllib2.Request(url, data, header)
+            request.add_header('Authorization', auth_str)
+            response = urllib2.urlopen(request)
+            data = response.read()
+            code = response.getcode()
+            response.close()
+            logger.info(" data %s, code %s "% (data, code))
+            return code
+        except urllib2.URLError as e:
+            return e.reason
