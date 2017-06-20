@@ -28,6 +28,9 @@ class NimbitsActions(object, HMSSqlQuery):
     def generate_url(self, req_url):
         return "https://{0}/{1}".format(self.json_server, req_url)
 
+    def generate_http_url(self, req_url):
+        return "http://{0}/{1}".format(self.json_server, req_url)
+
     def construct_nimbits_request_headers(self, cust_pk, or_dict):
         logger.info("construct_nimbits_request_headers started")
         logger.info("OR Dict - %s", or_dict)
@@ -97,7 +100,7 @@ class NimbitsActions(object, HMSSqlQuery):
     def fork_nimbits_events(self, events_dict):
 
         logger.info("fork_nimbits_events started")
-        url = self.generate_url(events_dict["url"])
+        url = self.generate_http_url(events_dict["url"])
         headers = events_dict["headers"]
         auth_header = events_dict["Authorization"]
         for index in range(events_dict["no_events"]):
