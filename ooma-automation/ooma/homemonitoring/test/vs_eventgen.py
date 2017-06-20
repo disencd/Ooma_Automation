@@ -45,9 +45,9 @@ class VStest(unittest.TestCase):
         #logger.info("Mongo Returned %s", results)
         cnt = 0
         for val in results:
-            cnt += 1
-            if "id" is val["TamperDetector"] and cnt > 200:
 
+            if "id" is val["TamperDetector"] and cnt <= 1:
+                cnt += 1
                 config_dict = {
                     "no_events": 1,
                     "time_interval": 5,
