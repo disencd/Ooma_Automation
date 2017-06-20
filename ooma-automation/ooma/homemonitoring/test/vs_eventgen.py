@@ -16,7 +16,7 @@ class VStest(unittest.TestCase):
         logger.info("Setting up Virtual Test Automation")
         self.custom_timers = {}
 
-    def config_test_sensor_generation(self):
+    def test_sensor_generation(self):
         logger.info("test_sensor_generation Started")
         sens_obj = Sensor_Action()
         # sens_obj.configure_door_Sensor("virtualaccount20170607170804362249", "VirtualDoorSensor3")
@@ -35,7 +35,7 @@ class VStest(unittest.TestCase):
 
         #sens_obj.post_sensor_events(cust_pk)
 
-    def test_sensor_generation(self):
+    def abctest_sensor_generation(self):
         logger.info("test_sensor_generation Started")
         sens_obj = Sensor_Action()
         # sens_obj.configure_door_Sensor("virtualaccount20170607170804362249", "VirtualDoorSensor3")
