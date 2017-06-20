@@ -4,7 +4,7 @@
           "mongodb_enable" : "enable",
           "prv-server" : "prv1-cert1.cn.ooma.com:0000",
 	      "hms-server" : "hms1-cert1.cn.ooma.com:8084",
-          "nimbits-server" : "nimbits-cert.hms.ooma.com:9080",
+          "nimbits-server" : "nimbits1-cert1.cn.ooma.com:9080",
           "beehive-server" : "beehive-cert.hms.ooma.com:8443",
           "oss-server" : "oss1-cert1.cn.ooma.com:8001",
           "hms-db" : {
