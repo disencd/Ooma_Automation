@@ -19,7 +19,7 @@ class HMSActions():
 
     '''
      Creating new account
-     POST http://hms1-cert1.cn.ooma.com:8084/hms/oss/vn5j9av6ru7hjue7fpzek3r73m4ec8mq
+     POST https://hms1-cert1.cn.ooma.com:8084/hms/oss/vn5j9av6ru7hjue7fpzek3r73m4ec8mq
      {
         "orUsername":"ui89dg3p4",
         "orPassword":"YmJoajlqaWJi",
@@ -31,6 +31,22 @@ class HMSActions():
     '''
     def vs_request_activate(self, hostname_port, req_url, cust_pk):
         self.__url = "https://{0}/{1}/{2}".format(hostname_port, req_url, cust_pk)
+        return self
+
+    '''
+    Creating new account
+     POST http://hms1-cert1.cn.ooma.com:8084/hms/oss/vn5j9av6ru7hjue7fpzek3r73m4ec8mq
+     {
+        "orUsername":"ui89dg3p4",
+        "orPassword":"YmJoajlqaWJi",
+        "nimbitsUsername":"sun2pfbjr@ooma.com",
+        "nimbitsPassword":"dmdlZmc3OWV2",
+        "spn":"9712732945",
+        "timezone":"America/Los_Angeles"
+     }
+    '''
+    def vs_oss_request_activate(self, hostname_port, req_url, cust_pk):
+        self.__url = "http://{0}/{1}/{2}".format(hostname_port, req_url, cust_pk)
         return self
 
     '''

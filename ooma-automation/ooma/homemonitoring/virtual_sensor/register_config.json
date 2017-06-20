@@ -13,7 +13,7 @@
             "phone": "off",
             "email": "off",
             "sms": "off",
-            "conditionRaised": 0,
+            "conditionRaised": 1,
             "conditionCeased": 0
           }
     ]
@@ -32,7 +32,7 @@
             "phone": "off",
             "email": "off",
             "sms": "off",
-            "conditionRaised": 0,
+            "conditionRaised": 1,
             "conditionCeased": 0
           }
     ]
@@ -51,7 +51,7 @@
             "phone": "off",
             "email": "off",
             "sms": "off",
-            "conditionRaised": 0,
+            "conditionRaised": 1,
             "conditionCeased": 0
           }
     ]
@@ -70,7 +70,7 @@
         "phone": "off",
         "email": "off",
         "sms": "off",
-        "conditionRaised": 0,
+        "conditionRaised": 1,
         "conditionCeased": 0
       }
     ]

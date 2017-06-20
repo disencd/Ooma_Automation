@@ -60,7 +60,7 @@ class HMS_Activation(object):
             "X-ooma-oToken": "TrustMe"
         }
 
-        code = HMSActions(self.json_obj, self.node).vs_request_activate(self.json_server, self.url, self.cust_pk). \
+        code = HMSActions(self.json_obj, self.node).vs_oss_request_activate(self.json_server, self.url, self.cust_pk). \
             post(self.headers, self.act_data)
 
         self.mongodb_dict["activation_status"] = code
