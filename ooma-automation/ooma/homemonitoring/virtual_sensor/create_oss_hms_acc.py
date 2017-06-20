@@ -96,7 +96,7 @@ class HMS_Activation(object):
 
         except:
             logger.error("OSS HMS Account Activation Failed")
-            assert response is "Not Found", "HMS Activation Failed"
+            #assert response is "Not Found", "HMS Activation Failed"
 
         return response[0]["id"]
 

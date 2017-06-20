@@ -195,7 +195,7 @@ class HMSActions():
 
             return code
         except urllib2.URLError as e:
-            logger.info("code - %s reasone %s" % (e.code, e.read()))
+            logger.info("code - %s reason %s" % (e.code, e.read()))
             return e.code
 
 
