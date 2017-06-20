@@ -42,7 +42,7 @@ class VStest(unittest.TestCase):
 
         _mong_obj = MongoDBQuery()
         results = _mong_obj.mongo_return_elements("SensorInterface_collection")
-
+        logger.info("Mongo Returned %s", results)
         cnt = 0
         for val in results:
 

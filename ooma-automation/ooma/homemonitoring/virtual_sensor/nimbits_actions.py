@@ -102,6 +102,7 @@ class NimbitsActions(object, HMSSqlQuery):
         auth_header = events_dict["Authorization"]
         for index in range(events_dict["no_events"]):
             data = "[{\"d\":1.1}]"
+            logger.info("Nimbits url %s", url)
             logger.info("Nimbits data %s", data)
             self.post_data(url, headers, auth_header, data)
             time.sleep(events_dict["time_interval"])
@@ -126,4 +127,5 @@ class NimbitsActions(object, HMSSqlQuery):
             logger.info(" data %s, code %s "% (data, code))
             return code
         except urllib2.URLError as e:
-            return e.reason
+            logger.info("code - %s reasone %s" % (e.code, e.read()))
+            return e.code, or_dict
