@@ -11,7 +11,7 @@ logging.basicConfig(format='%(asctime)s,%(msecs)d %(levelname)-8s [%(filename)s:
     level=logging.DEBUG)
 
 logger = logging.getLogger(__name__)
-global device_id_dict
+
 device_id_dict = {}
 
 class DDS_data():
@@ -29,6 +29,7 @@ class DDS_data():
         self.dd_gen.generate_uniqueID_for_sensor()
         self.dds_cnt += 1
         print("cust_pk %s", cust_pk)
+        global device_id_dict
         sen_cnt, sensor_name = self.sensorname_obj.generate_sensor_name(cust_pk, "door")
 
         #Dictionary used for generating events using device ids
@@ -59,6 +60,7 @@ class DDS_data():
         self.dd_obj = self.json_obj.dump_config(dds_f_path)
         self.dd_gen.generate_uniqueID_for_sensor()
         self.dds_cnt += 1
+        global device_id_dict
         sen_cnt, sensor_name = self.sensorname_obj.generate_sensor_name(cust_pk, "motion")
         #Dictionary used for generating events using device ids
 
@@ -88,7 +90,7 @@ class DDS_data():
         self.dd_obj = self.json_obj.dump_config(dds_f_path)
         self.dd_gen.generate_uniqueID_for_sensor()
         self.dds_cnt += 1
-        device_id_dict = {}
+        global device_id_dict
         sen_cnt, sensor_name = self.sensorname_obj.generate_sensor_name(cust_pk, "water")
         #Dictionary used for generating events using device ids
         device_id_dict[cust_pk] = {}
