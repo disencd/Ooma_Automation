@@ -72,7 +72,6 @@ class DDS_data():
             if key != "dds_std_header" and \
                key != "model_window_sensor" and \
                key != "model_flood_sensor":
-                device_id_dict = {}
                 deviceidentifier, dd_request = self.construct_dds_header(key)
                 device_id_dict[cust_pk][sensor_name][self.dd_obj[key]["deviceName"]] = {}
                 device_id_dict[cust_pk][sensor_name][self.dd_obj[key]["deviceName"]] \
