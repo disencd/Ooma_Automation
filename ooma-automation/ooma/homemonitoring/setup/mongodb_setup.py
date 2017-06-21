@@ -55,6 +55,13 @@ class MongoDBQuery():
     def mongo_find(self, or_id):
         return self.vs_account.find_one({"_id": or_id})
 
+    def mongo_return_all(self, collection):
+        self.__mongo_connect(collection)
+        cursor = mongo_acc.find({})
+        results = [res for res in cursor]
+        cursor.close()
+        return results
+
     def map_or_id_with_custpk(self, custpk):
         cursor = self.vs_account.find({})
         results = [res for res in cursor]
