@@ -62,7 +62,10 @@ class DDS_data():
         sen_cnt, sensor_name = self.sensorname_obj.generate_sensor_name(cust_pk, "motion")
         #Dictionary used for generating events using device ids
 
+        device_id_dict[cust_pk] = {}
+        #logger.info("Before DDS cust_pk - %s device_id_dict %s" % (cust_pk, device_id_dict))
         device_id_dict[cust_pk][sensor_name] = {}
+
         for key, val in self.dd_obj.iteritems():
             if key != "dds_std_header" and \
                key != "model_window_sensor" and \
@@ -90,6 +93,8 @@ class DDS_data():
         #Dictionary used for generating events using device ids
         device_id_dict[cust_pk] = {}
 
+        #logger.info("Before DDS cust_pk - %s device_id_dict %s" % (cust_pk, device_id_dict))
+        device_id_dict[cust_pk][sensor_name] = {}
         for key, val in self.dd_obj.iteritems():
             if key != "dds_std_header" and \
                key != "model_motion_sensor" and \
