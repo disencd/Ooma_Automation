@@ -30,7 +30,9 @@ class VStest(unittest.TestCase):
 
         for val in results:
             logger.info("pairing the PK with %s", val["cust_pk"])
-            sensor_add.pair_door_sensor(val["cust_pk"])
+            sensor_add.pair_motion_sensor(val["cust_pk"])
+
+            sensor_add.pair_water_sensor(val["cust_pk"])
         #id = "virtualaccount20170607170607296891"
 
 if __name__ == "__main__":
