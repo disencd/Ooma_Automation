@@ -53,7 +53,7 @@ class NimbitsActions(object, HMSSqlQuery):
     def get_nimbits_events(self, cust_pk, geturl, or_dict):
         logger.debug("get_nimbits_events started")
 
-        self.__url = self.generate_url(geturl)
+        self.__url = self.generate_http_url(geturl)
 
         self.headers, or_dict = self.construct_nimbits_request_headers(cust_pk, or_dict)
         logger.info("Nimbits URL - %s", self.__url)

@@ -190,7 +190,7 @@ class HMSActions():
             response = urllib2.urlopen(request)
             data = response.read()
             code = response.getcode()
-            logger.info(" data %s, code %s " % (data, code))
+            logger.info("data %s, code %s" % (data, code))
             response.close()
 
             return code
