@@ -9,8 +9,9 @@ class UpdateTables():
 
     def update_credentials(self):
         _mong_obj = MongoDBQuery()
-        results = _mong_obj.mongo_return_all("acc_collection")
+        sql = HMSSqlQuery()
 
+        results = _mong_obj.mongo_return_all("acc_collection")
         for val in results:
             print(val["cust_pk"])
             sql.sql_query_pk(val["cust_pk"])
