@@ -57,7 +57,7 @@ class MongoDBQuery():
 
     def mongo_return_all(self, collection):
         self.__mongo_connect(collection)
-        cursor = mongo_acc.find({})
+        cursor = self.vs_account.find({})
         results = [res for res in cursor]
         cursor.close()
         return results
