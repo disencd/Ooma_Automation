@@ -5,7 +5,7 @@ import unittest
 import time
 from homemonitoring.sensor.flask_webclient.door_rest_cli import FlaskClientDoorSensor
 from homemonitoring.sensor.flask_webclient.flood_rest_cli import FlaskClientWaterSensor
-from homemontioring.client.client_setup import Client_Setup
+from homemonitoring.client.client_setup import Client_Setup
 from homemonitoring.setup.json_parse import JsonConfig
 from homemonitoring.server.server_status import ServerStatus
 from homemonitoring.server.pairing_mode import PairingMode
