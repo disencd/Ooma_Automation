@@ -1,5 +1,5 @@
 {
-  "bb_rest_url" : "http://10.66.11.36:5000",
+  "bb_rest_url" : "http://10.66.16.162:5000",
   "Water_Sensor":
   {
     "Tamper_ON" : "c d3i1 1",

@@ -9,17 +9,19 @@ from homemonitoring.client.client_setup import Client_Setup
 from homemonitoring.setup.json_parse import JsonConfig
 from homemonitoring.server.server_status import ServerStatus
 from homemonitoring.server.pairing_mode import PairingMode
+import logging
+import colorlog
 
-# logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger()
-stream_handler = logging.StreamHandler(sys.stdout)
-logger.addHandler(stream_handler)
-#logging.basicConfig(filename='hms.log',level=logging.DEBUG)
+logging.basicConfig(format='%(asctime)s,%(msecs)d %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s',
+    datefmt='%d-%m-%Y:%H:%M:%S',
+    level=logging.DEBUG)
+logger = logging.getLogger(__name__)
+
 #Unittest framework for testing the Client Home Security Functionalities
 
 class HMStest(unittest.TestCase):
     def setUp(self):
-        print("Setting up Client HMS Test Automation")
+        logger.info("Setting up Client HMS Test Automation Started")
         self.jsonobj = JsonConfig()
         cli_set = Client_Setup()
         self.json_server_obj = self.jsonobj.dump_config("../server_config.json")
@@ -27,24 +29,24 @@ class HMStest(unittest.TestCase):
 
     def test_1_hms_server_status(self):
 
-        print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
-        print("test_1_hms_server_status - Started")
+        logger.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+        logger.info("test_1_hms_server_status - Started")
         serv_obj = ServerStatus(self.json_server_obj)
         serv_obj.check_all_server_status()
-        print ("test_1_hms_server_status - Completed")
-        print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+        logger.info ("test_1_hms_server_status - Completed")
+        logger.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
 
     def test_2_hms_config_in_client(self):
-        print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
-        print("test_hms_config_in_client - Started")
+        logger.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+        logger.info("test_hms_config_in_client - Started")
         cli_set.client_setup_verification()
-        print ("test_hms_config_in_client - Completed")
-        print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+        logger.info("test_hms_config_in_client - Completed")
+        logger.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
 
     def test_3_trigger_pairing_mode(self):
-        print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
-        print ("test_trigger_pairing_mode - Started")
-        print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+        logger.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+        logger.info ("test_trigger_pairing_mode - Started")
+        logger.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
         pair = PairingMode(self.json_server_obj)
 
         # print ("test_trigger_pairing_mode For Flood Sensor - Started")
@@ -64,12 +66,12 @@ class HMStest(unittest.TestCase):
         # door_obj.door_sensor_pairing_enabled()
         # time.sleep(120)
         # print ("test_trigger_pairing_mode For Door Sensor - Completed")
-        print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+        logger.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
 
     def test_4_door_sensor_status(self):
-        print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
-        print ("test_door_sensor_status - Started")
-        print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+        logger.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+        logger.info ("test_door_sensor_status - Started")
+        logger.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
 
         door_obj = FlaskClientDoorSensor(self.json_rest_obj)
         door_obj.door_sensor_status()
@@ -89,14 +91,14 @@ class HMStest(unittest.TestCase):
             door_obj.door_sensor_paging_enabled()
             time.sleep(7)
 
-        print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
-        print ("test_door_sensor_status - Completed")
-        print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+        logger.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+        logger.info ("test_door_sensor_status - Completed")
+        logger.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
 
     def test_5_flood_sensor_status(self):
-        print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
-        print ("test_door_sensor_status - Started")
-        print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+        logger.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+        logger.info ("test_door_sensor_status - Started")
+        logger.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
 
         flood_obj = FlaskClientWaterSensor(self.json_rest_obj)
         flood_obj.water_sensor_status()
@@ -116,9 +118,9 @@ class HMStest(unittest.TestCase):
             flood_obj.water_sensor_paging_enabled()
             time.sleep(7)
 
-        print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
-        print ("test_door_sensor_status - Completed")
-        print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+        logger.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+        logger.info("test_door_sensor_status - Completed")
+        logger.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
 
 if __name__ == "__main__":
     unittest.main()
