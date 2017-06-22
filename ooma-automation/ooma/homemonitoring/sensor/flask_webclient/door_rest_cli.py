@@ -39,7 +39,7 @@ class FlaskClientDoorSensor:
             _pair_url = self.__resturl
             _pair_url += "/sensor/Door/interface/pair/switch/off"
             __http_response = urllib2.urlopen(_pair_url)
-            logger.info("door_sensor_paging_enabled - %s",pair_url)
+            logger.info("door_sensor_paging_enabled - %s",_pair_url)
             return __http_response
         except urllib2.URLError as e:
             logger.error("Error - BBFlaskServer[code - %s reason %s]" % (e.code, e.read()))
@@ -50,7 +50,7 @@ class FlaskClientDoorSensor:
             _pair_url = self.__resturl
             _pair_url += "/sensor/Door/interface/pair/switch/on"
             __http_response = urllib2.urlopen(_pair_url)
-            logger.info("door_sensor_pairing_enabling...... - %s",pair_url)
+            logger.info("door_sensor_pairing_enabling...... - %s",_pair_url)
             #return __http_response
         except urllib2.URLError as e:
             logger.error("Error - BBFlaskServer[code - %s reason %s]" % (e.code, e.read()))
@@ -62,7 +62,7 @@ class FlaskClientDoorSensor:
             _pair_url = self.__resturl
             _pair_url += "/sensor/Door/interface/pair/switch/off"
             __http_response = urllib2.urlopen(_pair_url)
-            logger.info("door_sensor_pairing_enabled - %s",pair_url)
+            logger.info("door_sensor_pairing_enabled - %s",_pair_url)
             return __http_response
         except urllib2.URLError as e:
             logger.error("Error - BBFlaskServer[code - %s reason %s]" % (e.code, e.read()))
@@ -73,7 +73,7 @@ class FlaskClientDoorSensor:
             _pair_url = self.__resturl
             _pair_url += "/sensor/Door/interface/pair/switch/off"
             __http_response = urllib2.urlopen(_pair_url)
-            logger.info("door_sensor_pairing_disabled - %s",pair_url)
+            logger.info("door_sensor_pairing_disabled - %s",_pair_url)
             return __http_response
         except urllib2.URLError as e:
             logger.error("Error - BBFlaskServer[code - %s reason %s]" % (e.code, e.read()))
