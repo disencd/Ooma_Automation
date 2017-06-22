@@ -1,14 +1,12 @@
-import logging
-import colorlog
-import sys
-import unittest
-import time
 from homemonitoring.sensor.flask_webclient.door_rest_cli import FlaskClientDoorSensor
 from homemonitoring.sensor.flask_webclient.flood_rest_cli import FlaskClientWaterSensor
 from homemonitoring.client.client_setup import Client_Setup
 from homemonitoring.setup.json_parse import JsonConfig
 from homemonitoring.server.server_status import ServerStatus
 from homemonitoring.server.pairing_mode import PairingMode
+import sys
+import unittest
+import time
 import logging
 import colorlog
 
@@ -27,14 +25,14 @@ class HMStest(unittest.TestCase):
 
         self.json_server_obj = self.jsonobj.dump_config("../server_config.json")
         self.json_rest_obj = self.jsonobj.dump_config("../bb_flask_api.json")
-        self.serv_obj = ServerStatus(self.json_server_obj)
+
 
     def test_1_hms_server_status(self):
 
         logger.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
         logger.info("test_1_hms_server_status - Started")
-
-        self.serv_obj.check_all_server_status()
+        serv_obj = ServerStatus(self.json_server_obj)
+        serv_obj.check_all_server_status()
         logger.info ("test_1_hms_server_status - Completed")
         logger.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
 
