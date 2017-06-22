@@ -8,6 +8,7 @@ homemonitoring/client/Utils.py
 homemonitoring/client/__init__.py
 homemonitoring/client/client.py
 homemonitoring/client/client_interface.py
+homemonitoring/client/client_setup.py
 homemonitoring/client/rest_client.py
 homemonitoring/sensor/__init__.py
 homemonitoring/sensor/flask_webclient/__init__.py
@@ -26,6 +27,7 @@ homemonitoring/server/hms.py
 homemonitoring/server/pairing_mode.py
 homemonitoring/server/server_cb.py
 homemonitoring/server/server_status.py
+homemonitoring/server/validate_logs.py
 homemonitoring/server_smoke/__init__.py
 homemonitoring/server_smoke/configuration.py
 homemonitoring/server_smoke/controller.py
