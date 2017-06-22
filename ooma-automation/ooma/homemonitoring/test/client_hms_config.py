@@ -4,7 +4,7 @@ from homemonitoring.client.client_setup import Client_Setup
 from homemonitoring.setup.json_parse import JsonConfig
 from homemonitoring.server.server_status import ServerStatus
 from homemonitoring.server.pairing_mode import PairingMode
-import sys
+import sys, os
 import unittest
 import time
 import logging
