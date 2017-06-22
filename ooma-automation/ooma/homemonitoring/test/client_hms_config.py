@@ -75,7 +75,7 @@ class HMStest(unittest.TestCase):
         door_obj = FlaskClientDoorSensor(self.json_rest_obj)
         door_obj.door_sensor_status()
         __cnt  = 0
-        __max = 1000
+        __max = 5
         while( __cnt < __max):
             __cnt += 1
             time.sleep(7)
@@ -102,7 +102,7 @@ class HMStest(unittest.TestCase):
         flood_obj = FlaskClientWaterSensor(self.json_rest_obj)
         flood_obj.water_sensor_status()
         __cnt = 0
-        __max = 1000
+        __max = 5
         while( __cnt < __max):
             __cnt += 1
             time.sleep(7)
