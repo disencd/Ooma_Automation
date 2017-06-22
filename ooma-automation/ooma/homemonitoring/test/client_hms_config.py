@@ -22,8 +22,8 @@ class HMStest(unittest.TestCase):
         logger.info("-Setup for Testcase Started")
         self.jsonobj = JsonConfig()
         abs_path = os.path.dirname(os.path.abspath(__file__))
-        server_f_path = abs_path + "../server_config.json"
-        bb_f_path = abs_path + "../bb_flask_api.json"
+        server_f_path = abs_path + "/../server_config.json"
+        bb_f_path = abs_path + "/../bb_flask_api.json"
         self.json_server_obj = self.jsonobj.dump_config(server_f_path)
         self.json_rest_obj = self.jsonobj.dump_config(bb_f_path)
 
