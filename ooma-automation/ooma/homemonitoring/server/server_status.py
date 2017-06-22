@@ -12,6 +12,18 @@ class ServerStatus():
         self._nimbits_server = self._jsonconfig[self.node]["nimbits-server"]
         self._beehive_server = self._jsonconfig[self.node]["beehive-server"]
 
+    def check_all_server_status(self):
+        logger.info("Check_all_server_status Started")
+        __hms_status = self.ping_hms()
+        logger.info('HMS Status is %s', __hms_status)
+
+        __beehive_status = self.ping_beehive()
+        logger.info('Beehive Server Status is %s', __beehive_status)
+
+        __nimbits_status = self.ping_nimbits()
+        logger.info("Nimbits Server Status is %s", __nimbits_status)
+        logger.info("Check_all_server_status Ended")
+
     def http_ping(self, url):
         '''
         Send the HTTP Req to the server and waiting for the response
@@ -37,17 +49,13 @@ class ServerStatus():
         :param __hostname: 
         :return: TRUE/FALSE
         '''
-        if platform.system() == "Darwin":
-            response = os.system("nc -z %s %s" % tuple(__hostname.split(":")))
-        else:
-            print "Windows system: cannot make port check for Tomcat server"
-            return True
+        response = os.system("nc -z %s %s" % tuple(__hostname.split(":")))
 
         if response == 0:
-            print __hostname, 'is up!'
+            logger.info("%s is up!!!!!!" , __hostname)
             return True
         else:
-            print __hostname, 'is down!'
+            logger.exception("%s is Down!!!!!!", __hostname)
             return False
 
     def ping_hms(self, version=None):
@@ -57,12 +65,12 @@ class ServerStatus():
         :return: TRUE or FALSE
         '''
         self._url = "http://%s%s" % (self._hostname_port, self.__hms_path)
-        print ("ping_hms -", format(self._url))
+        logger.info("ping_hms - %s", format(self._url))
         try:
             self.server_version = self.http_ping(self._url)
 
-        except urllib2.URLError, err:
-            print "Error in Pinging HMS Server - ", err.reason
+        except urllib2.URLError as e:
+            logger.exception("Error in Pinging HMS Server - %s", e.reason)
 
         tomcat_status = self.tomcat_is_up(self._hostname_port)
 

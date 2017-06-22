@@ -5,8 +5,7 @@ import unittest
 import time
 from homemonitoring.sensor.flask_webclient.door_rest_cli import FlaskClientDoorSensor
 from homemonitoring.sensor.flask_webclient.flood_rest_cli import FlaskClientWaterSensor
-from homemonitoring.client.client import ClientParameters
-from homemonitoring.client.rest_client import ClientRestURL
+from homemontioring.client.client_Setup import Client_Setup
 from homemonitoring.setup.json_parse import JsonConfig
 from homemonitoring.server.server_status import ServerStatus
 from homemonitoring.server.pairing_mode import PairingMode
@@ -22,49 +21,23 @@ class HMStest(unittest.TestCase):
     def setUp(self):
         print("Setting up Client HMS Test Automation")
         self.jsonobj = JsonConfig()
+        cli_set = Client_Setup()
         self.json_server_obj = self.jsonobj.dump_config("../server_config.json")
-        self.json_cli_obj = self.jsonobj.dump_config("../client_config.json")
         self.json_rest_obj = self.jsonobj.dump_config("../bb_flask_api.json")
 
     def test_1_hms_server_status(self):
 
         print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
         print("test_1_hms_server_status - Started")
-        self.serv_obj = ServerStatus(self.json_server_obj)
-
-        __hms_status = self.serv_obj.ping_hms()
-        print('HMS Status is ', __hms_status)
-
-        __beehive_status = self.serv_obj.ping_beehive()
-        print('Beehive Server Status is ', __beehive_status)
-
-        __nimbits_status = self.serv_obj.ping_nimbits()
-        print("Nimbits Server Status is ", __nimbits_status)
-
+        serv_obj = ServerStatus(self.json_server_obj)
+        serv_obj.check_all_server_status()
         print ("test_1_hms_server_status - Completed")
         print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
 
     def test_2_hms_config_in_client(self):
         print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
         print("test_hms_config_in_client - Started")
-
-        #Creating the class for client
-        cli_obj = ClientParameters(self.json_cli_obj)
-        rest_cli = ClientRestURL(self.json_cli_obj)
-
-        #Checking Telo is online with IP Address
-        ip_addr = cli_obj.is_telo_online()
-        print("IP Address of Client Telo " , ip_addr)
-
-        #Checking the HMS Configuration
-        controller_info = cli_obj.get_hms_config()
-        print("Controller Info ", controller_info)
-
-        cli_obj = rest_cli.load_client_debugconfig(cli_obj)
-
-        if cli_obj.controller_info["ENABLED"] == "1":
-            print("HMS is running successfully")
-
+        cli_set.client_setup_verification()
         print ("test_hms_config_in_client - Completed")
         print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
 
