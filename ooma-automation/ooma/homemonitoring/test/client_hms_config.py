@@ -21,8 +21,6 @@ class HMStest(unittest.TestCase):
     def setUp(self):
         logger.info("-Setup for Testcase Started")
         self.jsonobj = JsonConfig()
-        self.cli_set = Client_Setup()
-
         self.json_server_obj = self.jsonobj.dump_config("../server_config.json")
         self.json_rest_obj = self.jsonobj.dump_config("../bb_flask_api.json")
 
@@ -39,6 +37,7 @@ class HMStest(unittest.TestCase):
     def test_2_hms_config_in_client(self):
         logger.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
         logger.info("test_hms_config_in_client - Started")
+        cli_set = Client_Setup()
         cli_set.client_setup_verification()
         logger.info("test_hms_config_in_client - Completed")
         logger.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
