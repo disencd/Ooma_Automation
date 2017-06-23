@@ -62,6 +62,7 @@ class VStest(unittest.TestCase):
 
                 time.sleep(2)
                 val_log = Validate_Logs(val["cust_pk"])
+                val_log.get_latest_logevent()
                 time.sleep(1)
 
 
