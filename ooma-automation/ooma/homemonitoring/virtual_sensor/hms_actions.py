@@ -11,7 +11,7 @@ logging.basicConfig(format='%(asctime)s,%(msecs)d %(levelname)-8s [%(filename)s:
     level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
-class HMSActions():
+class HMSActions(HMSSqlQuery):
     def __init__(self, jsonconfig, node="cert"):
         self.node = node
         self._jsonconfig = jsonconfig
