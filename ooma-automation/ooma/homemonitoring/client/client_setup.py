@@ -3,6 +3,7 @@ from homemonitoring.client.rest_client import ClientRestURL
 from homemonitoring.setup.json_parse import JsonConfig
 import logging
 import colorlog
+import sys, os
 
 logging.basicConfig(format='%(asctime)s,%(msecs)d %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s',
     datefmt='%d-%m-%Y:%H:%M:%S',
@@ -12,7 +13,9 @@ logger = logging.getLogger(__name__)
 class Client_Setup():
     def __init__(self):
         self.jsonobj = JsonConfig()
-        self.json_cli_obj = self.jsonobj.dump_config("../client_config.json")
+        abs_path = os.path.dirname(os.path.abspath(__file__))
+        cli_f_path = abs_path + "/../client_config.json"
+        self.json_cli_obj = self.jsonobj.dump_config(cli_f_path)
 
     def client_setup_verification(self):
         logger.info("Client_setup_is_good started")
