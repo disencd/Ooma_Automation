@@ -3,6 +3,7 @@ import unittest
 import time, os
 from homemonitoring.virtual_sensor.generate_sensor_events import Sensor_Action
 from homemonitoring.setup.mongodb_setup import MongoDBQuery
+from homemonitoring.server.validate_logs import Validate_Logs
 import logging
 
 logging.basicConfig(format='%(asctime)s,%(msecs)d %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s',
@@ -60,6 +61,8 @@ class VStest(unittest.TestCase):
                 sens_obj.trigger_sensor_events(config_dict)
 
                 time.sleep(2)
+                val_log = Validate_Logs(val["cust_pk"])
+                time.sleep(1)
 
 
 if __name__ == "__main__":
