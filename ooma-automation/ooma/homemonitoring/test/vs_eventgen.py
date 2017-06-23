@@ -44,10 +44,8 @@ class VStest(unittest.TestCase):
         _mong_obj = MongoDBQuery()
         results = _mong_obj.mongo_return_elements("SensorInterface_collection")
         #logger.info("Mongo Returned %s", results)
-        cnt = 0
         for val in results:
-            if  "id" in val["TamperDetector"].keys() and cnt == 0 :
-                cnt += 1
+            if  "id" in val["TamperDetector"].keys():
                 config_dict = {
                     "no_events": 1,
                     "time_interval": 5,
