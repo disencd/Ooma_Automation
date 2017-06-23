@@ -25,6 +25,7 @@ class FlaskClientDoorSensor:
 
     def door_sensor_paging_enabled(self):
         try:
+            logger.info("========> Enabling Door Sensor Paging")
             _pair_url = self.__resturl
             _pair_url += "/sensor/Door/interface/pair/switch/on"
             __http_response = urllib2.urlopen(_pair_url)
@@ -47,6 +48,7 @@ class FlaskClientDoorSensor:
 
     def door_sensor_pairing_enabled(self):
         try:
+            logger.info("========> Enabling Door Sensor Pairing")
             _pair_url = self.__resturl
             _pair_url += "/sensor/Door/interface/pair/switch/on"
             __http_response = urllib2.urlopen(_pair_url)
@@ -70,6 +72,7 @@ class FlaskClientDoorSensor:
 
     def door_sensor_pairing_disabled(self):
         try:
+            logger.info("========> Enabling Door Sensor Disabling Pairing")
             _pair_url = self.__resturl
             _pair_url += "/sensor/Door/interface/pair/switch/off"
             __http_response = urllib2.urlopen(_pair_url)
@@ -81,6 +84,7 @@ class FlaskClientDoorSensor:
 
     def door_sensor_tampering_enabled(self):
         try:
+            logger.info("========> Enabling Door Sensor Tampering")
             _tamper_url = self.__resturl
             _tamper_url += "/sensor/Door/interface/tamper/switch/on"
             __http_response = urllib2.urlopen(_tamper_url)
@@ -92,6 +96,7 @@ class FlaskClientDoorSensor:
 
     def door_sensor_tampering_disabled(self):
         try:
+            logger.info("========> Enabling Door Sensor Armed")
             _tamper_url = self.__resturl
             _tamper_url += "/sensor/Door/interface/tamper/switch/off"
             __http_response = urllib2.urlopen(_tamper_url)
@@ -103,6 +108,7 @@ class FlaskClientDoorSensor:
 
     def door_sensor_open(self):
         try:
+            logger.info("========> Enabling Door Sensor Open")
             _door_url = self.__resturl
             _door_url += "/sensor/Door/interface/event/switch/off"
             __http_response = urllib2.urlopen(_door_url)
@@ -114,6 +120,7 @@ class FlaskClientDoorSensor:
 
     def door_sensor_close(self):
         try:
+            logger.info("========> Enabling Door Sensor Closed")
             _door_url = self.__resturl
             _door_url += "/sensor/Door/interface/event/switch/on"
             __http_response = urllib2.urlopen(_door_url)

@@ -24,6 +24,7 @@ class FlaskClientWaterSensor:
 
     def water_sensor_paging_enabled(self):
         try:
+            logger.info("========> Enabling Water Sensor Paging")
             _pair_url = self.__resturl
             _pair_url += "/sensor/Water/interface/pair/switch/on"
             __http_response = urllib2.urlopen(_pair_url)
@@ -46,6 +47,7 @@ class FlaskClientWaterSensor:
 
     def water_sensor_pairing_enabled(self):
         try:
+            logger.info("========> Enabling Water Sensor Pairing")
             _pair_url = self.__resturl
             _pair_url += "/sensor/Water/interface/pair/switch/on"
             __http_response = urllib2.urlopen(_pair_url)
@@ -69,6 +71,7 @@ class FlaskClientWaterSensor:
 
     def water_sensor_pairing_disabled(self):
         try:
+            logger.info("========> Enabling Water Sensor Disabling Pairing")
             _pair_url = self.__resturl
             _pair_url += "/sensor/Water/interface/pair/switch/off"
             __http_response = urllib2.urlopen(_pair_url)
@@ -80,6 +83,7 @@ class FlaskClientWaterSensor:
 
     def water_sensor_tampering_enabled(self):
         try:
+            logger.info("========> Enabling Water Sensor Tampering")
             _tamper_url = self.__resturl
             _tamper_url += "/sensor/Water/interface/tamper/switch/on"
             __http_response = urllib2.urlopen(_tamper_url)
@@ -91,6 +95,7 @@ class FlaskClientWaterSensor:
 
     def water_sensor_tampering_disabled(self):
         try:
+            logger.info("========> Enabling Water Sensor Armed")
             _tamper_url = self.__resturl
             _tamper_url += "/sensor/Water/interface/tamper/switch/off"
             __http_response = urllib2.urlopen(_tamper_url)
@@ -102,6 +107,7 @@ class FlaskClientWaterSensor:
 
     def water_sensor_detects_water(self):
         try:
+            logger.info("========> Enabling Water Sensor Detects")
             _water_url = self.__resturl
             _water_url += "/sensor/Water/interface/event/switch/on"
             __http_response = urllib2.urlopen(_water_url)
@@ -114,6 +120,7 @@ class FlaskClientWaterSensor:
 
     def water_sensor_detects_no_water(self):
         try:
+            logger.info("========> Enabling Water Sensor Dry")
             _water_url = self.__resturl
             _water_url += "/sensor/Water/interface/event/switch/off"
             __http_response = urllib2.urlopen(_water_url)
