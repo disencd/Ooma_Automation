@@ -69,7 +69,7 @@ class NimbitsServerIDs(object, HMSSqlQuery):
             code = response.getcode()
             response.close()
             id_data = json.loads(data)
-            logger.info("data %s, code %s" % (data, code))
+            #logger.info("data %s, code %s" % (data, code))
             #logger.info("response %s" , response)
             logger.info("get_nimbits_events ended")
             return id_data["id"]

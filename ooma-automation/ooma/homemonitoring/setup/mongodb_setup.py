@@ -44,7 +44,7 @@ class MongoDBQuery():
             logger.info("Inserting to mongo DB - %s", dict)
             self.vs_account.insert_one(dict)
         else:
-            logger.info("Already inserted to mongo DB - %s", dict)
+            logger.info("Already inserted to mongo DB")
 
     def MongoSensorIfaceAdd(self, collection, dict):
         self.__mongo_connect(collection)

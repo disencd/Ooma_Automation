@@ -43,11 +43,12 @@ class NimbitsSqlQuery():
         cur = self.sql_connect()
 
         _ooma_userid = "select  * from  VALUESTORE WHERE ENTITYID LIKE '" + str(id) + "'" \
-                        " ORDER BY DATA  DESC limit 3;"
+                        " ORDER BY DATA  DESC limit 1;"
         cur.execute(_ooma_userid)
 
+
         for _row in cur.fetchall():
-            logger.info(" _row %s", _row[2])
+            logger.info(" ===========> %s", _row[2])
 
         self.sql_disconnect()
         time.sleep(1)
