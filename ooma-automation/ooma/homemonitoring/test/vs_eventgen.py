@@ -45,8 +45,8 @@ class VStest(unittest.TestCase):
         #logger.info("Mongo Returned %s", results)
         cnt = 0
         for val in results:
-
-            if val["TamperDetector"]["id"] and cnt == 0 :
+            dict = val["TamperDetector"]
+            if dict["id"] and cnt == 0 :
                 cnt += 1
                 config_dict = {
                     "no_events": 1,
