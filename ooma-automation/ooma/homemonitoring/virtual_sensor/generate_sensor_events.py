@@ -85,6 +85,8 @@ class Sensor_Action(object):
         }
         url = self.posturl + config_dict["TamperDetector"]["id"] \
                             + "/series"
+
+        logger.info("Event Generation Post URL for %s", url)
         sensor_trigger = {}
         sensor_trigger["Authorization"] = auth_str
         sensor_trigger["headers"] = headers
