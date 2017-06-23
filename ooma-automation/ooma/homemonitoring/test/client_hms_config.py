@@ -48,7 +48,7 @@ class HMStest(unittest.TestCase):
         logger.info("test_hms_config_in_client - Completed")
         logger.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
 
-    def sampletest_3_trigger_pairing_mode(self):
+    def test_3_trigger_pairing_mode(self):
         logger.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
         logger.info ("test_trigger_pairing_mode - Started")
         logger.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
