@@ -1,6 +1,7 @@
 import urllib2
 import requests
 from homemonitoring.setup.json_parse import JsonConfig
+from homemonitoring.virtual_sensor.hms_sql_query import HMSSqlQuery
 import json, base64
 import time
 import logging
