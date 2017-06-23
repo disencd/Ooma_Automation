@@ -114,7 +114,7 @@ class FlaskClientWaterSensor:
             logger.info("water_sensor_detects_water - %s", _water_url)
             return __http_response
         except urllib2.URLError as e:
-            logger.error("Error - BBFlaskServer[code - %s reason %s]" % (e.code, e.read()))
+            logger.error("BB Error - BBFlaskServer[code - %s reason %s]" % (e.code, e.read()))
             return e.code
 
 
