@@ -19,7 +19,7 @@ class FlaskClientWaterSensor:
             logger.info("water_sensor_status - %s", self.__resturl)
             return __http_response
         except urllib2.URLError as e:
-            logger.error("Error - BBFlaskServer[code - %s reason %s]" % (e.code, e.read()))
+            logger.error("Error - BBFlaskServer is not running")
             return e.code
 
     def water_sensor_paging_enabled(self):
@@ -31,7 +31,7 @@ class FlaskClientWaterSensor:
             logger.info("water_sensor_paging_enabling...... - %s",_pair_url)
             #return __http_response
         except urllib2.URLError as e:
-            logger.error("Error - BBFlaskServer[code - %s reason %s]" % (e.code, e.read()))
+            logger.error("Error - BBFlaskServer is not running")
             return e.code
 
         time.sleep(2)
@@ -42,7 +42,7 @@ class FlaskClientWaterSensor:
             logger.info("water_sensor_paging_enabled - %s",_pair_url)
             return __http_response
         except urllib2.URLError as e:
-            logger.error("Error - BBFlaskServer[code - %s reason %s]" % (e.code, e.read()))
+            logger.error("Error - BBFlaskServer is not running")
             return e.code
 
     def water_sensor_pairing_enabled(self):
@@ -54,7 +54,7 @@ class FlaskClientWaterSensor:
             logger.info("water_sensor_pairing_enabling ... - %s",_pair_url)
             #return __http_response
         except urllib2.URLError as e:
-            logger.error("Error - BBFlaskServer[code - %s reason %s]" % (e.code, e.read()))
+            logger.error("Error - BBFlaskServer is not running")
             return e.code
 
         time.sleep(5)
@@ -66,7 +66,7 @@ class FlaskClientWaterSensor:
             logger.info("water_sensor_pairing_enabled - %s",_pair_url)
             return __http_response
         except urllib2.URLError as e:
-            logger.error("Error - BBFlaskServer[code - %s reason %s]" % (e.code, e.read()))
+            logger.error("Error - BBFlaskServer is not running")
             return e.code
 
     def water_sensor_pairing_disabled(self):
@@ -78,7 +78,7 @@ class FlaskClientWaterSensor:
             logger.info("door_sensor_pairing_enabled - %s", _pair_url)
             return __http_response
         except urllib2.URLError as e:
-            logger.error("Error - BBFlaskServer[code - %s reason %s]" % (e.code, e.read()))
+            logger.error("Error - BBFlaskServer is not running")
             return e.code
 
     def water_sensor_tampering_enabled(self):
@@ -90,7 +90,7 @@ class FlaskClientWaterSensor:
             logger.info("water_sensor_tampering_enabled - %s", _tamper_url)
             return __http_response
         except urllib2.URLError as e:
-            logger.error("Error - BBFlaskServer[code - %s reason %s]" % (e.code, e.read()))
+            logger.error("Error - BBFlaskServer is not running")
             return e.code
 
     def water_sensor_tampering_disabled(self):
@@ -102,7 +102,7 @@ class FlaskClientWaterSensor:
             logger.info("water_sensor_tampering_disabled - %s", _tamper_url)
             return __http_response
         except urllib2.URLError as e:
-            logger.error("Error - BBFlaskServer[code - %s reason %s]" % (e.code, e.read()))
+            logger.error("Error - BBFlaskServer is not running")
             return e.code
 
     def water_sensor_detects_water(self):
@@ -114,7 +114,7 @@ class FlaskClientWaterSensor:
             logger.info("water_sensor_detects_water - %s", _water_url)
             return __http_response
         except urllib2.URLError as e:
-            logger.error("BB Error - BBFlaskServer[code - %s reason %s]" % (e.code, e.read()))
+            logger.error("BB Error - BBFlaskServer is not running")
             return e.code
 
 
@@ -129,6 +129,6 @@ class FlaskClientWaterSensor:
 
         except urllib2.URLError as e:
 
-            logger.error("Error - BBFlaskServer[code - %s reason %s]" % (e.code, e.read()))
+            logger.error("Error - BBFlaskServer is not running")
 
             return e.code

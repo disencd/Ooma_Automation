@@ -20,7 +20,7 @@ class FlaskClientDoorSensor:
             logger.info("door_sensor_status - %s", self.__resturl)
             return __http_response
         except urllib2.URLError as e:
-            logger.error("Error - BBFlaskServer[code - %s reason %s]" % (e.code, e.read()))
+            logger.error("Error - BBFlaskServer is not running")
             return e.code
 
     def door_sensor_paging_enabled(self):
@@ -32,7 +32,7 @@ class FlaskClientDoorSensor:
             logger.info("door_sensor_paging_enabling...... - %s", _pair_url)
             #return __http_response
         except urllib2.URLError as e:
-            logger.error("Error - BBFlaskServer[code - %s reason %s]" % (e.code, e.read()))
+            logger.error("Error - BBFlaskServer is not running")
             return e.code
 
         time.sleep(2)
@@ -43,7 +43,7 @@ class FlaskClientDoorSensor:
             logger.info("door_sensor_paging_enabled - %s",_pair_url)
             return __http_response
         except urllib2.URLError as e:
-            logger.error("Error - BBFlaskServer[code - %s reason %s]" % (e.code, e.read()))
+            logger.error("Error - BBFlaskServer is not running")
             return e.code
 
     def door_sensor_pairing_enabled(self):
@@ -55,7 +55,7 @@ class FlaskClientDoorSensor:
             logger.info("door_sensor_pairing_enabling...... - %s",_pair_url)
             #return __http_response
         except urllib2.URLError as e:
-            logger.error("Error - BBFlaskServer[code - %s reason %s]" % (e.code, e.read()))
+            logger.error("Error - BBFlaskServer is not running")
             return e.code
 
         time.sleep(5)
@@ -67,7 +67,7 @@ class FlaskClientDoorSensor:
             logger.info("door_sensor_pairing_enabled - %s",_pair_url)
             return __http_response
         except urllib2.URLError as e:
-            logger.error("Error - BBFlaskServer[code - %s reason %s]" % (e.code, e.read()))
+            logger.error("Error - BBFlaskServer is not running")
             return e.code
 
     def door_sensor_pairing_disabled(self):
@@ -79,7 +79,7 @@ class FlaskClientDoorSensor:
             logger.info("door_sensor_pairing_disabled - %s",_pair_url)
             return __http_response
         except urllib2.URLError as e:
-            logger.error("Error - BBFlaskServer[code - %s reason %s]" % (e.code, e.read()))
+            logger.error("Error - BBFlaskServer is not running")
             return e.code
 
     def door_sensor_tampering_enabled(self):
@@ -91,7 +91,7 @@ class FlaskClientDoorSensor:
             logger.info("door_sensor_tampering_enabled - %s",_tamper_url)
             return __http_response
         except urllib2.URLError as e:
-            logger.error("Error - BBFlaskServer[code - %s reason %s]" % (e.code, e.read()))
+            logger.error("Error - BBFlaskServer is not running")
             return e.code
 
     def door_sensor_tampering_disabled(self):
@@ -103,7 +103,7 @@ class FlaskClientDoorSensor:
             logger.info("door_sensor_tampering_disabled -%s ",_tamper_url)
             return __http_response
         except urllib2.URLError as e:
-            logger.error("Error - BBFlaskServer[code - %s reason %s]" % (e.code, e.read()))
+            logger.error("Error - BBFlaskServer is not running")
             return e.code
 
     def door_sensor_open(self):
@@ -115,7 +115,7 @@ class FlaskClientDoorSensor:
             logger.info("door_sensor_open - %s ",_door_url)
             return __http_response
         except urllib2.URLError as e:
-            logger.error("Error - BBFlaskServer[code - %s reason %s]" % (e.code, e.read()))
+            logger.error("Error - BBFlaskServer is not running")
             return e.code
 
     def door_sensor_close(self):
@@ -127,5 +127,5 @@ class FlaskClientDoorSensor:
             logger.info("send_door_sensor_close - %s",_door_url)
             return __http_response
         except urllib2.URLError as e:
-            logger.info("Error - BBFlaskServer[code - %s reason %s]" % (e.code, e.read()))
+            logger.info("Error - BBFlaskServer is not running")
             return e.code
