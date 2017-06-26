@@ -47,8 +47,8 @@ class VStest(unittest.TestCase):
         for val in results:
             if  "id" in val["TamperDetector"].keys():
                 config_dict = {
-                    "no_events": 2,
-                    "time_interval": 3,
+                    "no_events": 1,
+                    "time_interval": 1,
                     "event": "TamperDetector"
                 }
 
