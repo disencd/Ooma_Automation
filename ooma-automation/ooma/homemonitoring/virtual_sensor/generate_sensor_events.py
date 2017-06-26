@@ -94,7 +94,13 @@ class Sensor_Action(object):
         sensor_trigger["time_interval"] = config_dict["time_interval"]
         sensor_trigger["url"] = url
 
-        response = self.nimbits_action.fork_nimbits_events(sensor_trigger)
+        newpid = os.fork()
+        if newpid == 0:
+            response = self.nimbits_action.fork_nimbits_events(sensor_trigger)
+        else:
+            pids = (os.getpid(), newpid)
+            print("parent: %d, child: %d\n" % pids)
+
         logger.info("Trigger_sensor_events Ended")
 
     def post_sensor_events(self, cust_pk):
