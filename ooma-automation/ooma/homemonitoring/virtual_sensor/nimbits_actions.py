@@ -104,7 +104,7 @@ class NimbitsActions(object, HMSSqlQuery):
         headers = events_dict["headers"]
         auth_header = events_dict["Authorization"]
         for index in range(events_dict["no_events"]):
-            data = "[{\"d\":0.0}]"
+            data = "[{\"d\":1.0}]"
             logger.info("Nimbits data %s", data)
             self.post_data(url, headers, auth_header, data)
             time.sleep(events_dict["time_interval"])
