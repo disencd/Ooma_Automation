@@ -1,4 +1,4 @@
-import MySQLdb
+import MySQLdb, time
 import logging, os
 from homemonitoring.setup.json_parse import JsonConfig
 from homemonitoring.setup.mongodb_setup import MongoDBQuery
@@ -44,7 +44,7 @@ class UpdateTables():
         for val in results:
             if  "id" in val["Alert"].keys():
                 config_dict = {
-                    "no_events": 5,
+                    "no_events": 1,
                     "time_interval": 1,
                     "event": "Alert"
                 }
