@@ -10,7 +10,7 @@ def get_emails():
     # Reading emails from a file
     emails = {}
     abs_path = os.path.dirname(os.path.abspath(__file__))
-    filename = abs_path + 'emails.txt'
+    filename = abs_path + '/emails.txt'
     print(filename)
     try:
         email_file = open(filename, 'r')
