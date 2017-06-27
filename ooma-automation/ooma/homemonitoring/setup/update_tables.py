@@ -51,14 +51,14 @@ class UpdateTables():
 
                 time.sleep(2)
 
-            if  "id" in val["BatteryIndicator"].keys():
+            if  "id" in val["Battery Indicator"].keys():
                 config_dict = {
                     "no_events": 5,
                     "time_interval": 1,
-                    "event": "BatteryIndicator"
+                    "event": "Battery Indicator"
                 }
 
-                logger.info("BatteryIndicator %s Sensor of PK %s" % \
+                logger.info("Battery Indicator %s Sensor of PK %s" % \
                             (val["sensorname"], val["cust_pk"]))
 
                 config_dict.update(val)
@@ -66,11 +66,11 @@ class UpdateTables():
 
                 time.sleep(2)
 
-            if  "id" in val["RSSI128"].keys():
+            if  "id" in val["RSSI biased +128"].keys():
                 config_dict = {
                     "no_events": 5,
                     "time_interval": 1,
-                    "event": "RSSI128"
+                    "event": "RSSI biased +128"
                 }
 
                 logger.info("RSSI128 %s Sensor of PK %s" % \
