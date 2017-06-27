@@ -97,6 +97,20 @@ class NimbitsActions(object, HMSSqlQuery):
         except urllib2.URLError as e:
             return e.reason
 
+
+    def reset_nimbits_events(self, events_dict):
+        logger.info("reset_nimbits_events started")
+        url = self.generate_http_url(events_dict["url"])
+        headers = events_dict["headers"]
+        auth_header = events_dict["Authorization"]
+        for index in range(events_dict["no_events"]):
+            data = "[{\"d\":0.0}]"
+            logger.info("Nimbits data %s", data)
+            self.post_data(url, headers, auth_header, data)
+            time.sleep(events_dict["time_interval"])
+
+        logger.info("reset_nimbits_events ended")
+
     def fork_nimbits_events(self, events_dict):
 
         logger.info("fork_nimbits_events started")

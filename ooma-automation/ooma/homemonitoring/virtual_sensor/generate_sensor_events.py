@@ -67,6 +67,39 @@ class Sensor_Action(object):
         logger.info("get_sensor_nimbitsid ended")
         return iface_dict
 
+    def resetting_sensor_datapoints(self, config_dict):
+        logger.info("resetting_sensor_datapoints started")
+        _mong_obj = MongoDBQuery()
+        logger.info("Querying Nimbits Details of cust_pk %s", config_dict["cust_pk"])
+
+        mongo_dict = _mong_obj.mongo_find_one_element("UserCredentials_collection", \
+                                config_dict["cust_pk"])
+
+        auth_str = 'basic ' + mongo_dict['nimbits_id'] + ':' + \
+                                mongo_dict['nimbits_pwd']
+
+        headers = {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        }
+
+        event = config_dict["event"]
+        url = self.posturl + config_dict[event]["id"] \
+                            + "/series"
+
+        logger.info("Event Generation Post URL for %s", url)
+        sensor_trigger = {}
+        sensor_trigger["Authorization"] = auth_str
+        sensor_trigger["headers"] = headers
+        sensor_trigger["no_events"] = config_dict["no_events"]
+        sensor_trigger["time_interval"] = config_dict["time_interval"]
+        sensor_trigger["url"] = url
+
+
+        response = self.nimbits_action.reset_nimbits_events(sensor_trigger)
+
+        logger.info("resetting_sensor_datapoints Ended")
+
     def trigger_sensor_events(self, config_dict):
         logger.info("Trigger_sensor_events started")
         _mong_obj = MongoDBQuery()

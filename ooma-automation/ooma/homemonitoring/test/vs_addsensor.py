@@ -1,11 +1,11 @@
 import sys
 import unittest
 import time, os
+import logging
 from homemonitoring.virtual_sensor.create_oss_hms_acc import HMS_Activation
 from homemonitoring.virtual_sensor.pair_sensor import Sensor_Addition
 from homemonitoring.virtual_sensor.generate_sensor_events import Sensor_Action
 from homemonitoring.setup.mongodb_setup import MongoDBQuery
-import logging
 
 logging.basicConfig(format='%(asctime)s,%(msecs)d %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s',
     datefmt='%d-%m-%Y:%H:%M:%S',
