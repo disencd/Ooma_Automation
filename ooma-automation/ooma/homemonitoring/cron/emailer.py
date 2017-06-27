@@ -1,5 +1,5 @@
 import smtp
-
+import sys, os
 '''
 Send a greeting email to our customer email list
 with the daily weather forecast and schedule
@@ -9,9 +9,11 @@ with the daily weather forecast and schedule
 def get_emails():
     # Reading emails from a file
     emails = {}
+    abs_path = os.path.dirname(os.path.abspath(__file__))
+    filename = abs_path + 'emails.txt'
 
     try:
-        email_file = open('emails.txt', 'r')
+        email_file = open(filename, 'r')
 
         for line in email_file:
             (email, name) = line.split(',')
