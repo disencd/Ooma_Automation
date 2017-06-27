@@ -16,7 +16,7 @@ def send_emails(emails, schedule):
 
     # Send to entire email list
     for to_email, name in emails.items():
-        message = 'Subject: Beagle Bone Automation Status @ ' + \
+        message = 'Subject: HomeSecurity Smoketest Status @ ' + \
                     strftime("%Y-%m-%d %H:%M:%S", gmtime()) + '\n'
 
         message += 'Hi ' + name + '!\n\n'
