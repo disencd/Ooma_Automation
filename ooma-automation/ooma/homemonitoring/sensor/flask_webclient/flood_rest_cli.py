@@ -112,6 +112,7 @@ class FlaskClientWaterSensor:
             _water_url += "/sensor/Water/interface/event/switch/on"
             __http_response = urllib2.urlopen(_water_url)
             logger.info("water_sensor_detects_water - %s", _water_url)
+            time.sleep(60)
             return __http_response
         except urllib2.URLError as e:
             logger.error("BB Error - BBFlaskServer is not running")
@@ -125,6 +126,7 @@ class FlaskClientWaterSensor:
             _water_url += "/sensor/Water/interface/event/switch/off"
             __http_response = urllib2.urlopen(_water_url)
             logger.info("water_sensor_detects_no_water - %s", _water_url)
+            time.sleep(60)
             return __http_response
 
         except urllib2.URLError as e:
