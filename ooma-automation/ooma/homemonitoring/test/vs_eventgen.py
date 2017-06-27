@@ -41,6 +41,7 @@ class VStest(unittest.TestCase):
         sens_obj = Sensor_Action()
         # sens_obj.configure_door_Sensor("virtualaccount20170607170804362249", "VirtualDoorSensor3")
 
+        cnt = 0
         _mong_obj = MongoDBQuery()
         results = _mong_obj.mongo_return_elements("SensorInterface_collection")
         #logger.info("Mongo Returned %s", results)
@@ -62,7 +63,9 @@ class VStest(unittest.TestCase):
                 val_log = Validate_Logs(val["cust_pk"])
                 val_log.get_latest_logevent()
                 time.sleep(1)
-                break
+                cnt += 1
+                if cnt == 5:
+                    break
 
 if __name__ == "__main__":
     unittest.main()
