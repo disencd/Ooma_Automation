@@ -1,6 +1,6 @@
 import smtplib
 
-def send_emails(emails, schedule, forecast):
+def send_emails(emails, schedule):
     # Connect to the smtp server
     server = smtplib.SMTP('smtp.gmail.com', '587')
 
@@ -14,9 +14,8 @@ def send_emails(emails, schedule, forecast):
 
     # Send to entire email list
     for to_email, name in emails.items():
-        message = 'Subject: Welcome to the Circus!\n'
+        message = 'Subject: Beagle Bone Automation Status!\n'
         message += 'Hi ' + name + '!\n\n'
-        message += forecast + '\n\n'
         message += "Today's Performance Schedule:"
         message += schedule + '\n\n'
         message += 'Hope to see you there!'
