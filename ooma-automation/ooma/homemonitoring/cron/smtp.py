@@ -9,7 +9,7 @@ def send_emails(emails, schedule):
 
     # Login
     #password = input("What's your password?")
-    from_email = 'disen@ooma.com'
+    from_email = 'disencd@gmail.com'
     server.login(from_email, 'Cdd1@ges')
 
     # Send to entire email list
