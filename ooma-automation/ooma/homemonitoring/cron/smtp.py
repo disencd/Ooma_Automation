@@ -8,7 +8,7 @@ def send_emails(emails, schedule):
     server.starttls()
 
     # Login
-    password = input("What's your password?")
+    #password = input("What's your password?")
     from_email = 'disen@ooma.com'
     server.login(from_email, 'Cdd1@ges')
 
