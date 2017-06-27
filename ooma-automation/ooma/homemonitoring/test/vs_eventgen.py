@@ -63,9 +63,11 @@ class VStest(unittest.TestCase):
                 val_log = Validate_Logs(val["cust_pk"])
                 val_log.get_latest_logevent()
                 time.sleep(1)
-                cnt += 1
+
                 if cnt == 2:
                     break
+
+                cnt += 1
 
 if __name__ == "__main__":
     unittest.main()
