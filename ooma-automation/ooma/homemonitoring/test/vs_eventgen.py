@@ -64,7 +64,7 @@ class VStest(unittest.TestCase):
                 val_log.get_latest_logevent()
                 time.sleep(1)
                 cnt += 1
-                if cnt == 5:
+                if cnt == 2:
                     break
 
 if __name__ == "__main__":
