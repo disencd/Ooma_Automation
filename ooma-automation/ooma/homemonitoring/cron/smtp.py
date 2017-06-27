@@ -1,4 +1,5 @@
 import smtplib
+from time import gmtime, strftime
 
 def send_emails(emails, schedule):
     # Connect to the smtp server
@@ -15,7 +16,9 @@ def send_emails(emails, schedule):
 
     # Send to entire email list
     for to_email, name in emails.items():
-        message = 'Subject: Beagle Bone Automation Status!\n'
+        message = 'Subject: Beagle Bone Automation Status @ ' + \
+                    strftime("%Y-%m-%d %H:%M:%S", gmtime()) + '\n'
+
         message += 'Hi ' + name + '!\n\n'
         message += "Today's Performance Schedule:\n\n"
         message += schedule + '\n\n'
