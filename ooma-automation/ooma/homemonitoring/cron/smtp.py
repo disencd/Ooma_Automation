@@ -9,7 +9,7 @@ def send_emails(emails, schedule):
 
     # Login
     password = input("What's your password?")
-    from_email = 'sensor_robo@ooma.com'
+    from_email = 'disen@ooma.com'
     server.login(from_email, password)
 
     # Send to entire email list
