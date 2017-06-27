@@ -1,5 +1,5 @@
 {
-  "url": "mongodb://localhost:27017/VirtualAutomation",
+  "url": "mongodb://homesecurity0-auto.corp.ooma.com:27017/VirtualAutomation",
   "acc_collection": "VirtualAccount",
   "SensorCount_collection": "SensorCount",
   "SensorInterface_collection": "SensorInterface",
