@@ -116,6 +116,7 @@ class NimbitsActions(object, HMSSqlQuery):
             time.sleep(events_dict["time_interval"])
 
         logger.info("fork_nimbits_events ended")
+        os._exit(0)
 
     def post_data(self, url, header, auth_str, data):
         logger.info("post_data started")
