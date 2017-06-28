@@ -1,10 +1,9 @@
 import time, datetime
-import colorlog
-import logging
-import colorlog
 from homemonitoring.setup.mongodb_setup import MongoDBQuery
-logging.basicConfig(level=logging.DEBUG)
+from homemonitoring.setup.hms_logging import HmsLogging
+
 logger = logging.getLogger(__name__)
+
 
 class FieldGenerator():
     def __init__(self):

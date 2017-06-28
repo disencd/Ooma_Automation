@@ -3,14 +3,10 @@ from field_generator import FieldGenerator, DeviceDiscoveryGenerator, SensorName
 from post_sensor_data import Post_sensor
 from homemonitoring.setup.json_parse import JsonConfig
 import os, json
-import logging
-import colorlog
-
-logging.basicConfig(format='%(asctime)s,%(msecs)d %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s',
-    datefmt='%d-%m-%Y:%H:%M:%S',
-    level=logging.DEBUG)
+from homemonitoring.setup.hms_logging import HmsLogging
 
 logger = logging.getLogger(__name__)
+
 
 device_id_dict = {}
 

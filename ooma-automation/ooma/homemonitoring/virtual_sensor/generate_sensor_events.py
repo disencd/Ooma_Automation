@@ -1,4 +1,3 @@
-import logging, os
 import json, time
 import ast
 import fill_dds_request
@@ -6,11 +5,10 @@ from homemonitoring.virtual_sensor.hms_sql_query import HMSSqlQuery
 from homemonitoring.setup.mongodb_setup import MongoDBQuery
 from homemonitoring.setup.json_parse import JsonConfig
 from homemonitoring.virtual_sensor.nimbits_actions import NimbitsActions
-logging.basicConfig(level=logging.DEBUG)
-logging.basicConfig(format='%(asctime)s,%(msecs)d %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s',
-    datefmt='%d-%m-%Y:%H:%M:%S',
-    level=logging.DEBUG)
+from homemonitoring.setup.hms_logging import HmsLogging
+
 logger = logging.getLogger(__name__)
+
 
 class Sensor_Action(object):
     def __init__(self, node = "cert"):
