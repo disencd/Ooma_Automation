@@ -1,5 +1,5 @@
 import MySQLdb, time
-import os
+import os, logging
 from homemonitoring.setup.json_parse import JsonConfig
 from homemonitoring.setup.mongodb_setup import MongoDBQuery
 from homemonitoring.virtual_sensor.hms_sql_query import HMSSqlQuery
