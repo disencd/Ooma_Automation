@@ -6,8 +6,14 @@ from homemonitoring.virtual_sensor.hms_sql_query import HMSSqlQuery
 import json, base64
 import time
 from homemonitoring.setup.hms_logging import HmsLogging
-
+logging.basicConfig(format='%(asctime)s,%(msecs)d %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s',
+    datefmt='%d-%m-%Y:%H:%M:%S',
+    level=logging.DEBUG)
+# create file handler which logs even debug messages
+fh = logging.FileHandler('/tmp/listener.log')
+fh.setLevel(logging.DEBUG)
 logger = logging.getLogger(__name__)
+
 
 class HMSActions(HMSSqlQuery):
     def __init__(self, jsonconfig, node="cert"):
