@@ -1,4 +1,5 @@
 import sys, os
+import logging
 import pymongo
 from homemonitoring.setup.json_parse import JsonConfig
 from homemonitoring.setup.hms_logging import HmsLogging
