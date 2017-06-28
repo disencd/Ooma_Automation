@@ -7,7 +7,7 @@ from homemonitoring.setup.json_parse import JsonConfig
 from homemonitoring.virtual_sensor.hms_sql_query import HMSSqlQuery
 logging.basicConfig(format='%(asctime)s,%(msecs)d %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s',
     datefmt='%d-%m-%Y:%H:%M:%S',
-    level=logging.DEBUG)
+    level=logging.ERROR)
 logger = logging.getLogger(__name__)
 
 class NimbitsServerIDs(object, HMSSqlQuery):
