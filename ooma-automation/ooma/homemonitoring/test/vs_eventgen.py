@@ -64,7 +64,7 @@ class VStest(unittest.TestCase):
                 val_log.get_latest_logevent()
                 time.sleep(1)
 
-                if cnt == 2:
+                if cnt == 20000:
                     break
 
                 cnt += 1
