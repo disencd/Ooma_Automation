@@ -5,6 +5,7 @@ from homemonitoring.virtual_sensor.generate_sensor_events import Sensor_Action
 from homemonitoring.setup.mongodb_setup import MongoDBQuery
 from homemonitoring.server.validate_logs import Validate_Logs
 from homemonitoring.setup.hms_logging import HmsLogging
+import logging
 
 logger = logging.getLogger(__name__)
 
