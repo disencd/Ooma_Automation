@@ -59,7 +59,7 @@ class UpdateTables():
 
             if  "id" in val["Battery Indicator"].keys():
                 config_dict = {
-                    "no_events": 5,
+                    "no_events": 1,
                     "time_interval": 1,
                     "event": "Battery Indicator"
                 }
@@ -74,7 +74,7 @@ class UpdateTables():
 
             if  "id" in val["RSSI biased +128"].keys():
                 config_dict = {
-                    "no_events": 5,
+                    "no_events": 1,
                     "time_interval": 1,
                     "event": "RSSI biased +128"
                 }
@@ -89,7 +89,7 @@ class UpdateTables():
 
             if  "id" in val["ActiveDevice"].keys():
                 config_dict = {
-                    "no_events": 5,
+                    "no_events": 1,
                     "time_interval": 1,
                     "event": "ActiveDevice"
                 }
