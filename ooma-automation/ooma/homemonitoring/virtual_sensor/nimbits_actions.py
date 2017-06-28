@@ -2,6 +2,7 @@ import urllib2
 import colorlog
 import os, time
 import json, base64
+import logging
 from homemonitoring.setup.json_parse import JsonConfig
 from homemonitoring.virtual_sensor.hms_sql_query import HMSSqlQuery
 from homemonitoring.setup.hms_logging import HmsLogging

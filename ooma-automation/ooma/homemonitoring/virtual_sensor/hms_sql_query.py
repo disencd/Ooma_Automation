@@ -1,4 +1,5 @@
 import MySQLdb
+import logging
 from homemonitoring.setup.json_parse import JsonConfig
 from homemonitoring.setup.mongodb_setup import MongoDBQuery
 import colorlog

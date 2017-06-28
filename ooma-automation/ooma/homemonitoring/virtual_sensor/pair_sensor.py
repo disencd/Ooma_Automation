@@ -1,5 +1,6 @@
 import base64
 import time, os
+import logging
 from collections import OrderedDict
 from field_generator import FieldGenerator, DeviceDiscoveryGenerator
 from fill_dds_request import DDS_data

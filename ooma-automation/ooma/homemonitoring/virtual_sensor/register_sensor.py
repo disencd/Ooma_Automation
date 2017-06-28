@@ -3,6 +3,7 @@ import os, json
 from hms_actions import HMSActions
 import fill_dds_request
 import time
+import logging
 from homemonitoring.setup.mongodb_setup import MongoDBQuery
 from homemonitoring.setup.hms_logging import HmsLogging
 

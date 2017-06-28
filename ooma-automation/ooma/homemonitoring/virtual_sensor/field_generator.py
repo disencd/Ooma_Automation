@@ -1,7 +1,7 @@
 import time, datetime
 from homemonitoring.setup.mongodb_setup import MongoDBQuery
 from homemonitoring.setup.hms_logging import HmsLogging
-
+import logging
 logger = logging.getLogger(__name__)
 
 

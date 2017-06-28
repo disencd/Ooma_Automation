@@ -4,7 +4,7 @@ from post_sensor_data import Post_sensor
 from homemonitoring.setup.json_parse import JsonConfig
 import os, json
 from homemonitoring.setup.hms_logging import HmsLogging
-
+import logging
 logger = logging.getLogger(__name__)
 
 

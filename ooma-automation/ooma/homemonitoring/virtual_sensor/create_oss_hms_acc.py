@@ -1,5 +1,6 @@
 import urllib2
 import time, os, json
+import logging
 from hms_actions import HMSActions
 from field_generator import FieldGenerator
 from homemonitoring.setup.json_parse import JsonConfig
