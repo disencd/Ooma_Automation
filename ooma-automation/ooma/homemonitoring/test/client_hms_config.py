@@ -25,6 +25,7 @@ class HMStest(unittest.TestCase):
     def setUp(self):
         logger.info("-Setup for Testcase Started")
         self.jsonobj = JsonConfig()
+        self.status = ""
         abs_path = os.path.dirname(os.path.abspath(__file__))
         server_f_path = abs_path + "/../server_config.json"
         bb_f_path = abs_path + "/../bb_flask_api.json"
@@ -39,7 +40,8 @@ class HMStest(unittest.TestCase):
         logger.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
         logger.info("test_1_hms_server_status - Started")
         serv_obj = ServerStatus(self.json_server_obj)
-        serv_obj.check_all_server_status()
+        self.status = serv_obj.check_all_server_status()
+        logger.info("Result : HMS/Nimbits/Beehive Server Status - %s", self.status)
         logger.info ("test_1_hms_server_status - Completed")
         logger.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
 
@@ -47,7 +49,8 @@ class HMStest(unittest.TestCase):
         logger.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
         logger.info("test_hms_config_in_client - Started")
         cli_set = Client_Setup()
-        cli_set.client_setup_verification()
+        self.status = cli_set.client_setup_verification()
+        logger.info("Result : OR Enabled Client Status - %s", self.status)
         logger.info("test_hms_config_in_client - Completed")
         logger.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
 

@@ -35,5 +35,7 @@ class Client_Setup():
 
         if cli_obj.controller_info["ENABLED"] == "1":
             logger.info("Openremote is running successfully")
+            return "pass"
         else:
             logger.error("Openremote is Not Running")
+            return "fail"

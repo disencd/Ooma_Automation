@@ -31,6 +31,11 @@ class ServerStatus():
         logger.info("Nimbits Server Status is %s", __nimbits_status)
         logger.info("Check_all_server_status Ended")
 
+        if __hms_status and __beehive_status and __nimbits_status:
+            return "pass"
+        else:
+            return "fail"
+
     def http_ping(self, url):
         '''
         Send the HTTP Req to the server and waiting for the response
