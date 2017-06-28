@@ -11,7 +11,7 @@ class HmsLogging():
         console_handler.setFormatter(default_formatter)
 
         error_handler = FileHandler("error.log", "a")
-        error_handler.setLevel(logging.ERROR)
+        error_handler.setLevel(logging.DEBUG)
         error_handler.setFormatter(default_formatter)
 
         root = logging.getLogger()
