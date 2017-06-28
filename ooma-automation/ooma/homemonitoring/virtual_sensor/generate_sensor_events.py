@@ -7,6 +7,7 @@ from homemonitoring.setup.json_parse import JsonConfig
 from homemonitoring.virtual_sensor.nimbits_actions import NimbitsActions
 from homemonitoring.setup.hms_logging import HmsLogging
 import logging
+import os
 
 logger = logging.getLogger(__name__)
 
