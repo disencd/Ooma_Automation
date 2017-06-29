@@ -29,28 +29,27 @@ def get_emails():
 
 def report_generator(log):
     result_list = []
-    result = re.compile('(Result :)+([\w\d.])', re.UNICODE)
+    result = "Result :"
     with open(log) as fh:
         for line in fh:
-            match = result.search(line)
-            if match:
-                print(line)
+            if result in line:
+                index = line.find(result)
                 result_list.append(line)
 
-    return line
+    return result_list
 
 def get_schedule():
     # Reading our schedule from a file
     try:
         schedule_file = open('/tmp/listener.log', 'r')
 
-        schedule = schedule_file.read()
+        #schedule = schedule_file.read()
 
         schedule1 = report_generator('/tmp/listener.log')
     except FileNotFoundError as err:
         print(err)
 
-    return schedule + schedule1
+    return schedule1
 
 
 def main():

@@ -21,7 +21,7 @@ def send_emails(emails, schedule):
 
         message += 'Hi ' + name + '!\n\n'
         message += "Please find the below execution report:\n\n"
-        message += schedule + '\n\n'
+        message += str(schedule) + '\n\n'
         message += 'Thanks for looking into it....'
         server.sendmail(from_email, to_email, message)
 
