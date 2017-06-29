@@ -44,7 +44,7 @@ class FlaskClientDoorSensor:
             _pair_url += "/sensor/Door/interface/pair/switch/off"
             __http_response = urllib2.urlopen(_pair_url)
             logger.info("door_sensor_paging_enabled - %s",_pair_url)
-            return __http_response
+            return "paging"
         except urllib2.URLError as e:
             logger.error("Error - BBFlaskServer is not running")
             return e.code
@@ -68,7 +68,7 @@ class FlaskClientDoorSensor:
             _pair_url += "/sensor/Door/interface/pair/switch/off"
             __http_response = urllib2.urlopen(_pair_url)
             logger.info("door_sensor_pairing_enabled - %s",_pair_url)
-            return __http_response
+            return "successfully configured"
         except urllib2.URLError as e:
             logger.error("Error - BBFlaskServer is not running")
             return e.code
@@ -92,7 +92,7 @@ class FlaskClientDoorSensor:
             _tamper_url += "/sensor/Door/interface/tamper/switch/on"
             __http_response = urllib2.urlopen(_tamper_url)
             logger.info("door_sensor_tampering_enabled - %s",_tamper_url)
-            return __http_response
+            return "detects tampering"
         except urllib2.URLError as e:
             logger.error("Error - BBFlaskServer is not running")
             return e.code
@@ -104,7 +104,7 @@ class FlaskClientDoorSensor:
             _tamper_url += "/sensor/Door/interface/tamper/switch/off"
             __http_response = urllib2.urlopen(_tamper_url)
             logger.info("door_sensor_tampering_disabled -%s ",_tamper_url)
-            return __http_response
+            return "is armed"
         except urllib2.URLError as e:
             logger.error("Error - BBFlaskServer is not running")
             return e.code
@@ -116,7 +116,7 @@ class FlaskClientDoorSensor:
             _door_url += "/sensor/Door/interface/event/switch/off"
             __http_response = urllib2.urlopen(_door_url)
             logger.info("door_sensor_open - %s ",_door_url)
-            return __http_response
+            return "is open"
         except urllib2.URLError as e:
             logger.error("Error - BBFlaskServer is not running")
             return e.code
@@ -128,7 +128,7 @@ class FlaskClientDoorSensor:
             _door_url += "/sensor/Door/interface/event/switch/on"
             __http_response = urllib2.urlopen(_door_url)
             logger.info("send_door_sensor_close - %s",_door_url)
-            return __http_response
+            return "is closed"
         except urllib2.URLError as e:
             logger.info("Error - BBFlaskServer is not running")
             return e.code

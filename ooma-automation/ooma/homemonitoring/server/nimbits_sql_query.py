@@ -40,6 +40,7 @@ class NimbitsSqlQuery():
     def sql_query_pk(self, id = "1238c34b-33d7-444f-87d5-5f6acd03e66d"):
         logger.info("id = %s", id)
         or_dict = {}
+        result = ""
         cur = self.sql_connect()
 
         _ooma_userid = "select  * from  VALUESTORE WHERE ENTITYID LIKE '" + str(id) + "'" \
@@ -49,11 +50,12 @@ class NimbitsSqlQuery():
 
         for _row in cur.fetchall():
             logger.info(" ===========> %s", _row[2])
+            result = _row[2]
 
         self.sql_disconnect()
         time.sleep(1)
 
-        return or_dict
+        return result
 
 
 # if __name__ == "__main__":

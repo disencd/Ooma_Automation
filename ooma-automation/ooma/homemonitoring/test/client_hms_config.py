@@ -65,8 +65,12 @@ class HMStest(unittest.TestCase):
         time.sleep(20)
         water_obj = FlaskClientWaterSensor(self.json_rest_obj)
         water_obj.water_sensor_status()
-        water_obj.water_sensor_pairing_enabled()
+        _result = water_obj.water_sensor_pairing_enabled()
         time.sleep(120)
+
+        val_log = Validate_Logs(self.cust_pk)
+        self.status = val_log.get_latest_logevent(_result)
+        logger.info("Result : Pairing Water Sensor Status - %s", self.status)
         logger.info("test_trigger_pairing_mode For Flood Sensor - Completed")
 
         logger.info("test_trigger_pairing_mode For Door Sensor - Started")
@@ -74,8 +78,12 @@ class HMStest(unittest.TestCase):
         time.sleep(20)
         door_obj = FlaskClientDoorSensor(self.json_rest_obj)
         door_obj.door_sensor_status()
-        door_obj.door_sensor_pairing_enabled()
+        _result = door_obj.door_sensor_pairing_enabled()
         time.sleep(120)
+
+        val_log = Validate_Logs(self.cust_pk)
+        self.status = val_log.get_latest_logevent(_result)
+        logger.info("Result : Pairing Door Sensor Status - %s", self.status)
         # print ("test_trigger_pairing_mode For Door Sensor - Completed")
         logger.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
 
@@ -92,29 +100,34 @@ class HMStest(unittest.TestCase):
         while( __cnt < __max):
             __cnt += 1
             time.sleep(7)
-            door_obj.door_sensor_tampering_enabled()
+            _result = door_obj.door_sensor_tampering_enabled()
             time.sleep(1)
-            val_log.get_latest_logevent()
+            self.status = val_log.get_latest_logevent(_result)
+            logger.info("Result : Tampering Door Sensor Status - %s", self.status)
 
             time.sleep(7)
-            door_obj.door_sensor_tampering_disabled()
+            _result = door_obj.door_sensor_tampering_disabled()
             time.sleep(1)
-            val_log.get_latest_logevent()
+            self.status = val_log.get_latest_logevent(_result)
+            logger.info("Result : Arming Door Sensor Status - %s", self.status)
 
             time.sleep(7)
-            door_obj.door_sensor_open()
+            _result = door_obj.door_sensor_open()
             time.sleep(1)
-            val_log.get_latest_logevent()
+            self.status = val_log.get_latest_logevent(_result)
+            logger.info("Result : Open Door Sensor Status - %s", self.status)
 
             time.sleep(7)
-            door_obj.door_sensor_close()
+            _result = door_obj.door_sensor_close()
             time.sleep(1)
-            val_log.get_latest_logevent()
+            self.status = val_log.get_latest_logevent(_result)
+            logger.info("Result : Close Door Sensor Status - %s", self.status)
 
             time.sleep(7)
-            door_obj.door_sensor_paging_enabled()
+            _result = door_obj.door_sensor_paging_enabled()
             time.sleep(1)
-            val_log.get_latest_logevent()
+            self.status = val_log.get_latest_logevent(_result)
+            logger.info("Result : paging Door Sensor Status - %s", self.status)
 
             time.sleep(7)
 
@@ -134,29 +147,34 @@ class HMStest(unittest.TestCase):
         while( __cnt < __max):
             __cnt += 1
             time.sleep(7)
-            flood_obj.water_sensor_tampering_enabled()
+            _result = flood_obj.water_sensor_tampering_enabled()
             time.sleep(1)
-            val_log.get_latest_logevent()
+            self.status = val_log.get_latest_logevent(_result)
+            logger.info("Result : Tampering Water Sensor Status - %s", self.status)
 
             time.sleep(7)
-            flood_obj.water_sensor_tampering_disabled()
+            _result = flood_obj.water_sensor_tampering_disabled()
             time.sleep(1)
-            val_log.get_latest_logevent()
+            self.status = val_log.get_latest_logevent(_result)
+            logger.info("Result : Arming Water Sensor Status - %s", self.status)
 
             time.sleep(7)
-            flood_obj.water_sensor_detects_water()
+            _result = flood_obj.water_sensor_detects_water()
             time.sleep(1)
-            val_log.get_latest_logevent()
+            self.status = val_log.get_latest_logevent(_result)
+            logger.info("Result : Wet Water Sensor Status - %s", self.status)
 
             time.sleep(7)
-            flood_obj.water_sensor_detects_no_water()
+            _result = flood_obj.water_sensor_detects_no_water()
             time.sleep(1)
-            val_log.get_latest_logevent()
+            self.status = val_log.get_latest_logevent(_result)
+            logger.info("Result : Dry Water Sensor Status - %s", self.status)
 
             time.sleep(7)
-            flood_obj.water_sensor_paging_enabled()
+            _result = flood_obj.water_sensor_paging_enabled()
             time.sleep(1)
-            val_log.get_latest_logevent()
+            self.status = val_log.get_latest_logevent(_result)
+            logger.info("Result : Paging Water Sensor Status - %s", self.status)
 
             time.sleep(7)
 
