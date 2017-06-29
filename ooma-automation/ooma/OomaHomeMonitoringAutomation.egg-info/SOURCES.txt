@@ -24,8 +24,9 @@ homemonitoring/sensor/utils/serial_connection.py
 homemonitoring/server/__init__.py
 homemonitoring/server/get_config.py
 homemonitoring/server/hms.py
+homemonitoring/server/nimbits_server_id.py
+homemonitoring/server/nimbits_sql_query.py
 homemonitoring/server/pairing_mode.py
-homemonitoring/server/server_cb.py
 homemonitoring/server/server_status.py
 homemonitoring/server/validate_logs.py
 homemonitoring/server_smoke/__init__.py
@@ -40,6 +41,7 @@ homemonitoring/server_smoke/sensor.py
 homemonitoring/server_smoke/sensor_events.py
 homemonitoring/server_smoke/utils.py
 homemonitoring/setup/__init__.py
+homemonitoring/setup/hms_logging.py
 homemonitoring/setup/json_parse.py
 homemonitoring/setup/mongodb_setup.py
 homemonitoring/setup/ssh_apis.py

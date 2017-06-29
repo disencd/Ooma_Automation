@@ -1,67 +1,69 @@
 import smtp
 import sys, os
 import re
-
+from smtp import SmtpEmail
 '''
 Send a greeting email to our customer email list
 with the daily weather forecast and schedule
 '''
 
+class Emailer(object, SmtpEmail):
+    def __init__(self):
+        pass
 
-def get_emails():
-    # Reading emails from a file
-    emails = {}
-    abs_path = os.path.dirname(os.path.abspath(__file__))
-    filename = abs_path + '/emails.txt'
+    def get_emails(self):
+        # Reading emails from a file
+        emails = {}
+        abs_path = os.path.dirname(os.path.abspath(__file__))
+        filename = abs_path + '/emails.txt'
 
-    try:
-        email_file = open(filename, 'r')
+        try:
+            email_file = open(filename, 'r')
 
-        for line in email_file:
-            (email, name) = line.split(',')
-            emails[email] = name.strip()
+            for line in email_file:
+                (email, name) = line.split(',')
+                emails[email] = name.strip()
 
-    except FileNotFoundError as err:
-        print(err)
+        except FileNotFoundError as err:
+            print(err)
 
-    return emails
+        return emails
 
 
-def report_generator(log):
-    result_list = ""
-    result = "Result :"
-    with open(log) as fh:
-        for line in fh:
-            if result in line:
-                index = line.find(result)
-                index += len(result)
-                result_list += line[index:] + '\n'
+    def report_generator(self, log):
+        result_list = ""
+        result = "Result :"
+        with open(log) as fh:
+            for line in fh:
+                if result in line:
+                    index = line.find(result)
+                    index += len(result)
+                    result_list += line[index:] + '\n'
 
-    return result_list
+        return result_list
 
-def get_schedule():
-    # Reading our schedule from a file
-    try:
-        schedule_file = open('/tmp/listener.log', 'r')
+    def get_report_card(self):
+        # Reading our schedule from a file
+        try:
+            report_card = self.report_generator('/tmp/listener.log')
+        except FileNotFoundError as err:
+            print(err)
 
-        #schedule = schedule_file.read()
+        return report_card
 
-        schedule1 = report_generator('/tmp/listener.log')
-    except FileNotFoundError as err:
-        print(err)
+    def send_report_card(self):
+        # Get our dictionary of customer emails and names
+        emails = self.get_emails()
 
-    return schedule1
+        # Get our daily performance schedule
+        schedule = self.get_report_card()
 
+        super(Emailer, self).send_emails(emails, schedule)
 
 def main():
-    # Get our dictionary of customer emails and names
-    emails = get_emails()
-
-    # Get our daily performance schedule
-    schedule = get_schedule()
-
+    email_obj = Emailer()
     # Send emails to all of our customers with schedule
-    smtp.send_emails(emails, schedule)
+    email_obj.send_report_card()
 
 
 main()
