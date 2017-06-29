@@ -9,16 +9,16 @@ with the daily weather forecast and schedule
 
 class Emailer(object, SmtpEmail):
     def __init__(self):
-        pass
+        self.abs_path = os.path.dirname(os.path.abspath(__file__))
+        self.html_file = self.abs_path + '/../setup/report.html'
+        self._filename = self.abs_path + '/emails.txt'
 
     def get_emails(self):
         # Reading emails from a file
         emails = {}
-        abs_path = os.path.dirname(os.path.abspath(__file__))
-        filename = abs_path + '/emails.txt'
 
         try:
-            email_file = open(filename, 'r')
+            email_file = open(self._filename, 'r')
 
             for line in email_file:
                 (email, name) = line.split(',')
@@ -29,27 +29,53 @@ class Emailer(object, SmtpEmail):
 
         return emails
 
+    def construct_report(self, sl_no, testcase, result):
+        html_str = "<TR><TD>" + str(sl_no) + "</TD>" \
+                   "<TD>" + testcase + "</TD> " \
+                   "<TD>" + result + "</TD><TD></TD></TR>"
+
+        return html_str
 
     def report_generator(self, log):
         result_list = ""
         result = "Result :"
-        with open(log) as fh:
-            for line in fh:
-                if result in line:
-                    index = line.find(result)
-                    index += len(result)
-                    result_list += line[index:] + '\n'
+        _cnt = 1
+        try:
+            with open(log) as fh:
+                for line in fh:
+                    if result in line:
+                        index = line.find(result)
+                        index += len(result)
+                        # result_str += line[index:] + '\n'
+                        str = line[index:]
+                        val = str.split(' -')
+                        result_list += self.construct_report(_cnt, val[0], val[1])
+                        _cnt += 1
+        except:
+            print("Unexpected error:", sys.exc_info()[0])
 
         return result_list
+
+    def process_html_result(self, result):
+
+        with open(self.html_file) as fh:
+            data = fh.read().replace('@outputstring', result)
+
+        fh.close()
+
+        return data
 
     def get_report_card(self):
         # Reading our schedule from a file
         try:
-            report_card = self.report_generator('/tmp/listener.log')
+            report_result = self.report_generator('/tmp/listener.log')
+
+            final_output = self.process_html_result(report_result)
+
         except FileNotFoundError as err:
             print(err)
 
-        return report_card
+        return final_output
 
     def send_report_card(self):
         # Get our dictionary of customer emails and names
