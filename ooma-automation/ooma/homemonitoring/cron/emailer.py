@@ -34,7 +34,7 @@ def report_generator(log):
         for line in fh:
             if result in line:
                 index = line.find(result)
-                result_list.append(line)
+                result_list.append(line[index:])
 
     return result_list
 
