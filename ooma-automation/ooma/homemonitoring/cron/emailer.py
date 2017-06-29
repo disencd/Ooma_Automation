@@ -42,15 +42,15 @@ def report_generator(log):
 def get_schedule():
     # Reading our schedule from a file
     try:
-        # schedule_file = open('/tmp/listener.log', 'r')
-        #
-        # schedule = schedule_file.read()
+        schedule_file = open('/tmp/listener.log', 'r')
 
-        schedule = report_generator('/tmp/listener.log')
+        schedule = schedule_file.read()
+
+        schedule1 = report_generator('/tmp/listener.log')
     except FileNotFoundError as err:
         print(err)
 
-    return schedule
+    return schedule + schedule1
 
 
 def main():
