@@ -29,8 +29,15 @@ class Validate_Logs():
         _cur_res = log_obj.sql_query_pk(log_id)
         logger.info("Current Result - %s Expected Result %s " % \
                                             (_cur_res, exp_res))
-        return "pass"
-        logger.info("get_latest_logevent Ended")
 
+        res = self.validate_result(_cur_res, exp_res)
+        logger.info("get_latest_logevent Ended")
+        return res
+
+    def validate_result(self, _cur_res, exp_res):
+        if exp_res in _cur_res:
+            return "pass"
+        else:
+            return "fail"
 # obj = Validate_Logs("c3bw6mu485ea3z67tnjcqws7dhuv5wsv")
 # obj.get_latest_logevent()

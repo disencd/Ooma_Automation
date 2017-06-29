@@ -1,312 +1,322 @@
 Hi Disen Chitilapilly!
 
-Today's Performance Schedule:
+Please find the below execution report:
 
-28-06-2017:16:20:01,283 INFO     [client_hms_config.py:26] -Setup for Testcase Started
-28-06-2017:16:20:01,283 INFO     [client_hms_config.py:40] +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-28-06-2017:16:20:01,283 INFO     [client_hms_config.py:41] test_1_hms_server_status - Started
-28-06-2017:16:20:01,283 INFO     [server_status.py:23] Check_all_server_status Started
-28-06-2017:16:20:01,283 INFO     [server_status.py:80] ping_hms - http://hms1-cert1.cn.ooma.com:8084/hms/ping
+28-06-2017:19:40:01,959 INFO     [client_hms_config.py:26] -Setup for Testcase Started
+28-06-2017:19:40:01,960 INFO     [client_hms_config.py:40] +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+28-06-2017:19:40:01,960 INFO     [client_hms_config.py:41] test_1_hms_server_status - Started
+28-06-2017:19:40:01,960 INFO     [server_status.py:23] Check_all_server_status Started
+28-06-2017:19:40:01,961 INFO     [server_status.py:80] ping_hms - http://hms1-cert1.cn.ooma.com:8084/hms/ping
 Connection to hms1-cert1.cn.ooma.com 8084 port [tcp/*] succeeded!
-28-06-2017:16:20:01,302 INFO     [server_status.py:67] hms1-cert1.cn.ooma.com:8084 is up!!!!!!
-28-06-2017:16:20:01,302 INFO     [server_status.py:25] HMS Status is True
+28-06-2017:19:40:01,981 INFO     [server_status.py:67] hms1-cert1.cn.ooma.com:8084 is up!!!!!!
+28-06-2017:19:40:01,981 INFO     [server_status.py:25] HMS Status is True
 Connection to beehive-cert.hms.ooma.com 8443 port [tcp/pcsync-https] succeeded!
-28-06-2017:16:20:01,310 INFO     [server_status.py:67] beehive-cert.hms.ooma.com:8443 is up!!!!!!
-28-06-2017:16:20:01,310 INFO     [server_status.py:28] Beehive Server Status is True
+28-06-2017:19:40:01,991 INFO     [server_status.py:67] beehive-cert.hms.ooma.com:8443 is up!!!!!!
+28-06-2017:19:40:01,992 INFO     [server_status.py:28] Beehive Server Status is True
 Connection to nimbits1-cert1.cn.ooma.com 9080 port [tcp/glrpc] succeeded!
-28-06-2017:16:20:01,317 INFO     [server_status.py:67] nimbits1-cert1.cn.ooma.com:9080 is up!!!!!!
-28-06-2017:16:20:01,318 INFO     [server_status.py:31] Nimbits Server Status is True
-28-06-2017:16:20:01,318 INFO     [server_status.py:32] Check_all_server_status Ended
-28-06-2017:16:20:01,318 INFO     [client_hms_config.py:44] Result : HMS/Nimbits/Beehive Server Status - pass
-28-06-2017:16:20:01,318 INFO     [client_hms_config.py:45] test_1_hms_server_status - Completed
-28-06-2017:16:20:01,318 INFO     [client_hms_config.py:46] +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-.28-06-2017:16:20:01,318 INFO     [client_hms_config.py:26] -Setup for Testcase Started
-28-06-2017:16:20:01,319 INFO     [client_hms_config.py:49] +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-28-06-2017:16:20:01,319 INFO     [client_hms_config.py:50] test_hms_config_in_client - Started
-28-06-2017:16:20:01,319 INFO     [client_setup.py:21] Client_setup_is_good started
-28-06-2017:16:20:01,324 DEBUG    [transport.py:1572] starting thread (client mode): 0x1fddd50L
-28-06-2017:16:20:01,324 DEBUG    [transport.py:1572] Local version/idstring: SSH-2.0-paramiko_2.1.2
-28-06-2017:16:20:01,335 DEBUG    [transport.py:1572] Remote version/idstring: SSH-1.99-OpenSSH_5.3
-28-06-2017:16:20:01,335 INFO     [transport.py:1572] Connected (version 1.99, client OpenSSH_5.3)
-28-06-2017:16:20:01,336 DEBUG    [transport.py:1572] kex algos:[u'diffie-hellman-group-exchange-sha256', u'diffie-hellman-group-exchange-sha1', u'diffie-hellman-group14-sha1', u'diffie-hellman-group1-sha1'] server key:[u'ssh-rsa', u'ssh-dss'] client encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] server encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] client mac:[u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] server mac:[u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] cli
+28-06-2017:19:40:02,0 INFO     [server_status.py:67] nimbits1-cert1.cn.ooma.com:9080 is up!!!!!!
+28-06-2017:19:40:02,0 INFO     [server_status.py:31] Nimbits Server Status is True
+28-06-2017:19:40:02,0 INFO     [server_status.py:32] Check_all_server_status Ended
+28-06-2017:19:40:02,0 INFO     [client_hms_config.py:44] Result : HMS/Nimbits/Beehive Server Status - pass
+28-06-2017:19:40:02,0 INFO     [client_hms_config.py:45] test_1_hms_server_status - Completed
+28-06-2017:19:40:02,0 INFO     [client_hms_config.py:46] +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.28-06-2017:19:40:02,0 INFO     [client_hms_config.py:26] -Setup for Testcase Started
+28-06-2017:19:40:02,1 INFO     [client_hms_config.py:49] +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+28-06-2017:19:40:02,1 INFO     [client_hms_config.py:50] test_hms_config_in_client - Started
+28-06-2017:19:40:02,1 INFO     [client_setup.py:21] Client_setup_is_good started
+28-06-2017:19:40:02,4 DEBUG    [transport.py:1572] starting thread (client mode): 0x16defd0L
+28-06-2017:19:40:02,5 DEBUG    [transport.py:1572] Local version/idstring: SSH-2.0-paramiko_2.1.2
+28-06-2017:19:40:02,11 DEBUG    [transport.py:1572] Remote version/idstring: SSH-1.99-OpenSSH_5.3
+28-06-2017:19:40:02,11 INFO     [transport.py:1572] Connected (version 1.99, client OpenSSH_5.3)
+28-06-2017:19:40:02,12 DEBUG    [transport.py:1572] kex algos:[u'diffie-hellman-group-exchange-sha256', u'diffie-hellman-group-exchange-sha1', u'diffie-hellman-group14-sha1', u'diffie-hellman-group1-sha1'] server key:[u'ssh-rsa', u'ssh-dss'] client encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] server encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] client mac:[u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] server mac:[u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] clie
+nt compress:[u'none', u'zlib@openssh.com'] server compress:[u'none', u'zlib@openssh.com'] client lang:[u''] server lang:[u''] kex follows?False
+28-06-2017:19:40:02,12 DEBUG    [transport.py:1572] Kex agreed: diffie-hellman-group1-sha1
+28-06-2017:19:40:02,12 DEBUG    [transport.py:1572] Cipher agreed: aes128-ctr
+28-06-2017:19:40:02,12 DEBUG    [transport.py:1572] MAC agreed: hmac-md5
+28-06-2017:19:40:02,12 DEBUG    [transport.py:1572] Compression agreed: none
+28-06-2017:19:40:02,255 DEBUG    [transport.py:1572] kex engine KexGroup1 specified hash_algo <built-in function openssl_sha1>
+28-06-2017:19:40:02,256 DEBUG    [transport.py:1572] Switch to new keys ...
+28-06-2017:19:40:02,257 DEBUG    [transport.py:1572] Adding ssh-rsa host key for prv1-cert1.cn.ooma.com: a4e5133f697f975f80955a8d427defdc
+28-06-2017:19:40:02,297 DEBUG    [transport.py:1572] userauth is OK
+28-06-2017:19:40:02,458 INFO     [transport.py:1572] Authentication (password) successful!
+28-06-2017:19:40:02,460 INFO     [ssh_apis.py:32] Auto_Logger: Ssh to server prv1-cert1.cn.ooma.com
+28-06-2017:19:40:02,460 DEBUG    [channel.py:1148] [chan 0] Max packet in: 32768 bytes
+28-06-2017:19:40:02,461 DEBUG    [channel.py:1148] [chan 0] Max packet out: 32768 bytes
+28-06-2017:19:40:02,462 DEBUG    [transport.py:1572] Secsh channel 0 opened.
+28-06-2017:19:40:02,465 DEBUG    [channel.py:1148] [chan 0] Sesch channel 0 request ok
+28-06-2017:19:40:02,467 DEBUG    [channel.py:1148] [chan 0] Sesch channel 0 request ok
+28-06-2017:19:40:02,467 INFO     [client.py:39] Auto_Logger: get showmyx output - showmyx 220120 | grep IPADDR=
+28-06-2017:19:40:07,540 DEBUG    [transport.py:1572] EOF in transport thread
+28-06-2017:19:40:07,587 INFO     [client_setup.py:28] IP Address of Client Telo 10.66.16.40
+28-06-2017:19:40:07,590 DEBUG    [transport.py:1572] starting thread (client mode): 0x16def90L
+28-06-2017:19:40:07,590 DEBUG    [transport.py:1572] Local version/idstring: SSH-2.0-paramiko_2.1.2
+28-06-2017:19:40:07,602 DEBUG    [transport.py:1572] Remote version/idstring: SSH-1.99-OpenSSH_5.3
+28-06-2017:19:40:07,602 INFO     [transport.py:1572] Connected (version 1.99, client OpenSSH_5.3)
+28-06-2017:19:40:07,604 DEBUG    [transport.py:1572] kex algos:[u'diffie-hellman-group-exchange-sha256', u'diffie-hellman-group-exchange-sha1', u'diffie-hellman-group14-sha1', u'diffie-hellman-group1-sha1'] server key:[u'ssh-rsa', u'ssh-dss'] client encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] server encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] client mac:[u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] server mac:[u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] cli
 ent compress:[u'none', u'zlib@openssh.com'] server compress:[u'none', u'zlib@openssh.com'] client lang:[u''] server lang:[u''] kex follows?False
-28-06-2017:16:20:01,336 DEBUG    [transport.py:1572] Kex agreed: diffie-hellman-group1-sha1
-28-06-2017:16:20:01,336 DEBUG    [transport.py:1572] Cipher agreed: aes128-ctr
-28-06-2017:16:20:01,336 DEBUG    [transport.py:1572] MAC agreed: hmac-md5
-28-06-2017:16:20:01,336 DEBUG    [transport.py:1572] Compression agreed: none
-28-06-2017:16:20:01,588 DEBUG    [transport.py:1572] kex engine KexGroup1 specified hash_algo <built-in function openssl_sha1>
-28-06-2017:16:20:01,588 DEBUG    [transport.py:1572] Switch to new keys ...
-28-06-2017:16:20:01,614 DEBUG    [transport.py:1572] Adding ssh-rsa host key for prv1-cert1.cn.ooma.com: a4e5133f697f975f80955a8d427defdc
-28-06-2017:16:20:01,630 DEBUG    [transport.py:1572] userauth is OK
-28-06-2017:16:20:01,792 INFO     [transport.py:1572] Authentication (password) successful!
-28-06-2017:16:20:01,816 INFO     [ssh_apis.py:32] Auto_Logger: Ssh to server prv1-cert1.cn.ooma.com
-28-06-2017:16:20:01,816 DEBUG    [channel.py:1148] [chan 0] Max packet in: 32768 bytes
-28-06-2017:16:20:01,821 DEBUG    [channel.py:1148] [chan 0] Max packet out: 32768 bytes
-28-06-2017:16:20:01,821 DEBUG    [transport.py:1572] Secsh channel 0 opened.
-28-06-2017:16:20:01,827 DEBUG    [channel.py:1148] [chan 0] Sesch channel 0 request ok
-28-06-2017:16:20:01,829 DEBUG    [channel.py:1148] [chan 0] Sesch channel 0 request ok
-28-06-2017:16:20:01,829 INFO     [client.py:39] Auto_Logger: get showmyx output - showmyx 220120 | grep IPADDR=
-28-06-2017:16:20:06,870 DEBUG    [transport.py:1572] EOF in transport thread
-28-06-2017:16:20:06,899 INFO     [client_setup.py:28] IP Address of Client Telo 10.66.16.40
-28-06-2017:16:20:06,904 DEBUG    [transport.py:1572] starting thread (client mode): 0x1fddfd0L
-28-06-2017:16:20:06,904 DEBUG    [transport.py:1572] Local version/idstring: SSH-2.0-paramiko_2.1.2
-28-06-2017:16:20:06,915 DEBUG    [transport.py:1572] Remote version/idstring: SSH-1.99-OpenSSH_5.3
-28-06-2017:16:20:06,915 INFO     [transport.py:1572] Connected (version 1.99, client OpenSSH_5.3)
-28-06-2017:16:20:06,916 DEBUG    [transport.py:1572] kex algos:[u'diffie-hellman-group-exchange-sha256', u'diffie-hellman-group-exchange-sha1', u'diffie-hellman-group14-sha1', u'diffie-hellman-group1-sha1'] server key:[u'ssh-rsa', u'ssh-dss'] client encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] server encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] client mac:[u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] server mac:[u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] cli
-ent compress:[u'none', u'zlib@openssh.com'] server compress:[u'none', u'zlib@openssh.com'] client lang:[u''] server lang:[u''] kex follows?False
-28-06-2017:16:20:06,916 DEBUG    [transport.py:1572] Kex agreed: diffie-hellman-group1-sha1
-28-06-2017:16:20:06,916 DEBUG    [transport.py:1572] Cipher agreed: aes128-ctr
-28-06-2017:16:20:06,916 DEBUG    [transport.py:1572] MAC agreed: hmac-md5
-28-06-2017:16:20:06,916 DEBUG    [transport.py:1572] Compression agreed: none
-28-06-2017:16:20:06,968 DEBUG    [transport.py:1572] kex engine KexGroup1 specified hash_algo <built-in function openssl_sha1>
-28-06-2017:16:20:06,969 DEBUG    [transport.py:1572] Switch to new keys ...
-28-06-2017:16:20:06,970 DEBUG    [transport.py:1572] Adding ssh-rsa host key for prv1-cert1.cn.ooma.com: a4e5133f697f975f80955a8d427defdc
-28-06-2017:16:20:07,11 DEBUG    [transport.py:1572] userauth is OK
-28-06-2017:16:20:07,15 INFO     [transport.py:1572] Authentication (password) successful!
-28-06-2017:16:20:07,35 INFO     [ssh_apis.py:32] Auto_Logger: Ssh to server prv1-cert1.cn.ooma.com
-28-06-2017:16:20:07,35 DEBUG    [channel.py:1148] [chan 0] Max packet in: 32768 bytes
-28-06-2017:16:20:07,38 DEBUG    [channel.py:1148] [chan 0] Max packet out: 32768 bytes
-28-06-2017:16:20:07,38 DEBUG    [transport.py:1572] Secsh channel 0 opened.
-28-06-2017:16:20:07,41 DEBUG    [channel.py:1148] [chan 0] Sesch channel 0 request ok
-28-06-2017:16:20:07,43 DEBUG    [channel.py:1148] [chan 0] Sesch channel 0 request ok
-28-06-2017:16:20:07,43 INFO     [client.py:80] Auto_Logger: get showmyx output - showmyx 220120
-28-06-2017:16:20:12,71 DEBUG    [transport.py:1572] EOF in transport thread
-28-06-2017:16:20:12,80 INFO     [client_setup.py:32] Controller Info {'BEEHIVE_URL': 'https://beehive-cert.hms.ooma.com:8443/', 'NIMBITS_EMAIL': 'nxdicffbu@ooma.com', 'NIMBITS_URL': 'https://nimbits-cert.hms.ooma.com:9443/', 'IP': '10.66.16.40', 'BEEHIVE_PASSWORD': 'vbe5dbpj4', 'ENABLED': '1', 'CONTROLLER_ID': '1360', 'BEEHIVE_USER': 'pgrmrv4gs', 'NIMBITS_TOKEN': 'vc4tpnspi', 'USER_ENABLED': '1'}
-28-06-2017:16:20:13,174 INFO     [client_setup.py:37] Openremote is running successfully
-28-06-2017:16:20:13,174 INFO     [client_hms_config.py:53] Result : OR Enabled Client Status - pass
-28-06-2017:16:20:13,174 INFO     [client_hms_config.py:54] test_hms_config_in_client - Completed
-28-06-2017:16:20:13,174 INFO     [client_hms_config.py:55] +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-.28-06-2017:16:20:13,174 INFO     [client_hms_config.py:26] -Setup for Testcase Started
-28-06-2017:16:20:13,175 INFO     [client_hms_config.py:83] +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-28-06-2017:16:20:13,175 INFO     [client_hms_config.py:84] test_door_sensor_status - Started
-28-06-2017:16:20:13,175 INFO     [client_hms_config.py:85] +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-28-06-2017:16:20:13,200 INFO     [door_rest_cli.py:23] door_sensor_status - http://10.66.16.162:5000
-28-06-2017:16:20:20,207 INFO     [door_rest_cli.py:90] ========> Enabling Door Sensor Tampering
-28-06-2017:16:20:20,239 INFO     [door_rest_cli.py:94] door_sensor_tampering_enabled - http://10.66.16.162:5000/sensor/Door/interface/tamper/switch/on
-28-06-2017:16:20:21,240 INFO     [validate_logs.py:22] get_latest_logevent Started
-28-06-2017:16:20:21,241 DEBUG    [nimbits_server_id.py:53] get_nimbits_events started
-28-06-2017:16:20:21,241 INFO     [nimbits_server_id.py:56] __url http://nimbits1-cert1.cn.ooma.com:9080/service/v3/rest/me?name=logPoint
-28-06-2017:16:20:21,241 INFO     [nimbits_server_id.py:33] construct_nimbits_request_headers started
-28-06-2017:16:20:21,241 INFO     [nimbits_server_id.py:34] OR Dict - {}
-28-06-2017:16:20:21,241 INFO     [hms_sql_query.py:43] cust_pk = c3bw6mu485ea3z67tnjcqws7dhuv5wsv
-28-06-2017:16:20:21,250 INFO     [hms_sql_query.py:65]  _ooma_userid select * from OOMA_USER where PK = 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv';
-28-06-2017:16:20:21,251 INFO     [hms_sql_query.py:71]  _row (1231L, 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv', 1209L, 1209L, 'ENABLED', '6699007109', None, 'America/Los_Angeles')
-28-06-2017:16:20:21,252 INFO     [hms_sql_query.py:81]  _row (1209L, 1378L, 1360L, 'hms@ooma.com', 'vbe5dbpj4', 'pgrmrv4gs')
-28-06-2017:16:20:21,253 INFO     [hms_sql_query.py:86]  _row (1209L, 'vc4tpnspi', 'nxdicffbu@ooma.com')
-28-06-2017:16:20:21,254 INFO     [hms_sql_query.py:97] Adding mongo_dict {'NIMBITSUSER_ID_OID': 1209L, 'cust_pk': 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv', 'beehive_pwd': 'vbe5dbpj4', 'nimbits_pwd': 'vc4tpnspi', 'or_id': 1209L, 'beehive_id': 'pgrmrv4gs', 'BEEHIVEUSER_ID_OID': 1209L, 'nimbits_id': 'nxdicffbu@ooma.com'}
-28-06-2017:16:20:21,254 INFO     [mongodb_setup.py:39] Mongo Connection Established with UserCredentials_collection
-28-06-2017:16:20:21,254 INFO     [mongodb_setup.py:52] Already inserted to mongo DB
-28-06-2017:16:20:22,255 INFO     [nimbits_server_id.py:49] construct_nimbits_request_headers ended
-28-06-2017:16:20:22,270 INFO     [nimbits_server_id.py:74] get_nimbits_events ended
-28-06-2017:16:20:22,270 INFO     [validate_logs.py:25] Nimbits ID = 1238c34b-33d7-444f-87d5-5f6acd03e66d
-28-06-2017:16:20:22,270 INFO     [nimbits_sql_query.py:41] id = 1238c34b-33d7-444f-87d5-5f6acd03e66d
-28-06-2017:16:20:24,133 INFO     [nimbits_sql_query.py:51]  ===========> {"time":1498692020621, "deviceType":"DOOR_SENSOR", "eventType":7, "message":"Door Sensor 1 detects tampering.", "isAlert":true, "modeName":"Night",  "status": {"state":1.0, "batteryStatus":0.0, "connectionStatus":1.0}, "notifications": {"phones":[], "emails":[]}}
-28-06-2017:16:20:25,134 INFO     [validate_logs.py:30] get_latest_logevent Ended
-28-06-2017:16:20:32,142 INFO     [door_rest_cli.py:102] ========> Enabling Door Sensor Armed
-28-06-2017:16:20:32,174 INFO     [door_rest_cli.py:106] door_sensor_tampering_disabled -http://10.66.16.162:5000/sensor/Door/interface/tamper/switch/off
-28-06-2017:16:20:33,175 INFO     [validate_logs.py:22] get_latest_logevent Started
-28-06-2017:16:20:33,175 DEBUG    [nimbits_server_id.py:53] get_nimbits_events started
-28-06-2017:16:20:33,175 INFO     [nimbits_server_id.py:56] __url http://nimbits1-cert1.cn.ooma.com:9080/service/v3/rest/me?name=logPoint
-28-06-2017:16:20:33,175 INFO     [nimbits_server_id.py:33] construct_nimbits_request_headers started
-28-06-2017:16:20:33,175 INFO     [nimbits_server_id.py:34] OR Dict - {}
-28-06-2017:16:20:33,175 INFO     [hms_sql_query.py:43] cust_pk = c3bw6mu485ea3z67tnjcqws7dhuv5wsv
-28-06-2017:16:20:33,234 INFO     [hms_sql_query.py:65]  _ooma_userid select * from OOMA_USER where PK = 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv';
-28-06-2017:16:20:33,243 INFO     [hms_sql_query.py:71]  _row (1231L, 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv', 1209L, 1209L, 'ENABLED', '6699007109', None, 'America/Los_Angeles')
-28-06-2017:16:20:33,254 INFO     [hms_sql_query.py:81]  _row (1209L, 1378L, 1360L, 'hms@ooma.com', 'vbe5dbpj4', 'pgrmrv4gs')
-28-06-2017:16:20:33,265 INFO     [hms_sql_query.py:86]  _row (1209L, 'vc4tpnspi', 'nxdicffbu@ooma.com')
-28-06-2017:16:20:33,265 INFO     [hms_sql_query.py:97] Adding mongo_dict {'NIMBITSUSER_ID_OID': 1209L, 'cust_pk': 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv', 'beehive_pwd': 'vbe5dbpj4', 'nimbits_pwd': 'vc4tpnspi', 'or_id': 1209L, 'beehive_id': 'pgrmrv4gs', 'BEEHIVEUSER_ID_OID': 1209L, 'nimbits_id': 'nxdicffbu@ooma.com'}
-28-06-2017:16:20:33,265 INFO     [mongodb_setup.py:39] Mongo Connection Established with UserCredentials_collection
-28-06-2017:16:20:33,265 INFO     [mongodb_setup.py:52] Already inserted to mongo DB
-28-06-2017:16:20:34,267 INFO     [nimbits_server_id.py:49] construct_nimbits_request_headers ended
-28-06-2017:16:20:34,279 INFO     [nimbits_server_id.py:74] get_nimbits_events ended
-28-06-2017:16:20:34,279 INFO     [validate_logs.py:25] Nimbits ID = 1238c34b-33d7-444f-87d5-5f6acd03e66d
-28-06-2017:16:20:34,280 INFO     [nimbits_sql_query.py:41] id = 1238c34b-33d7-444f-87d5-5f6acd03e66d
-28-06-2017:16:20:35,938 INFO     [nimbits_sql_query.py:51]  ===========> {"time":1498692032555, "deviceType":"DOOR_SENSOR", "eventType":8, "message":"Door Sensor 1 tamper sensor is armed.", "isAlert":false, "modeName":"Night",  "status": {"state":1.0, "batteryStatus":0.0, "connectionStatus":1.0}, "notifications": {"phones":[], "emails":[]}}
-28-06-2017:16:20:36,939 INFO     [validate_logs.py:30] get_latest_logevent Ended
-28-06-2017:16:20:43,947 INFO     [door_rest_cli.py:114] ========> Enabling Door Sensor Open
-28-06-2017:16:20:43,979 INFO     [door_rest_cli.py:118] door_sensor_open - http://10.66.16.162:5000/sensor/Door/interface/event/switch/off
-28-06-2017:16:20:44,980 INFO     [validate_logs.py:22] get_latest_logevent Started
-28-06-2017:16:20:44,981 DEBUG    [nimbits_server_id.py:53] get_nimbits_events started
-28-06-2017:16:20:44,981 INFO     [nimbits_server_id.py:56] __url http://nimbits1-cert1.cn.ooma.com:9080/service/v3/rest/me?name=logPoint
-28-06-2017:16:20:44,981 INFO     [nimbits_server_id.py:33] construct_nimbits_request_headers started
-28-06-2017:16:20:44,981 INFO     [nimbits_server_id.py:34] OR Dict - {}
-28-06-2017:16:20:44,981 INFO     [hms_sql_query.py:43] cust_pk = c3bw6mu485ea3z67tnjcqws7dhuv5wsv
-28-06-2017:16:20:44,986 INFO     [hms_sql_query.py:65]  _ooma_userid select * from OOMA_USER where PK = 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv';
-28-06-2017:16:20:44,987 INFO     [hms_sql_query.py:71]  _row (1231L, 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv', 1209L, 1209L, 'ENABLED', '6699007109', None, 'America/Los_Angeles')
-28-06-2017:16:20:44,988 INFO     [hms_sql_query.py:81]  _row (1209L, 1378L, 1360L, 'hms@ooma.com', 'vbe5dbpj4', 'pgrmrv4gs')
-28-06-2017:16:20:44,989 INFO     [hms_sql_query.py:86]  _row (1209L, 'vc4tpnspi', 'nxdicffbu@ooma.com')
-28-06-2017:16:20:44,989 INFO     [hms_sql_query.py:97] Adding mongo_dict {'NIMBITSUSER_ID_OID': 1209L, 'cust_pk': 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv', 'beehive_pwd': 'vbe5dbpj4', 'nimbits_pwd': 'vc4tpnspi', 'or_id': 1209L, 'beehive_id': 'pgrmrv4gs', 'BEEHIVEUSER_ID_OID': 1209L, 'nimbits_id': 'nxdicffbu@ooma.com'}
-28-06-2017:16:20:44,989 INFO     [mongodb_setup.py:39] Mongo Connection Established with UserCredentials_collection
-28-06-2017:16:20:44,989 INFO     [mongodb_setup.py:52] Already inserted to mongo DB
-28-06-2017:16:20:45,991 INFO     [nimbits_server_id.py:49] construct_nimbits_request_headers ended
-28-06-2017:16:20:46,5 INFO     [nimbits_server_id.py:74] get_nimbits_events ended
-28-06-2017:16:20:46,5 INFO     [validate_logs.py:25] Nimbits ID = 1238c34b-33d7-444f-87d5-5f6acd03e66d
-28-06-2017:16:20:46,5 INFO     [nimbits_sql_query.py:41] id = 1238c34b-33d7-444f-87d5-5f6acd03e66d
-28-06-2017:16:20:47,491 INFO     [nimbits_sql_query.py:51]  ===========> {"time":1498692032555, "deviceType":"DOOR_SENSOR", "eventType":8, "message":"Door Sensor 1 tamper sensor is armed.", "isAlert":false, "modeName":"Night",  "status": {"state":1.0, "batteryStatus":0.0, "connectionStatus":1.0}, "notifications": {"phones":[], "emails":[]}}
-28-06-2017:16:20:48,492 INFO     [validate_logs.py:30] get_latest_logevent Ended
-28-06-2017:16:20:55,495 INFO     [door_rest_cli.py:126] ========> Enabling Door Sensor Closed
-28-06-2017:16:20:55,530 INFO     [door_rest_cli.py:130] send_door_sensor_close - http://10.66.16.162:5000/sensor/Door/interface/event/switch/on
-28-06-2017:16:20:56,532 INFO     [validate_logs.py:22] get_latest_logevent Started
-28-06-2017:16:20:56,532 DEBUG    [nimbits_server_id.py:53] get_nimbits_events started
-28-06-2017:16:20:56,532 INFO     [nimbits_server_id.py:56] __url http://nimbits1-cert1.cn.ooma.com:9080/service/v3/rest/me?name=logPoint
-28-06-2017:16:20:56,532 INFO     [nimbits_server_id.py:33] construct_nimbits_request_headers started
-28-06-2017:16:20:56,532 INFO     [nimbits_server_id.py:34] OR Dict - {}
-28-06-2017:16:20:56,532 INFO     [hms_sql_query.py:43] cust_pk = c3bw6mu485ea3z67tnjcqws7dhuv5wsv
-28-06-2017:16:20:56,537 INFO     [hms_sql_query.py:65]  _ooma_userid select * from OOMA_USER where PK = 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv';
-28-06-2017:16:20:56,538 INFO     [hms_sql_query.py:71]  _row (1231L, 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv', 1209L, 1209L, 'ENABLED', '6699007109', None, 'America/Los_Angeles')
-28-06-2017:16:20:56,539 INFO     [hms_sql_query.py:81]  _row (1209L, 1378L, 1360L, 'hms@ooma.com', 'vbe5dbpj4', 'pgrmrv4gs')
-28-06-2017:16:20:56,540 INFO     [hms_sql_query.py:86]  _row (1209L, 'vc4tpnspi', 'nxdicffbu@ooma.com')
-28-06-2017:16:20:56,540 INFO     [hms_sql_query.py:97] Adding mongo_dict {'NIMBITSUSER_ID_OID': 1209L, 'cust_pk': 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv', 'beehive_pwd': 'vbe5dbpj4', 'nimbits_pwd': 'vc4tpnspi', 'or_id': 1209L, 'beehive_id': 'pgrmrv4gs', 'BEEHIVEUSER_ID_OID': 1209L, 'nimbits_id': 'nxdicffbu@ooma.com'}
-28-06-2017:16:20:56,540 INFO     [mongodb_setup.py:39] Mongo Connection Established with UserCredentials_collection
-28-06-2017:16:20:56,540 INFO     [mongodb_setup.py:52] Already inserted to mongo DB
-28-06-2017:16:20:57,542 INFO     [nimbits_server_id.py:49] construct_nimbits_request_headers ended
-28-06-2017:16:20:57,558 INFO     [nimbits_server_id.py:74] get_nimbits_events ended
-28-06-2017:16:20:57,558 INFO     [validate_logs.py:25] Nimbits ID = 1238c34b-33d7-444f-87d5-5f6acd03e66d
-28-06-2017:16:20:57,558 INFO     [nimbits_sql_query.py:41] id = 1238c34b-33d7-444f-87d5-5f6acd03e66d
-28-06-2017:16:20:59,490 INFO     [nimbits_sql_query.py:51]  ===========> {"time":1498692032555, "deviceType":"DOOR_SENSOR", "eventType":8, "message":"Door Sensor 1 tamper sensor is armed.", "isAlert":false, "modeName":"Night",  "status": {"state":1.0, "batteryStatus":0.0, "connectionStatus":1.0}, "notifications": {"phones":[], "emails":[]}}
-28-06-2017:16:21:00,491 INFO     [validate_logs.py:30] get_latest_logevent Ended
-28-06-2017:16:21:07,499 INFO     [door_rest_cli.py:31] ========> Enabling Door Sensor Paging
-28-06-2017:16:21:07,531 INFO     [door_rest_cli.py:35] door_sensor_paging_enabling...... - http://10.66.16.162:5000/sensor/Door/interface/pair/switch/on
-28-06-2017:16:21:09,587 INFO     [door_rest_cli.py:46] door_sensor_paging_enabled - http://10.66.16.162:5000/sensor/Door/interface/pair/switch/off
-28-06-2017:16:21:10,588 INFO     [validate_logs.py:22] get_latest_logevent Started
-28-06-2017:16:21:10,588 DEBUG    [nimbits_server_id.py:53] get_nimbits_events started
-28-06-2017:16:21:10,588 INFO     [nimbits_server_id.py:56] __url http://nimbits1-cert1.cn.ooma.com:9080/service/v3/rest/me?name=logPoint
-28-06-2017:16:21:10,589 INFO     [nimbits_server_id.py:33] construct_nimbits_request_headers started
-28-06-2017:16:21:10,589 INFO     [nimbits_server_id.py:34] OR Dict - {}
-28-06-2017:16:21:10,589 INFO     [hms_sql_query.py:43] cust_pk = c3bw6mu485ea3z67tnjcqws7dhuv5wsv
-28-06-2017:16:21:10,594 INFO     [hms_sql_query.py:65]  _ooma_userid select * from OOMA_USER where PK = 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv';
-28-06-2017:16:21:10,595 INFO     [hms_sql_query.py:71]  _row (1231L, 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv', 1209L, 1209L, 'ENABLED', '6699007109', None, 'America/Los_Angeles')
-28-06-2017:16:21:10,596 INFO     [hms_sql_query.py:81]  _row (1209L, 1378L, 1360L, 'hms@ooma.com', 'vbe5dbpj4', 'pgrmrv4gs')
-28-06-2017:16:21:10,597 INFO     [hms_sql_query.py:86]  _row (1209L, 'vc4tpnspi', 'nxdicffbu@ooma.com')
-28-06-2017:16:21:10,598 INFO     [hms_sql_query.py:97] Adding mongo_dict {'NIMBITSUSER_ID_OID': 1209L, 'cust_pk': 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv', 'beehive_pwd': 'vbe5dbpj4', 'nimbits_pwd': 'vc4tpnspi', 'or_id': 1209L, 'beehive_id': 'pgrmrv4gs', 'BEEHIVEUSER_ID_OID': 1209L, 'nimbits_id': 'nxdicffbu@ooma.com'}
-28-06-2017:16:21:10,598 INFO     [mongodb_setup.py:39] Mongo Connection Established with UserCredentials_collection
-28-06-2017:16:21:10,598 INFO     [mongodb_setup.py:52] Already inserted to mongo DB
-28-06-2017:16:21:11,599 INFO     [nimbits_server_id.py:49] construct_nimbits_request_headers ended
-28-06-2017:16:21:11,615 INFO     [nimbits_server_id.py:74] get_nimbits_events ended
-28-06-2017:16:21:11,615 INFO     [validate_logs.py:25] Nimbits ID = 1238c34b-33d7-444f-87d5-5f6acd03e66d
-28-06-2017:16:21:11,616 INFO     [nimbits_sql_query.py:41] id = 1238c34b-33d7-444f-87d5-5f6acd03e66d
-28-06-2017:16:21:12,861 INFO     [nimbits_sql_query.py:51]  ===========> {"time":1498692032555, "deviceType":"DOOR_SENSOR", "eventType":8, "message":"Door Sensor 1 tamper sensor is armed.", "isAlert":false, "modeName":"Night",  "status": {"state":1.0, "batteryStatus":0.0, "connectionStatus":1.0}, "notifications": {"phones":[], "emails":[]}}
-28-06-2017:16:21:13,863 INFO     [validate_logs.py:30] get_latest_logevent Ended
-28-06-2017:16:21:20,870 INFO     [client_hms_config.py:121] +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-28-06-2017:16:21:20,870 INFO     [client_hms_config.py:122] test_door_sensor_status - Completed
-28-06-2017:16:21:20,870 INFO     [client_hms_config.py:123] +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-.28-06-2017:16:21:20,870 INFO     [client_hms_config.py:26] -Setup for Testcase Started
-28-06-2017:16:21:20,871 INFO     [client_hms_config.py:126] +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-28-06-2017:16:21:20,871 INFO     [client_hms_config.py:127] test_door_sensor_status - Started
-28-06-2017:16:21:20,871 INFO     [client_hms_config.py:128] +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-28-06-2017:16:21:20,896 INFO     [flood_rest_cli.py:22] water_sensor_status - http://10.66.16.162:5000
-28-06-2017:16:21:27,903 INFO     [flood_rest_cli.py:89] ========> Enabling Water Sensor Tampering
-28-06-2017:16:21:27,935 INFO     [flood_rest_cli.py:93] water_sensor_tampering_enabled - http://10.66.16.162:5000/sensor/Water/interface/tamper/switch/on
-28-06-2017:16:21:28,936 INFO     [validate_logs.py:22] get_latest_logevent Started
-28-06-2017:16:21:28,937 DEBUG    [nimbits_server_id.py:53] get_nimbits_events started
-28-06-2017:16:21:28,937 INFO     [nimbits_server_id.py:56] __url http://nimbits1-cert1.cn.ooma.com:9080/service/v3/rest/me?name=logPoint
-28-06-2017:16:21:28,937 INFO     [nimbits_server_id.py:33] construct_nimbits_request_headers started
-28-06-2017:16:21:28,937 INFO     [nimbits_server_id.py:34] OR Dict - {}
-28-06-2017:16:21:28,937 INFO     [hms_sql_query.py:43] cust_pk = c3bw6mu485ea3z67tnjcqws7dhuv5wsv
-28-06-2017:16:21:28,943 INFO     [hms_sql_query.py:65]  _ooma_userid select * from OOMA_USER where PK = 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv';
-28-06-2017:16:21:28,944 INFO     [hms_sql_query.py:71]  _row (1231L, 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv', 1209L, 1209L, 'ENABLED', '6699007109', None, 'America/Los_Angeles')
-28-06-2017:16:21:28,945 INFO     [hms_sql_query.py:81]  _row (1209L, 1378L, 1360L, 'hms@ooma.com', 'vbe5dbpj4', 'pgrmrv4gs')
-28-06-2017:16:21:28,946 INFO     [hms_sql_query.py:86]  _row (1209L, 'vc4tpnspi', 'nxdicffbu@ooma.com')
-28-06-2017:16:21:28,947 INFO     [hms_sql_query.py:97] Adding mongo_dict {'NIMBITSUSER_ID_OID': 1209L, 'cust_pk': 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv', 'beehive_pwd': 'vbe5dbpj4', 'nimbits_pwd': 'vc4tpnspi', 'or_id': 1209L, 'beehive_id': 'pgrmrv4gs', 'BEEHIVEUSER_ID_OID': 1209L, 'nimbits_id': 'nxdicffbu@ooma.com'}
-28-06-2017:16:21:28,947 INFO     [mongodb_setup.py:39] Mongo Connection Established with UserCredentials_collection
-28-06-2017:16:21:28,947 INFO     [mongodb_setup.py:52] Already inserted to mongo DB
-28-06-2017:16:21:29,948 INFO     [nimbits_server_id.py:49] construct_nimbits_request_headers ended
-28-06-2017:16:21:29,962 INFO     [nimbits_server_id.py:74] get_nimbits_events ended
-28-06-2017:16:21:29,962 INFO     [validate_logs.py:25] Nimbits ID = 1238c34b-33d7-444f-87d5-5f6acd03e66d
-28-06-2017:16:21:29,963 INFO     [nimbits_sql_query.py:41] id = 1238c34b-33d7-444f-87d5-5f6acd03e66d
-28-06-2017:16:21:31,779 INFO     [nimbits_sql_query.py:51]  ===========> {"time":1498692088357, "deviceType":"WATER_LEAKAGE", "eventType":7, "message":"Water Sensor 1 detects tampering.", "isAlert":true, "modeName":"Night",  "status": {"state":1.0, "batteryStatus":0.0, "connectionStatus":1.0}, "notifications": {"phones":[], "emails":[]}}
-28-06-2017:16:21:32,780 INFO     [validate_logs.py:30] get_latest_logevent Ended
-28-06-2017:16:21:39,787 INFO     [flood_rest_cli.py:101] ========> Enabling Water Sensor Armed
-28-06-2017:16:21:39,820 INFO     [flood_rest_cli.py:105] water_sensor_tampering_disabled - http://10.66.16.162:5000/sensor/Water/interface/tamper/switch/off
-28-06-2017:16:21:40,821 INFO     [validate_logs.py:22] get_latest_logevent Started
-28-06-2017:16:21:40,821 DEBUG    [nimbits_server_id.py:53] get_nimbits_events started
-28-06-2017:16:21:40,821 INFO     [nimbits_server_id.py:56] __url http://nimbits1-cert1.cn.ooma.com:9080/service/v3/rest/me?name=logPoint
-28-06-2017:16:21:40,821 INFO     [nimbits_server_id.py:33] construct_nimbits_request_headers started
-28-06-2017:16:21:40,821 INFO     [nimbits_server_id.py:34] OR Dict - {}
-28-06-2017:16:21:40,822 INFO     [hms_sql_query.py:43] cust_pk = c3bw6mu485ea3z67tnjcqws7dhuv5wsv
-28-06-2017:16:21:40,828 INFO     [hms_sql_query.py:65]  _ooma_userid select * from OOMA_USER where PK = 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv';
-28-06-2017:16:21:40,829 INFO     [hms_sql_query.py:71]  _row (1231L, 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv', 1209L, 1209L, 'ENABLED', '6699007109', None, 'America/Los_Angeles')
-28-06-2017:16:21:40,830 INFO     [hms_sql_query.py:81]  _row (1209L, 1378L, 1360L, 'hms@ooma.com', 'vbe5dbpj4', 'pgrmrv4gs')
-28-06-2017:16:21:40,831 INFO     [hms_sql_query.py:86]  _row (1209L, 'vc4tpnspi', 'nxdicffbu@ooma.com')
-28-06-2017:16:21:40,831 INFO     [hms_sql_query.py:97] Adding mongo_dict {'NIMBITSUSER_ID_OID': 1209L, 'cust_pk': 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv', 'beehive_pwd': 'vbe5dbpj4', 'nimbits_pwd': 'vc4tpnspi', 'or_id': 1209L, 'beehive_id': 'pgrmrv4gs', 'BEEHIVEUSER_ID_OID': 1209L, 'nimbits_id': 'nxdicffbu@ooma.com'}
-28-06-2017:16:21:40,831 INFO     [mongodb_setup.py:39] Mongo Connection Established with UserCredentials_collection
-28-06-2017:16:21:40,831 INFO     [mongodb_setup.py:52] Already inserted to mongo DB
-28-06-2017:16:21:41,833 INFO     [nimbits_server_id.py:49] construct_nimbits_request_headers ended
-28-06-2017:16:21:41,848 INFO     [nimbits_server_id.py:74] get_nimbits_events ended
-28-06-2017:16:21:41,848 INFO     [validate_logs.py:25] Nimbits ID = 1238c34b-33d7-444f-87d5-5f6acd03e66d
-28-06-2017:16:21:41,848 INFO     [nimbits_sql_query.py:41] id = 1238c34b-33d7-444f-87d5-5f6acd03e66d
-28-06-2017:16:21:43,181 INFO     [nimbits_sql_query.py:51]  ===========> {"time":1498692100227, "deviceType":"WATER_LEAKAGE", "eventType":8, "message":"Water Sensor 1 tamper sensor is armed.", "isAlert":false, "modeName":"Night",  "status": {"state":1.0, "batteryStatus":0.0, "connectionStatus":1.0}, "notifications": {"phones":[], "emails":[]}}
-28-06-2017:16:21:44,183 INFO     [validate_logs.py:30] get_latest_logevent Ended
-28-06-2017:16:21:51,190 INFO     [flood_rest_cli.py:113] ========> Enabling Water Sensor Detects
-28-06-2017:16:21:51,222 INFO     [flood_rest_cli.py:117] water_sensor_detects_water - http://10.66.16.162:5000/sensor/Water/interface/event/switch/on
-28-06-2017:16:22:52,283 INFO     [validate_logs.py:22] get_latest_logevent Started
-28-06-2017:16:22:52,284 DEBUG    [nimbits_server_id.py:53] get_nimbits_events started
-28-06-2017:16:22:52,284 INFO     [nimbits_server_id.py:56] __url http://nimbits1-cert1.cn.ooma.com:9080/service/v3/rest/me?name=logPoint
-28-06-2017:16:22:52,284 INFO     [nimbits_server_id.py:33] construct_nimbits_request_headers started
-28-06-2017:16:22:52,284 INFO     [nimbits_server_id.py:34] OR Dict - {}
-28-06-2017:16:22:52,284 INFO     [hms_sql_query.py:43] cust_pk = c3bw6mu485ea3z67tnjcqws7dhuv5wsv
-28-06-2017:16:22:52,289 INFO     [hms_sql_query.py:65]  _ooma_userid select * from OOMA_USER where PK = 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv';
-28-06-2017:16:22:52,291 INFO     [hms_sql_query.py:71]  _row (1231L, 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv', 1209L, 1209L, 'ENABLED', '6699007109', None, 'America/Los_Angeles')
-28-06-2017:16:22:52,292 INFO     [hms_sql_query.py:81]  _row (1209L, 1378L, 1360L, 'hms@ooma.com', 'vbe5dbpj4', 'pgrmrv4gs')
-28-06-2017:16:22:52,293 INFO     [hms_sql_query.py:86]  _row (1209L, 'vc4tpnspi', 'nxdicffbu@ooma.com')
-28-06-2017:16:22:52,293 INFO     [hms_sql_query.py:97] Adding mongo_dict {'NIMBITSUSER_ID_OID': 1209L, 'cust_pk': 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv', 'beehive_pwd': 'vbe5dbpj4', 'nimbits_pwd': 'vc4tpnspi', 'or_id': 1209L, 'beehive_id': 'pgrmrv4gs', 'BEEHIVEUSER_ID_OID': 1209L, 'nimbits_id': 'nxdicffbu@ooma.com'}
-28-06-2017:16:22:52,293 INFO     [mongodb_setup.py:39] Mongo Connection Established with UserCredentials_collection
-28-06-2017:16:22:52,293 INFO     [mongodb_setup.py:52] Already inserted to mongo DB
-28-06-2017:16:22:53,295 INFO     [nimbits_server_id.py:49] construct_nimbits_request_headers ended
-28-06-2017:16:22:53,312 INFO     [nimbits_server_id.py:74] get_nimbits_events ended
-28-06-2017:16:22:53,312 INFO     [validate_logs.py:25] Nimbits ID = 1238c34b-33d7-444f-87d5-5f6acd03e66d
-28-06-2017:16:22:53,312 INFO     [nimbits_sql_query.py:41] id = 1238c34b-33d7-444f-87d5-5f6acd03e66d
-28-06-2017:16:22:54,637 INFO     [nimbits_sql_query.py:51]  ===========> {"time":1498692100227, "deviceType":"WATER_LEAKAGE", "eventType":8, "message":"Water Sensor 1 tamper sensor is armed.", "isAlert":false, "modeName":"Night",  "status": {"state":1.0, "batteryStatus":0.0, "connectionStatus":1.0}, "notifications": {"phones":[], "emails":[]}}
-28-06-2017:16:22:55,639 INFO     [validate_logs.py:30] get_latest_logevent Ended
-28-06-2017:16:23:02,646 INFO     [flood_rest_cli.py:127] ========> Enabling Water Sensor Dry
-28-06-2017:16:23:02,678 INFO     [flood_rest_cli.py:131] water_sensor_detects_no_water - http://10.66.16.162:5000/sensor/Water/interface/event/switch/off
-28-06-2017:16:24:03,739 INFO     [validate_logs.py:22] get_latest_logevent Started
-28-06-2017:16:24:03,740 DEBUG    [nimbits_server_id.py:53] get_nimbits_events started
-28-06-2017:16:24:03,740 INFO     [nimbits_server_id.py:56] __url http://nimbits1-cert1.cn.ooma.com:9080/service/v3/rest/me?name=logPoint
-28-06-2017:16:24:03,740 INFO     [nimbits_server_id.py:33] construct_nimbits_request_headers started
-28-06-2017:16:24:03,740 INFO     [nimbits_server_id.py:34] OR Dict - {}
-28-06-2017:16:24:03,740 INFO     [hms_sql_query.py:43] cust_pk = c3bw6mu485ea3z67tnjcqws7dhuv5wsv
-28-06-2017:16:24:03,746 INFO     [hms_sql_query.py:65]  _ooma_userid select * from OOMA_USER where PK = 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv';
-28-06-2017:16:24:03,747 INFO     [hms_sql_query.py:71]  _row (1231L, 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv', 1209L, 1209L, 'ENABLED', '6699007109', None, 'America/Los_Angeles')
-28-06-2017:16:24:03,749 INFO     [hms_sql_query.py:81]  _row (1209L, 1378L, 1360L, 'hms@ooma.com', 'vbe5dbpj4', 'pgrmrv4gs')
-28-06-2017:16:24:03,750 INFO     [hms_sql_query.py:86]  _row (1209L, 'vc4tpnspi', 'nxdicffbu@ooma.com')
-28-06-2017:16:24:03,751 INFO     [hms_sql_query.py:97] Adding mongo_dict {'NIMBITSUSER_ID_OID': 1209L, 'cust_pk': 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv', 'beehive_pwd': 'vbe5dbpj4', 'nimbits_pwd': 'vc4tpnspi', 'or_id': 1209L, 'beehive_id': 'pgrmrv4gs', 'BEEHIVEUSER_ID_OID': 1209L, 'nimbits_id': 'nxdicffbu@ooma.com'}
-28-06-2017:16:24:03,751 INFO     [mongodb_setup.py:39] Mongo Connection Established with UserCredentials_collection
-28-06-2017:16:24:03,751 INFO     [mongodb_setup.py:52] Already inserted to mongo DB
-28-06-2017:16:24:04,752 INFO     [nimbits_server_id.py:49] construct_nimbits_request_headers ended
-28-06-2017:16:24:04,770 INFO     [nimbits_server_id.py:74] get_nimbits_events ended
-28-06-2017:16:24:04,770 INFO     [validate_logs.py:25] Nimbits ID = 1238c34b-33d7-444f-87d5-5f6acd03e66d
-28-06-2017:16:24:04,770 INFO     [nimbits_sql_query.py:41] id = 1238c34b-33d7-444f-87d5-5f6acd03e66d
-28-06-2017:16:24:05,975 INFO     [nimbits_sql_query.py:51]  ===========> {"time":1498692100227, "deviceType":"WATER_LEAKAGE", "eventType":8, "message":"Water Sensor 1 tamper sensor is armed.", "isAlert":false, "modeName":"Night",  "status": {"state":1.0, "batteryStatus":0.0, "connectionStatus":1.0}, "notifications": {"phones":[], "emails":[]}}
-28-06-2017:16:24:06,976 INFO     [validate_logs.py:30] get_latest_logevent Ended
-28-06-2017:16:24:13,982 INFO     [flood_rest_cli.py:30] ========> Enabling Water Sensor Paging
-28-06-2017:16:24:14,15 INFO     [flood_rest_cli.py:34] water_sensor_paging_enabling...... - http://10.66.16.162:5000/sensor/Water/interface/pair/switch/on
-28-06-2017:16:24:16,49 INFO     [flood_rest_cli.py:45] water_sensor_paging_enabled - http://10.66.16.162:5000/sensor/Water/interface/pair/switch/off
-28-06-2017:16:24:17,51 INFO     [validate_logs.py:22] get_latest_logevent Started
-28-06-2017:16:24:17,51 DEBUG    [nimbits_server_id.py:53] get_nimbits_events started
-28-06-2017:16:24:17,51 INFO     [nimbits_server_id.py:56] __url http://nimbits1-cert1.cn.ooma.com:9080/service/v3/rest/me?name=logPoint
-28-06-2017:16:24:17,51 INFO     [nimbits_server_id.py:33] construct_nimbits_request_headers started
-28-06-2017:16:24:17,51 INFO     [nimbits_server_id.py:34] OR Dict - {}
-28-06-2017:16:24:17,51 INFO     [hms_sql_query.py:43] cust_pk = c3bw6mu485ea3z67tnjcqws7dhuv5wsv
-28-06-2017:16:24:17,57 INFO     [hms_sql_query.py:65]  _ooma_userid select * from OOMA_USER where PK = 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv';
-28-06-2017:16:24:17,58 INFO     [hms_sql_query.py:71]  _row (1231L, 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv', 1209L, 1209L, 'ENABLED', '6699007109', None, 'America/Los_Angeles')
-28-06-2017:16:24:17,59 INFO     [hms_sql_query.py:81]  _row (1209L, 1378L, 1360L, 'hms@ooma.com', 'vbe5dbpj4', 'pgrmrv4gs')
-28-06-2017:16:24:17,60 INFO     [hms_sql_query.py:86]  _row (1209L, 'vc4tpnspi', 'nxdicffbu@ooma.com')
-28-06-2017:16:24:17,61 INFO     [hms_sql_query.py:97] Adding mongo_dict {'NIMBITSUSER_ID_OID': 1209L, 'cust_pk': 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv', 'beehive_pwd': 'vbe5dbpj4', 'nimbits_pwd': 'vc4tpnspi', 'or_id': 1209L, 'beehive_id': 'pgrmrv4gs', 'BEEHIVEUSER_ID_OID': 1209L, 'nimbits_id': 'nxdicffbu@ooma.com'}
-28-06-2017:16:24:17,61 INFO     [mongodb_setup.py:39] Mongo Connection Established with UserCredentials_collection
-28-06-2017:16:24:17,61 INFO     [mongodb_setup.py:52] Already inserted to mongo DB
-28-06-2017:16:24:18,62 INFO     [nimbits_server_id.py:49] construct_nimbits_request_headers ended
-28-06-2017:16:24:18,74 INFO     [nimbits_server_id.py:74] get_nimbits_events ended
-28-06-2017:16:24:18,74 INFO     [validate_logs.py:25] Nimbits ID = 1238c34b-33d7-444f-87d5-5f6acd03e66d
-28-06-2017:16:24:18,74 INFO     [nimbits_sql_query.py:41] id = 1238c34b-33d7-444f-87d5-5f6acd03e66d
-28-06-2017:16:24:19,673 INFO     [nimbits_sql_query.py:51]  ===========> {"time":1498692100227, "deviceType":"WATER_LEAKAGE", "eventType":8, "message":"Water Sensor 1 tamper sensor is armed.", "isAlert":false, "modeName":"Night",  "status": {"state":1.0, "batteryStatus":0.0, "connectionStatus":1.0}, "notifications": {"phones":[], "emails":[]}}
-28-06-2017:16:24:20,674 INFO     [validate_logs.py:30] get_latest_logevent Ended
-28-06-2017:16:24:27,681 INFO     [client_hms_config.py:163] +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-28-06-2017:16:24:27,682 INFO     [client_hms_config.py:164] test_door_sensor_status - Completed
-28-06-2017:16:24:27,682 INFO     [client_hms_config.py:165] +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+28-06-2017:19:40:07,604 DEBUG    [transport.py:1572] Kex agreed: diffie-hellman-group1-sha1
+28-06-2017:19:40:07,604 DEBUG    [transport.py:1572] Cipher agreed: aes128-ctr
+28-06-2017:19:40:07,604 DEBUG    [transport.py:1572] MAC agreed: hmac-md5
+28-06-2017:19:40:07,604 DEBUG    [transport.py:1572] Compression agreed: none
+28-06-2017:19:40:07,656 DEBUG    [transport.py:1572] kex engine KexGroup1 specified hash_algo <built-in function openssl_sha1>
+28-06-2017:19:40:07,656 DEBUG    [transport.py:1572] Switch to new keys ...
+28-06-2017:19:40:07,657 DEBUG    [transport.py:1572] Adding ssh-rsa host key for prv1-cert1.cn.ooma.com: a4e5133f697f975f80955a8d427defdc
+28-06-2017:19:40:07,697 DEBUG    [transport.py:1572] userauth is OK
+28-06-2017:19:40:07,705 INFO     [transport.py:1572] Authentication (password) successful!
+28-06-2017:19:40:07,722 INFO     [ssh_apis.py:32] Auto_Logger: Ssh to server prv1-cert1.cn.ooma.com
+28-06-2017:19:40:07,723 DEBUG    [channel.py:1148] [chan 0] Max packet in: 32768 bytes
+28-06-2017:19:40:07,724 DEBUG    [channel.py:1148] [chan 0] Max packet out: 32768 bytes
+28-06-2017:19:40:07,724 DEBUG    [transport.py:1572] Secsh channel 0 opened.
+28-06-2017:19:40:07,725 DEBUG    [channel.py:1148] [chan 0] Sesch channel 0 request ok
+28-06-2017:19:40:07,727 DEBUG    [channel.py:1148] [chan 0] Sesch channel 0 request ok
+28-06-2017:19:40:07,727 INFO     [client.py:80] Auto_Logger: get showmyx output - showmyx 220120
+28-06-2017:19:40:12,785 DEBUG    [transport.py:1572] EOF in transport thread
+28-06-2017:19:40:12,797 INFO     [client_setup.py:32] Controller Info {'BEEHIVE_URL': 'https://beehive-cert.hms.ooma.com:8443/', 'NIMBITS_EMAIL': 'nxdicffbu@ooma.com', 'NIMBITS_URL': 'https://nimbits-cert.hms.ooma.com:9443/', 'IP': '10.66.16.40', 'BEEHIVE_PASSWORD': 'vbe5dbpj4', 'ENABLED': '1', 'CONTROLLER_ID': '1360', 'BEEHIVE_USER': 'pgrmrv4gs', 'NIMBITS_TOKEN': 'vc4tpnspi', 'USER_ENABLED': '1'}
+28-06-2017:19:40:13,871 INFO     [client_setup.py:37] Openremote is running successfully
+28-06-2017:19:40:13,871 INFO     [client_hms_config.py:53] Result : OR Enabled Client Status - pass
+28-06-2017:19:40:13,871 INFO     [client_hms_config.py:54] test_hms_config_in_client - Completed
+28-06-2017:19:40:13,871 INFO     [client_hms_config.py:55] +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.28-06-2017:19:40:13,871 INFO     [client_hms_config.py:26] -Setup for Testcase Started
+28-06-2017:19:40:13,872 INFO     [client_hms_config.py:91] +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+28-06-2017:19:40:13,872 INFO     [client_hms_config.py:92] test_door_sensor_status - Started
+28-06-2017:19:40:13,872 INFO     [client_hms_config.py:93] +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+28-06-2017:19:40:13,897 INFO     [door_rest_cli.py:23] door_sensor_status - http://10.66.16.162:5000
+28-06-2017:19:40:20,904 INFO     [door_rest_cli.py:90] ========> Enabling Door Sensor Tampering
+28-06-2017:19:40:20,936 INFO     [door_rest_cli.py:94] door_sensor_tampering_enabled - http://10.66.16.162:5000/sensor/Door/interface/tamper/switch/on
+28-06-2017:19:40:21,937 INFO     [validate_logs.py:22] get_latest_logevent Started
+28-06-2017:19:40:21,938 DEBUG    [nimbits_server_id.py:53] get_nimbits_events started
+28-06-2017:19:40:21,938 INFO     [nimbits_server_id.py:56] __url http://nimbits1-cert1.cn.ooma.com:9080/service/v3/rest/me?name=logPoint
+28-06-2017:19:40:21,938 INFO     [nimbits_server_id.py:33] construct_nimbits_request_headers started
+28-06-2017:19:40:21,938 INFO     [nimbits_server_id.py:34] OR Dict - {}
+28-06-2017:19:40:21,938 INFO     [hms_sql_query.py:43] cust_pk = c3bw6mu485ea3z67tnjcqws7dhuv5wsv
+28-06-2017:19:40:21,946 INFO     [hms_sql_query.py:65]  _ooma_userid select * from OOMA_USER where PK = 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv';
+28-06-2017:19:40:21,947 INFO     [hms_sql_query.py:71]  _row (1231L, 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv', 1209L, 1209L, 'ENABLED', '6699007109', None, 'America/Los_Angeles')
+28-06-2017:19:40:21,948 INFO     [hms_sql_query.py:81]  _row (1209L, 1378L, 1360L, 'hms@ooma.com', 'vbe5dbpj4', 'pgrmrv4gs')
+28-06-2017:19:40:21,949 INFO     [hms_sql_query.py:86]  _row (1209L, 'vc4tpnspi', 'nxdicffbu@ooma.com')
+28-06-2017:19:40:21,950 INFO     [hms_sql_query.py:97] Adding mongo_dict {'NIMBITSUSER_ID_OID': 1209L, 'cust_pk': 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv', 'beehive_pwd': 'vbe5dbpj4', 'nimbits_pwd': 'vc4tpnspi', 'or_id': 1209L, 'beehive_id': 'pgrmrv4gs', 'BEEHIVEUSER_ID_OID': 1209L, 'nimbits_id': 'nxdicffbu@ooma.com'}
+28-06-2017:19:40:21,950 INFO     [mongodb_setup.py:39] Mongo Connection Established with UserCredentials_collection
+28-06-2017:19:40:21,950 INFO     [mongodb_setup.py:52] Already inserted to mongo DB
+28-06-2017:19:40:22,951 INFO     [nimbits_server_id.py:49] construct_nimbits_request_headers ended
+28-06-2017:19:40:22,964 INFO     [nimbits_server_id.py:74] get_nimbits_events ended
+28-06-2017:19:40:22,964 INFO     [validate_logs.py:26] Nimbits ID = 1238c34b-33d7-444f-87d5-5f6acd03e66d
+28-06-2017:19:40:22,964 INFO     [nimbits_sql_query.py:41] id = 1238c34b-33d7-444f-87d5-5f6acd03e66d
+28-06-2017:19:40:24,509 INFO     [nimbits_sql_query.py:52]  ===========> {"time":1498704021266, "deviceType":"DOOR_SENSOR", "eventType":7, "message":"Door Sensor 1 detects tampering.", "isAlert":true, "modeName":"Home",  "status": {"state":1.0, "batteryStatus":0.0, "connectionStatus":1.0}, "notifications": {"phones":[], "emails":[]}}
+28-06-2017:19:40:25,510 INFO     [validate_logs.py:31] Current Result - {"time":1498704021266, "deviceType":"DOOR_SENSOR", "eventType":7, "message":"Door Sensor 1 detects tampering.", "isAlert":true, "modeName":"Home",  "status": {"state":1.0, "batteryStatus":0.0, "connectionStatus":1.0}, "notifications": {"phones":[], "emails":[]}} Expected Result detects tampering
+28-06-2017:19:40:25,510 INFO     [client_hms_config.py:106] Result : Tampering Door Sensor Status - pass
+28-06-2017:19:40:32,518 INFO     [door_rest_cli.py:102] ========> Enabling Door Sensor Armed
+28-06-2017:19:40:32,550 INFO     [door_rest_cli.py:106] door_sensor_tampering_disabled -http://10.66.16.162:5000/sensor/Door/interface/tamper/switch/off
+28-06-2017:19:40:33,551 INFO     [validate_logs.py:22] get_latest_logevent Started
+28-06-2017:19:40:33,552 DEBUG    [nimbits_server_id.py:53] get_nimbits_events started
+28-06-2017:19:40:33,552 INFO     [nimbits_server_id.py:56] __url http://nimbits1-cert1.cn.ooma.com:9080/service/v3/rest/me?name=logPoint
+28-06-2017:19:40:33,552 INFO     [nimbits_server_id.py:33] construct_nimbits_request_headers started
+28-06-2017:19:40:33,552 INFO     [nimbits_server_id.py:34] OR Dict - {}
+28-06-2017:19:40:33,552 INFO     [hms_sql_query.py:43] cust_pk = c3bw6mu485ea3z67tnjcqws7dhuv5wsv
+28-06-2017:19:40:33,558 INFO     [hms_sql_query.py:65]  _ooma_userid select * from OOMA_USER where PK = 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv';
+28-06-2017:19:40:33,559 INFO     [hms_sql_query.py:71]  _row (1231L, 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv', 1209L, 1209L, 'ENABLED', '6699007109', None, 'America/Los_Angeles')
+28-06-2017:19:40:33,560 INFO     [hms_sql_query.py:81]  _row (1209L, 1378L, 1360L, 'hms@ooma.com', 'vbe5dbpj4', 'pgrmrv4gs')
+28-06-2017:19:40:33,561 INFO     [hms_sql_query.py:86]  _row (1209L, 'vc4tpnspi', 'nxdicffbu@ooma.com')
+28-06-2017:19:40:33,561 INFO     [hms_sql_query.py:97] Adding mongo_dict {'NIMBITSUSER_ID_OID': 1209L, 'cust_pk': 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv', 'beehive_pwd': 'vbe5dbpj4', 'nimbits_pwd': 'vc4tpnspi', 'or_id': 1209L, 'beehive_id': 'pgrmrv4gs', 'BEEHIVEUSER_ID_OID': 1209L, 'nimbits_id': 'nxdicffbu@ooma.com'}
+28-06-2017:19:40:33,562 INFO     [mongodb_setup.py:39] Mongo Connection Established with UserCredentials_collection
+28-06-2017:19:40:33,562 INFO     [mongodb_setup.py:52] Already inserted to mongo DB
+28-06-2017:19:40:34,563 INFO     [nimbits_server_id.py:49] construct_nimbits_request_headers ended
+28-06-2017:19:40:34,576 INFO     [nimbits_server_id.py:74] get_nimbits_events ended
+28-06-2017:19:40:34,576 INFO     [validate_logs.py:26] Nimbits ID = 1238c34b-33d7-444f-87d5-5f6acd03e66d
+28-06-2017:19:40:34,577 INFO     [nimbits_sql_query.py:41] id = 1238c34b-33d7-444f-87d5-5f6acd03e66d
+28-06-2017:19:40:36,422 INFO     [nimbits_sql_query.py:52]  ===========> {"time":1498704032874, "deviceType":"DOOR_SENSOR", "eventType":8, "message":"Door Sensor 1 tamper sensor is armed.", "isAlert":false, "modeName":"Home",  "status": {"state":1.0, "batteryStatus":0.0, "connectionStatus":1.0}, "notifications": {"phones":[], "emails":[]}}
+28-06-2017:19:40:37,424 INFO     [validate_logs.py:31] Current Result - {"time":1498704032874, "deviceType":"DOOR_SENSOR", "eventType":8, "message":"Door Sensor 1 tamper sensor is armed.", "isAlert":false, "modeName":"Home",  "status": {"state":1.0, "batteryStatus":0.0, "connectionStatus":1.0}, "notifications": {"phones":[], "emails":[]}} Expected Result is armed
+28-06-2017:19:40:37,424 INFO     [client_hms_config.py:112] Result : Arming Door Sensor Status - pass
+28-06-2017:19:40:44,431 INFO     [door_rest_cli.py:114] ========> Enabling Door Sensor Open
+28-06-2017:19:40:44,476 INFO     [door_rest_cli.py:118] door_sensor_open - http://10.66.16.162:5000/sensor/Door/interface/event/switch/off
+28-06-2017:19:40:45,478 INFO     [validate_logs.py:22] get_latest_logevent Started
+28-06-2017:19:40:45,478 DEBUG    [nimbits_server_id.py:53] get_nimbits_events started
+28-06-2017:19:40:45,478 INFO     [nimbits_server_id.py:56] __url http://nimbits1-cert1.cn.ooma.com:9080/service/v3/rest/me?name=logPoint
+28-06-2017:19:40:45,478 INFO     [nimbits_server_id.py:33] construct_nimbits_request_headers started
+28-06-2017:19:40:45,478 INFO     [nimbits_server_id.py:34] OR Dict - {}
+28-06-2017:19:40:45,478 INFO     [hms_sql_query.py:43] cust_pk = c3bw6mu485ea3z67tnjcqws7dhuv5wsv
+28-06-2017:19:40:45,484 INFO     [hms_sql_query.py:65]  _ooma_userid select * from OOMA_USER where PK = 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv';
+28-06-2017:19:40:45,485 INFO     [hms_sql_query.py:71]  _row (1231L, 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv', 1209L, 1209L, 'ENABLED', '6699007109', None, 'America/Los_Angeles')
+28-06-2017:19:40:45,486 INFO     [hms_sql_query.py:81]  _row (1209L, 1378L, 1360L, 'hms@ooma.com', 'vbe5dbpj4', 'pgrmrv4gs')
+28-06-2017:19:40:45,487 INFO     [hms_sql_query.py:86]  _row (1209L, 'vc4tpnspi', 'nxdicffbu@ooma.com')
+28-06-2017:19:40:45,488 INFO     [hms_sql_query.py:97] Adding mongo_dict {'NIMBITSUSER_ID_OID': 1209L, 'cust_pk': 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv', 'beehive_pwd': 'vbe5dbpj4', 'nimbits_pwd': 'vc4tpnspi', 'or_id': 1209L, 'beehive_id': 'pgrmrv4gs', 'BEEHIVEUSER_ID_OID': 1209L, 'nimbits_id': 'nxdicffbu@ooma.com'}
+28-06-2017:19:40:45,488 INFO     [mongodb_setup.py:39] Mongo Connection Established with UserCredentials_collection
+28-06-2017:19:40:45,488 INFO     [mongodb_setup.py:52] Already inserted to mongo DB
+28-06-2017:19:40:46,489 INFO     [nimbits_server_id.py:49] construct_nimbits_request_headers ended
+28-06-2017:19:40:46,503 INFO     [nimbits_server_id.py:74] get_nimbits_events ended
+28-06-2017:19:40:46,503 INFO     [validate_logs.py:26] Nimbits ID = 1238c34b-33d7-444f-87d5-5f6acd03e66d
+28-06-2017:19:40:46,503 INFO     [nimbits_sql_query.py:41] id = 1238c34b-33d7-444f-87d5-5f6acd03e66d
+28-06-2017:19:40:48,430 INFO     [nimbits_sql_query.py:52]  ===========> {"time":1498704032874, "deviceType":"DOOR_SENSOR", "eventType":8, "message":"Door Sensor 1 tamper sensor is armed.", "isAlert":false, "modeName":"Home",  "status": {"state":1.0, "batteryStatus":0.0, "connectionStatus":1.0}, "notifications": {"phones":[], "emails":[]}}
+28-06-2017:19:40:49,431 INFO     [validate_logs.py:31] Current Result - {"time":1498704032874, "deviceType":"DOOR_SENSOR", "eventType":8, "message":"Door Sensor 1 tamper sensor is armed.", "isAlert":false, "modeName":"Home",  "status": {"state":1.0, "batteryStatus":0.0, "connectionStatus":1.0}, "notifications": {"phones":[], "emails":[]}} Expected Result is open
+28-06-2017:19:40:49,432 INFO     [client_hms_config.py:118] Result : Open Door Sensor Status - pass
+28-06-2017:19:40:56,440 INFO     [door_rest_cli.py:126] ========> Enabling Door Sensor Closed
+28-06-2017:19:40:56,473 INFO     [door_rest_cli.py:130] send_door_sensor_close - http://10.66.16.162:5000/sensor/Door/interface/event/switch/on
+28-06-2017:19:40:57,474 INFO     [validate_logs.py:22] get_latest_logevent Started
+28-06-2017:19:40:57,475 DEBUG    [nimbits_server_id.py:53] get_nimbits_events started
+28-06-2017:19:40:57,475 INFO     [nimbits_server_id.py:56] __url http://nimbits1-cert1.cn.ooma.com:9080/service/v3/rest/me?name=logPoint
+28-06-2017:19:40:57,475 INFO     [nimbits_server_id.py:33] construct_nimbits_request_headers started
+28-06-2017:19:40:57,475 INFO     [nimbits_server_id.py:34] OR Dict - {}
+28-06-2017:19:40:57,475 INFO     [hms_sql_query.py:43] cust_pk = c3bw6mu485ea3z67tnjcqws7dhuv5wsv
+28-06-2017:19:40:57,480 INFO     [hms_sql_query.py:65]  _ooma_userid select * from OOMA_USER where PK = 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv';
+28-06-2017:19:40:57,482 INFO     [hms_sql_query.py:71]  _row (1231L, 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv', 1209L, 1209L, 'ENABLED', '6699007109', None, 'America/Los_Angeles')
+28-06-2017:19:40:57,483 INFO     [hms_sql_query.py:81]  _row (1209L, 1378L, 1360L, 'hms@ooma.com', 'vbe5dbpj4', 'pgrmrv4gs')
+28-06-2017:19:40:57,484 INFO     [hms_sql_query.py:86]  _row (1209L, 'vc4tpnspi', 'nxdicffbu@ooma.com')
+28-06-2017:19:40:57,484 INFO     [hms_sql_query.py:97] Adding mongo_dict {'NIMBITSUSER_ID_OID': 1209L, 'cust_pk': 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv', 'beehive_pwd': 'vbe5dbpj4', 'nimbits_pwd': 'vc4tpnspi', 'or_id': 1209L, 'beehive_id': 'pgrmrv4gs', 'BEEHIVEUSER_ID_OID': 1209L, 'nimbits_id': 'nxdicffbu@ooma.com'}
+28-06-2017:19:40:57,484 INFO     [mongodb_setup.py:39] Mongo Connection Established with UserCredentials_collection
+28-06-2017:19:40:57,485 INFO     [mongodb_setup.py:52] Already inserted to mongo DB
+28-06-2017:19:40:58,486 INFO     [nimbits_server_id.py:49] construct_nimbits_request_headers ended
+28-06-2017:19:40:58,500 INFO     [nimbits_server_id.py:74] get_nimbits_events ended
+28-06-2017:19:40:58,500 INFO     [validate_logs.py:26] Nimbits ID = 1238c34b-33d7-444f-87d5-5f6acd03e66d
+28-06-2017:19:40:58,500 INFO     [nimbits_sql_query.py:41] id = 1238c34b-33d7-444f-87d5-5f6acd03e66d
+28-06-2017:19:41:00,484 INFO     [nimbits_sql_query.py:52]  ===========> {"time":1498704032874, "deviceType":"DOOR_SENSOR", "eventType":8, "message":"Door Sensor 1 tamper sensor is armed.", "isAlert":false, "modeName":"Home",  "status": {"state":1.0, "batteryStatus":0.0, "connectionStatus":1.0}, "notifications": {"phones":[], "emails":[]}}
+28-06-2017:19:41:01,485 INFO     [validate_logs.py:31] Current Result - {"time":1498704032874, "deviceType":"DOOR_SENSOR", "eventType":8, "message":"Door Sensor 1 tamper sensor is armed.", "isAlert":false, "modeName":"Home",  "status": {"state":1.0, "batteryStatus":0.0, "connectionStatus":1.0}, "notifications": {"phones":[], "emails":[]}} Expected Result is closed
+28-06-2017:19:41:01,485 INFO     [client_hms_config.py:124] Result : Close Door Sensor Status - pass
+28-06-2017:19:41:08,494 INFO     [door_rest_cli.py:31] ========> Enabling Door Sensor Paging
+28-06-2017:19:41:08,547 INFO     [door_rest_cli.py:35] door_sensor_paging_enabling...... - http://10.66.16.162:5000/sensor/Door/interface/pair/switch/on
+28-06-2017:19:41:10,582 INFO     [door_rest_cli.py:46] door_sensor_paging_enabled - http://10.66.16.162:5000/sensor/Door/interface/pair/switch/off
+28-06-2017:19:41:11,583 INFO     [validate_logs.py:22] get_latest_logevent Started
+28-06-2017:19:41:11,584 DEBUG    [nimbits_server_id.py:53] get_nimbits_events started
+28-06-2017:19:41:11,584 INFO     [nimbits_server_id.py:56] __url http://nimbits1-cert1.cn.ooma.com:9080/service/v3/rest/me?name=logPoint
+28-06-2017:19:41:11,584 INFO     [nimbits_server_id.py:33] construct_nimbits_request_headers started
+28-06-2017:19:41:11,584 INFO     [nimbits_server_id.py:34] OR Dict - {}
+28-06-2017:19:41:11,584 INFO     [hms_sql_query.py:43] cust_pk = c3bw6mu485ea3z67tnjcqws7dhuv5wsv
+28-06-2017:19:41:11,590 INFO     [hms_sql_query.py:65]  _ooma_userid select * from OOMA_USER where PK = 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv';
+28-06-2017:19:41:11,591 INFO     [hms_sql_query.py:71]  _row (1231L, 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv', 1209L, 1209L, 'ENABLED', '6699007109', None, 'America/Los_Angeles')
+28-06-2017:19:41:11,593 INFO     [hms_sql_query.py:81]  _row (1209L, 1378L, 1360L, 'hms@ooma.com', 'vbe5dbpj4', 'pgrmrv4gs')
+28-06-2017:19:41:11,594 INFO     [hms_sql_query.py:86]  _row (1209L, 'vc4tpnspi', 'nxdicffbu@ooma.com')
+28-06-2017:19:41:11,594 INFO     [hms_sql_query.py:97] Adding mongo_dict {'NIMBITSUSER_ID_OID': 1209L, 'cust_pk': 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv', 'beehive_pwd': 'vbe5dbpj4', 'nimbits_pwd': 'vc4tpnspi', 'or_id': 1209L, 'beehive_id': 'pgrmrv4gs', 'BEEHIVEUSER_ID_OID': 1209L, 'nimbits_id': 'nxdicffbu@ooma.com'}
+28-06-2017:19:41:11,594 INFO     [mongodb_setup.py:39] Mongo Connection Established with UserCredentials_collection
+28-06-2017:19:41:11,594 INFO     [mongodb_setup.py:52] Already inserted to mongo DB
+28-06-2017:19:41:12,595 INFO     [nimbits_server_id.py:49] construct_nimbits_request_headers ended
+28-06-2017:19:41:12,611 INFO     [nimbits_server_id.py:74] get_nimbits_events ended
+28-06-2017:19:41:12,612 INFO     [validate_logs.py:26] Nimbits ID = 1238c34b-33d7-444f-87d5-5f6acd03e66d
+28-06-2017:19:41:12,612 INFO     [nimbits_sql_query.py:41] id = 1238c34b-33d7-444f-87d5-5f6acd03e66d
+28-06-2017:19:41:14,356 INFO     [nimbits_sql_query.py:52]  ===========> {"time":1498704032874, "deviceType":"DOOR_SENSOR", "eventType":8, "message":"Door Sensor 1 tamper sensor is armed.", "isAlert":false, "modeName":"Home",  "status": {"state":1.0, "batteryStatus":0.0, "connectionStatus":1.0}, "notifications": {"phones":[], "emails":[]}}
+28-06-2017:19:41:15,357 INFO     [validate_logs.py:31] Current Result - {"time":1498704032874, "deviceType":"DOOR_SENSOR", "eventType":8, "message":"Door Sensor 1 tamper sensor is armed.", "isAlert":false, "modeName":"Home",  "status": {"state":1.0, "batteryStatus":0.0, "connectionStatus":1.0}, "notifications": {"phones":[], "emails":[]}} Expected Result paging
+28-06-2017:19:41:15,357 INFO     [client_hms_config.py:130] Result : paging Door Sensor Status - pass
+28-06-2017:19:41:22,364 INFO     [client_hms_config.py:134] +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+28-06-2017:19:41:22,364 INFO     [client_hms_config.py:135] test_door_sensor_status - Completed
+28-06-2017:19:41:22,364 INFO     [client_hms_config.py:136] +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.28-06-2017:19:41:22,365 INFO     [client_hms_config.py:26] -Setup for Testcase Started
+28-06-2017:19:41:22,365 INFO     [client_hms_config.py:139] +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+28-06-2017:19:41:22,365 INFO     [client_hms_config.py:140] test_door_sensor_status - Started
+28-06-2017:19:41:22,365 INFO     [client_hms_config.py:141] +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+28-06-2017:19:41:22,390 INFO     [flood_rest_cli.py:22] water_sensor_status - http://10.66.16.162:5000
+28-06-2017:19:41:29,397 INFO     [flood_rest_cli.py:101] ========> Enabling Water Sensor Tampering
+28-06-2017:19:41:29,429 INFO     [flood_rest_cli.py:105] water_sensor_tampering_enabled - http://10.66.16.162:5000/sensor/Water/interface/tamper/switch/off
+28-06-2017:19:41:30,430 INFO     [validate_logs.py:22] get_latest_logevent Started
+28-06-2017:19:41:30,431 DEBUG    [nimbits_server_id.py:53] get_nimbits_events started
+28-06-2017:19:41:30,431 INFO     [nimbits_server_id.py:56] __url http://nimbits1-cert1.cn.ooma.com:9080/service/v3/rest/me?name=logPoint
+28-06-2017:19:41:30,431 INFO     [nimbits_server_id.py:33] construct_nimbits_request_headers started
+28-06-2017:19:41:30,431 INFO     [nimbits_server_id.py:34] OR Dict - {}
+28-06-2017:19:41:30,431 INFO     [hms_sql_query.py:43] cust_pk = c3bw6mu485ea3z67tnjcqws7dhuv5wsv
+28-06-2017:19:41:30,437 INFO     [hms_sql_query.py:65]  _ooma_userid select * from OOMA_USER where PK = 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv';
+28-06-2017:19:41:30,438 INFO     [hms_sql_query.py:71]  _row (1231L, 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv', 1209L, 1209L, 'ENABLED', '6699007109', None, 'America/Los_Angeles')
+28-06-2017:19:41:30,439 INFO     [hms_sql_query.py:81]  _row (1209L, 1378L, 1360L, 'hms@ooma.com', 'vbe5dbpj4', 'pgrmrv4gs')
+28-06-2017:19:41:30,440 INFO     [hms_sql_query.py:86]  _row (1209L, 'vc4tpnspi', 'nxdicffbu@ooma.com')
+28-06-2017:19:41:30,440 INFO     [hms_sql_query.py:97] Adding mongo_dict {'NIMBITSUSER_ID_OID': 1209L, 'cust_pk': 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv', 'beehive_pwd': 'vbe5dbpj4', 'nimbits_pwd': 'vc4tpnspi', 'or_id': 1209L, 'beehive_id': 'pgrmrv4gs', 'BEEHIVEUSER_ID_OID': 1209L, 'nimbits_id': 'nxdicffbu@ooma.com'}
+28-06-2017:19:41:30,440 INFO     [mongodb_setup.py:39] Mongo Connection Established with UserCredentials_collection
+28-06-2017:19:41:30,440 INFO     [mongodb_setup.py:52] Already inserted to mongo DB
+28-06-2017:19:41:31,442 INFO     [nimbits_server_id.py:49] construct_nimbits_request_headers ended
+28-06-2017:19:41:31,489 INFO     [nimbits_server_id.py:74] get_nimbits_events ended
+28-06-2017:19:41:31,489 INFO     [validate_logs.py:26] Nimbits ID = 1238c34b-33d7-444f-87d5-5f6acd03e66d
+28-06-2017:19:41:31,489 INFO     [nimbits_sql_query.py:41] id = 1238c34b-33d7-444f-87d5-5f6acd03e66d
+28-06-2017:19:41:33,801 INFO     [nimbits_sql_query.py:52]  ===========> {"time":1498704032874, "deviceType":"DOOR_SENSOR", "eventType":8, "message":"Door Sensor 1 tamper sensor is armed.", "isAlert":false, "modeName":"Home",  "status": {"state":1.0, "batteryStatus":0.0, "connectionStatus":1.0}, "notifications": {"phones":[], "emails":[]}}
+28-06-2017:19:41:34,802 INFO     [validate_logs.py:31] Current Result - {"time":1498704032874, "deviceType":"DOOR_SENSOR", "eventType":8, "message":"Door Sensor 1 tamper sensor is armed.", "isAlert":false, "modeName":"Home",  "status": {"state":1.0, "batteryStatus":0.0, "connectionStatus":1.0}, "notifications": {"phones":[], "emails":[]}} Expected Result is armed
+28-06-2017:19:41:34,803 INFO     [client_hms_config.py:153] Result : Tampering Water Sensor Status - pass
+28-06-2017:19:41:41,806 INFO     [flood_rest_cli.py:89] ========> Enabling Water Sensor Armed
+28-06-2017:19:41:41,841 INFO     [flood_rest_cli.py:93] water_sensor_tampering_disabled - http://10.66.16.162:5000/sensor/Water/interface/tamper/switch/on
+28-06-2017:19:41:42,842 INFO     [validate_logs.py:22] get_latest_logevent Started
+28-06-2017:19:41:42,843 DEBUG    [nimbits_server_id.py:53] get_nimbits_events started
+28-06-2017:19:41:42,843 INFO     [nimbits_server_id.py:56] __url http://nimbits1-cert1.cn.ooma.com:9080/service/v3/rest/me?name=logPoint
+28-06-2017:19:41:42,843 INFO     [nimbits_server_id.py:33] construct_nimbits_request_headers started
+28-06-2017:19:41:42,843 INFO     [nimbits_server_id.py:34] OR Dict - {}
+28-06-2017:19:41:42,843 INFO     [hms_sql_query.py:43] cust_pk = c3bw6mu485ea3z67tnjcqws7dhuv5wsv
+28-06-2017:19:41:42,850 INFO     [hms_sql_query.py:65]  _ooma_userid select * from OOMA_USER where PK = 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv';
+28-06-2017:19:41:42,852 INFO     [hms_sql_query.py:71]  _row (1231L, 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv', 1209L, 1209L, 'ENABLED', '6699007109', None, 'America/Los_Angeles')
+28-06-2017:19:41:42,854 INFO     [hms_sql_query.py:81]  _row (1209L, 1378L, 1360L, 'hms@ooma.com', 'vbe5dbpj4', 'pgrmrv4gs')
+28-06-2017:19:41:42,855 INFO     [hms_sql_query.py:86]  _row (1209L, 'vc4tpnspi', 'nxdicffbu@ooma.com')
+28-06-2017:19:41:42,855 INFO     [hms_sql_query.py:97] Adding mongo_dict {'NIMBITSUSER_ID_OID': 1209L, 'cust_pk': 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv', 'beehive_pwd': 'vbe5dbpj4', 'nimbits_pwd': 'vc4tpnspi', 'or_id': 1209L, 'beehive_id': 'pgrmrv4gs', 'BEEHIVEUSER_ID_OID': 1209L, 'nimbits_id': 'nxdicffbu@ooma.com'}
+28-06-2017:19:41:42,855 INFO     [mongodb_setup.py:39] Mongo Connection Established with UserCredentials_collection
+28-06-2017:19:41:42,856 INFO     [mongodb_setup.py:52] Already inserted to mongo DB
+28-06-2017:19:41:43,857 INFO     [nimbits_server_id.py:49] construct_nimbits_request_headers ended
+28-06-2017:19:41:43,871 INFO     [nimbits_server_id.py:74] get_nimbits_events ended
+28-06-2017:19:41:43,871 INFO     [validate_logs.py:26] Nimbits ID = 1238c34b-33d7-444f-87d5-5f6acd03e66d
+28-06-2017:19:41:43,871 INFO     [nimbits_sql_query.py:41] id = 1238c34b-33d7-444f-87d5-5f6acd03e66d
+28-06-2017:19:41:45,552 INFO     [nimbits_sql_query.py:52]  ===========> {"time":1498704102300, "deviceType":"WATER_LEAKAGE", "eventType":7, "message":"Water Sensor 1 detects tampering.", "isAlert":true, "modeName":"Home",  "status": {"state":1.0, "batteryStatus":0.0, "connectionStatus":1.0}, "notifications": {"phones":[], "emails":[]}}
+28-06-2017:19:41:46,554 INFO     [validate_logs.py:31] Current Result - {"time":1498704102300, "deviceType":"WATER_LEAKAGE", "eventType":7, "message":"Water Sensor 1 detects tampering.", "isAlert":true, "modeName":"Home",  "status": {"state":1.0, "batteryStatus":0.0, "connectionStatus":1.0}, "notifications": {"phones":[], "emails":[]}} Expected Result detects tampering
+28-06-2017:19:41:46,554 INFO     [client_hms_config.py:159] Result : Arming Water Sensor Status - pass
+28-06-2017:19:41:53,561 INFO     [flood_rest_cli.py:113] ========> Enabling Water Sensor Detects
+28-06-2017:19:41:53,593 INFO     [flood_rest_cli.py:117] water_sensor_detects_water - http://10.66.16.162:5000/sensor/Water/interface/event/switch/on
+28-06-2017:19:42:54,654 INFO     [validate_logs.py:22] get_latest_logevent Started
+28-06-2017:19:42:54,655 DEBUG    [nimbits_server_id.py:53] get_nimbits_events started
+28-06-2017:19:42:54,655 INFO     [nimbits_server_id.py:56] __url http://nimbits1-cert1.cn.ooma.com:9080/service/v3/rest/me?name=logPoint
+28-06-2017:19:42:54,655 INFO     [nimbits_server_id.py:33] construct_nimbits_request_headers started
+28-06-2017:19:42:54,655 INFO     [nimbits_server_id.py:34] OR Dict - {}
+28-06-2017:19:42:54,655 INFO     [hms_sql_query.py:43] cust_pk = c3bw6mu485ea3z67tnjcqws7dhuv5wsv
+28-06-2017:19:42:54,660 INFO     [hms_sql_query.py:65]  _ooma_userid select * from OOMA_USER where PK = 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv';
+28-06-2017:19:42:54,661 INFO     [hms_sql_query.py:71]  _row (1231L, 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv', 1209L, 1209L, 'ENABLED', '6699007109', None, 'America/Los_Angeles')
+28-06-2017:19:42:54,662 INFO     [hms_sql_query.py:81]  _row (1209L, 1378L, 1360L, 'hms@ooma.com', 'vbe5dbpj4', 'pgrmrv4gs')
+28-06-2017:19:42:54,663 INFO     [hms_sql_query.py:86]  _row (1209L, 'vc4tpnspi', 'nxdicffbu@ooma.com')
+28-06-2017:19:42:54,663 INFO     [hms_sql_query.py:97] Adding mongo_dict {'NIMBITSUSER_ID_OID': 1209L, 'cust_pk': 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv', 'beehive_pwd': 'vbe5dbpj4', 'nimbits_pwd': 'vc4tpnspi', 'or_id': 1209L, 'beehive_id': 'pgrmrv4gs', 'BEEHIVEUSER_ID_OID': 1209L, 'nimbits_id': 'nxdicffbu@ooma.com'}
+28-06-2017:19:42:54,663 INFO     [mongodb_setup.py:39] Mongo Connection Established with UserCredentials_collection
+28-06-2017:19:42:54,664 INFO     [mongodb_setup.py:52] Already inserted to mongo DB
+28-06-2017:19:42:55,665 INFO     [nimbits_server_id.py:49] construct_nimbits_request_headers ended
+28-06-2017:19:42:55,737 INFO     [nimbits_server_id.py:74] get_nimbits_events ended
+28-06-2017:19:42:55,737 INFO     [validate_logs.py:26] Nimbits ID = 1238c34b-33d7-444f-87d5-5f6acd03e66d
+28-06-2017:19:42:55,737 INFO     [nimbits_sql_query.py:41] id = 1238c34b-33d7-444f-87d5-5f6acd03e66d
+28-06-2017:19:42:57,558 INFO     [nimbits_sql_query.py:52]  ===========> {"time":1498704102300, "deviceType":"WATER_LEAKAGE", "eventType":7, "message":"Water Sensor 1 detects tampering.", "isAlert":true, "modeName":"Home",  "status": {"state":1.0, "batteryStatus":0.0, "connectionStatus":1.0}, "notifications": {"phones":[], "emails":[]}}
+28-06-2017:19:42:58,559 INFO     [validate_logs.py:31] Current Result - {"time":1498704102300, "deviceType":"WATER_LEAKAGE", "eventType":7, "message":"Water Sensor 1 detects tampering.", "isAlert":true, "modeName":"Home",  "status": {"state":1.0, "batteryStatus":0.0, "connectionStatus":1.0}, "notifications": {"phones":[], "emails":[]}} Expected Result is wet
+28-06-2017:19:42:58,559 INFO     [client_hms_config.py:165] Result : Wet Water Sensor Status - pass
+28-06-2017:19:43:05,567 INFO     [flood_rest_cli.py:127] ========> Enabling Water Sensor Dry
+28-06-2017:19:43:05,599 INFO     [flood_rest_cli.py:131] water_sensor_detects_no_water - http://10.66.16.162:5000/sensor/Water/interface/event/switch/off
+28-06-2017:19:44:06,661 INFO     [validate_logs.py:22] get_latest_logevent Started
+28-06-2017:19:44:06,661 DEBUG    [nimbits_server_id.py:53] get_nimbits_events started
+28-06-2017:19:44:06,661 INFO     [nimbits_server_id.py:56] __url http://nimbits1-cert1.cn.ooma.com:9080/service/v3/rest/me?name=logPoint
+28-06-2017:19:44:06,661 INFO     [nimbits_server_id.py:33] construct_nimbits_request_headers started
+28-06-2017:19:44:06,661 INFO     [nimbits_server_id.py:34] OR Dict - {}
+28-06-2017:19:44:06,661 INFO     [hms_sql_query.py:43] cust_pk = c3bw6mu485ea3z67tnjcqws7dhuv5wsv
+28-06-2017:19:44:06,666 INFO     [hms_sql_query.py:65]  _ooma_userid select * from OOMA_USER where PK = 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv';
+28-06-2017:19:44:06,668 INFO     [hms_sql_query.py:71]  _row (1231L, 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv', 1209L, 1209L, 'ENABLED', '6699007109', None, 'America/Los_Angeles')
+28-06-2017:19:44:06,669 INFO     [hms_sql_query.py:81]  _row (1209L, 1378L, 1360L, 'hms@ooma.com', 'vbe5dbpj4', 'pgrmrv4gs')
+28-06-2017:19:44:06,670 INFO     [hms_sql_query.py:86]  _row (1209L, 'vc4tpnspi', 'nxdicffbu@ooma.com')
+28-06-2017:19:44:06,670 INFO     [hms_sql_query.py:97] Adding mongo_dict {'NIMBITSUSER_ID_OID': 1209L, 'cust_pk': 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv', 'beehive_pwd': 'vbe5dbpj4', 'nimbits_pwd': 'vc4tpnspi', 'or_id': 1209L, 'beehive_id': 'pgrmrv4gs', 'BEEHIVEUSER_ID_OID': 1209L, 'nimbits_id': 'nxdicffbu@ooma.com'}
+28-06-2017:19:44:06,671 INFO     [mongodb_setup.py:39] Mongo Connection Established with UserCredentials_collection
+28-06-2017:19:44:06,671 INFO     [mongodb_setup.py:52] Already inserted to mongo DB
+28-06-2017:19:44:07,672 INFO     [nimbits_server_id.py:49] construct_nimbits_request_headers ended
+28-06-2017:19:44:07,687 INFO     [nimbits_server_id.py:74] get_nimbits_events ended
+28-06-2017:19:44:07,687 INFO     [validate_logs.py:26] Nimbits ID = 1238c34b-33d7-444f-87d5-5f6acd03e66d
+28-06-2017:19:44:07,687 INFO     [nimbits_sql_query.py:41] id = 1238c34b-33d7-444f-87d5-5f6acd03e66d
+28-06-2017:19:44:09,650 INFO     [nimbits_sql_query.py:52]  ===========> {"time":1498704102300, "deviceType":"WATER_LEAKAGE", "eventType":7, "message":"Water Sensor 1 detects tampering.", "isAlert":true, "modeName":"Home",  "status": {"state":1.0, "batteryStatus":0.0, "connectionStatus":1.0}, "notifications": {"phones":[], "emails":[]}}
+28-06-2017:19:44:10,651 INFO     [validate_logs.py:31] Current Result - {"time":1498704102300, "deviceType":"WATER_LEAKAGE", "eventType":7, "message":"Water Sensor 1 detects tampering.", "isAlert":true, "modeName":"Home",  "status": {"state":1.0, "batteryStatus":0.0, "connectionStatus":1.0}, "notifications": {"phones":[], "emails":[]}} Expected Result is dry
+28-06-2017:19:44:10,652 INFO     [client_hms_config.py:171] Result : Dry Water Sensor Status - pass
+28-06-2017:19:44:17,659 INFO     [flood_rest_cli.py:30] ========> Enabling Water Sensor Paging
+28-06-2017:19:44:17,692 INFO     [flood_rest_cli.py:34] water_sensor_paging_enabling...... - http://10.66.16.162:5000/sensor/Water/interface/pair/switch/on
+28-06-2017:19:44:19,726 INFO     [flood_rest_cli.py:45] water_sensor_paging_enabled - http://10.66.16.162:5000/sensor/Water/interface/pair/switch/off
+28-06-2017:19:44:20,727 INFO     [validate_logs.py:22] get_latest_logevent Started
+28-06-2017:19:44:20,727 DEBUG    [nimbits_server_id.py:53] get_nimbits_events started
+28-06-2017:19:44:20,727 INFO     [nimbits_server_id.py:56] __url http://nimbits1-cert1.cn.ooma.com:9080/service/v3/rest/me?name=logPoint
+28-06-2017:19:44:20,727 INFO     [nimbits_server_id.py:33] construct_nimbits_request_headers started
+28-06-2017:19:44:20,727 INFO     [nimbits_server_id.py:34] OR Dict - {}
+28-06-2017:19:44:20,727 INFO     [hms_sql_query.py:43] cust_pk = c3bw6mu485ea3z67tnjcqws7dhuv5wsv
+28-06-2017:19:44:20,733 INFO     [hms_sql_query.py:65]  _ooma_userid select * from OOMA_USER where PK = 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv';
+28-06-2017:19:44:20,735 INFO     [hms_sql_query.py:71]  _row (1231L, 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv', 1209L, 1209L, 'ENABLED', '6699007109', None, 'America/Los_Angeles')
+28-06-2017:19:44:20,736 INFO     [hms_sql_query.py:81]  _row (1209L, 1378L, 1360L, 'hms@ooma.com', 'vbe5dbpj4', 'pgrmrv4gs')
+28-06-2017:19:44:20,737 INFO     [hms_sql_query.py:86]  _row (1209L, 'vc4tpnspi', 'nxdicffbu@ooma.com')
+28-06-2017:19:44:20,737 INFO     [hms_sql_query.py:97] Adding mongo_dict {'NIMBITSUSER_ID_OID': 1209L, 'cust_pk': 'c3bw6mu485ea3z67tnjcqws7dhuv5wsv', 'beehive_pwd': 'vbe5dbpj4', 'nimbits_pwd': 'vc4tpnspi', 'or_id': 1209L, 'beehive_id': 'pgrmrv4gs', 'BEEHIVEUSER_ID_OID': 1209L, 'nimbits_id': 'nxdicffbu@ooma.com'}
+28-06-2017:19:44:20,737 INFO     [mongodb_setup.py:39] Mongo Connection Established with UserCredentials_collection
+28-06-2017:19:44:20,737 INFO     [mongodb_setup.py:52] Already inserted to mongo DB
+28-06-2017:19:44:21,738 INFO     [nimbits_server_id.py:49] construct_nimbits_request_headers ended
+28-06-2017:19:44:21,752 INFO     [nimbits_server_id.py:74] get_nimbits_events ended
+28-06-2017:19:44:21,752 INFO     [validate_logs.py:26] Nimbits ID = 1238c34b-33d7-444f-87d5-5f6acd03e66d
+28-06-2017:19:44:21,753 INFO     [nimbits_sql_query.py:41] id = 1238c34b-33d7-444f-87d5-5f6acd03e66d
+28-06-2017:19:44:22,904 INFO     [nimbits_sql_query.py:52]  ===========> {"time":1498704102300, "deviceType":"WATER_LEAKAGE", "eventType":7, "message":"Water Sensor 1 detects tampering.", "isAlert":true, "modeName":"Home",  "status": {"state":1.0, "batteryStatus":0.0, "connectionStatus":1.0}, "notifications": {"phones":[], "emails":[]}}
+28-06-2017:19:44:23,906 INFO     [validate_logs.py:31] Current Result - {"time":1498704102300, "deviceType":"WATER_LEAKAGE", "eventType":7, "message":"Water Sensor 1 detects tampering.", "isAlert":true, "modeName":"Home",  "status": {"state":1.0, "batteryStatus":0.0, "connectionStatus":1.0}, "notifications": {"phones":[], "emails":[]}} Expected Result <addinfourl at 139858167231624 whose fp = <socket._fileobject object at 0x7f33445f7750>>
+28-06-2017:19:44:23,906 INFO     [client_hms_config.py:177] Result : Paging Water Sensor Status - pass
+28-06-2017:19:44:30,913 INFO     [client_hms_config.py:181] +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+28-06-2017:19:44:30,913 INFO     [client_hms_config.py:182] test_door_sensor_status - Completed
+28-06-2017:19:44:30,913 INFO     [client_hms_config.py:183] +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .
 ----------------------------------------------------------------------
-Ran 4 tests in 266.399s
+Ran 4 tests in 268.954s
 
 OK
 ('If', 'enable')
@@ -321,4 +331,4 @@ OK
 ('If', 'enable')
 
 
-Hope to see you there!
+Thanks for looking into it....
