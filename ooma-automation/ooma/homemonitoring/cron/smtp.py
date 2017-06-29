@@ -20,9 +20,9 @@ def send_emails(emails, schedule):
                     strftime("%Y-%m-%d %H:%M:%S", gmtime()) + '\n'
 
         message += 'Hi ' + name + '!\n\n'
-        message += "Today's Performance Schedule:\n\n"
+        message += "Please find the below execution report:\n\n"
         message += schedule + '\n\n'
-        message += 'Hope to see you there!'
+        message += 'Thanks for looking into it....'
         server.sendmail(from_email, to_email, message)
 
     server.quit()

@@ -84,25 +84,25 @@ class FlaskClientWaterSensor:
             logger.error("Error - BBFlaskServer is not running")
             return e.code
 
-    def water_sensor_tampering_enabled(self):
+    def water_sensor_tampering_disabled(self):
         try:
-            logger.info("========> Enabling Water Sensor Tampering")
+            logger.info("========> Enabling Water Sensor Armed")
             _tamper_url = self.__resturl
             _tamper_url += "/sensor/Water/interface/tamper/switch/on"
             __http_response = urllib2.urlopen(_tamper_url)
-            logger.info("water_sensor_tampering_enabled - %s", _tamper_url)
+            logger.info("water_sensor_tampering_disabled - %s", _tamper_url)
             return "detects tampering"
         except urllib2.URLError as e:
             logger.error("Error - BBFlaskServer is not running")
             return e.code
 
-    def water_sensor_tampering_disabled(self):
+    def water_sensor_tampering_enabled(self):
         try:
-            logger.info("========> Enabling Water Sensor Armed")
+            logger.info("========> Enabling Water Sensor Tampering ")
             _tamper_url = self.__resturl
             _tamper_url += "/sensor/Water/interface/tamper/switch/off"
             __http_response = urllib2.urlopen(_tamper_url)
-            logger.info("water_sensor_tampering_disabled - %s", _tamper_url)
+            logger.info("water_sensor_tampering_enabled - %s", _tamper_url)
             return "is armed"
         except urllib2.URLError as e:
             logger.error("Error - BBFlaskServer is not running")
