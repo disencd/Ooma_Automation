@@ -1,5 +1,7 @@
 import smtp
 import sys, os
+import re
+
 '''
 Send a greeting email to our customer email list
 with the daily weather forecast and schedule
@@ -25,12 +27,26 @@ def get_emails():
     return emails
 
 
+def report_generator(log):
+    result_list = []
+    result = re.compile('(Result :)+([\w\d.])', re.UNICODE)
+    with open(log) as fh:
+        for line in fh:
+            match = result.search(line)
+            if match:
+                print(line)
+                result_list.append(line)
+
+    return line
+
 def get_schedule():
     # Reading our schedule from a file
     try:
-        schedule_file = open('/tmp/listener.log', 'r')
+        # schedule_file = open('/tmp/listener.log', 'r')
+        #
+        # schedule = schedule_file.read()
 
-        schedule = schedule_file.read()
+        schedule = report_generator('/tmp/listener.log')
     except FileNotFoundError as err:
         print(err)
 
