@@ -44,7 +44,7 @@ class FlaskClientDoorSensor:
             _pair_url += "/sensor/Door/interface/pair/switch/off"
             __http_response = urllib2.urlopen(_pair_url)
             logger.info("door_sensor_paging_enabled - %s",_pair_url)
-            return "paging"
+            return "is paging"
         except urllib2.URLError as e:
             logger.error("Error - BBFlaskServer is not running")
             return e.code
