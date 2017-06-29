@@ -28,13 +28,14 @@ def get_emails():
 
 
 def report_generator(log):
-    result_list = []
+    result_list = ""
     result = "Result :"
     with open(log) as fh:
         for line in fh:
             if result in line:
                 index = line.find(result)
-                result_list.append(line[index:])
+                index += len(result)
+                result_list += line[index:] + '\n'
 
     return result_list
 
