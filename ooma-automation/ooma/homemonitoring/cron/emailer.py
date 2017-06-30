@@ -49,6 +49,7 @@ class Emailer(object, SmtpEmail):
                         s_index = line.find(setup)
                         s_index += len(setup)
                         setup_str = line[index:]
+                        print(setup_str)
 
                     if result in line:
 
