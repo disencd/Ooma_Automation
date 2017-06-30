@@ -44,6 +44,7 @@ class Emailer(object, SmtpEmail):
             with open(log) as fh:
                 for line in fh:
                     if result in line:
+                        print(line)
                         index = line.find(result)
                         index += len(result)
                         # result_str += line[index:] + '\n'
