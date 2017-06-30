@@ -28,6 +28,7 @@ class ClientParameters():
         self.controller_info = {}
         self.jsonconfig = jsonconfig
         self._myx_id = jsonconfig["client_conf"]["myxid"]
+        self._spn = jsonconfig["client_conf"]["spn"]
         self.login_obj = Login(self.jsonconfig)
         self._client_dict = {}
         self._node = node
@@ -35,6 +36,9 @@ class ClientParameters():
     def is_telo_online(self):
         __ssh = self.login_obj.ssh_to_server(self.jsonconfig[self._node]["prv-server"])
         __shell = __ssh.invoke_shell()
+        logger.info("Setup : \n Node - %s \n MyxID - %s \n SPN - %s"\
+                        % (self._node, self._myx_id, self._spn))
+
         cmd = 'showmyx ' + self._myx_id + ' | grep IPADDR='
         logging.info('Auto_Logger: get showmyx output - %s' % cmd)
         wait_period = 600  # wait period(in secs) for telo to reboot

@@ -38,11 +38,18 @@ class Emailer(object, SmtpEmail):
 
     def report_generator(self, log):
         result_list = ""
+        setup_list = ""
         result = "Result :"
+        setup = "Setup :"
         _cnt = 1
         try:
             with open(log) as fh:
                 for line in fh:
+                    if setup in line:
+                        s_index = line.find(setup)
+                        s_index += len(setup)
+                        setup_str = line[index:]
+
                     if result in line:
 
                         index = line.find(result)
@@ -58,12 +65,13 @@ class Emailer(object, SmtpEmail):
         if not result_list:
             sys.exit()
 
-        return result_list
+        return setup_str, result_list
 
-    def process_html_result(self, result):
+    def process_html_result(self, setup, result):
 
         with open(self.html_file) as fh:
             data = fh.read().replace('@outputstring', result)
+            data = fh.read().replace('@setupstring', setup)
 
         fh.close()
 
@@ -72,9 +80,9 @@ class Emailer(object, SmtpEmail):
     def get_report_card(self):
         # Reading our schedule from a file
         try:
-            report_result = self.report_generator('/tmp/listener.log')
+            setup_str, report_result = self.report_generator('/tmp/listener.log')
 
-            final_output = self.process_html_result(report_result)
+            final_output = self.process_html_result(setup_str, report_result)
 
         except FileNotFoundError as err:
             print(err)
