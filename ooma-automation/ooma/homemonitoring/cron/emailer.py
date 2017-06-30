@@ -32,7 +32,7 @@ class Emailer(object, SmtpEmail):
     def construct_report(self, sl_no, testcase, result):
         html_str = "<TR><TD>" + str(sl_no) + "</TD>" \
                    "<TD>" + testcase + "</TD> " \
-                   "<TD>" + result + "</TD><TD></TD></TR>"
+                   "<TD>" + result + "</TD></TR>"
 
         return html_str
 
