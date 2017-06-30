@@ -55,6 +55,9 @@ class Emailer(object, SmtpEmail):
         except:
             print("Unexpected error:", sys.exc_info()[0])
 
+        if not result_list:
+            sys.exit()
+
         return result_list
 
     def process_html_result(self, result):
