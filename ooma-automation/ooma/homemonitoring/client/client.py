@@ -36,7 +36,7 @@ class ClientParameters():
     def is_telo_online(self):
         __ssh = self.login_obj.ssh_to_server(self.jsonconfig[self._node]["prv-server"])
         __shell = __ssh.invoke_shell()
-        logger.info("Setup : \n Node - %s \n MyxID - %s \n SPN - %s"\
+        logger.info("Setup : Node - %s MyxID - %s SPN - %s"\
                         % (self._node, self._myx_id, self._spn))
 
         cmd = 'showmyx ' + self._myx_id + ' | grep IPADDR='
