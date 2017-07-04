@@ -74,6 +74,7 @@ class Emailer(object, SmtpEmail):
             data = fh.read().replace('@outputstring', result)
 
 
+        data = data.replace('@setupstring', setup)
         fh.close()
 
         return data
