@@ -21,7 +21,7 @@ class MongoDBQuery():
         self.json_server_obj = self.json_obj.dump_config(server_f_path)
         #self.mongo_url = self.json_server_obj["url"]
 
-    url = "mongodb://localhost:27017/VirtualAutomation"
+    url = "mongodb://homesecurity0-auto.corp.ooma.com:27017/VirtualAutomation"
     client = pymongo.MongoClient(url)
     @staticmethod
     def __getInstance():
