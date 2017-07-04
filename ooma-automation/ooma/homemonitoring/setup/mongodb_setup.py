@@ -43,10 +43,9 @@ class MongoDBQuery():
         MongoDBQuery.__getInstance().close()
 
     def mongo_insertion(self, collection, dict):
-
+        logger.info("cust_pk %s", dict['cust_pk'])
         #dict['cust_pk'] = "virtualaccount20170620164922089987"
         self.__mongo_connect(collection)
-        logger.info("cust_pk %s", dict['cust_pk'])
         if not self.vs_account.find_one({'cust_pk' : dict['cust_pk']}):
             self.vs_account.insert_one(dict)
             logger.info("Successfully Inserted to mongo DB - %s", dict)
