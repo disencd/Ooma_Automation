@@ -130,7 +130,8 @@ class MongoDBQuery():
         return self.vs_account.update(search_query, dict)
 
     #Added seperate function if we dont have this table itself
-    def mongo_reset_sensor_count(self, id, cust_pk):
+    def mongo_reset_sensor_count(self, collection, id, cust_pk):
+        self.__mongo_connect(collection)
         logger.info("mongo_reset_sensor_count started")
         logger.info("user_dict %s cust_pk %s", id, cust_pk)
         user_dict = {}
