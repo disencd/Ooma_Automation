@@ -131,6 +131,8 @@ class MongoDBQuery():
 
     #Added seperate function if we dont have this table itself
     def mongo_reset_sensor_count(self, id, cust_pk):
+        logger.info("mongo_reset_sensor_count started")
+        logger.info("user_dict %s cust_pk %s", id, cust_pk)
         user_dict = {}
         user_dict["_id"] = id
         user_dict["cust_pk"] = cust_pk
