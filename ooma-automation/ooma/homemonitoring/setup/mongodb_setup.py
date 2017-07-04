@@ -45,6 +45,7 @@ class MongoDBQuery():
     def mongo_insertion(self, collection, dict):
 
         self.__mongo_connect(collection)
+        logger.info("cust_pk %s", dict['cust_pk'])
         if not self.vs_account.find({'cust_pk' : dict['cust_pk']}):
             logger.info("Inserting to mongo DB - %s", dict)
             self.vs_account.insert_one(dict)
