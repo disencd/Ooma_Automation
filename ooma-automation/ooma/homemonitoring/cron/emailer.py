@@ -72,7 +72,7 @@ class Emailer(object, SmtpEmail):
 
         with open(self.html_file) as fh:
             data = fh.read().replace('@outputstring', result)
-            data = fh.read().replace('@setupstring', setup)
+
 
         fh.close()
 
