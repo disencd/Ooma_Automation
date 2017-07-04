@@ -91,7 +91,7 @@ class HMS_Activation(object):
             if self.mongodb_dict["activation_status"] and self.mongo_enable == "enable":
                 _mong_obj.mongo_insertion("acc_collection", self.mongodb_dict)
                 logger.info("Getting Info of The HMS Account %s", response)
-                _mong_obj.mongo_reset_sensor_count(mongo_resp[0]["id"])
+                _mong_obj.mongo_reset_sensor_count(response[0]["id"])
 
 
             logger.debug("get_status_hms_account Ended")
