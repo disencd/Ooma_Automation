@@ -22,7 +22,7 @@ class VStest(unittest.TestCase):
         logger.info("Activating the OSS HMS Account")
         oss_hms = HMS_Activation()
         cnt = 0
-        while cnt < 1:
+        while cnt < 5000:
             _start_timer = time.time()
             cust_pk,code = oss_hms.activate_hms_account()
             _latency = time.time() - _start_timer
