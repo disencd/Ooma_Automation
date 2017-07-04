@@ -63,9 +63,9 @@ class VStest(unittest.TestCase):
                 sens_obj.trigger_sensor_events(config_dict)
 
                 time.sleep(2)
-                val_log = Validate_Logs(val["cust_pk"])
-                val_log.get_latest_logevent()
-                time.sleep(1)
+                # val_log = Validate_Logs(val["cust_pk"])
+                # val_log.get_latest_logevent()
+                # time.sleep(1)
 
                 if cnt == 20000:
                     break
