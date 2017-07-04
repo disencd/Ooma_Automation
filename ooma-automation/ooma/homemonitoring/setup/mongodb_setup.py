@@ -48,8 +48,9 @@ class MongoDBQuery():
         self.__mongo_connect(collection)
         logger.info("cust_pk %s", dict['cust_pk'])
         if not self.vs_account.find_one({'cust_pk' : dict['cust_pk']}):
-            logger.info("Inserting to mongo DB - %s", dict)
             self.vs_account.insert_one(dict)
+            logger.info("Successfully Inserted to mongo DB - %s", dict)
+
         else:
             logger.info("Already inserted to mongo DB")
 
