@@ -44,7 +44,7 @@ class MongoDBQuery():
 
     def mongo_insertion(self, collection, dict):
 
-        dict['cust_pk'] = "virtualaccount20170620164922089987"
+        #dict['cust_pk'] = "virtualaccount20170620164922089987"
         self.__mongo_connect(collection)
         logger.info("cust_pk %s", dict['cust_pk'])
         if self.vs_account.find_one({'cust_pk' : dict['cust_pk']}):
