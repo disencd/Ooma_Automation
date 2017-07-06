@@ -5,6 +5,7 @@ from homemonitoring.setup.json_parse import JsonConfig
 from homemonitoring.server.server_status import ServerStatus
 from homemonitoring.server.pairing_mode import PairingMode
 from homemonitoring.server.validate_logs import Validate_Logs
+from homemonitoring.virtual_sensor.create_oss_hms_acc import HMS_Activation
 import sys, os
 import unittest
 import time
@@ -36,10 +37,10 @@ class HMStest(unittest.TestCase):
         self.cust_pk = self.json_cli_obj["client_conf"]["cust_pk"]
 
     def test_1_hms_server_status(self):
-
         logger.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
         logger.info("test_1_hms_server_status - Started")
         serv_obj = ServerStatus(self.json_server_obj)
+
         self.status = serv_obj.check_all_server_status()
         logger.info("Result : HMS/Nimbits/Beehive Server Status - %s", self.status)
         logger.info ("test_1_hms_server_status - Completed")
@@ -52,6 +53,19 @@ class HMStest(unittest.TestCase):
         self.status = cli_set.client_setup_verification()
         logger.info("Result : OR Enabled Client Status - %s", self.status)
         logger.info("test_hms_config_in_client - Completed")
+        logger.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+
+    def test_3_activate_hms_account(self):
+        logger.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+        logger.info("test_3_activate_hms_account - Started")
+        oss_hms = HMS_Activation()
+        time.sleep(3)
+        cust_pk, code = oss_hms.activate_hms_account()
+        time.sleep(3)
+        oss_hms.get_status_hms_account()
+
+        logger.info("Result : OR Enabled Client Status - %s", self.status)
+        logger.info("test_3_activate_hms_account - Completed")
         logger.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
 
     def abctest_3_trigger_pairing_mode(self):

@@ -97,12 +97,12 @@ class HMS_Activation(object):
 
 
             logger.debug("get_status_hms_account Ended")
-
+            return "pass"
         except:
             logger.error("OSS HMS Account Activation Failed")
             #assert response is "Not Found", "HMS Activation Failed"
 
-        return response[0]["id"]
+        return "fail"
 
 
     '''
