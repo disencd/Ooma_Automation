@@ -62,9 +62,9 @@ class HMStest(unittest.TestCase):
         time.sleep(3)
         cust_pk, code = oss_hms.activate_hms_account()
         time.sleep(3)
-        oss_hms.get_status_hms_account()
+        self.status = oss_hms.get_status_hms_account()
 
-        logger.info("Result : OR Enabled Client Status - %s", self.status)
+        logger.info("Result : Activate HMS Account Status - %s", self.status)
         logger.info("test_3_activate_hms_account - Completed")
         logger.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
 
