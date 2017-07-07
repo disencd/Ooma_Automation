@@ -79,8 +79,8 @@ class HMSActions(HMSSqlQuery):
             logger.info("data %s code %s" % (data, code))
             return code
         except urllib2.URLError as e:
-            logger.info("code - %s reason %s" % (e.code, e.read()))
-            assert "HMS Activation Failed"
+            logger.error("code - %s reason %s" % (e.code, e.read()))
+            #assert "HMS Activation Failed"
             return e.reason
 
 
@@ -100,7 +100,7 @@ class HMSActions(HMSSqlQuery):
             response.close()
             return data
         except urllib2.URLError as e:
-            logger.info("Activation Failure - Reason %s", e.reason)
+            logger.error("Activation Failure - Reason %s", e.reason)
             assert "HMS Activation Failed"
             return e.reason
 
