@@ -67,6 +67,7 @@ class HMS_Activation(object):
         self.mongodb_dict["activation_status"] = code
 
         logger.info("Activating the HMS Account - %s", self.act_data['spn'])
+        logger.debug("Code of Activating the HMS Account %s", code)
         logger.debug("activate_hms_account End")
         return self.cust_pk, code
 

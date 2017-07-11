@@ -79,9 +79,11 @@ class HMSActions(HMSSqlQuery):
             logger.info("data %s code %s" % (data, code))
             return code
         except urllib2.URLError as e:
-            logger.error("code - %s reason %s" % (e.code, e.read()))
+            error_log = e.read()
+            logger.info("code - %s reason %s" % (e.code, error_log))
             #assert "HMS Activation Failed"
-            return e.reason
+            logger.info("Comment : %s", reason)
+            return error_log
 
 
     def get(self, headers = None, data = None):

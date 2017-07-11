@@ -1,0 +1,90 @@
+{
+  "version": true,
+  "size": 500,
+  "sort": [
+    {
+      "@timestamp": {
+        "order": "desc",
+        "unmapped_type": "boolean"
+      }
+    }
+  ],
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "query_string": {
+            "query": "host:(\"hms1-cert1.cn.ooma.com\" OR \"hms2-cert1.cn.ooma.com\") AND source:\"/var/log/hms.log\" AND \"Push request body: {\" AND \"8016584790\"",
+            "analyze_wildcard": true
+          }
+        },
+        {
+          "range": {
+            "@timestamp": {
+              "gte": 1499728126497,
+              "lte": 1499729026497,
+              "format": "epoch_millis"
+            }
+          }
+        }
+      ],
+      "must_not": []
+    }
+  },
+  "_source": {
+    "excludes": []
+  },
+  "aggs": {
+    "2": {
+      "date_histogram": {
+        "field": "@timestamp",
+        "interval": "30s",
+        "time_zone": "America/Los_Angeles",
+        "min_doc_count": 1
+      }
+    }
+  },
+  "stored_fields": [
+    "*"
+  ],
+  "script_fields": {},
+  "docvalue_fields": [
+    "@timestamp"
+  ],
+  "highlight": {
+    "pre_tags": [
+      "@kibana-highlighted-field@"
+    ],
+    "post_tags": [
+      "@/kibana-highlighted-field@"
+    ],
+    "fields": {
+      "*": {
+        "highlight_query": {
+          "bool": {
+            "must": [
+              {
+                "query_string": {
+                  "query": "host:(\"hms1-cert1.cn.ooma.com\" OR \"hms2-cert1.cn.ooma.com\") AND source:\"/var/log/hms.log\" AND \"Push request body: {\" AND \"8016584790\"",
+                  "analyze_wildcard": true,
+                  "all_fields": true
+                }
+              },
+              {
+                "range": {
+                  "@timestamp": {
+                    "gte": 1499728126497,
+                    "lte": 1499729026497,
+                    "format": "epoch_millis"
+                  }
+                }
+              }
+            ],
+            "must_not": []
+          }
+        }
+      }
+    },
+    "fragment_size": 2147483647
+  }
+}
