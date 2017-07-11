@@ -75,7 +75,7 @@ class HMStest(unittest.TestCase):
         logger.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
         logger.info ("test_trigger_pairing_mode - Started")
         logger.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
-        pair = PairingMode(self.json_server_obj)
+        pair = PairingMode(self.json_cli_obj)
 
         logger.info("test_trigger_pairing_mode For Flood Sensor - Started")
         pair.enable()
