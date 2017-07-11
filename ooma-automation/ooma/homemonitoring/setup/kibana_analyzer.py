@@ -23,11 +23,14 @@ class KibanaAnalyzer():
         val = self.es.search(body=self.data_dict)
 
         length = len(val['hits']['hits'])
-        print("*******************************************************")
-        print(val['hits']['hits'][0]['_source']['message'])
-        print("*******************************************************")
-        # for index in range(length):
-        #      print(val['hits']['hits'][index]['_source']['message'])
+        # print("*******************************************************")
+        # print(val['hits']['hits'][0]['_source']['message'])
+        # print("*******************************************************")
+        for index in range(length):
+            print("*******************************************************")
+            print(val['hits']['hits'][0]['_source']['host'])
+            print("*******************************************************")
+            print(val['hits']['hits'][index]['_source']['message'])
 
 if __name__ == '__main__':
     # get trace logger and set level

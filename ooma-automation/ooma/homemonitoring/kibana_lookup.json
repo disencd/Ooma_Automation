@@ -14,7 +14,7 @@
       "must": [
         {
           "query_string": {
-            "query": "host:(\"hms1-cert1.cn.ooma.com\" OR \"hms2-cert1.cn.ooma.com\") AND source:\"/var/log/hms.log\" AND \"Push request body: {\" AND \"8016584790\"",
+            "query": "host:(\"hms2-cert1.cn.ooma.com\" OR \"hms1-cert1.cn.ooma.com\") AND source:\"/var/log/hms.log\" AND \"Push request body: {\" AND \"6699007109\"",
             "analyze_wildcard": true
           }
         },
@@ -58,33 +58,6 @@
     "post_tags": [
       "@/kibana-highlighted-field@"
     ],
-    "fields": {
-      "*": {
-        "highlight_query": {
-          "bool": {
-            "must": [
-              {
-                "query_string": {
-                  "query": "host:(\"hms1-cert1.cn.ooma.com\" OR \"hms2-cert1.cn.ooma.com\") AND source:\"/var/log/hms.log\" AND \"Push request body: {\" AND \"8016584790\"",
-                  "analyze_wildcard": true,
-                  "all_fields": true
-                }
-              },
-              {
-                "range": {
-                  "@timestamp": {
-                    "gte": 1499728126497,
-                    "lte": 1499729026497,
-                    "format": "epoch_millis"
-                  }
-                }
-              }
-            ],
-            "must_not": []
-          }
-        }
-      }
-    },
     "fragment_size": 2147483647
   }
 }

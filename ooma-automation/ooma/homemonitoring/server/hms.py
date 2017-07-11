@@ -1,5 +1,13 @@
 import urllib2
 import json
+import logging
+import colorlog
+import sys, os
+
+logging.basicConfig(format='%(asctime)s,%(msecs)d %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s',
+    datefmt='%d-%m-%Y:%H:%M:%S',
+    level=logging.ERROR)
+logger = logging.getLogger(__name__)
 
 class HMS(object):
     def __init__(self, jsonconfig, node="cert"):
@@ -11,10 +19,11 @@ class HMS(object):
 
     def request(self, req_url, cust_pk):
         self.__url = "http://{0}/hms/{1}?username={2}".format(self._hostname_port, req_url, cust_pk)
-        print self.__url
+        logger.info("Request - %s", self.__url)
         return self
 
     def post(self, data):
+        logger.info("Request - %s", self.__url)
         assert self.__url is not None, "Use 'request' method to specify URL"
         assert isinstance(data, dict)\
                 or isinstance(data, list), "Data should be dictionary or list"
