@@ -159,6 +159,7 @@ class HMStest(unittest.TestCase):
         flood_obj.water_sensor_status()
         __cnt = 0
         __max = 1
+        time.sleep(30)
         while( __cnt < __max):
             __cnt += 1
             time.sleep(7)
