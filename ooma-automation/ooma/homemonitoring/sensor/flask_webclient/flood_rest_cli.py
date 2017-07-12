@@ -43,7 +43,7 @@ class FlaskClientWaterSensor:
             _pair_url += "/sensor/Water/interface/pair/switch/off"
             __http_response = urllib2.urlopen(_pair_url)
             logger.info("water_sensor_paging_enabled - %s",_pair_url)
-            return "is paging"
+            return "pass"
         except urllib2.URLError as e:
             logger.error("Error - BBFlaskServer is not running")
             return e.code

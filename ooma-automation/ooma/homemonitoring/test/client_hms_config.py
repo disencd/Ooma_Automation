@@ -142,9 +142,7 @@ class HMStest(unittest.TestCase):
 
             time.sleep(7)
             _result = door_obj.door_sensor_paging_enabled()
-            time.sleep(1)
-            self.status = val_log.get_latest_logevent(_result)
-            logger.info("Result : paging Door Sensor Status - %s", self.status)
+            logger.info("Result : paging Door Sensor Status - %s", _result)
 
             time.sleep(7)
 
@@ -189,9 +187,7 @@ class HMStest(unittest.TestCase):
 
             time.sleep(7)
             _result = flood_obj.water_sensor_paging_enabled()
-            time.sleep(1)
-            self.status = val_log.get_latest_logevent(_result)
-            logger.info("Result : Paging Water Sensor Status - %s", self.status)
+            logger.info("Result : Paging Water Sensor Status - %s", _result)
 
             time.sleep(7)
 
