@@ -36,7 +36,7 @@ class HMStest(unittest.TestCase):
         self.json_cli_obj = self.jsonobj.dump_config(cli_f_path)
         self.cust_pk = self.json_cli_obj["client_conf"]["cust_pk"]
 
-    def atest_3_activate_hms_account(self):
+    def test_3_activate_hms_account(self):
         logger.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
         logger.info("test_3_activate_hms_account - Started")
         oss_hms = HMS_Activation()
@@ -50,7 +50,7 @@ class HMStest(unittest.TestCase):
         logger.info("test_3_activate_hms_account - Completed")
         logger.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
 
-    def atest_1_hms_server_status(self):
+    def test_1_hms_server_status(self):
         logger.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
         logger.info("test_1_hms_server_status - Started")
         serv_obj = ServerStatus(self.json_server_obj)
@@ -60,7 +60,7 @@ class HMStest(unittest.TestCase):
         logger.info ("test_1_hms_server_status - Completed")
         logger.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
 
-    def atest_2_hms_config_in_client(self):
+    def test_2_hms_config_in_client(self):
         logger.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
         logger.info("test_hms_config_in_client - Started")
         cli_set = Client_Setup()
