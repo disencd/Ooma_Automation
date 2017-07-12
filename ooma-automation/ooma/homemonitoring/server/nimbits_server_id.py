@@ -34,6 +34,8 @@ class NimbitsServerIDs(object, HMSSqlQuery):
         logger.info("OR Dict - %s", or_dict)
 
         if "beehive_id" not in or_dict.keys():
+
+            logger.info("cust pk - %s" , cust_pk)
             # Calling the hms_sql_query class for getting OR credentials
             or_dict = super(NimbitsServerIDs, self).sql_query_pk(cust_pk)
 

@@ -28,7 +28,7 @@ class KibanaAnalyzer():
         # print("*******************************************************")
         for index in range(length):
             print("*******************************************************")
-            print(val['hits']['hits'][0]['_source']['host'])
+            print(val['hits']['hits'][index]['_source']['host'])
             print("*******************************************************")
             print(val['hits']['hits'][index]['_source']['message'])
 
